@@ -12,7 +12,10 @@ nav:
 
 # Theme
 theme:
-    features:
+  palette:
+    primary: black
+    accent: green
+  features:
       - toc.integrate
       - content.code.copy
     name: material
