@@ -6,6 +6,10 @@ dev_addr: '0.0.0.0:8000'
 nav:
   - Overview: index.md
 
+  - "Microsoft Fabric":
+    - "01 Lakehouse": ms-fabric/01-lakehouse.md
+    - "05 Dataflows (Gen2)": ms-fabric/05-dataflows-gen2.md
+
 # Theme
 theme:
     features:
