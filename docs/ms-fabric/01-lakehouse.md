@@ -1,4 +1,4 @@
-# Lab: Create a Microsoft Fabric Lakehouse
+# Lab ~ Create a Microsoft Fabric Lakehouse
 
 Large-scale data analytics solutions have traditionally been built around a *data warehouse*, in which data is stored in relational tables and queried using SQL. The growth in “big data” (characterized by high *volumes*, *variety*, and *velocity* of new data assets) together with the availability of low-cost storage and cloud-scale distributed compute technologies has led to an alternative approach to analytical data storage; the *data lake*. In a data lake, data is stored as files without imposing a fixed schema for storage. Increasingly, data engineers and analysts seek to benefit from the best features of both of these approaches by combining them in a *data lakehouse*; in which data is stored in files in a data lake and a relational schema is applied to them as a metadata layer so that they can be queried using traditional SQL semantics.
 
@@ -10,7 +10,7 @@ This lab takes approximately **30** minutes to complete.
 
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
-## Signing in to Microsoft Fabric
+## Step 1: Signing in to Microsoft Fabric
 
 In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
@@ -22,9 +22,10 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
 3. After signing in, you will be redirected to the Fabric home page:
 
-    ![Fabric home page](../img/qa-fabric-home.png)
+    !!! example ""
+        ![Fabric home page](../img/qa-fabric-home.png)
 
-## Create a workspace
+## Step 2: Create a workspace
 
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
@@ -40,9 +41,10 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 4. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+    !!! example ""
+        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
-## Create a lakehouse
+## Step 3: Create a lakehouse
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
@@ -53,7 +55,8 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new empty lakehouse will be created.
 
-    ![New lakehouse.](../img/new-lakehouse.png)
+    !!! example ""
+        ![New lakehouse.](../img/new-lakehouse.png)
 
 2. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
@@ -63,7 +66,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 Currently, there are no tables or files in this lakehouse.
 
-## Upload a file
+## Step 4: Upload a file
 
 Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).
 
@@ -71,7 +74,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
     - Save it as `sales.csv` on your local computer (or lab VM if applicable).
 
-    !!! note 
+    !!! note
         - To download the file, open a new tab in the browser and paste in the URL.
         - Right click anywhere on the page containing the data and select "Save as" to save the data as a CSV file.
 
@@ -87,13 +90,14 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 4. After the file has been uploaded, select the **Files/data** folder and verify that the **sales.csv** file has been uploaded, as shown here:
 
-    ![Screenshot of uploaded sales.csv file in a lakehouse.](../img/01-uploaded-sales-file.png)
+    !!! question ""
+        ![Screenshot of uploaded sales.csv file in a lakehouse.](../img/01-uploaded-sales-file.png)
 
 5. Select the **sales.csv** file to see a preview of its contents.
 
     !!! tip "If the **sales.csv** file does not automatically appear, in the **...** menu for the **data** folder, select **Refresh**."
 
-## Explore shortcuts
+## Step 5: Explore shortcuts
 
 In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
 
@@ -103,7 +107,7 @@ In many scenarios, the data you need to work with in your lakehouse may be store
 
     - Then close the **New shortcut** dialog box without creating a shortcut.
 
-## Load file data into a table
+## Step 6: Load file data into a table
 
 The sales data you uploaded is in a file, which you can work with directly by using Apache Spark code. However, in many scenarios you may want to load the data from the file into a table so that you can query it using SQL.
 
@@ -111,7 +115,8 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 2. In the **...** menu for the **sales.csv** file, select **Load to Tables > New table**.
 
-    ![Load to tables - New table.](../img/qa-01-load-to-tables.png)
+    !!! example ""
+        ![Load to tables - New table.](../img/qa-01-load-to-tables.png)
 
 3. In **Load to table** dialog box, set the table name to **sales** and confirm the load operation.
 
@@ -121,15 +126,17 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 4. In the **Explorer** pane, select the **sales** table that has been created to view the data:
 
-    ![Screenshot of a table preview.](../img/qa-01-table-preview.png)
+    !!! question ""
+        ![Screenshot of a table preview.](../img/qa-01-table-preview.png)
 
 5. In the **...** menu for the **sales** table, select **View files** to see the underlying files for this table:
 
-    ![Screenshot of a table preview.](../img/qa-01-delta-table-files.png)
+    !!! question ""
+        ![Screenshot of a table preview.](../img/qa-01-delta-table-files.png)
 
     > Files for a delta table are stored in *Parquet* format, and include a subfolder named `_delta_log` in which details of transactions applied to the table are logged.
 
-## Use SQL to query tables
+## Step 7: Use SQL to query tables
 
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
@@ -148,9 +155,10 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
 3. Use the :material-play: **Run** button to run the query and view the results, which should show the total revenue for each product.
 
-    ![Screenshot of a SQL query with results.](../img/qa-01-sql-query.png)
+    !!! question ""
+        ![Screenshot of a SQL query with results.](../img/qa-01-sql-query.png)
 
-## Create a visual query
+## Step 8: Create a visual query
 
 While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.
 
@@ -158,13 +166,15 @@ While many data professionals are familiar with SQL, those with Power BI experie
 
 2. Drag the **sales** table (under dbo > Tables) to the new visual query editor pane that opens to create a Power Query as shown here:
 
-    ![Screenshot of a Visual query.](../img/qa-01-visual-query.png)
+    !!! question ""
+        ![Screenshot of a Visual query.](../img/qa-01-visual-query.png)
 
 3. In the **Manage columns** menu, select **Choose columns**.
 
     - Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns. Click **OK**
 
-    ![Screenshot of a Choose columns dialog box.](../img/01-choose-columns.png)
+    !!! question ""
+        ![Screenshot of a Choose columns dialog box.](../img/01-choose-columns.png)
 
 4. in the **Transform** menu, select **Group by**. Then group the data by using the following **Basic** settings:
 
@@ -175,7 +185,8 @@ While many data professionals are familiar with SQL, those with Power BI experie
 
     When you're done, the results pane under the visual query shows the number of line items for each sales order.
 
-    ![Screenshot of a Visual query with results.](../img/qa-01-visual-query-results.png)
+    !!! question ""
+        ![Screenshot of a Visual query with results.](../img/qa-01-visual-query-results.png)
 
 ---
 
