@@ -18,7 +18,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
 3. After signing in, you will be redirected to the Fabric home page:
 
-    ![Fabric home page](../img/qa-fabric-home.png)
+    ![Fabric home page](img/qa-fabric-home.png)
 
 ## Create a workspace
 
@@ -36,11 +36,11 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 4. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+    ![Screenshot of an empty workspace in Fabric.](img/new-workspace.png)
 
 5. Navigate to the workspace settings and verify that the **Data model settings** preview feature is enabled. This will enable you to create relationships between tables in your lakehouse using a Power BI semantic model.
 
-    ![Screenshot of the workspace settings page in Fabric.](../img/03b-workspace-settings.png)
+    ![Screenshot of the workspace settings page in Fabric.](img/03b-workspace-settings.png)
 
     !!! note "You may need to refresh the browser tab after enabling the preview feature."
 
@@ -62,7 +62,7 @@ Now that you have a workspace, it's time to create a data lakehouse for the data
 
 5. After the files have been uploaded, select the **bronze** folder; and verify that the files have been uploaded, as shown here:
 
-    ![Screenshot of uploaded products.csv file in a lakehouse.](../img/03b-bronze-files.png)
+    ![Screenshot of uploaded products.csv file in a lakehouse.](img/03b-bronze-files.png)
 
 ## Transform data and load to silver Delta table
 
@@ -74,7 +74,7 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 2. When the notebook opens, rename it to `Transform data for Silver` by selecting the `Notebook xxxx` text at the top left of the notebook and entering the new name.
 
-    ![Screenshot of a new notebook named Transform data for silver.](../img/03b-sales-notebook-rename.png)
+    ![Screenshot of a new notebook named Transform data for silver.](img/03b-sales-notebook-rename.png)
 
 3. Select the existing cell in the notebook, which contains some simple commented-out code.
 
@@ -116,12 +116,14 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 6. When the cell command has completed, review the output below the cell, which should look similar to this:
 
-    ```none
-    Index SalesOrderNumber SalesOrderLineNumber OrderDate  CustomerName Email        Item                Quantity UnitPrice Tax
-    1     SO49172          1                    2021-01-01 Brian Howard brian@aw.com Road-250 Red        1        2443.35   195.468
-    2     SO49173          1                    2021-01-01 Linda Alvare linda@aw.com Mountain-200 Silver 1        2071.4197 165.7136
     ```
-
+    | Index | SalesOrderNumber | SalesOrderLineNumber | OrderDate  | CustomerName | Email             | Item                 | Quantity | UnitPrice | Tax      |
+    | ----- | ---------------- | -------------------- | ---------- | ------------ | ----------------- | -------------------- | -------- | --------- | -------- |
+    | 1     | SO49172          | 1                    | 2021-01-01 | Brian Howard | brian@example.com | Road-250 Red, 52     | 1        | 2443.35   | 195.468  |
+    | 2     | SO49173          | 1                    | 2021-01-01 | Linda Alvarez| linda@example.com | Mount-200 Silver, 38 | 1        | 2071.4197 | 165.7136 |
+    | ...   | ...              | ...                  | ...        | ...          | ...               | ...                  | ...      | ...       | ...      |
+    ```
+    
     The code you ran loaded the data from the CSV files in the bronze folder into a Spark dataframe, and then displayed the first few rows of the dataframe.
 
     !!! note "Note: You can clear, hide, and auto-resize the contents of the cell output by selecting the **...** menu at the top left of the output pane."
@@ -231,7 +233,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
 
 1. Navigate back to your workspace and notice that you now have several items listed. Select the **Sales SQL analytics endpoint** to open your lakehouse in the SQL analytics endpoint view.
 
-    ![Screenshot of the SQL endpoint in a lakehouse.](../img/03b-sql-endpoint-item.png)
+    ![Screenshot of the SQL endpoint in a lakehouse.](img/03b-sql-endpoint-item.png)
 
 2. Select New SQL query from the ribbon, which will open a SQL query editor. Note that you can rename your query using the **...** menu item next to the existing query name in the Explorer pane.
 
@@ -249,7 +251,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
 
     This query calculates the total sales for each year in the sales_silver table. Your results should look like this:
 
-    ![Screenshot of the results of a SQL query in a lakehouse.](../img/03b-total-sales-sql.png)
+    ![Screenshot of the results of a SQL query in a lakehouse.](img/03b-total-sales-sql.png)
 
 4. Next you'll review which customers are purchasing the most (in terms of quantity). Paste the following query into the query editor and select **Run**:
 
@@ -646,7 +648,7 @@ Note that you can't use the **default semantic model** that is automatically cre
 
     This will open the semantic model in Fabric where you can create relationships and measures, as shown here:
 
-    ![Screenshot of a semantic model in Fabric.](../img/03b-dataset-relationships.png)
+    ![Screenshot of a semantic model in Fabric.](img/03b-dataset-relationships.png)
 
 !!! note "Before you create relationships, you need to have a PowerBI Pro licence"
 
