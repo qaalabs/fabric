@@ -16,7 +16,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](./Images/new-empty-workspace.png)
+    ![Screenshot of an empty workspace in Fabric.](img/new-empty-workspace.png)
 
 > **Note**: When you create a workspace, you automatically become a member of the Workspace Admin role.
 
@@ -28,7 +28,8 @@ Next, create a data warehouse in the workspace you created:
 
      After a minute or so, a new warehouse will be created:
 
-    ![Screenshot of a new warehouse.](./Images/new-sample-warehouse.png)
+    !!! quote ""
+        ![Screenshot of a new warehouse.](img/new-sample-warehouse.png)
 
 ## Create a lakehouse
 Next, create a lakehouse in the workspace you created.
@@ -41,7 +42,8 @@ Next, create a lakehouse in the workspace you created.
 
    After a minute or so, a new Lakehouse will be created:
 
-    ![Screenshot of a new lakehouse in Fabric.](./Images/new-sample-lakehouse.png)
+    !!! quote ""
+        ![Screenshot of a new lakehouse in Fabric.](img/new-sample-lakehouse.png)
 
 4. Select the **Start with sample data** tile and then select the **Public holidays** sample. After a minute or so, the lakehouse will be populated with data.
 
@@ -79,7 +81,8 @@ In this exercise, you add a user to a workspace role, apply permissions and, see
 
 12. Select the **Workspaces** icon on the left menu bar (the icon looks similar to &#128455;) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the **Workspace Viewer** role.
 
-    ![Screenshot of workspace items in Fabric.](./Images/workspace-viewer-view.png)
+    !!! quote ""
+        ![Screenshot of workspace items in Fabric.](img/workspace-viewer-view.png)
 
 13. Select the warehouse and open it.
 
@@ -103,7 +106,8 @@ Item permissions control access to individual Fabric items within a workspace, l
 
 4. Select the word **Viewer** under the name of the second user. On the menu that appears, select **Remove**.
 
-   ![Screenshot of workspace access dropdown in Fabric.](./Images/workspace-access.png)
+    !!! quote ""
+        ![Screenshot of workspace access dropdown in Fabric.](img/workspace-access.png)
 
 5. Close the **Manage access** section.
 
@@ -113,7 +117,7 @@ Item permissions control access to individual Fabric items within a workspace, l
 
 8. In the box that appears, under **Additional permissions** check **Read all data using SQL (ReadData)** and uncheck all other boxes.
 
-    ![Screenshot of warehouse permissions being granted in Fabric.](./Images/grant-warehouse-access.png)
+    ![Screenshot of warehouse permissions being granted in Fabric.](img/grant-warehouse-access.png)
 
 9. Select **Grant**
 
@@ -141,13 +145,15 @@ In this exercise, you assign an item permission and create a OneLake data access
 
 5. Select on the ellipse (**...**) to the right of the ellipse and select **Manage permissions**
 
-      ![Screenshot of setting permissions on a lakehouse in Fabric.](./Images/lakehouse-manage-permissions.png)
+    !!! quote ""
+        ![Screenshot of setting permissions on a lakehouse in Fabric.](img/lakehouse-manage-permissions.png)
 
 6. On the screen that appears, select **Add user**. 
 
 7. Assign the second user to the lakehouse and ensure none of the checkboxes on the **Grant People Access** window are checked.  
 
-      ![Screenshot of the grant access lakehouse window in Fabric.](./Images/grant-people-access-window.png)
+    !!! quote ""
+        ![Screenshot of the grant access lakehouse window in Fabric.](img/grant-people-access-window.png)
 
 8. Select **Grant**. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we'll validate this.
 
@@ -169,19 +175,23 @@ In this exercise, you assign an item permission and create a OneLake data access
 
     When the lakehouse opens, select **Manage OneLake data access** on the top menu bar and enable the feature by clicking the **Continue** button.
 
-    ![Screenshot of the Manage OneLake data access (preview) feature on the menu bar in Fabric.](./Images/manage-onelake-roles.png)
+    !!! quote ""
+        ![Screenshot of the Manage OneLake data access (preview) feature on the menu bar in Fabric.](img/manage-onelake-roles.png)
 
 17. Select new role on the **Manage OneLake data access (preview)** screen that appears.
   
-      ![Screenshot of the new role functionality in the manage OneLake data access feature.](./Images/create-onelake-role.png)
+    !!! quote ""
+        ![Screenshot of the new role functionality in the manage OneLake data access feature.](img/create-onelake-role.png)
 
 18. Create a new role called **publicholidays** that can only access the publicholidays folder as shown in the screenshot below.
 
-      ![Screenshot of the folder assignment in the manage OneLake data access feature.](./Images/new-data-access-role.png)
+    !!! quote ""
+        ![Screenshot of the folder assignment in the manage OneLake data access feature.](img/new-data-access-role.png)
 
 19. When the role finishes creating, select **Assign role** and assign the role to your second user, select **Add** and, select **Save**.
  
-       ![Screenshot of the folder assignment in the manage OneLake data access feature.](./Images/assign-role.png)
+    !!! quote ""
+       ![Screenshot of the folder assignment in the manage OneLake data access feature.](img/assign-role.png)
 
 20. Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.  
 
@@ -190,3 +200,13 @@ In this exercise, you assign an item permission and create a OneLake data access
 ## Clean up resources
 
 In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.
+
+1. Navigate to Microsoft Fabric in your browser.
+
+2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
+
+3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
+
+4. Select **Delete** to delete the workspace.
+
+---
