@@ -4,6 +4,8 @@ Microsoft Fabric has a multi-layer security model for managing data access. Secu
 
 This lab takes approximately **45** minutes to complete.
 
+## Step 1: Signing in to Microsoft Fabric
+
 ## Create a workspace
 
 Before working with data in Fabric, create a workspace with the Fabric trial enabled.

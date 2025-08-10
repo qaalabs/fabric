@@ -2,7 +2,7 @@
 
 The *monitoring hub* in Microsoft Fabric provides a central place where you can monitor activity. You can use the monitoring hub to review events related to items you have permission to view.
 
-This lab takes approximately *30* minutes to complete.
+This lab takes approximately **30** minutes to complete.
 
 !!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 

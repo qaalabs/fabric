@@ -10,6 +10,8 @@ This exercise should take approximately **45** minutes to complete
 
 In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
+## Step 1: Signing in to Microsoft Fabric
+
 1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
 
 2. Follow the prompts, and sign in with the user credentials from the QA Platform:

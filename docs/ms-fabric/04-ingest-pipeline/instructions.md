@@ -1,14 +1,10 @@
-# Lab: Ingest Data with a Pipeline in Microsoft Fabric
-
-A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse. In Microsoft Fabric, you can implement *extract, transform, and load* (ETL) or *extract, load, and transform* (ELT) solutions for data ingestion through the creation of *pipelines*.
-
-Fabric also supports Apache Spark, enabling you to write and run code to process data at scale. By combining the pipeline and Spark capabilities in Fabric, you can implement complex data ingestion logic that copies data from external sources into the OneLake storage on which the lakehouse is based, and then uses Spark code to perform custom data transformations before loading it into tables for analysis.
-
-This lab will take approximately **45** minutes to complete.
+# 04 ~ Ingest Data with a Pipeline in Microsoft Fabric
 
 !!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
+
+## Step 1: Signing in to Microsoft Fabric
 
 In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
@@ -18,11 +14,11 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     - Email
     - Password
 
-After signing in, you will be redirected to the Fabric home page:
+    After signing in, you will be redirected to the Fabric home page:
 
-![Fabric home page](../img/qa-fabric-home.png)
+    ![Fabric home page](../img/qa-fabric-home.png)
 
-## Create a workspace
+## Step 2: Create a workspace
 
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
@@ -38,9 +34,10 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 4. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+    !!! quote ""
+        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
-## Create a lakehouse
+## Step 3: Create a lakehouse
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
@@ -51,11 +48,12 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-    ![New lakehouse.](../img/new-lakehouse.png)
+    !!! quote ""
+        ![New lakehouse.](../img/new-lakehouse.png)
 
 2. On the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**
 
-## Create a pipeline
+## Step 4: Create a pipeline
 
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
@@ -65,7 +63,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 3. In the **Copy Data** wizard, on the **Choose data source page**, type HTTP in the search bar and then select **HTTP** in the **New sources** section.
 
-    ![Screenshot of the Choose data source page.](../img/04-choose-data-source.png)
+    !!! quote ""
+        ![Screenshot of the Choose data source page.](../img/04-choose-data-source.png)
 
 4. In the **Connect to data source** pane, enter the following settings for the connection to your data source:
 
@@ -113,7 +112,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
-    ![Screenshot of a pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
+    !!! quote ""
+        ![Screenshot of a pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
 
 11. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the :material-refresh: (*Refresh*) icon to refresh the status, and wait until it has succeeeded.
 
@@ -121,7 +121,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 13. On the **Home** page, in the **Explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
 
-## Create a notebook
+## Step 5: Create a notebook
 
 1. On the **Home** page for your lakehouse, in the **Open notebook** menu, select **New notebook**.
 
@@ -160,7 +160,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 5. Verify that your notebooks looks similar to this, and then use the :material-play: **Run all** button on the toolbar to run all of the cells it contains.
 
-    ![Screenshot of a notebook with a parameters cell and code to transform data.](../img/04-notebook.png)
+    !!! quote ""
+        ![Screenshot of a notebook with a parameters cell and code to transform data.](../img/04-notebook.png)
 
     !!! note
         - Since this is the first time you've run any Spark code in this session, the Spark pool must be started.
@@ -174,7 +175,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 9. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
-## Modify the pipeline
+## Step 6: Modify the pipeline
 
 Now that you've implemented a notebook to transform data and load it into a table, you can incorporate the notebook into a pipeline to create a reusable ETL process.
 
@@ -182,7 +183,8 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 2. On the **Activities** tab, in the **All activities** list, select **Delete data**. Then position the new **Delete data** activity to the left of the **Copy data** activity and connect its **On completion** output to the **Copy data** activity, as shown here:
 
-    ![Screenshot of a pipeline with Delete data and Copy data activities.](../img/04-delete-data-activity.png)
+    !!! quote ""
+        ![Screenshot of a pipeline with Delete data and Copy data activities.](../img/04-delete-data-activity.png)
 
 3. Select the **Delete data** activity, and in the pane below the design canvas, set the following properties:
 
@@ -241,9 +243,17 @@ In this exercise, you implemented a data ingestion solution that uses a pipeline
 
 ---
 
-## Don't delete the workspace
+## Clean up resources
 
-!!! danger "Do not delete the workspace as you will need it in the next acticity."
+Once you've finished exploring your pipeline, you should delete the workspace you created for this exercise.
+
+1. Navigate to Microsoft Fabric in your browser.
+
+2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
+
+3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
+
+4. Select **Delete** to delete the workspace.
 
 ---
 <small><b>Source:
