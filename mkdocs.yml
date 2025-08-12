@@ -7,22 +7,39 @@ nav:
   - Overview: index.md
 
   - "Microsoft Fabric":
-    - "01 Lakehouse": ms-fabric/01-lakehouse.md
-    - "05 Dataflows (Gen2)": ms-fabric/05-dataflows-gen2.md
+    - "01 Lakehouse":
+      - Overview: ms-fabric/01-lakehouse/overview.md
+      - Instructions: ms-fabric/01-lakehouse/instructions.md
+    - "05 Dataflows (Gen2)": 
+      - Overview: ms-fabric/05-dataflows-gen2/overview.md
+      - Instructions: ms-fabric/05-dataflows-gen2/instructions.md
+    - 03b-medallion-lakehouse:
+      - Instructions: ms-fabric/03b-medallion-lakehouse/instructions.md
+    - "04 Ingest Pipeline":
+      - Overview: ms-fabric/04-ingest-pipeline/overview.md
+      - Instructions: ms-fabric/04-ingest-pipeline/instructions.md
+    - "06c Monitor Data Warehouse":
+      - Instructions: ms-fabric/06c-monitor-data-warehouse/instructions.md
+    - "18 Monitor Hub":
+      - Instructions: ms-fabric/18-monitor-hub/instructions.md
+    - "19 Secure Data Access":
+      - Instructions: ms-fabric/19-secure-data-access/instructions.md
+    - "21 Deployment Pipelines":
+      - Instructions: ms-fabric/21-deployment-pipelines/instructions.md    
 
 # Theme
 theme:
+  name: material
   palette:
     primary: black
     accent: green
   features:
-      - toc.integrate
-      - content.code.copy
-    name: material
-    icon:
-      logo: material/database
-    static_templates:
-      - 404.html
+    - toc.integrate
+    - content.code.copy
+  icon:
+    logo: material/database
+  static_templates:
+    - 404.html
 
 # Extensions
 markdown_extensions:
