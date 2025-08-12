@@ -42,7 +42,8 @@ Next, create a deployment pipeline.
 
 3. Select the check mark **Assign** for each deployment stage.
 
-  ![Screenshot of deployment pipeline.](./Images/deployment-pipeline.png)
+    !!! quote ""
+        ![Screenshot of deployment pipeline.](../img/21-deployment-pipeline.png)
 
 ## Create content
 
@@ -60,7 +61,8 @@ Fabric items haven't been created in your workspaces yet. Next, create a lakehou
 
 6. In the Lakehouse Explorer window, select **Start with sample data** to populate the new lakehouse with data.
 
-  ![Screenshot of Lakehouse Explorer.](./Images/lakehouse-explorer.png)
+    !!! quote ""
+        ![Screenshot of Lakehouse Explorer.](../img/21-lakehouse-explorer.png)
 
 7. Select the sample **NYCTaxi**.
 
@@ -70,7 +72,8 @@ Fabric items haven't been created in your workspaces yet. Next, create a lakehou
 
 10. Select the **Test** stage and under the deployment pipeline canvas you can see that the lakehouse you created is only a stage item in the source, which in this case refers to the **Development** stage.  
 
-  ![Screenshot the deployment pipeline showing content mismatches between stages.](./Images/lab-pipeline-compare.png)
+    !!! quote ""
+        ![Screenshot the deployment pipeline showing content mismatches between stages.](../img/21-lab-pipeline-compare.png)
 
 ## Deploy content between stages
 

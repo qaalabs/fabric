@@ -50,7 +50,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
     After a minute or so, a new empty lakehouse will be created.
 
     !!! quote ""
-        ![New lakehouse.](img/new-lakehouse.png)
+        ![New lakehouse.](../img/new-lakehouse.png)
 
 ## Create and monitor a Dataflow
 
@@ -61,28 +61,28 @@ In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide ra
 2. Name the new dataflow `Get Product Data` and select **Create**.
 
     !!! quote ""
-    ![Screenshot of a new dataflow.](img/18-new-data-flow.png)
+    ![Screenshot of a new dataflow.](../img/18-new-data-flow.png)
 
 3. In the dataflow designer, select **Import from a Text/CSV file**. Then complete the Get Data wizard to create a data connection by linking to `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv` using anonymous authentication.
 
     When you have completed the wizard, a preview of the data will be shown in the dataflow designer like this:
 
     !!! quote ""
-        ![Screenshot of a dataflow query.](img/18-data-flow-query.png)
+        ![Screenshot of a dataflow query.](../img/18-data-flow-query.png)
 
 4. Publish the dataflow.
 
 5. In the navigation bar on the left, select **Monitor** to view the monitoring hub and observe that your dataflow is in-progress (if not, refresh the view until you see it).
 
     !!! quote ""
-        ![Screenshot of the monitoring hub with a dataflow in-progress.](img/18-monitor-dataflow.png)
+        ![Screenshot of the monitoring hub with a dataflow in-progress.](../img/18-monitor-dataflow.png)
 
 6. Wait for a few seconds, and then refresh the page until the status of the dataflow is **Succeeded**.
 
 7. In the navigation pane, select your lakehouse. Then expand the **Tables** folder to verify that a table named **products** has been created and loaded by the dataflow (you may need to refresh the **Tables** folder).
 
     !!! quote ""
-        ![Screenshot of the products table in the lakehouse page.](img/18-products-table.png)
+        ![Screenshot of the products table in the lakehouse page.](../img/18-products-table.png)
 
 ## Create and monitor a Spark notebook
 
@@ -93,7 +93,7 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
     A new notebook named **Notebook 1** is created and opened.
 
     !!! quote ""
-        ![Screenshot of a new notebook.](img/18-new-notebook.png)
+        ![Screenshot of a new notebook.](../img/18-new-notebook.png)
 
 2. At the top left of the notebook, select **Notebook 1** to view its details, and change its name to `Query Products`
 
@@ -106,19 +106,19 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
 6. In the **...** menu for the **products** table, select **Load data > Spark**. This adds a new code cell to the notebook as shown here:
 
     !!! quote ""
-        ![Screenshot of a notebook with code to query a table.](img/18-load-spark.png)
+        ![Screenshot of a notebook with code to query a table.](../img/18-load-spark.png)
 
 7. Use the :material-play: **Run all** button to run all cells in the notebook. It will take a moment or so to start the Spark session, and then the results of the query will be shown under the code cell.
 
     !!! quote ""
-        ![Screenshot of a notebook with query results.](img/18-notebook-output.png)
+        ![Screenshot of a notebook with query results.](../img/18-notebook-output.png)
 
 8. On the toolbar, use the  :material-stop: (*Stop session*) button to stop the Spark session.
 
 9. In the navigation bar, select **Monitor** to view the monitoring hub, and note that the notebook activity is listed.
 
     !!! quote ""
-        ![Screenshot of the monitoring hub with a notebook activity.](img/18-monitor-notebook.png)
+        ![Screenshot of the monitoring hub with a notebook activity.](../img/18-monitor-notebook.png)
 
 ## Monitor history for an item
 
@@ -131,7 +131,7 @@ Some items in a workspace might be run multiple times. You can use the monitorin
 3. In the **...** menu for the **Get Product Data** dataflow, select **Historical runs** to view the run history for the dataflow:
 
     !!! quote ""
-        ![Screenshot of the monitoring hub historical runs view.](img/18-historical-runs.png)
+        ![Screenshot of the monitoring hub historical runs view.](../img/18-historical-runs.png)
 
 4. In the **...** menu for any of the historical runs select **View detail** to see details of the run.
 
@@ -149,7 +149,7 @@ In this exercise you’ve only run a few activities, so it should be fairly easy
     With the filter applied, only successful runs of dataflows are listed.
 
     !!! quote ""
-        ![Screenshot of the monitoring hub with a filter applied.](img/18-monitor-filter.png)
+        ![Screenshot of the monitoring hub with a filter applied.](../img/18-monitor-filter.png)
 
 2. Use the **Column Options** button to include the following columns in the view (use the **Apply** button to apply the changes):
 
@@ -166,7 +166,7 @@ In this exercise you’ve only run a few activities, so it should be fairly easy
     You may need to scroll horizontally to see all of the columns:
 
     !!! quote ""
-        ![Screenshot of the monitoring hub with custom columns.](img/18-monitor-columns.png)
+        ![Screenshot of the monitoring hub with custom columns.](../img/18-monitor-columns.png)
 
 ## Clean up resources
 

@@ -6,19 +6,37 @@ This lab takes approximately **45** minutes to complete.
 
 ## Step 1: Signing in to Microsoft Fabric
 
-## Create a workspace
+In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
 
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser and sign in with your Fabric credentials.
+2. Follow the prompts, and sign in with the user credentials from the QA Platform:
+    - Email
+    - Password
 
-1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
+3. After signing in, you will be redirected to the Fabric home page:
 
-1. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
+    !!! quote ""
+        ![Fabric home page](../img/qa-fabric-home.png)
 
-1. When your new workspace opens, it should be empty.
+## Step 2: Create a workspace
 
-    ![Screenshot of an empty workspace in Fabric.](img/new-empty-workspace.png)
+Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
+
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
+
+2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
+
+3. Create a **New workspace**:
+
+    - Give it a name of your choice. For example: `fab_workspace`
+    - Leave all other options as the default values
+    - Click **Apply**
+
+4. When your new workspace opens, it should be empty.
+
+    !!! quote ""
+        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 > **Note**: When you create a workspace, you automatically become a member of the Workspace Admin role.
 
@@ -31,7 +49,7 @@ Next, create a data warehouse in the workspace you created:
      After a minute or so, a new warehouse will be created:
 
     !!! quote ""
-        ![Screenshot of a new warehouse.](img/new-sample-warehouse.png)
+        ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
 
 ## Create a lakehouse
 Next, create a lakehouse in the workspace you created.
@@ -45,7 +63,7 @@ Next, create a lakehouse in the workspace you created.
    After a minute or so, a new Lakehouse will be created:
 
     !!! quote ""
-        ![Screenshot of a new lakehouse in Fabric.](img/new-sample-lakehouse.png)
+        ![Screenshot of a new lakehouse in Fabric.](../img/sample-lakehouse.png)
 
 4. Select the **Start with sample data** tile and then select the **Public holidays** sample. After a minute or so, the lakehouse will be populated with data.
 
@@ -61,7 +79,7 @@ In this exercise, you add a user to a workspace role, apply permissions and, see
 
 3. Select on **Manage access** on the top of the screen.
 
-> **Note**: You'll see the user you're logged, who is a a member of the **Workspace Admin** role because you created the workspace. No other users are assigned access to the workspace yet.
+    > **Note**: You'll see the user you're logged, who is a a member of the **Workspace Admin** role because you created the workspace. No other users are assigned access to the workspace yet.
 
 4. Next, you'll see what a user without permissions on the workspace can view. In your browser, open an InPrivate window. In the Microsoft Edge browser, select the ellipse at the top right corner and select **New InPrivate Window**.
 
@@ -69,7 +87,7 @@ In this exercise, you add a user to a workspace role, apply permissions and, see
 
 6. On the bottom left corner of your screen, select **Microsoft Fabric** and then select **Data Warehouse**. Next select **Workspaces** (the icon looks similar to &#128455;).  
 
-> **Note:** The second user doesn't have access to the workspace, so it's not viewable.
+    > **Note:** The second user doesn't have access to the workspace, so it's not viewable.
 
 7. Next, you assign the **Workspace Viewer** role to the second user and see that the role grants read access to the warehouse in the workspace.  
 
@@ -84,7 +102,7 @@ In this exercise, you add a user to a workspace role, apply permissions and, see
 12. Select the **Workspaces** icon on the left menu bar (the icon looks similar to &#128455;) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the **Workspace Viewer** role.
 
     !!! quote ""
-        ![Screenshot of workspace items in Fabric.](img/workspace-viewer-view.png)
+        ![Screenshot of workspace items in Fabric.](../img/19-workspace-viewer-view.png)
 
 13. Select the warehouse and open it.
 
@@ -109,17 +127,17 @@ Item permissions control access to individual Fabric items within a workspace, l
 4. Select the word **Viewer** under the name of the second user. On the menu that appears, select **Remove**.
 
     !!! quote ""
-        ![Screenshot of workspace access dropdown in Fabric.](img/workspace-access.png)
+        ![Screenshot of workspace access dropdown in Fabric.](../img/19-workspace-access.png)
 
 5. Close the **Manage access** section.
 
 6. In the workspace, hover over the name of your warehouse and an ellipse (**...**) will appear. Select the ellipse and select **Manage permissions**
 
-7. Select **Add user** and enter the name of the second user. 
+7. Select **Add user** and enter the name of the second user.
 
 8. In the box that appears, under **Additional permissions** check **Read all data using SQL (ReadData)** and uncheck all other boxes.
 
-    ![Screenshot of warehouse permissions being granted in Fabric.](img/grant-warehouse-access.png)
+    ![Screenshot of warehouse permissions being granted in Fabric.](../img/19-grant-warehouse-access.png)
 
 9. Select **Grant**
 
@@ -148,14 +166,14 @@ In this exercise, you assign an item permission and create a OneLake data access
 5. Select on the ellipse (**...**) to the right of the ellipse and select **Manage permissions**
 
     !!! quote ""
-        ![Screenshot of setting permissions on a lakehouse in Fabric.](img/lakehouse-manage-permissions.png)
+        ![Screenshot of setting permissions on a lakehouse in Fabric.](../img/19-lakehouse-manage-permissions.png)
 
-6. On the screen that appears, select **Add user**. 
+6. On the screen that appears, select **Add user**.
 
 7. Assign the second user to the lakehouse and ensure none of the checkboxes on the **Grant People Access** window are checked.  
 
     !!! quote ""
-        ![Screenshot of the grant access lakehouse window in Fabric.](img/grant-people-access-window.png)
+        ![Screenshot of the grant access lakehouse window in Fabric.](../img/19-grant-people-access-window.png)
 
 8. Select **Grant**. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we'll validate this.
 
@@ -178,22 +196,22 @@ In this exercise, you assign an item permission and create a OneLake data access
     When the lakehouse opens, select **Manage OneLake data access** on the top menu bar and enable the feature by clicking the **Continue** button.
 
     !!! quote ""
-        ![Screenshot of the Manage OneLake data access (preview) feature on the menu bar in Fabric.](img/manage-onelake-roles.png)
+        ![Screenshot of the Manage OneLake data access (preview) feature on the menu bar in Fabric.](../img/19-manage-onelake-roles.png)
 
 17. Select new role on the **Manage OneLake data access (preview)** screen that appears.
   
     !!! quote ""
-        ![Screenshot of the new role functionality in the manage OneLake data access feature.](img/create-onelake-role.png)
+        ![Screenshot of the new role functionality in the manage OneLake data access feature.](../img/19-create-onelake-role.png)
 
 18. Create a new role called **publicholidays** that can only access the publicholidays folder as shown in the screenshot below.
 
     !!! quote ""
-        ![Screenshot of the folder assignment in the manage OneLake data access feature.](img/new-data-access-role.png)
+        ![Screenshot of the folder assignment in the manage OneLake data access feature.](../img/19-new-data-access-role.png)
 
 19. When the role finishes creating, select **Assign role** and assign the role to your second user, select **Add** and, select **Save**.
- 
+
     !!! quote ""
-       ![Screenshot of the folder assignment in the manage OneLake data access feature.](img/assign-role.png)
+       ![Screenshot of the folder assignment in the manage OneLake data access feature.](../img/19-assign-role.png)
 
 20. Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.  
 

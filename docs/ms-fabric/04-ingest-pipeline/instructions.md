@@ -16,7 +16,8 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
     After signing in, you will be redirected to the Fabric home page:
 
-    ![Fabric home page](../img/qa-fabric-home.png)
+    !!! quote ""
+        ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Step 2: Create a workspace
 
