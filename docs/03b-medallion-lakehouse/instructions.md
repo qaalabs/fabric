@@ -1,16 +1,12 @@
 # Lab 03b ~ Create Medallion Architecture in a Fabric Lakehouse
 
-In this exercise you will build out a medallion architecture in a Fabric lakehouse using notebooks. You will create a workspace, create a lakehouse, upload data to the bronze layer, transform the data and load it to the silver Delta table, transform the data further and load it to the gold Delta tables, and then explore the semantic model and create relationships.
-
-This exercise should take approximately **45** minutes to complete
-
 !!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
-In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
-
 ## Step 1: Signing in to Microsoft Fabric
+
+In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
 1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
 
@@ -23,7 +19,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     !!! quote ""
         ![Fabric home page](../img/qa-fabric-home.png)
 
-## Create a workspace
+## Step 2: Create a workspace
 
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
@@ -40,16 +36,16 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 4. When your new workspace opens, it should be empty.
 
     !!! quote ""
-        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+        ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 5. Navigate to the workspace settings and verify that the **Data model settings** preview feature is enabled. This will enable you to create relationships between tables in your lakehouse using a Power BI semantic model.
 
     !!! quote ""
-        ![Screenshot of the workspace settings page in Fabric.](../img/03b-workspace-settings.png)
+        ![Workspace settings page in Fabric.](../img/03b-workspace-settings.png)
 
     !!! note "You may need to refresh the browser tab after enabling the preview feature."
 
-## Create a lakehouse and upload data to bronze layer
+## Step 3: Create a lakehouse and upload data to bronze layer
 
 Now that you have a workspace, it's time to create a data lakehouse for the data you're going to analyze.
 
@@ -68,20 +64,20 @@ Now that you have a workspace, it's time to create a data lakehouse for the data
 5. After the files have been uploaded, select the **bronze** folder; and verify that the files have been uploaded, as shown here:
 
     !!! quote ""
-        ![Screenshot of uploaded products.csv file in a lakehouse.](../img/03b-bronze-files.png)
+        ![Uploaded products.csv file in a lakehouse.](../img/03b-bronze-files.png)
 
-## Transform data and load to silver Delta table
+## Step 4: Transform data and load to silver Delta table
 
 Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data and load it to a delta table in the silver layer.
 
 1. On the **Home** page while viewing the contents of the **bronze** folder in your data lake, in the **Open notebook** menu, select **New notebook**.
 
-    After a few seconds, a new notebook containing a *single cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+    After a few seconds, a new notebook containing a *single cell* will open.
 
 2. When the notebook opens, rename it to `Transform data for Silver` by selecting the `Notebook xxxx` text at the top left of the notebook and entering the new name.
 
     !!! quote ""
-        ![Screenshot of a new notebook named Transform data for silver.](../img/03b-sales-notebook-rename.png)
+        ![New notebook named Transform data for silver.](../img/03b-sales-notebook-rename.png)
 
 3. Select the existing cell in the notebook, which contains some simple commented-out code.
 
@@ -123,14 +119,14 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 6. When the cell command has completed, review the output below the cell, which should look similar to this:
 
-    ```
+    ```none
     | Index | SalesOrderNumber | SalesOrderLineNumber | OrderDate  | CustomerName | Email             | Item                 | Quantity | UnitPrice | Tax      |
     | ----- | ---------------- | -------------------- | ---------- | ------------ | ----------------- | -------------------- | -------- | --------- | -------- |
     | 1     | SO49172          | 1                    | 2021-01-01 | Brian Howard | brian@example.com | Road-250 Red, 52     | 1        | 2443.35   | 195.468  |
     | 2     | SO49173          | 1                    | 2021-01-01 | Linda Alvarez| linda@example.com | Mount-200 Silver, 38 | 1        | 2071.4197 | 165.7136 |
     | ...   | ...              | ...                  | ...        | ...          | ...               | ...                  | ...      | ...       | ...      |
     ```
-    
+
     The code you ran loaded the data from the CSV files in the bronze folder into a Spark dataframe, and then displayed the first few rows of the dataframe.
 
     !!! note "Note: You can clear, hide, and auto-resize the contents of the cell output by selecting the **...** menu at the top left of the output pane."
@@ -183,7 +179,7 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 10. Run the cell to execute the code using the **:material-play: (Run cell)** button.
 
-11. Select the **...** in the Tables section of the Explorer pane and select Refresh. You should now see the new sales_silver table listed. The :material-triangle: (triangle icon) indicates that it's a Delta table.
+11. Select the **...** in the Tables section of the Explorer pane and select Refresh. You should now see the new **sales_silver** table listed. The :material-triangle: (triangle icon) indicates that it's a Delta table.
 
     !!! note "Note: If you don't see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab."
 
@@ -234,16 +230,16 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 !!! success "You now have data in your silver delta table that is ready for further transformation and modeling."
 
-## Explore data in the silver layer using the SQL endpoint
+## Step 5: Explore data in the silver layer using the SQL endpoint
 
 Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis. This is useful if you're familiar with SQL and want to do some basic exploration of your data. In this exercise we're using the SQL endpoint view in Fabric, but you can use other tools like SQL Server Management Studio (SSMS) and Azure Data Explorer.
 
 1. Navigate back to your workspace and notice that you now have several items listed. Select the **Sales SQL analytics endpoint** to open your lakehouse in the SQL analytics endpoint view.
 
     !!! quote ""
-        ![Screenshot of the SQL endpoint in a lakehouse.](../img/03b-sql-endpoint-item.png)
+        ![SQL endpoint in a lakehouse.](../img/03b-sql-endpoint-item.png)
 
-2. Select New SQL query from the ribbon, which will open a SQL query editor. Note that you can rename your query using the **...** menu item next to the existing query name in the Explorer pane.
+2. Select **New SQL query** from the ribbon, which will open a SQL query editor. Note that you can rename your query using the **...** menu item next to the existing query name in the Explorer pane.
 
     Next, you'll run two sql queries to explore the data.
 
@@ -278,7 +274,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
         - This will enable you to do more advanced analysis and reporting.
         - You'll do that in the next section.
 
-## Transform data for gold layer
+## Step 6: Transform data for gold layer
 
 You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. Now you'll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.
 
@@ -636,7 +632,20 @@ You have successfully taken data from your bronze layer, transformed it, and loa
 
 !!! success "You now have a curated, modeled **gold** layer that can be used for reporting and analysis."
 
-## Create a semantic model
+## Step 7: Create a semantic model (Optional)
+
+!!! note "Before you can create relationships in a semantic model, you need to have a PowerBI Pro licence"
+
+### Get a PowerBi licence
+
+- Click your Workspace
+- In the lakehouse row - hover over semantic model
+- Click the 3 dots **...**
+- Click **Create report**
+
+*A message box should popup offering you a PowerBi Pro trial.*
+
+!!! success "You should now be able to create the semantic model as depicted below."
 
 In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.
 
@@ -658,26 +667,14 @@ Note that you can't use the **default semantic model** that is automatically cre
     This will open the semantic model in Fabric where you can create relationships and measures, as shown here:
 
     !!! quote ""
-        ![Screenshot of a semantic model in Fabric.](../img/03b-dataset-relationships.png)
-
-!!! note "Before you create relationships, you need to have a PowerBI Pro licence"
-
-### Get a PowerBi licence
-
-- Open your semantic model
-- Click the 3 dots **...**
-- Click **Show tables**
-
-!!! success "You should now be able to create the semantic model as depicted below."
+        ![Semantic model in Fabric.](../img/03b-dataset-relationships.png)
 
 ## Create a PowerBi report
 
 - You can now create new report
 - Or just auto create a report: **Explore > Auto create report**
 
----
-
-From here, you or other members of your data team can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they'll always reflect the latest data.
+From here you can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they'll always reflect the latest data.
 
 ---
 

@@ -36,7 +36,7 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 4. When your new workspace opens, it should be empty.
 
     !!! quote ""
-        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+        ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 3: Create a lakehouse
 
@@ -85,7 +85,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 4. After the file has been uploaded, select the **Files/data** folder and verify that the **sales.csv** file has been uploaded, as shown here:
 
     !!! quote ""
-        ![Screenshot of uploaded sales.csv file in a lakehouse.](../img/01-uploaded-sales-file.png)
+        ![Uploaded sales.csv file in a lakehouse.](../img/01-uploaded-sales-file.png)
 
 5. Select the **sales.csv** file to see a preview of its contents.
 
@@ -144,13 +144,12 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
     SELECT Item, SUM(Quantity * UnitPrice) AS Revenue
     FROM sales
     GROUP BY Item
-    ORDER BY Revenue DESC;
     ```
 
 3. Use the :material-play: **Run** button to run the query and view the results, which should show the total revenue for each product.
 
     !!! quote ""
-        ![Screenshot of a SQL query with results.](../img/qa-01-sql-query.png)
+        ![SQL query with results.](../img/qa-01-sql-query.png)
 
 ## Step 8: Create a visual query
 
@@ -161,14 +160,14 @@ While many data professionals are familiar with SQL, those with Power BI experie
 2. Drag the **sales** table (under dbo > Tables) to the new visual query editor pane that opens to create a Power Query as shown here:
 
     !!! quote ""
-        ![Screenshot of a Visual query.](../img/qa-01-visual-query.png)
+        ![Visual query.](../img/qa-01-visual-query.png)
 
 3. In the **Manage columns** menu, select **Choose columns**.
 
     - Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns. Click **OK**
 
     !!! quote ""
-        ![Screenshot of a Choose columns dialog box.](../img/01-choose-columns.png)
+        ![Choose columns dialog box.](../img/01-choose-columns.png)
 
 4. in the **Transform** menu, select **Group by**. Then group the data by using the following **Basic** settings:
 
@@ -180,7 +179,7 @@ While many data professionals are familiar with SQL, those with Power BI experie
     When you're done, the results pane under the visual query shows the number of line items for each sales order.
 
     !!! quote ""
-        ![Screenshot of a Visual query with results.](../img/qa-01-visual-query-results.png)
+        ![Visual query with results.](../img/qa-01-visual-query-results.png)
 
 ---
 
