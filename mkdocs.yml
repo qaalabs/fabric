@@ -13,19 +13,24 @@ nav:
     - "05 Dataflows (Gen2)": 
       - 05-dataflows-gen2/index.md
       - Instructions: 05-dataflows-gen2/instructions.md
-    - "03b Medallion Lakehouse":
+    - "3b Medallion Architecture":
+      - 03b-medallion-lakehouse/index.md
       - Instructions: 03b-medallion-lakehouse/instructions.md
     - "04 Ingest Pipeline":
       - 04-ingest-pipeline/index.md
       - Instructions: 04-ingest-pipeline/instructions.md
-    - "06c Monitor Data Warehouse":
+    - "6c Monitor Data Warehouse":
+      - 06c-monitor-data-warehouse/index.md
       - Instructions: 06c-monitor-data-warehouse/instructions.md
     - "18 Monitor Hub":
+      - 18-monitor-hub/index.md
       - Instructions: 18-monitor-hub/instructions.md
     - "19 Secure Data Access":
+      - 19-secure-data-access/index.md
       - Instructions: 19-secure-data-access/instructions.md
     - "21 Deployment Pipelines":
-      - Instructions: 21-deployment-pipelines/instructions.md    
+      - 21-deployment-pipelines/index.md
+      - Instructions: 21-deployment-pipelines/instructions.md
 
 # Theme
 theme:
