@@ -6,6 +6,8 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 This lab will take approximately **45** minutes to complete.
 
+## Overview
+
 ### Step 1: Signing in to Microsoft Fabric
 
 - In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
