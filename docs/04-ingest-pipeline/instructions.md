@@ -1,4 +1,4 @@
-# 04 ~ Ingest Data with a Pipeline in Microsoft Fabric
+# Lab 04 ~ Ingest Data with a Pipeline in Microsoft Fabric
 
 !!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
@@ -208,7 +208,8 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 5. Select the **Copy data** activity and then connect its **On Completion** output to the **Notebook** activity as shown here:
 
-    ![Screenshot of a pipeline with Copy Data and Notebook activities.](../img/04-pipeline.png)
+    !!! quote ""
+        ![Screenshot of a pipeline with Copy Data and Notebook activities.](../img/04-pipeline.png)
 
 6. Select the **Notebook** activity, and then in the pane below the design canvas, set the following properties:
 
@@ -227,7 +228,8 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 7. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline. Then use the :material-play: **Run** button to run the pipeline, and wait for all of the activities to complete.
 
-    ![Screenshot of a pipeline with a Dataflow activity.](../img/04-pipeline-run.png)
+    !!! quote ""
+        ![Screenshot of a pipeline with a Dataflow activity.](../img/04-pipeline-run.png)
 
     !!! warning "If you see an error message"
         - In case you receive the error message:

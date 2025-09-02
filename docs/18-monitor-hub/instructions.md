@@ -1,4 +1,4 @@
-# 18 ~ Monitor Fabric Activity in the Monitoring Hub
+# Lab 18 ~ Monitor Fabric Activity in the Monitoring Hub
 
 The *monitoring hub* in Microsoft Fabric provides a central place where you can monitor activity. You can use the monitoring hub to review events related to items you have permission to view.
 
@@ -18,7 +18,8 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
 3. After signing in, you will be redirected to the Fabric home page:
 
-    ![Fabric home page](../img/qa-fabric-home.png)
+    !!! quote ""
+        ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
 
@@ -36,7 +37,8 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 4. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+    !!! quote ""
+        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Create a lakehouse
 
@@ -61,7 +63,7 @@ In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide ra
 2. Name the new dataflow `Get Product Data` and select **Create**.
 
     !!! quote ""
-    ![Screenshot of a new dataflow.](../img/18-new-data-flow.png)
+        ![Screenshot of a new dataflow.](../img/18-new-data-flow.png)
 
 3. In the dataflow designer, select **Import from a Text/CSV file**. Then complete the Get Data wizard to create a data connection by linking to `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv` using anonymous authentication.
 

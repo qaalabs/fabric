@@ -1,4 +1,4 @@
-# 05 ~ Create and use Dataflows (Gen2) in Microsoft Fabric
+# Lab 05 ~ Create and use Dataflows (Gen2) in Microsoft Fabric
 
 !!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
@@ -58,7 +58,8 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 1. In the home page for your lakehouse, select **Get data > New Dataflow Gen2**
 
-    ![Lakehouse toolbar.](../img/lakehouse-toolbar.png)
+    !!! quote ""
+        ![Lakehouse toolbar.](../img/lakehouse-toolbar.png)
 
     Click **Create**, and after a few seconds, the Power Query editor for your new dataflow opens as shown here:
 

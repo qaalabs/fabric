@@ -1,4 +1,4 @@
-# 19 ~ Secure data access in Microsoft Fabric
+# Lab 19 ~ Secure data access in Microsoft Fabric
 
 Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles.
 
@@ -137,7 +137,8 @@ Item permissions control access to individual Fabric items within a workspace, l
 
 8. In the box that appears, under **Additional permissions** check **Read all data using SQL (ReadData)** and uncheck all other boxes.
 
-    ![Screenshot of warehouse permissions being granted in Fabric.](../img/19-grant-warehouse-access.png)
+    !!! quote ""
+        ![Screenshot of warehouse permissions being granted in Fabric.](../img/19-grant-warehouse-access.png)
 
 9. Select **Grant**
 
@@ -196,22 +197,22 @@ In this exercise, you assign an item permission and create a OneLake data access
     When the lakehouse opens, select **Manage OneLake data access** on the top menu bar and enable the feature by clicking the **Continue** button.
 
     !!! quote ""
-        ![Screenshot of the Manage OneLake data access (preview) feature on the menu bar in Fabric.](../img/19-manage-onelake-roles.png)
+        ![Manage OneLake data access feature.](../img/19-manage-onelake-roles.png)
 
 17. Select new role on the **Manage OneLake data access (preview)** screen that appears.
   
     !!! quote ""
-        ![Screenshot of the new role functionality in the manage OneLake data access feature.](../img/19-create-onelake-role.png)
+        ![New role functionality in the manage OneLake data access feature.](../img/19-create-onelake-role.png)
 
 18. Create a new role called **publicholidays** that can only access the publicholidays folder as shown in the screenshot below.
 
     !!! quote ""
-        ![Screenshot of the folder assignment in the manage OneLake data access feature.](../img/19-new-data-access-role.png)
+        ![Folder assignment in the manage OneLake data access feature.](../img/19-new-data-access-role.png)
 
 19. When the role finishes creating, select **Assign role** and assign the role to your second user, select **Add** and, select **Save**.
 
     !!! quote ""
-       ![Screenshot of the folder assignment in the manage OneLake data access feature.](../img/19-assign-role.png)
+       ![Folder assignment in the manage OneLake data access feature.](../img/19-assign-role.png)
 
 20. Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.  
 

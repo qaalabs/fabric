@@ -1,4 +1,4 @@
-# 01 ~ Create a Microsoft Fabric Lakehouse
+# Lab 01 ~ Create a Microsoft Fabric Lakehouse
 
 !!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
@@ -49,7 +49,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! example ""
+    !!! quote ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
 2. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
@@ -109,7 +109,7 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 2. In the **...** menu for the **sales.csv** file, select **Load to Tables > New table**.
 
-    !!! example ""
+    !!! quote ""
         ![Load to tables - New table.](../img/qa-01-load-to-tables.png)
 
 3. In **Load to table** dialog box, set the table name to **sales** and confirm the load operation.

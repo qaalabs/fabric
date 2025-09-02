@@ -1,4 +1,4 @@
-# 21 ~ Implement deployment pipelines in Microsoft Fabric
+# Lab 21 ~ Implement deployment pipelines in Microsoft Fabric
 
 Deployment pipelines in Microsoft Fabric let you automate the process of copying   changes made to the content in Fabric items between environments like development, test, and production. You can use deployment pipelines to develop and test content before it reaches end users. In this exercise, you create a deployment pipeline, and assign stages to the pipeline. Then you create some content in a development workspace and use deployment pipelines to deploy it between the Development, Test and Production pipeline stages.
 
@@ -73,7 +73,7 @@ Fabric items haven't been created in your workspaces yet. Next, create a lakehou
 10. Select the **Test** stage and under the deployment pipeline canvas you can see that the lakehouse you created is only a stage item in the source, which in this case refers to the **Development** stage.  
 
     !!! quote ""
-        ![Screenshot the deployment pipeline showing content mismatches between stages.](../img/21-lab-pipeline-compare.png)
+        ![Deployment pipeline showing content mismatches between stages.](../img/21-lab-pipeline-compare.png)
 
 ## Deploy content between stages
 

@@ -1,4 +1,4 @@
-# Lab: Monitor a data warehouse in Microsoft Fabric
+# Lab 06c ~ Monitor a data warehouse in Microsoft Fabric
 
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Data warehouses in Microsoft Fabric include dynamic management views that you can use to monitor activity and queries.
 
@@ -20,7 +20,8 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
 3. After signing in, you will be redirected to the Fabric home page:
 
-    ![Fabric home page](../img/qa-fabric-home.png)
+    !!! quote ""
+        ![Fabric home page](../img/qa-fabric-home.png)
 
 ## Create a workspace
 
@@ -38,7 +39,8 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 4. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+    !!! quote ""
+        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Create a sample data warehouse
 
@@ -50,7 +52,8 @@ Now that you have a workspace, it’s time to create a data warehouse.
 
     After a minute or so, a new warehouse will be created and populated with sample data for a taxi ride analysis scenario.
 
-    ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
+    !!! quote ""
+        ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
 
 ## Explore dynamic management views
 
