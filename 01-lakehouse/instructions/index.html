@@ -1,0 +1,1340 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../../05-dataflows-gen2/overview/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Instructions - MS Fabic Labs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01-create-a-microsoft-fabric-lakehouse" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MS Fabic Labs" class="md-header__button md-logo" aria-label="MS Fabic Labs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MS Fabic Labs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instructions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MS Fabic Labs" class="md-nav__button md-logo" aria-label="MS Fabic Labs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+
+    </a>
+    MS Fabic Labs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Microsoft Fabric
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Microsoft Fabric
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    01 Lakehouse
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 Lakehouse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-signing-in-to-microsoft-fabric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Signing in to Microsoft Fabric
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-a-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create a lakehouse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-upload-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Upload a file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-explore-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Explore shortcuts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-load-file-data-into-a-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Load file data into a table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-use-sql-to-query-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Use SQL to query tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-create-a-visual-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Create a visual query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean up resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    05 Dataflows (Gen2)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            05 Dataflows (Gen2)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-dataflows-gen2/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-dataflows-gen2/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    03b Medallion Lakehouse
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            03b Medallion Lakehouse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03b-medallion-lakehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    04 Ingest Pipeline
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            04 Ingest Pipeline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-ingest-pipeline/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-ingest-pipeline/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    06c Monitor Data Warehouse
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            06c Monitor Data Warehouse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06c-monitor-data-warehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    18 Monitor Hub
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            18 Monitor Hub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../18-monitor-hub/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    19 Secure Data Access
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            19 Secure Data Access
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19-secure-data-access/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    21 Deployment Pipelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            21 Deployment Pipelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../21-deployment-pipelines/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="01-create-a-microsoft-fabric-lakehouse">01 ~ Create a Microsoft Fabric Lakehouse</h1>
+<div class="admonition info">
+<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
+</div>
+<h2 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h2>
+<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
+<ol>
+<li>
+<p>Using an <strong>incognito/private mode browser tab</strong> navigate to the <a href="https://app.fabric.microsoft.com/">Fabric portal</a> at: <a href="https://fabric.microsoft.com">https://fabric.microsoft.com</a></p>
+</li>
+<li>
+<p>Follow the prompts, and sign in with the user credentials from the QA Platform:</p>
+<ul>
+<li>Email</li>
+<li>Password</li>
+</ul>
+</li>
+<li>
+<p>After signing in, you will be redirected to the Fabric home page:</p>
+<div class="admonition quote">
+<p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric">Microsoft Fabric home page</a> in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.</p>
+</li>
+<li>
+<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Create a <strong>New workspace</strong>:</p>
+<ul>
+<li>Give it a name of your choice. For example: <code>fab_workspace</code></li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
+</ul>
+</li>
+<li>
+<p>When your new workspace opens, it should be empty.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
+</div>
+</li>
+</ol>
+<h2 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h2>
+<p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
+<ol>
+<li>
+<p>On the menu bar on the left, select <strong>Create</strong>. In the New page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
+<ul>
+<li>Give it a name of your choice. For example: <code>fab_lakehouse</code></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
+</div>
+<p>After a minute or so, a new empty lakehouse will be created.</p>
+<div class="admonition example">
+<p><img alt="New lakehouse." src="../../img/new-lakehouse.png" /></p>
+</div>
+</li>
+<li>
+<p>View the new lakehouse, and note that the <strong>Lakehouse explorer</strong> pane on the left enables you to browse tables and files in the lakehouse:</p>
+<ul>
+<li>
+<p>The <strong>Tables</strong> folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source <em>Delta Lake</em> file format, commonly used in Apache Spark.</p>
+</li>
+<li>
+<p>The <strong>Files</strong> folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create shortcuts in this folder to reference data that is stored externally.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Currently, there are no tables or files in this lakehouse.</p>
+<h2 id="step-4-upload-a-file">Step 4: Upload a file</h2>
+<p>Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).</p>
+<ol>
+<li>
+<p>Download the <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv">sales.csv</a> file from <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv">https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv</a>, </p>
+<ul>
+<li>Save it as <code>sales.csv</code> on your local computer (or lab VM if applicable).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>To download the file, open a new tab in the browser and paste in the URL.</li>
+<li>Right click anywhere on the page containing the data and select "Save as" to save the data as a CSV file.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Return to the web browser tab containing your lakehouse</p>
+<ul>
+<li>Click the <strong>...</strong> menu for the <strong>Files</strong> folder in the <strong>Explorer pane</strong> select <strong>New subfolder</strong></li>
+<li>Name the new subfolder: <code>data</code></li>
+<li>Click <strong>Create</strong></li>
+</ul>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the new <strong>data</strong> folder, select <strong>Upload</strong> and <strong>Upload files</strong>.</p>
+<ul>
+<li>Then upload the <strong>sales.csv</strong> file from your local computer (or lab VM if applicable).</li>
+</ul>
+</li>
+<li>
+<p>After the file has been uploaded, select the <strong>Files/data</strong> folder and verify that the <strong>sales.csv</strong> file has been uploaded, as shown here:</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of uploaded sales.csv file in a lakehouse." src="../../img/01-uploaded-sales-file.png" /></p>
+</div>
+</li>
+<li>
+<p>Select the <strong>sales.csv</strong> file to see a preview of its contents.</p>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>sales.csv</strong> file does not automatically appear, in the <strong>...</strong> menu for the <strong>data</strong> folder, select <strong>Refresh</strong>.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-5-explore-shortcuts">Step 5: Explore shortcuts</h2>
+<p>In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.</p>
+<ol>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>Files</strong> folder, select <strong>New shortcut</strong>.</p>
+</li>
+<li>
+<p>View the available data source types for shortcuts.</p>
+<ul>
+<li>Then close the <strong>New shortcut</strong> dialog box without creating a shortcut.</li>
+</ul>
+</li>
+</ol>
+<h2 id="step-6-load-file-data-into-a-table">Step 6: Load file data into a table</h2>
+<p>The sales data you uploaded is in a file, which you can work with directly by using Apache Spark code. However, in many scenarios you may want to load the data from the file into a table so that you can query it using SQL.</p>
+<ol>
+<li>
+<p>In the <strong>Explorer</strong> pane, select the <strong>Files/data</strong> folder so you can see the <strong>sales.csv</strong> file it contains.</p>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>sales.csv</strong> file, select <strong>Load to Tables &gt; New table</strong>.</p>
+<div class="admonition example">
+<p><img alt="Load to tables - New table." src="../../img/qa-01-load-to-tables.png" /></p>
+</div>
+</li>
+<li>
+<p>In <strong>Load to table</strong> dialog box, set the table name to <strong>sales</strong> and confirm the load operation.</p>
+<ul>
+<li>Then wait for the table to be created and loaded.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>sales</strong> table does not automatically appear, in the <strong>...</strong> menu for the <strong>Tables</strong> folder, select <strong>Refresh</strong>.</p>
+</div>
+</li>
+<li>
+<p>In the <strong>Explorer</strong> pane, select the <strong>sales</strong> table that has been created to view the data:</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of a table preview." src="../../img/qa-01-table-preview.png" /></p>
+</div>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>sales</strong> table, select <strong>View files</strong> to see the underlying files for this table:</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of a table preview." src="../../img/qa-01-delta-table-files.png" /></p>
+</div>
+<blockquote>
+<p>Files for a delta table are stored in <em>Parquet</em> format, and include a subfolder named <code>_delta_log</code> in which details of transactions applied to the table are logged.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="step-7-use-sql-to-query-tables">Step 7: Use SQL to query tables</h2>
+<p>When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL <code>SELECT</code> statements.</p>
+<ol>
+<li>
+<p>At the top-right of the Lakehouse page, switch from Lakehouse to SQL analytics endpoint.</p>
+<ul>
+<li>Then wait a short time until the SQL analytics endpoint for your lakehouse opens in a visual interface from which you can query its tables.</li>
+</ul>
+</li>
+<li>
+<p>Use the <strong>New SQL query</strong> button to open a new query editor, and enter the following SQL query:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Item</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">UnitPrice</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Revenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Item</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Revenue</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> <strong>Run</strong> button to run the query and view the results, which should show the total revenue for each product.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of a SQL query with results." src="../../img/qa-01-sql-query.png" /></p>
+</div>
+</li>
+</ol>
+<h2 id="step-8-create-a-visual-query">Step 8: Create a visual query</h2>
+<p>While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.</p>
+<ol>
+<li>
+<p>On the toolbar, expand the <strong>New SQL query</strong> option and select <strong>New visual query</strong>.</p>
+</li>
+<li>
+<p>Drag the <strong>sales</strong> table (under dbo &gt; Tables) to the new visual query editor pane that opens to create a Power Query as shown here:</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of a Visual query." src="../../img/qa-01-visual-query.png" /></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Manage columns</strong> menu, select <strong>Choose columns</strong>.</p>
+<ul>
+<li>Then select only the <strong>SalesOrderNumber</strong> and <strong>SalesOrderLineNumber</strong> columns. Click <strong>OK</strong></li>
+</ul>
+<div class="admonition quote">
+<p><img alt="Screenshot of a Choose columns dialog box." src="../../img/01-choose-columns.png" /></p>
+</div>
+</li>
+<li>
+<p>in the <strong>Transform</strong> menu, select <strong>Group by</strong>. Then group the data by using the following <strong>Basic</strong> settings:</p>
+<ul>
+<li><strong>Group by</strong>: SalesOrderNumber</li>
+<li><strong>New column name</strong>: <code>LineItems</code></li>
+<li><strong>Operation</strong>: Count distinct values</li>
+<li><strong>Column</strong>: SalesOrderLineNumber (<em>if not greyed out</em>)</li>
+</ul>
+<p>When you're done, the results pane under the visual query shows the number of line items for each sales order.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of a Visual query with results." src="../../img/qa-01-visual-query-results.png" /></p>
+</div>
+</li>
+</ol>
+<hr />
+<h2 id="clean-up-resources">Clean up resources</h2>
+<p>In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default semantic model to support data visualizations.</p>
+<p>Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.</p>
+<ol>
+<li>
+<p>Navigate to Microsoft Fabric in your browser.</p>
+</li>
+<li>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
+</li>
+<li>
+<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Delete</strong> to delete the workspace.</p>
+</li>
+</ol>
+<hr />
+<p><small><b>Source:
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html</a>
+</b></small></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

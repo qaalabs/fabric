@@ -1,0 +1,1374 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../18-monitor-hub/instructions/">
+      
+      
+        <link rel="next" href="../../21-deployment-pipelines/instructions/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Instructions - MS Fabic Labs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#19-secure-data-access-in-microsoft-fabric" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MS Fabic Labs" class="md-header__button md-logo" aria-label="MS Fabic Labs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MS Fabic Labs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instructions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MS Fabic Labs" class="md-nav__button md-logo" aria-label="MS Fabic Labs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+
+    </a>
+    MS Fabic Labs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Microsoft Fabric
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Microsoft Fabric
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    01 Lakehouse
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 Lakehouse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-lakehouse/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-lakehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    05 Dataflows (Gen2)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            05 Dataflows (Gen2)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-dataflows-gen2/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-dataflows-gen2/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    03b Medallion Lakehouse
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            03b Medallion Lakehouse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03b-medallion-lakehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    04 Ingest Pipeline
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            04 Ingest Pipeline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-ingest-pipeline/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-ingest-pipeline/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    06c Monitor Data Warehouse
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            06c Monitor Data Warehouse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06c-monitor-data-warehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    18 Monitor Hub
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            18 Monitor Hub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../18-monitor-hub/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    19 Secure Data Access
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            19 Secure Data Access
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-signing-in-to-microsoft-fabric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Signing in to Microsoft Fabric
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-data-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a data warehouse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a lakehouse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-workspace-access-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply workspace access controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-item-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply item access control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-onelake-data-access-roles-in-a-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply OneLake data access roles in a Lakehouse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean up resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    21 Deployment Pipelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            21 Deployment Pipelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../21-deployment-pipelines/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="19-secure-data-access-in-microsoft-fabric">19 ~ Secure data access in Microsoft Fabric</h1>
+<p>Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles.</p>
+<p>This lab takes approximately <strong>45</strong> minutes to complete.</p>
+<h2 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h2>
+<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
+<ol>
+<li>
+<p>Using an <strong>incognito/private mode browser tab</strong> navigate to the <a href="https://app.fabric.microsoft.com/">Fabric portal</a> at: <a href="https://fabric.microsoft.com">https://fabric.microsoft.com</a></p>
+</li>
+<li>
+<p>Follow the prompts, and sign in with the user credentials from the QA Platform:</p>
+<ul>
+<li>Email</li>
+<li>Password</li>
+</ul>
+</li>
+<li>
+<p>After signing in, you will be redirected to the Fabric home page:</p>
+<div class="admonition quote">
+<p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric">Microsoft Fabric home page</a> in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.</p>
+</li>
+<li>
+<p>In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Create a <strong>New workspace</strong>:</p>
+<ul>
+<li>Give it a name of your choice. For example: <code>fab_workspace</code></li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
+</ul>
+</li>
+<li>
+<p>When your new workspace opens, it should be empty.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
+</div>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: When you create a workspace, you automatically become a member of the Workspace Admin role.</p>
+</blockquote>
+<h2 id="create-a-data-warehouse">Create a data warehouse</h2>
+<p>Next, create a data warehouse in the workspace you created:</p>
+<ol>
+<li>
+<p>Click <strong>+ New Item</strong>. On the <em>New item</em> page, under the <em>Store Data</em> section, select <strong>Sample warehouse</strong> and create a new data warehouse with a name of your choice.</p>
+<p>After a minute or so, a new warehouse will be created:</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of a new warehouse." src="../../img/sample-data-warehouse.png" /></p>
+</div>
+</li>
+</ol>
+<h2 id="create-a-lakehouse">Create a lakehouse</h2>
+<p>Next, create a lakehouse in the workspace you created.</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Select the workspace you created.</p>
+</li>
+<li>
+<p>In the workspace, select the <strong>+ New Item</strong> button and then select <strong>Lakehouse</strong>. Create a new Lakehouse with the name of your choice.</p>
+</li>
+</ol>
+<p>After a minute or so, a new Lakehouse will be created:</p>
+<div class="codehilite"><pre><span></span><code>!!! quote &quot;&quot;
+    ![Screenshot of a new lakehouse in Fabric.](../img/sample-lakehouse.png)
+</code></pre></div>
+
+<ol>
+<li>Select the <strong>Start with sample data</strong> tile and then select the <strong>Public holidays</strong> sample. After a minute or so, the lakehouse will be populated with data.</li>
+</ol>
+<h2 id="apply-workspace-access-controls">Apply workspace access controls</h2>
+<p>Workspace roles are used to control access to workspaces and the content within them. Workspace roles can be assigned when users need to see all items in a workspace, when they need to manage workspace access, or create new Fabric items, or when they need specific permissions to view, modify or share content in the workspace.  </p>
+<p>In this exercise, you add a user to a workspace role, apply permissions and, see what is viewable when each set of permissions is applied. You open two browsers and sign-in as different users. In one browser, you'll be a <strong>Workspace Admin</strong> and in the other, you'll sign-in as a second, less privileged user. In one browser, the Workspace Admin changes permissions for the second user and in the second browser, you're able to see the effects of changing permissions.  </p>
+<ol>
+<li>
+<p>In the menu bar on the left, select <strong>Workspaces</strong> (the icon looks similar to &#128455;).</p>
+</li>
+<li>
+<p>Next select the workspace you created.</p>
+</li>
+<li>
+<p>Select on <strong>Manage access</strong> on the top of the screen.</p>
+<blockquote>
+<p><strong>Note</strong>: You'll see the user you're logged, who is a a member of the <strong>Workspace Admin</strong> role because you created the workspace. No other users are assigned access to the workspace yet.</p>
+</blockquote>
+</li>
+<li>
+<p>Next, you'll see what a user without permissions on the workspace can view. In your browser, open an InPrivate window. In the Microsoft Edge browser, select the ellipse at the top right corner and select <strong>New InPrivate Window</strong>.</p>
+</li>
+<li>
+<p>Enter <a href="https://app.fabric.microsoft.com">https://app.fabric.microsoft.com</a> and sign-in as the second user you're using for testing.  </p>
+</li>
+<li>
+<p>On the bottom left corner of your screen, select <strong>Microsoft Fabric</strong> and then select <strong>Data Warehouse</strong>. Next select <strong>Workspaces</strong> (the icon looks similar to &#128455;).  </p>
+<blockquote>
+<p><strong>Note:</strong> The second user doesn't have access to the workspace, so it's not viewable.</p>
+</blockquote>
+</li>
+<li>
+<p>Next, you assign the <strong>Workspace Viewer</strong> role to the second user and see that the role grants read access to the warehouse in the workspace.  </p>
+</li>
+<li>
+<p>Return to the browser window where you're logged in as the Workspace Admin. Ensure you're still on the page that shows the workspace you created. It should have your new workspace items, and the sample warehouse and lakehouse, listed at the bottom of the page.</p>
+</li>
+<li>
+<p>Select <strong>Manage access</strong> at the top right of the screen.</p>
+</li>
+<li>
+<p>Select <strong>Add people or groups</strong>. Enter the email of the second user you're testing with. Select <strong>Add</strong> to assign the user to the workspace <strong>Viewer</strong> role.</p>
+</li>
+<li>
+<p>Return to the InPrivate browser window where you're logged in as the second user and select refresh button on the browser to refresh session permissions assigned to the second user.</p>
+</li>
+<li>
+<p>Select the <strong>Workspaces</strong> icon on the left menu bar (the icon looks similar to &#128455;) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the <strong>Workspace Viewer</strong> role.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of workspace items in Fabric." src="../../img/19-workspace-viewer-view.png" /></p>
+</div>
+</li>
+<li>
+<p>Select the warehouse and open it.</p>
+</li>
+<li>
+<p>Select the <strong>Date</strong> table and wait for the rows to be loaded. You can see the rows because as a member of the Workspace Viewer role, you have CONNECT and ReadData permission on tables in the warehouse. For more information on permissions granted to the Workspace Viewer role, see <a href="https://learn.microsoft.com/en-us/fabric/data-warehouse/workspace-roles">Workspace roles</a>.</p>
+</li>
+<li>
+<p>Next, select the <strong>Workspaces</strong> icon on the left menu bar, then select the lakehouse.</p>
+</li>
+<li>
+<p>When the lakehouse opens, click on the dropdown box at the top right corner of the screen that says <strong>Lakehouse</strong> and select <strong>SQL analytics endpoint</strong>.</p>
+</li>
+<li>
+<p>Select the <strong>publicholidays</strong> table and wait for the data to be displayed. Data in the lakehouse table is readable from the SQL analytics endpoint because the user is a member of the Workspace Viewer role that grants read permissions on the SQL analytics endpoint.</p>
+</li>
+</ol>
+<h2 id="apply-item-access-control">Apply item access control</h2>
+<p>Item permissions control access to individual Fabric items within a workspace, like warehouses, lakehouses and semantic models. In this exercise, you remove the <strong>Workspace Viewer</strong> permissions applied in the previous exercise and then apply item level permissions on the warehouse so a less privileged user can only view the warehouse data, not the lakehouse data.</p>
+<ol>
+<li>
+<p>Return to the browser window where you're logged in as the Workspace Admin. Select <strong>Workspaces</strong> from the left navigation pane. </p>
+</li>
+<li>
+<p>Select the workspace that you created to open it.</p>
+</li>
+<li>
+<p>Select <strong>Manage access</strong> from the top of the screen.</p>
+</li>
+<li>
+<p>Select the word <strong>Viewer</strong> under the name of the second user. On the menu that appears, select <strong>Remove</strong>.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of workspace access dropdown in Fabric." src="../../img/19-workspace-access.png" /></p>
+</div>
+</li>
+<li>
+<p>Close the <strong>Manage access</strong> section.</p>
+</li>
+<li>
+<p>In the workspace, hover over the name of your warehouse and an ellipse (<strong>...</strong>) will appear. Select the ellipse and select <strong>Manage permissions</strong></p>
+</li>
+<li>
+<p>Select <strong>Add user</strong> and enter the name of the second user.</p>
+</li>
+<li>
+<p>In the box that appears, under <strong>Additional permissions</strong> check <strong>Read all data using SQL (ReadData)</strong> and uncheck all other boxes.</p>
+<p><img alt="Screenshot of warehouse permissions being granted in Fabric." src="../../img/19-grant-warehouse-access.png" /></p>
+</li>
+<li>
+<p>Select <strong>Grant</strong></p>
+</li>
+<li>
+<p>Return to the browser window where you're logged in as the second user. Refresh the browser view.</p>
+</li>
+<li>
+<p>The second user no longer has access to the workspace and instead has access to only the warehouse. You can no longer browse workspaces on the left navigation pane to find the warehouse. Select <strong>OneLake</strong> on the left navigation menu to find the warehouse. </p>
+</li>
+<li>
+<p>Select the warehouse. On the screen that appears, select <strong>Open</strong> from the top menu bar.</p>
+</li>
+<li>
+<p>When the warehouse view appears, select the <strong>Date</strong> table to view table data. The rows are viewable because the user still has read access to the warehouse because ReadData permissions were applied by using item permissions on the warehouse.</p>
+</li>
+</ol>
+<h2 id="apply-onelake-data-access-roles-in-a-lakehouse">Apply OneLake data access roles in a Lakehouse</h2>
+<p>OneLake data access roles let you create custom roles within a Lakehouse and grant read permissions to folders you specify. OneLake data access roles is currently a Preview feature.</p>
+<p>In this exercise, you assign an item permission and create a OneLake data access role and experiment with how they work together to restrict access to data in a Lakehouse.  </p>
+<ol>
+<li>
+<p>Stay in the browser where you're logged in as the second user.  </p>
+</li>
+<li>
+<p>Select <strong>OneLake</strong> on the left navigation bar. The second user doesn't see the lakehouse.  </p>
+</li>
+<li>
+<p>Return to the browser where you're logged in as the Workspace Admin.</p>
+</li>
+<li>
+<p>Select <strong>Workspaces</strong> on the left menu and select your workspace. Hover over the name of the lakehouse.  </p>
+</li>
+<li>
+<p>Select on the ellipse (<strong>...</strong>) to the right of the ellipse and select <strong>Manage permissions</strong></p>
+<div class="admonition quote">
+<p><img alt="Screenshot of setting permissions on a lakehouse in Fabric." src="../../img/19-lakehouse-manage-permissions.png" /></p>
+</div>
+</li>
+<li>
+<p>On the screen that appears, select <strong>Add user</strong>.</p>
+</li>
+<li>
+<p>Assign the second user to the lakehouse and ensure none of the checkboxes on the <strong>Grant People Access</strong> window are checked.  </p>
+<div class="admonition quote">
+<p><img alt="Screenshot of the grant access lakehouse window in Fabric." src="../../img/19-grant-people-access-window.png" /></p>
+</div>
+</li>
+<li>
+<p>Select <strong>Grant</strong>. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we'll validate this.</p>
+</li>
+<li>
+<p>Return to the browser where you're logged in as the second user. Refresh the browser.</p>
+</li>
+<li>
+<p>Select <strong>OneLake</strong> in the left navigation pane.  </p>
+</li>
+<li>
+<p>Select the lakehouse and open it. </p>
+</li>
+<li>
+<p>Select <strong>Open</strong> on the top menu bar. You're unable to expand the tables or files even though read permission was granted. Next, you grant the second user access to a specific folder using OneLake data access permissions.</p>
+</li>
+<li>
+<p>Return to the browser where you're logged in as the workspace administrator.</p>
+</li>
+<li>
+<p>Select <strong>Workspaces</strong> from the left navigation bar.</p>
+</li>
+<li>
+<p>Select your workspace name.</p>
+</li>
+<li>
+<p>Select the lakehouse.</p>
+<p>When the lakehouse opens, select <strong>Manage OneLake data access</strong> on the top menu bar and enable the feature by clicking the <strong>Continue</strong> button.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of the Manage OneLake data access (preview) feature on the menu bar in Fabric." src="../../img/19-manage-onelake-roles.png" /></p>
+</div>
+</li>
+<li>
+<p>Select new role on the <strong>Manage OneLake data access (preview)</strong> screen that appears.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of the new role functionality in the manage OneLake data access feature." src="../../img/19-create-onelake-role.png" /></p>
+</div>
+</li>
+<li>
+<p>Create a new role called <strong>publicholidays</strong> that can only access the publicholidays folder as shown in the screenshot below.</p>
+<div class="admonition quote">
+<p><img alt="Screenshot of the folder assignment in the manage OneLake data access feature." src="../../img/19-new-data-access-role.png" /></p>
+</div>
+</li>
+<li>
+<p>When the role finishes creating, select <strong>Assign role</strong> and assign the role to your second user, select <strong>Add</strong> and, select <strong>Save</strong>.</p>
+<div class="admonition quote"></div>
+<p><img alt="Screenshot of the folder assignment in the manage OneLake data access feature." src="../../img/19-assign-role.png" /></p>
+</li>
+<li>
+<p>Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.  </p>
+</li>
+<li>
+<p>Select the <strong>publicholidays</strong> table and wait for the data to load. Only the data in the publicholidays table is accessible to the user because the user was assigned to the custom OneLake data access role. The role permits them to see only the data in the publicholidays table, not data in any of the other tables, files, or folders.</p>
+</li>
+</ol>
+<h2 id="clean-up-resources">Clean up resources</h2>
+<p>In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.</p>
+<ol>
+<li>
+<p>Navigate to Microsoft Fabric in your browser.</p>
+</li>
+<li>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
+</li>
+<li>
+<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Delete</strong> to delete the workspace.</p>
+</li>
+</ol>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
