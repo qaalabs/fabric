@@ -659,8 +659,8 @@ Note that you can't use the **default semantic model** that is automatically cre
 
 4. Select your transformed gold tables to include in your semantic model and select **Confirm**.
 
-    - dimdate_gold
     - dimcustomer_gold
+    - dimdate_gold
     - dimproduct_gold
     - factsales_gold
 
