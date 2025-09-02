@@ -12,7 +12,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../05-dataflows-gen2/">
+        <link rel="next" href="../../18-monitor-hub/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-01-create-a-microsoft-fabric-lakehouse" class="md-skip">
+        <a href="#lab-09-ingest-real-time-data-with-eventstream-in-fabric" class="md-skip">
           Skip to content
         </a>
       
@@ -283,8 +283,6 @@
                 
   
   
-    
-  
   
   
     
@@ -300,15 +298,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../01-lakehouse/" class="md-nav__link ">
               
   
   
@@ -327,7 +325,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             1 Lakehouse
@@ -340,32 +338,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Instructions
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../01-lakehouse/instructions/" class="md-nav__link">
         
   
   
@@ -376,107 +352,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-signing-in-to-microsoft-fabric" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Signing in to Microsoft Fabric
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Create a workspace
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-create-a-lakehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Create a lakehouse
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-upload-a-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Upload a file
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-explore-shortcuts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 5: Explore shortcuts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-load-file-data-into-a-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 6: Load file data into a table
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-use-sql-to-query-tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 7: Use SQL to query tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-8-create-a-visual-query" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 8: Create a visual query
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clean-up-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clean up resources
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -838,6 +713,8 @@
                 
   
   
+    
+  
   
   
     
@@ -853,15 +730,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../09-real-time-analytics-eventstream/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -880,7 +757,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             09 Real-time Eventstream
@@ -893,10 +770,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../09-real-time-analytics-eventstream/instructions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -907,6 +806,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-signing-in-to-microsoft-fabric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Signing in to Microsoft Fabric
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-an-eventhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create an eventhouse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-an-eventstream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Create an Eventstream
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-add-a-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Add a source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-add-a-destination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Add a destination
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-query-captured-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Query captured data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-transform-event-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Transform event data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-query-the-transformed-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Query the transformed data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean up resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1201,7 +1210,7 @@
 
 
 
-<h1 id="lab-01-create-a-microsoft-fabric-lakehouse">Lab 01 ~ Create a Microsoft Fabric Lakehouse</h1>
+<h1 id="lab-09-ingest-real-time-data-with-eventstream-in-fabric">Lab 09 ~ Ingest real-time data with Eventstream in Fabric</h1>
 <div class="admonition info">
 <p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
 </div>
@@ -1252,190 +1261,229 @@
 </div>
 </li>
 </ol>
-<h2 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h2>
-<p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
+<h2 id="step-3-create-an-eventhouse">Step 3: Create an eventhouse</h2>
+<p>Now that you have a workspace, you can start creating the Fabric items you'll need for your real-time intelligence solution. we'll start by creating an eventhouse.</p>
 <ol>
 <li>
-<p>On the menu bar on the left, select <strong>Create</strong>. In the New page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
-<ul>
-<li>Give it a name of your choice. For example: <code>fab_lakehouse</code></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
-</div>
-<p>After a minute or so, a new empty lakehouse will be created.</p>
-<div class="admonition quote">
-<p><img alt="New lakehouse." src="../../img/new-lakehouse.png" /></p>
-</div>
+<p>In the workspace you just created, select <strong>+ New item</strong>. In the <em>New item</em> pane, select <strong>Eventhouse</strong>, giving it a unique name of your choice.</p>
 </li>
 <li>
-<p>View the new lakehouse, and note that the <strong>Lakehouse explorer</strong> pane on the left enables you to browse tables and files in the lakehouse:</p>
-<ul>
-<li>
-<p>The <strong>Tables</strong> folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source <em>Delta Lake</em> file format, commonly used in Apache Spark.</p>
+<p>Close any tips or prompts that are displayed until you see your new empty eventhouse.</p>
+<p><img alt="Create eventhouse" src="../../img/09-create-eventhouse.png" /></p>
 </li>
 <li>
-<p>The <strong>Files</strong> folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create shortcuts in this folder to reference data that is stored externally.</p>
+<p>In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse.</p>
 </li>
-</ul>
-</li>
-</ol>
-<p>Currently, there are no tables or files in this lakehouse.</p>
-<h2 id="step-4-upload-a-file">Step 4: Upload a file</h2>
-<p>Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).</p>
-<ol>
 <li>
-<p>Download the <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv">sales.csv</a> file from <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv">https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv</a>, </p>
-<ul>
-<li>Save it as <code>sales.csv</code> on your local computer (or lab VM if applicable).</li>
-</ul>
+<p>Select the KQL database to view it.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>To download the file, open a new tab in the browser and paste in the URL.</li>
-<li>Right click anywhere on the page containing the data and select "Save as" to save the data as a CSV file.</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Return to the web browser tab containing your lakehouse</p>
-<ul>
-<li>Click the <strong>...</strong> menu for the <strong>Files</strong> folder in the <strong>Explorer pane</strong> select <strong>New subfolder</strong></li>
-<li>Name the new subfolder: <code>data</code></li>
-<li>Click <strong>Create</strong></li>
-</ul>
-</li>
-<li>
-<p>In the <strong>...</strong> menu for the new <strong>data</strong> folder, select <strong>Upload</strong> and <strong>Upload files</strong>.</p>
-<ul>
-<li>Then upload the <strong>sales.csv</strong> file from your local computer (or lab VM if applicable).</li>
-</ul>
-</li>
-<li>
-<p>After the file has been uploaded, select the <strong>Files/data</strong> folder and verify that the <strong>sales.csv</strong> file has been uploaded, as shown here:</p>
-<div class="admonition quote">
-<p><img alt="Uploaded sales.csv file in a lakehouse." src="../../img/01-uploaded-sales-file.png" /></p>
-</div>
-</li>
-<li>
-<p>Select the <strong>sales.csv</strong> file to see a preview of its contents.</p>
-<div class="admonition tip">
-<p class="admonition-title">If the <strong>sales.csv</strong> file does not automatically appear, in the <strong>...</strong> menu for the <strong>data</strong> folder, select <strong>Refresh</strong>.</p>
+<p class="admonition-title">Note: Currently there are no tables in the database.</p>
+<p>In the rest of this exercise you'll use an eventstream to load data from a real-time source into a table.</p>
 </div>
 </li>
 </ol>
-<h2 id="step-5-explore-shortcuts">Step 5: Explore shortcuts</h2>
-<p>In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.</p>
+<h2 id="step-4-create-an-eventstream">Step 4: Create an Eventstream</h2>
 <ol>
 <li>
-<p>In the <strong>...</strong> menu for the <strong>Files</strong> folder, select <strong>New shortcut</strong>.</p>
+<p>In the main page of your KQL database, select <strong>Get data</strong>.</p>
 </li>
 <li>
-<p>View the available data source types for shortcuts.</p>
-<ul>
-<li>Then close the <strong>New shortcut</strong> dialog box without creating a shortcut.</li>
-</ul>
+<p>For the data source, select <strong>Eventstream</strong> &gt; <strong>New eventstream</strong>. Name the Eventstream <code>Bicycle-data</code>.</p>
+<p>The creation of your new event stream in the workspace will be completed in just a few moments. Once established, you will be automatically redirected to the primary editor, ready to begin integrating sources into your event stream.</p>
+<div class="admonition quote">
+<p><img alt="Empty eventstream." src="../../img/09-empty-eventstream.png" /></p>
+</div>
 </li>
 </ol>
-<h2 id="step-6-load-file-data-into-a-table">Step 6: Load file data into a table</h2>
-<p>The sales data you uploaded is in a file, which you can work with directly by using Apache Spark code. However, in many scenarios you may want to load the data from the file into a table so that you can query it using SQL.</p>
+<h2 id="step-5-add-a-source">Step 5: Add a source</h2>
 <ol>
 <li>
-<p>In the <strong>Explorer</strong> pane, select the <strong>Files/data</strong> folder so you can see the <strong>sales.csv</strong> file it contains.</p>
+<p>In the Eventstream canvas, select <strong>Use sample data</strong>.</p>
 </li>
 <li>
-<p>In the <strong>...</strong> menu for the <strong>sales.csv</strong> file, select <strong>Load to Tables &gt; New table</strong>.</p>
+<p>Name the source <code>Bicycles</code>, and select the <strong>Bicycles</strong> sample data.</p>
+<p>Your stream will be mapped and you will be automatically displayed on the <strong>eventstream canvas</strong>.</p>
 <div class="admonition quote">
-<p><img alt="Load to tables - New table." src="../../img/qa-01-load-to-tables.png" /></p>
+<p><img alt="Review the eventstream canvas" src="../../img/09-real-time-intelligence-eventstream-sourced.png" /></p>
 </div>
-</li>
-<li>
-<p>In <strong>Load to table</strong> dialog box, set the table name to <strong>sales</strong> and confirm the load operation.</p>
-<ul>
-<li>Then wait for the table to be created and loaded.</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">If the <strong>sales</strong> table does not automatically appear, in the <strong>...</strong> menu for the <strong>Tables</strong> folder, select <strong>Refresh</strong>.</p>
-</div>
-</li>
-<li>
-<p>In the <strong>Explorer</strong> pane, select the <strong>sales</strong> table that has been created to view the data:</p>
-<div class="admonition quote">
-<p><img alt="Screenshot of a table preview." src="../../img/qa-01-table-preview.png" /></p>
-</div>
-</li>
-<li>
-<p>In the <strong>...</strong> menu for the <strong>sales</strong> table, select <strong>View files</strong> to see the underlying files for this table:</p>
-<div class="admonition quote">
-<p><img alt="Screenshot of a table preview." src="../../img/qa-01-delta-table-files.png" /></p>
-</div>
-<blockquote>
-<p>Files for a delta table are stored in <em>Parquet</em> format, and include a subfolder named <code>_delta_log</code> in which details of transactions applied to the table are logged.</p>
-</blockquote>
 </li>
 </ol>
-<h2 id="step-7-use-sql-to-query-tables">Step 7: Use SQL to query tables</h2>
-<p>When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL <code>SELECT</code> statements.</p>
+<h2 id="step-6-add-a-destination">Step 6: Add a destination</h2>
 <ol>
 <li>
-<p>At the top-right of the Lakehouse page, switch from Lakehouse to SQL analytics endpoint.</p>
-<ul>
-<li>Then wait a short time until the SQL analytics endpoint for your lakehouse opens in a visual interface from which you can query its tables.</li>
-</ul>
+<p>Select the <strong>Transform events or add destination</strong> tile and search for <strong>Eventhouse</strong>.</p>
 </li>
 <li>
-<p>Use the <strong>New SQL query</strong> button to open a new query editor, and enter the following SQL query:</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Item</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">UnitPrice</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Revenue</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">sales</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Item</span>
+<p>In the <strong>Eventhouse</strong> pane, configure the following setup options.</p>
+</li>
+<li><strong>Data ingestion mode:</strong>: Event processing before ingestion</li>
+<li><strong>Destination name:</strong> <code>bikes-table</code></li>
+<li><strong>Workspace:</strong> <em>Select the workspace you created at the beginning of this exercise</em></li>
+<li><strong>Eventhouse</strong>: <em>Select your eventhouse</em></li>
+<li><strong>KQL database:</strong> <em>Select your KQL database</em></li>
+<li><strong>Destination table:</strong> Create a new table named <code>bikes</code></li>
+<li>
+<p><strong>Input data format:</strong> JSON</p>
+<div class="admonition quote">
+<p><img alt="Eventstream destination settings." src="../../img/09-kql-database-event-processing-before-ingestion.png" /></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Eventhouse</strong> pane, select <strong>Save</strong>. </p>
+</li>
+<li>
+<p>On the toolbar, select <strong>Publish</strong>.</p>
+</li>
+<li>
+<p>Wait a minute or so for the data destination to become active. Then select the <strong>bikes-table</strong> node in the design canvas and view the <strong>Data preview</strong> pane underneath to see the latest data that has been ingested:</p>
+<div class="admonition quote">
+<p><img alt="A destination table in an eventstream." src="../../img/09-stream-data-preview.png" /></p>
+</div>
+</li>
+<li>
+<p>Wait a few minutes and then use the <strong>Refresh</strong> button to refresh the <strong>Data preview</strong> pane. The stream is running perpetually, so new data may have been added to the table.</p>
+</li>
+<li>
+<p>Beneath the eventstream design canvas, view the <strong>Data insights</strong> tab to see details of the data events that have been captured.</p>
+</li>
+</ol>
+<h2 id="step-7-query-captured-data">Step 7: Query captured data</h2>
+<p>The eventstream you have created takes data from the sample source of bicycle data and loads it into the database in your eventhouse. You can analyze the captured data by querying the table in the database.</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select your KQL database.</p>
+</li>
+<li>
+<p>On the <strong>database</strong> tab, in the toolbar for your KQL database, use the <strong>Refresh</strong> button to refresh the view until you see the <strong>bikes</strong> table under the database. Then select the <strong>bikes</strong> table.</p>
+<div class="admonition quote">
+<p><img alt="A table in a KQL database." src="../../img/09-kql-table.png" /></p>
+</div>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>bikes</strong> table, select <strong>Query table</strong> &gt; <strong>Records ingested in the last 24 hours</strong>.</p>
+</li>
+<li>
+<p>In the query pane, note that the following query has been generated and run, with the results shown beneath:</p>
+<div class="highlight"><pre><span></span><code><span class="c">// See the most recent data - records ingested in the last 24 hours.</span>
+<span class="n">bikes</span>
+<span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ingestion_time</span><span class="p">()</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="p">(</span><span class="n">now</span><span class="p">(-</span><span class="mi">1</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="err">..</span><span class="w"> </span><span class="n">now</span><span class="p">())</span>
 </code></pre></div>
 </li>
 <li>
-<p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> <strong>Run</strong> button to run the query and view the results, which should show the total revenue for each product.</p>
+<p>Select the query code and run it to see 24 hours of data from the table.</p>
 <div class="admonition quote">
-<p><img alt="SQL query with results." src="../../img/qa-01-sql-query.png" /></p>
+<p><img alt="KQL query." src="../../img/09-kql-query.png" /></p>
 </div>
 </li>
 </ol>
-<h2 id="step-8-create-a-visual-query">Step 8: Create a visual query</h2>
-<p>While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.</p>
+<h2 id="step-8-transform-event-data">Step 8: Transform event data</h2>
+<p>The data you've captured is unaltered from the source. In many scenarios, you may want to transform the data in the event stream before loading it into a destination.</p>
 <ol>
 <li>
-<p>On the toolbar, expand the <strong>New SQL query</strong> option and select <strong>New visual query</strong>.</p>
+<p>In the menu bar on the left, select the <strong>Bicycle-data</strong> eventstream.</p>
 </li>
 <li>
-<p>Drag the <strong>sales</strong> table (under dbo &gt; Tables) to the new visual query editor pane that opens to create a Power Query as shown here:</p>
+<p>On the toolbar, select <strong>Edit</strong> to edit the eventstream.</p>
+</li>
+<li>
+<p>In the <strong>Transform events</strong> menu, select <strong>Group by</strong> to add a new <strong>Group by</strong> node to the eventstream.</p>
+</li>
+<li>
+<p>Drag a connection from the output of the <strong>Bicycle-data</strong> node to the input of the new <strong>Group by</strong> node Then use the <em>pencil</em> icon in the <strong>Group by</strong> node to edit it.</p>
 <div class="admonition quote">
-<p><img alt="Visual query." src="../../img/qa-01-visual-query.png" /></p>
+<p><img alt="Add group by to the transformation event." src="../../img/09-eventstream-add-aggregates.png" /></p>
 </div>
 </li>
 <li>
-<p>In the <strong>Manage columns</strong> menu, select <strong>Choose columns</strong>.</p>
+<p>Configure out the properties of the <strong>Group by</strong> settings section:</p>
 <ul>
-<li>Then select only the <strong>SalesOrderNumber</strong> and <strong>SalesOrderLineNumber</strong> columns. Click <strong>OK</strong></li>
+<li><strong>Operation name:</strong> GroupByStreet</li>
+<li><strong>Aggregate type:</strong> <em>Select</em> Sum</li>
+<li><strong>Field:</strong> <em>select</em> No_Bikes. <em>Then select <strong>Add</strong> to create the function</em> SUM of No_Bikes</li>
+<li><strong>Group aggregations by (optional):</strong> Street</li>
+<li><strong>Time window</strong>: Tumbling</li>
+<li><strong>Duration</strong>: 5 seconds</li>
+<li><strong>Offset</strong>: 0 seconds</li>
 </ul>
-<div class="admonition quote">
-<p><img alt="Choose columns dialog box." src="../../img/01-choose-columns.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">This configuration will cause the eventstream to calculate the total number of bicycles in each street every 5 seconds.</p>
 </div>
 </li>
 <li>
-<p>in the <strong>Transform</strong> menu, select <strong>Group by</strong>. Then group the data by using the following <strong>Basic</strong> settings:</p>
-<ul>
-<li><strong>Group by</strong>: SalesOrderNumber</li>
-<li><strong>New column name</strong>: <code>LineItems</code></li>
-<li><strong>Operation</strong>: Count distinct values</li>
-<li><strong>Column</strong>: SalesOrderLineNumber (<em>if not greyed out</em>)</li>
-</ul>
-<p>When you're done, the results pane under the visual query shows the number of line items for each sales order.</p>
+<p>Save the configuration and return to the eventstream canvas, where an error is indicated (because you need to store the output from the transformation somewhere!).</p>
+</li>
+<li>
+<p>Use the <strong>+</strong> icon to the right of the <strong>GroupByStreet</strong> node to add a new <strong>Eventhouse</strong> node.</p>
+</li>
+<li>
+<p>Configure the new eventhouse node with the following options:</p>
+</li>
+<li><strong>Data ingestion mode:</strong>: Event processing before ingestion</li>
+<li><strong>Destination name:</strong> <code>bikes-by-street-table</code></li>
+<li><strong>Workspace:</strong> <em>Select the workspace you created at the beginning of this exercise</em></li>
+<li><strong>Eventhouse</strong>: <em>Select your eventhouse</em></li>
+<li><strong>KQL database:</strong> <em>Select your KQL database</em></li>
+<li><strong>Destination table:</strong> Create a new table named <code>bikes-by-street</code></li>
+<li>
+<p><strong>Input data format:</strong> JSON</p>
 <div class="admonition quote">
-<p><img alt="Visual query with results." src="../../img/qa-01-visual-query-results.png" /></p>
+<p><img alt="Table for grouped data." src="../../img/09-group-by-table.png" /></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Eventhouse</strong> pane, select <strong>Save</strong>. </p>
+</li>
+<li>
+<p>On the toolbar, select <strong>Publish</strong>.</p>
+</li>
+<li>
+<p>Wait a minute or so for the changes to become active.</p>
+</li>
+<li>
+<p>In the design canvas, select the <strong>bikes-by-street-table</strong> node, and view the <strong>data preview</strong> pane beneath the canvas.</p>
+<div class="admonition quote">
+<p><img alt="Table for grouped data." src="../../img/09-stream-table-with-windows.png" /></p>
+</div>
+<p>Note that the trasformed data includes the grouping field you specified (<strong>Street</strong>), the aggregation you specified (<strong>SUM_no_Bikes</strong>), and a timestamp field indicating the end of the 5 second tumbling window in which the event occurred (<strong>Window_End_Time</strong>).</p>
+</li>
+</ol>
+<h2 id="step-9-query-the-transformed-data">Step 9: Query the transformed data</h2>
+<p>Now you can query the bicycle data that has been transformed and loaded into a table by your eventstream</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select your KQL database.</p>
+</li>
+<li>
+<p>On the <strong>database</strong> tab, in the toolbar for your KQL database, use the <strong>Refresh</strong> button to refresh the view until you see the <strong>bikes-by-street</strong> table under the database.</p>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>bikes-by-street</strong> table, select <strong>Query data</strong> &gt; <strong>Show any 100 records</strong>.</p>
+</li>
+<li>
+<p>In the query pane, note that the following query is generated and run:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s">&#39;bikes-by-street&#39;</span><span class="p">]</span>
+<span class="p">|</span><span class="w"> </span><span class="k">take</span><span class="w"> </span><span class="mi">100</span>
+</code></pre></div>
+</li>
+<li>
+<p>Modify the KQL query to retrieve the total number of bikes per street within each 5 second window:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s">&#39;bikes-by-street&#39;</span><span class="p">]</span>
+<span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">TotalBikes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">tolong</span><span class="p">(</span><span class="n">SUM_No_Bikes</span><span class="p">))</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Window_End_Time</span><span class="p">,</span><span class="w"> </span><span class="n">Street</span>
+<span class="p">|</span><span class="w"> </span><span class="k">sort</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Window_End_Time</span><span class="w"> </span><span class="n">desc</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Street</span><span class="w"> </span><span class="n">asc</span>
+</code></pre></div>
+</li>
+<li>
+<p>Select the modified query and run it.</p>
+<p>The results show the number of bikes observed in each street within each 5 second time period.</p>
+<div class="admonition quote">
+<p><img alt="Query returning grouped data." src="../../img/09-kql-group-query.png" /></p>
 </div>
 </li>
 </ol>
 <hr />
 <h2 id="clean-up-resources">Clean up resources</h2>
-<p>In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default semantic model to support data visualizations.</p>
-<p>Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.</p>
+<p>In this exercise, you have created an eventhouse and populated tables in its database by using an eventstream.</p>
+<p>When you've finished exploring your KQL database, you can delete the workspace you created for this exercise.</p>
 <ol>
 <li>
 <p>Navigate to Microsoft Fabric in your browser.</p>
@@ -1452,7 +1500,7 @@
 </ol>
 <hr />
 <p><small><b>Source:
-<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html</a>
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/09-real-time-analytics-eventstream.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/09-real-time-analytics-eventstream.html</a>
 </b></small></p>
 
 
