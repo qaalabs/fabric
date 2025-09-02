@@ -1,3 +1,4 @@
-# Welcome to your new site
+# MS Fabric Labs
 
-Content is coming soon!
+This site hosts instructions for the MS Fabric labs
+
