@@ -7,19 +7,19 @@ nav:
   - Overview: index.md
 
   - "Microsoft Fabric":
-    - "1 Lakehouse":
+    - "01 Lakehouse":
       - 01-lakehouse/index.md
       - Instructions: 01-lakehouse/instructions.md
-    - "5 Dataflows (Gen2)": 
+    - "05 Dataflows (Gen2)": 
       - 05-dataflows-gen2/index.md
       - Instructions: 05-dataflows-gen2/instructions.md
     - "3b Medallion Architecture":
       - 03b-medallion-lakehouse/index.md
       - Instructions: 03b-medallion-lakehouse/instructions.md
-    - "4 Ingest Pipeline":
+    - "04 Ingest Pipeline":
       - 04-ingest-pipeline/index.md
       - Instructions: 04-ingest-pipeline/instructions.md
-    - "6c Monitor Data Warehouse":
+    - "06c Monitor Data Warehouse":
       - 06c-monitor-data-warehouse/index.md
       - Instructions: 06c-monitor-data-warehouse/instructions.md
     - "09 Real-time Eventstream":
@@ -91,3 +91,5 @@ markdown_extensions:
 
 plugins:
   - search
+  - glightbox
+
