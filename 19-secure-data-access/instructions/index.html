@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -41,7 +38,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -53,7 +50,17 @@
     
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -89,12 +96,12 @@
     <a href="../.." title="MS Fabric Labs" class="md-header__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -122,7 +129,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -131,15 +138,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -175,7 +182,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -189,7 +196,7 @@
     <a href="../.." title="MS Fabric Labs" class="md-nav__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
 
     </a>
     MS Fabric Labs
@@ -302,7 +309,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <div class="md-nav__link md-nav__container">
@@ -311,7 +318,7 @@
   
   
   <span class="md-ellipsis">
-    1 Lakehouse
+    01 Lakehouse
     
   </span>
   
@@ -328,7 +335,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            1 Lakehouse
+            01 Lakehouse
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -388,7 +395,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <div class="md-nav__link md-nav__container">
@@ -397,7 +404,7 @@
   
   
   <span class="md-ellipsis">
-    5 Dataflows (Gen2)
+    05 Dataflows (Gen2)
     
   </span>
   
@@ -414,7 +421,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            5 Dataflows (Gen2)
+            05 Dataflows (Gen2)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -474,7 +481,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <div class="md-nav__link md-nav__container">
@@ -560,7 +567,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4">
         
           
           <div class="md-nav__link md-nav__container">
@@ -569,7 +576,7 @@
   
   
   <span class="md-ellipsis">
-    4 Ingest Pipeline
+    04 Ingest Pipeline
     
   </span>
   
@@ -586,7 +593,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
-            4 Ingest Pipeline
+            04 Ingest Pipeline
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -646,7 +653,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
         
           
           <div class="md-nav__link md-nav__container">
@@ -655,7 +662,7 @@
   
   
   <span class="md-ellipsis">
-    6c Monitor Data Warehouse
+    06c Monitor Data Warehouse
     
   </span>
   
@@ -672,7 +679,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
-            6c Monitor Data Warehouse
+            06c Monitor Data Warehouse
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -732,7 +739,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6">
         
           
           <div class="md-nav__link md-nav__container">
@@ -818,7 +825,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1106,7 +1113,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1211,7 +1218,7 @@
 <li>
 <p>After signing in, you will be redirected to the Fabric home page:</p>
 <div class="admonition quote">
-<p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
 </div>
 </li>
 </ol>
@@ -1235,7 +1242,7 @@
 <li>
 <p>When your new workspace opens, it should be empty.</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-workspace.png" data-desc-position="bottom"><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png"></a></p>
 </div>
 </li>
 </ol>
@@ -1249,7 +1256,7 @@
 <p>Click <strong>+ New Item</strong>. On the <em>New item</em> page, under the <em>Store Data</em> section, select <strong>Sample warehouse</strong> and create a new data warehouse with a name of your choice.</p>
 <p>After a minute or so, a new warehouse will be created:</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of a new warehouse." src="../../img/sample-data-warehouse.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/sample-data-warehouse.png" data-desc-position="bottom"><img alt="Screenshot of a new warehouse." src="../../img/sample-data-warehouse.png"></a></p>
 </div>
 </li>
 </ol>
@@ -1267,7 +1274,7 @@
 </li>
 </ol>
 <p>After a minute or so, a new Lakehouse will be created:</p>
-<div class="codehilite"><pre><span></span><code>!!! quote &quot;&quot;
+<div class="codehilite"><pre><span></span><code>!!! quote ""
     ![Screenshot of a new lakehouse in Fabric.](../img/sample-lakehouse.png)
 </code></pre></div>
 
@@ -1279,7 +1286,7 @@
 <p>In this exercise, you add a user to a workspace role, apply permissions and, see what is viewable when each set of permissions is applied. You open two browsers and sign-in as different users. In one browser, you'll be a <strong>Workspace Admin</strong> and in the other, you'll sign-in as a second, less privileged user. In one browser, the Workspace Admin changes permissions for the second user and in the second browser, you're able to see the effects of changing permissions.  </p>
 <ol>
 <li>
-<p>In the menu bar on the left, select <strong>Workspaces</strong> (the icon looks similar to &#128455;).</p>
+<p>In the menu bar on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
 </li>
 <li>
 <p>Next select the workspace you created.</p>
@@ -1297,7 +1304,7 @@
 <p>Enter <a href="https://app.fabric.microsoft.com">https://app.fabric.microsoft.com</a> and sign-in as the second user you're using for testing.  </p>
 </li>
 <li>
-<p>On the bottom left corner of your screen, select <strong>Microsoft Fabric</strong> and then select <strong>Data Warehouse</strong>. Next select <strong>Workspaces</strong> (the icon looks similar to &#128455;).  </p>
+<p>On the bottom left corner of your screen, select <strong>Microsoft Fabric</strong> and then select <strong>Data Warehouse</strong>. Next select <strong>Workspaces</strong> (the icon looks similar to 🗇).  </p>
 <blockquote>
 <p><strong>Note:</strong> The second user doesn't have access to the workspace, so it's not viewable.</p>
 </blockquote>
@@ -1318,9 +1325,9 @@
 <p>Return to the InPrivate browser window where you're logged in as the second user and select refresh button on the browser to refresh session permissions assigned to the second user.</p>
 </li>
 <li>
-<p>Select the <strong>Workspaces</strong> icon on the left menu bar (the icon looks similar to &#128455;) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the <strong>Workspace Viewer</strong> role.</p>
+<p>Select the <strong>Workspaces</strong> icon on the left menu bar (the icon looks similar to 🗇) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the <strong>Workspace Viewer</strong> role.</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of workspace items in Fabric." src="../../img/19-workspace-viewer-view.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-workspace-viewer-view.png" data-desc-position="bottom"><img alt="Screenshot of workspace items in Fabric." src="../../img/19-workspace-viewer-view.png"></a></p>
 </div>
 </li>
 <li>
@@ -1354,7 +1361,7 @@
 <li>
 <p>Select the word <strong>Viewer</strong> under the name of the second user. On the menu that appears, select <strong>Remove</strong>.</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of workspace access dropdown in Fabric." src="../../img/19-workspace-access.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-workspace-access.png" data-desc-position="bottom"><img alt="Screenshot of workspace access dropdown in Fabric." src="../../img/19-workspace-access.png"></a></p>
 </div>
 </li>
 <li>
@@ -1369,7 +1376,7 @@
 <li>
 <p>In the box that appears, under <strong>Additional permissions</strong> check <strong>Read all data using SQL (ReadData)</strong> and uncheck all other boxes.</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of warehouse permissions being granted in Fabric." src="../../img/19-grant-warehouse-access.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-grant-warehouse-access.png" data-desc-position="bottom"><img alt="Screenshot of warehouse permissions being granted in Fabric." src="../../img/19-grant-warehouse-access.png"></a></p>
 </div>
 </li>
 <li>
@@ -1407,7 +1414,7 @@
 <li>
 <p>Select on the ellipse (<strong>...</strong>) to the right of the ellipse and select <strong>Manage permissions</strong></p>
 <div class="admonition quote">
-<p><img alt="Screenshot of setting permissions on a lakehouse in Fabric." src="../../img/19-lakehouse-manage-permissions.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-lakehouse-manage-permissions.png" data-desc-position="bottom"><img alt="Screenshot of setting permissions on a lakehouse in Fabric." src="../../img/19-lakehouse-manage-permissions.png"></a></p>
 </div>
 </li>
 <li>
@@ -1416,7 +1423,7 @@
 <li>
 <p>Assign the second user to the lakehouse and ensure none of the checkboxes on the <strong>Grant People Access</strong> window are checked.  </p>
 <div class="admonition quote">
-<p><img alt="Screenshot of the grant access lakehouse window in Fabric." src="../../img/19-grant-people-access-window.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-grant-people-access-window.png" data-desc-position="bottom"><img alt="Screenshot of the grant access lakehouse window in Fabric." src="../../img/19-grant-people-access-window.png"></a></p>
 </div>
 </li>
 <li>
@@ -1447,25 +1454,25 @@
 <p>Select the lakehouse.</p>
 <p>When the lakehouse opens, select <strong>Manage OneLake data access</strong> on the top menu bar and enable the feature by clicking the <strong>Continue</strong> button.</p>
 <div class="admonition quote">
-<p><img alt="Manage OneLake data access feature." src="../../img/19-manage-onelake-roles.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-manage-onelake-roles.png" data-desc-position="bottom"><img alt="Manage OneLake data access feature." src="../../img/19-manage-onelake-roles.png"></a></p>
 </div>
 </li>
 <li>
 <p>Select new role on the <strong>Manage OneLake data access (preview)</strong> screen that appears.</p>
 <div class="admonition quote">
-<p><img alt="New role functionality in the manage OneLake data access feature." src="../../img/19-create-onelake-role.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-create-onelake-role.png" data-desc-position="bottom"><img alt="New role functionality in the manage OneLake data access feature." src="../../img/19-create-onelake-role.png"></a></p>
 </div>
 </li>
 <li>
 <p>Create a new role called <strong>publicholidays</strong> that can only access the publicholidays folder as shown in the screenshot below.</p>
 <div class="admonition quote">
-<p><img alt="Folder assignment in the manage OneLake data access feature." src="../../img/19-new-data-access-role.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-new-data-access-role.png" data-desc-position="bottom"><img alt="Folder assignment in the manage OneLake data access feature." src="../../img/19-new-data-access-role.png"></a></p>
 </div>
 </li>
 <li>
 <p>When the role finishes creating, select <strong>Assign role</strong> and assign the role to your second user, select <strong>Add</strong> and, select <strong>Save</strong>.</p>
 <div class="admonition quote"></div>
-<p><img alt="Folder assignment in the manage OneLake data access feature." src="../../img/19-assign-role.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/19-assign-role.png" data-desc-position="bottom"><img alt="Folder assignment in the manage OneLake data access feature." src="../../img/19-assign-role.png"></a></p>
 </li>
 <li>
 <p>Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.  </p>
@@ -1490,7 +1497,7 @@
 <p>Select <strong>Delete</strong> to delete the workspace.</p>
 </li>
 </ol>
-<hr />
+<hr>
 
 
 
@@ -1545,5 +1552,7 @@
       <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

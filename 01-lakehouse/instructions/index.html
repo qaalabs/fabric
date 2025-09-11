@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -41,7 +38,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -53,7 +50,17 @@
     
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -89,12 +96,12 @@
     <a href="../.." title="MS Fabric Labs" class="md-header__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -122,7 +129,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -131,15 +138,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -175,7 +182,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -189,7 +196,7 @@
     <a href="../.." title="MS Fabric Labs" class="md-nav__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
 
     </a>
     MS Fabric Labs
@@ -313,7 +320,7 @@
   
   
   <span class="md-ellipsis">
-    1 Lakehouse
+    01 Lakehouse
     
   </span>
   
@@ -330,7 +337,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            1 Lakehouse
+            01 Lakehouse
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -513,7 +520,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <div class="md-nav__link md-nav__container">
@@ -522,7 +529,7 @@
   
   
   <span class="md-ellipsis">
-    5 Dataflows (Gen2)
+    05 Dataflows (Gen2)
     
   </span>
   
@@ -539,7 +546,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            5 Dataflows (Gen2)
+            05 Dataflows (Gen2)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -599,7 +606,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <div class="md-nav__link md-nav__container">
@@ -685,7 +692,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4">
         
           
           <div class="md-nav__link md-nav__container">
@@ -694,7 +701,7 @@
   
   
   <span class="md-ellipsis">
-    4 Ingest Pipeline
+    04 Ingest Pipeline
     
   </span>
   
@@ -711,7 +718,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
-            4 Ingest Pipeline
+            04 Ingest Pipeline
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -771,7 +778,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
         
           
           <div class="md-nav__link md-nav__container">
@@ -780,7 +787,7 @@
   
   
   <span class="md-ellipsis">
-    6c Monitor Data Warehouse
+    06c Monitor Data Warehouse
     
   </span>
   
@@ -797,7 +804,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
-            6c Monitor Data Warehouse
+            06c Monitor Data Warehouse
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -857,7 +864,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6">
         
           
           <div class="md-nav__link md-nav__container">
@@ -943,7 +950,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1029,7 +1036,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1115,7 +1122,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1224,7 +1231,7 @@
 <li>
 <p>After signing in, you will be redirected to the Fabric home page:</p>
 <div class="admonition quote">
-<p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
 </div>
 </li>
 </ol>
@@ -1248,7 +1255,7 @@
 <li>
 <p>When your new workspace opens, it should be empty.</p>
 <div class="admonition quote">
-<p><img alt="Empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-workspace.png" data-desc-position="bottom"><img alt="Empty workspace in Fabric." src="../../img/new-workspace.png"></a></p>
 </div>
 </li>
 </ol>
@@ -1265,7 +1272,7 @@
 </div>
 <p>After a minute or so, a new empty lakehouse will be created.</p>
 <div class="admonition quote">
-<p><img alt="New lakehouse." src="../../img/new-lakehouse.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-lakehouse.png" data-desc-position="bottom"><img alt="New lakehouse." src="../../img/new-lakehouse.png"></a></p>
 </div>
 </li>
 <li>
@@ -1314,7 +1321,7 @@
 <li>
 <p>After the file has been uploaded, select the <strong>Files/data</strong> folder and verify that the <strong>sales.csv</strong> file has been uploaded, as shown here:</p>
 <div class="admonition quote">
-<p><img alt="Uploaded sales.csv file in a lakehouse." src="../../img/01-uploaded-sales-file.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/01-uploaded-sales-file.png" data-desc-position="bottom"><img alt="Uploaded sales.csv file in a lakehouse." src="../../img/01-uploaded-sales-file.png"></a></p>
 </div>
 </li>
 <li>
@@ -1346,7 +1353,7 @@
 <li>
 <p>In the <strong>...</strong> menu for the <strong>sales.csv</strong> file, select <strong>Load to Tables &gt; New table</strong>.</p>
 <div class="admonition quote">
-<p><img alt="Load to tables - New table." src="../../img/qa-01-load-to-tables.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-01-load-to-tables.png" data-desc-position="bottom"><img alt="Load to tables - New table." src="../../img/qa-01-load-to-tables.png"></a></p>
 </div>
 </li>
 <li>
@@ -1361,13 +1368,13 @@
 <li>
 <p>In the <strong>Explorer</strong> pane, select the <strong>sales</strong> table that has been created to view the data:</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of a table preview." src="../../img/qa-01-table-preview.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-01-table-preview.png" data-desc-position="bottom"><img alt="Screenshot of a table preview." src="../../img/qa-01-table-preview.png"></a></p>
 </div>
 </li>
 <li>
 <p>In the <strong>...</strong> menu for the <strong>sales</strong> table, select <strong>View files</strong> to see the underlying files for this table:</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of a table preview." src="../../img/qa-01-delta-table-files.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-01-delta-table-files.png" data-desc-position="bottom"><img alt="Screenshot of a table preview." src="../../img/qa-01-delta-table-files.png"></a></p>
 </div>
 <blockquote>
 <p>Files for a delta table are stored in <em>Parquet</em> format, and include a subfolder named <code>_delta_log</code> in which details of transactions applied to the table are logged.</p>
@@ -1391,9 +1398,9 @@
 </code></pre></div>
 </li>
 <li>
-<p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> <strong>Run</strong> button to run the query and view the results, which should show the total revenue for each product.</p>
+<p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> button to run the query and view the results, which should show the total revenue for each product.</p>
 <div class="admonition quote">
-<p><img alt="SQL query with results." src="../../img/qa-01-sql-query.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-01-sql-query.png" data-desc-position="bottom"><img alt="SQL query with results." src="../../img/qa-01-sql-query.png"></a></p>
 </div>
 </li>
 </ol>
@@ -1406,7 +1413,7 @@
 <li>
 <p>Drag the <strong>sales</strong> table (under dbo &gt; Tables) to the new visual query editor pane that opens to create a Power Query as shown here:</p>
 <div class="admonition quote">
-<p><img alt="Visual query." src="../../img/qa-01-visual-query.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-01-visual-query.png" data-desc-position="bottom"><img alt="Visual query." src="../../img/qa-01-visual-query.png"></a></p>
 </div>
 </li>
 <li>
@@ -1415,7 +1422,7 @@
 <li>Then select only the <strong>SalesOrderNumber</strong> and <strong>SalesOrderLineNumber</strong> columns. Click <strong>OK</strong></li>
 </ul>
 <div class="admonition quote">
-<p><img alt="Choose columns dialog box." src="../../img/01-choose-columns.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/01-choose-columns.png" data-desc-position="bottom"><img alt="Choose columns dialog box." src="../../img/01-choose-columns.png"></a></p>
 </div>
 </li>
 <li>
@@ -1428,11 +1435,11 @@
 </ul>
 <p>When you're done, the results pane under the visual query shows the number of line items for each sales order.</p>
 <div class="admonition quote">
-<p><img alt="Visual query with results." src="../../img/qa-01-visual-query-results.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-01-visual-query-results.png" data-desc-position="bottom"><img alt="Visual query with results." src="../../img/qa-01-visual-query-results.png"></a></p>
 </div>
 </li>
 </ol>
-<hr />
+<hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
 <p>In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default semantic model to support data visualizations.</p>
 <p>Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.</p>
@@ -1450,7 +1457,7 @@
 <p>Select <strong>Delete</strong> to delete the workspace.</p>
 </li>
 </ol>
-<hr />
+<hr>
 <p><small><b>Source:
 <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html</a>
 </b></small></p>
@@ -1508,5 +1515,7 @@
       <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

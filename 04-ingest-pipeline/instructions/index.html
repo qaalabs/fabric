@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -41,7 +38,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -53,7 +50,17 @@
     
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -89,12 +96,12 @@
     <a href="../.." title="MS Fabric Labs" class="md-header__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -122,7 +129,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -131,15 +138,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -175,7 +182,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -189,7 +196,7 @@
     <a href="../.." title="MS Fabric Labs" class="md-nav__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
 
     </a>
     MS Fabric Labs
@@ -302,7 +309,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <div class="md-nav__link md-nav__container">
@@ -311,7 +318,7 @@
   
   
   <span class="md-ellipsis">
-    1 Lakehouse
+    01 Lakehouse
     
   </span>
   
@@ -328,7 +335,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            1 Lakehouse
+            01 Lakehouse
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -388,7 +395,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <div class="md-nav__link md-nav__container">
@@ -397,7 +404,7 @@
   
   
   <span class="md-ellipsis">
-    5 Dataflows (Gen2)
+    05 Dataflows (Gen2)
     
   </span>
   
@@ -414,7 +421,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            5 Dataflows (Gen2)
+            05 Dataflows (Gen2)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -474,7 +481,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <div class="md-nav__link md-nav__container">
@@ -571,7 +578,7 @@
   
   
   <span class="md-ellipsis">
-    4 Ingest Pipeline
+    04 Ingest Pipeline
     
   </span>
   
@@ -588,7 +595,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
-            4 Ingest Pipeline
+            04 Ingest Pipeline
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -753,7 +760,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
         
           
           <div class="md-nav__link md-nav__container">
@@ -762,7 +769,7 @@
   
   
   <span class="md-ellipsis">
-    6c Monitor Data Warehouse
+    06c Monitor Data Warehouse
     
   </span>
   
@@ -779,7 +786,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
-            6c Monitor Data Warehouse
+            06c Monitor Data Warehouse
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -839,7 +846,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6">
         
           
           <div class="md-nav__link md-nav__container">
@@ -925,7 +932,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1011,7 +1018,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1097,7 +1104,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1204,7 +1211,7 @@
 </ul>
 <p>After signing in, you will be redirected to the Fabric home page:</p>
 <div class="admonition quote">
-<p><img alt="Fabric home page" src="../../img/qa-fabric-home.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
 </div>
 </li>
 </ol>
@@ -1228,7 +1235,7 @@
 <li>
 <p>When your new workspace opens, it should be empty.</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-workspace.png" data-desc-position="bottom"><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png"></a></p>
 </div>
 </li>
 </ol>
@@ -1245,7 +1252,7 @@
 </div>
 <p>After a minute or so, a new lakehouse with no <strong>Tables</strong> or <strong>Files</strong> will be created.</p>
 <div class="admonition quote">
-<p><img alt="New lakehouse." src="../../img/new-lakehouse.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-lakehouse.png" data-desc-position="bottom"><img alt="New lakehouse." src="../../img/new-lakehouse.png"></a></p>
 </div>
 </li>
 <li>
@@ -1264,7 +1271,7 @@
 <li>
 <p>In the <strong>Copy Data</strong> wizard, on the <strong>Choose data source page</strong>, type HTTP in the search bar and then select <strong>HTTP</strong> in the <strong>New sources</strong> section.</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of the Choose data source page." src="../../img/04-choose-data-source.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/04-choose-data-source.png" data-desc-position="bottom"><img alt="Screenshot of the Choose data source page." src="../../img/04-choose-data-source.png"></a></p>
 </div>
 </li>
 <li>
@@ -1324,11 +1331,11 @@
 <p>On the <strong>Copy summary</strong> page, review the details of your copy operation and then select <strong>Save + Run</strong>.</p>
 <p>A new pipeline containing a <strong>Copy Data</strong> activity is created, as shown here:</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of a pipeline with a Copy Data activity." src="../../img/04-copy-data-pipeline.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/04-copy-data-pipeline.png" data-desc-position="bottom"><img alt="Screenshot of a pipeline with a Copy Data activity." src="../../img/04-copy-data-pipeline.png"></a></p>
 </div>
 </li>
 <li>
-<p>When the pipeline starts to run, you can monitor its status in the <strong>Output</strong> pane under the pipeline designer. Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg></span> (<em>Refresh</em>) icon to refresh the status, and wait until it has succeeeded.</p>
+<p>When the pipeline starts to run, you can monitor its status in the <strong>Output</strong> pane under the pipeline designer. Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"></path></svg></span> (<em>Refresh</em>) icon to refresh the status, and wait until it has succeeeded.</p>
 </li>
 <li>
 <p>In the menu bar on the left, select your lakehouse.</p>
@@ -1345,7 +1352,7 @@
 </li>
 <li>
 <p>Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.</p>
-<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">&quot;sales&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">"sales"</span>
 </code></pre></div>
 </li>
 <li>
@@ -1356,26 +1363,26 @@
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># Read the new sales data</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;header&quot;</span><span class="p">,</span><span class="s2">&quot;true&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;Files/new_data/*.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"csv"</span><span class="p">)</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">"header"</span><span class="p">,</span><span class="s2">"true"</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"Files/new_data/*.csv"</span><span class="p">)</span>
 
 <span class="c1">## Add month and year columns</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">year</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;OrderDate&quot;</span><span class="p">)))</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="n">month</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;OrderDate&quot;</span><span class="p">)))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">,</span> <span class="n">year</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)))</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">,</span> <span class="n">month</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)))</span>
 
 <span class="c1"># Derive FirstName and LastName columns</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;FirstName&quot;</span><span class="p">,</span> <span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">),</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;LastName&quot;</span><span class="p">,</span> <span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">),</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"FirstName"</span><span class="p">,</span> <span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span> <span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"LastName"</span><span class="p">,</span> <span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span> <span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 
 <span class="c1"># Filter and reorder columns</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;SalesOrderNumber&quot;</span><span class="p">,</span> <span class="s2">&quot;SalesOrderLineNumber&quot;</span><span class="p">,</span> <span class="s2">&quot;OrderDate&quot;</span><span class="p">,</span> <span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;FirstName&quot;</span><span class="p">,</span> <span class="s2">&quot;LastName&quot;</span><span class="p">,</span> <span class="s2">&quot;EmailAddress&quot;</span><span class="p">,</span> <span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;UnitPrice&quot;</span><span class="p">,</span> <span class="s2">&quot;TaxAmount&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"SalesOrderNumber"</span><span class="p">,</span> <span class="s2">"SalesOrderLineNumber"</span><span class="p">,</span> <span class="s2">"OrderDate"</span><span class="p">,</span> <span class="s2">"Year"</span><span class="p">,</span> <span class="s2">"Month"</span><span class="p">,</span> <span class="s2">"FirstName"</span><span class="p">,</span> <span class="s2">"LastName"</span><span class="p">,</span> <span class="s2">"EmailAddress"</span><span class="p">,</span> <span class="s2">"Item"</span><span class="p">,</span> <span class="s2">"Quantity"</span><span class="p">,</span> <span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="s2">"TaxAmount"</span><span class="p">]</span>
 
 <span class="c1"># Load the data into a table</span>
-<span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;delta&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">&quot;append&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"delta"</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"append"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span>
 </code></pre></div>
 <p>This code loads the data from the sales.csv file that was ingested by the <strong>Copy Data</strong> activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.</p>
 </li>
 <li>
-<p>Verify that your notebooks looks similar to this, and then use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> <strong>Run all</strong> button on the toolbar to run all of the cells it contains.</p>
+<p>Verify that your notebooks looks similar to this, and then use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run all</strong> button on the toolbar to run all of the cells it contains.</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of a notebook with a parameters cell and code to transform data." src="../../img/04-notebook.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/04-notebook.png" data-desc-position="bottom"><img alt="Screenshot of a notebook with a parameters cell and code to transform data." src="../../img/04-notebook.png"></a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1407,7 +1414,7 @@
 <li>
 <p>On the <strong>Activities</strong> tab, in the <strong>All activities</strong> list, select <strong>Delete data</strong>. Then position the new <strong>Delete data</strong> activity to the left of the <strong>Copy data</strong> activity and connect its <strong>On completion</strong> output to the <strong>Copy data</strong> activity, as shown here:</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of a pipeline with Delete data and Copy data activities." src="../../img/04-delete-data-activity.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/04-delete-data-activity.png" data-desc-position="bottom"><img alt="Screenshot of a pipeline with Delete data and Copy data activities." src="../../img/04-delete-data-activity.png"></a></p>
 </div>
 </li>
 <li>
@@ -1444,7 +1451,7 @@
 <li>
 <p>Select the <strong>Copy data</strong> activity and then connect its <strong>On Completion</strong> output to the <strong>Notebook</strong> activity as shown here:</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of a pipeline with Copy Data and Notebook activities." src="../../img/04-pipeline.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/04-pipeline.png" data-desc-position="bottom"><img alt="Screenshot of a pipeline with Copy Data and Notebook activities." src="../../img/04-pipeline.png"></a></p>
 </div>
 </li>
 <li>
@@ -1483,9 +1490,9 @@
 <p>The <strong>table_name</strong> parameter will be passed to the notebook and override the default value assigned to the <strong>table_name</strong> variable in the parameters cell.</p>
 </li>
 <li>
-<p>On the <strong>Home</strong> tab, use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"/></svg></span> (<em>Save</em>) icon to save the pipeline. Then use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> <strong>Run</strong> button to run the pipeline, and wait for all of the activities to complete.</p>
+<p>On the <strong>Home</strong> tab, use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"></path></svg></span> (<em>Save</em>) icon to save the pipeline. Then use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> button to run the pipeline, and wait for all of the activities to complete.</p>
 <div class="admonition quote">
-<p><img alt="Screenshot of a pipeline with a Dataflow activity." src="../../img/04-pipeline-run.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/04-pipeline-run.png" data-desc-position="bottom"><img alt="Screenshot of a pipeline with a Dataflow activity." src="../../img/04-pipeline-run.png"></a></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">If you see an error message</p>
@@ -1496,7 +1503,7 @@
 </li>
 <li>Open your notebook, select the lakehouse you created on the left pane,</li>
 <li>select <strong>Remove all Lakehouses</strong> and then add it again.</li>
-<li>Go back to the pipeline designer and select <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"/></svg></span> <strong>Run</strong>.</li>
+<li>Go back to the pipeline designer and select <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong>.</li>
 </ul>
 </div>
 </li>
@@ -1508,7 +1515,7 @@
 </li>
 </ol>
 <p>In this exercise, you implemented a data ingestion solution that uses a pipeline to copy data to your lakehouse from an external source, and then uses a Spark notebook to transform the data and load it into a table.</p>
-<hr />
+<hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
 <p>Once you've finished exploring your pipeline, you should delete the workspace you created for this exercise.</p>
 <ol>
@@ -1525,7 +1532,7 @@
 <p>Select <strong>Delete</strong> to delete the workspace.</p>
 </li>
 </ol>
-<hr />
+<hr>
 <p><small><b>Source:
 <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html</a>
 </b></small></p>
@@ -1583,5 +1590,7 @@
       <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
