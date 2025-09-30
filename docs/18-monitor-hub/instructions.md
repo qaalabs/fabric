@@ -1,12 +1,10 @@
 # Lab 18 ~ Monitor Fabric Activity in the Monitoring Hub
 
-The *monitoring hub* in Microsoft Fabric provides a central place where you can monitor activity. You can use the monitoring hub to review events related to items you have permission to view.
-
-This lab takes approximately **30** minutes to complete.
-
 !!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
+
+## Step 1: Signing in to Microsoft Fabric
 
 In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
@@ -21,7 +19,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
     !!! quote ""
         ![Fabric home page](../img/qa-fabric-home.png)
 
-## Create a workspace
+## Step 2: Create a workspace
 
 Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
@@ -38,9 +36,9 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 4. When your new workspace opens, it should be empty.
 
     !!! quote ""
-        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+        ![Empty workspace in Fabric.](../img/new-workspace.png)
 
-## Create a lakehouse
+## Step 3: Create a lakehouse
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
@@ -54,11 +52,23 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
     !!! quote ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
-## Create and monitor a Dataflow
+2. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
+
+    - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
+
+    - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create shortcuts in this folder to reference data that is stored externally.
+
+Currently, there are no tables or files in this lakehouse.
+
+## Step 4: Create and monitor a Dataflow
 
 In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide range of sources. In this exercise, you’ll use a dataflow to get data from a CSV file and load it into a table in your lakehouse.
 
 1. On the **Home** page for your lakehouse, in the **Get data** menu, select **New Dataflow Gen2**.
+
+    *Make sure that **Enable Git Integration** is NOT selected:*
+
+    ![Enable git integration.](../img/gen2-git-integration-circle.png){ width="300"}
 
 2. Name the new dataflow `Get Product Data` and select **Create**.
 
@@ -86,7 +96,7 @@ In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide ra
     !!! quote ""
         ![Screenshot of the products table in the lakehouse page.](../img/18-products-table.png)
 
-## Create and monitor a Spark notebook
+## Step 5: Create and monitor a Spark notebook
 
 In Microsoft Fabric, you can use notebooks to run Spark code.
 
@@ -122,7 +132,7 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
     !!! quote ""
         ![Screenshot of the monitoring hub with a notebook activity.](../img/18-monitor-notebook.png)
 
-## Monitor history for an item
+## Step 6: Monitor history for an item
 
 Some items in a workspace might be run multiple times. You can use the monitoring hub to view their run history.
 
@@ -139,9 +149,9 @@ Some items in a workspace might be run multiple times. You can use the monitorin
 
 5. Close the **Details** pane and use the **Back to main view** button to return to the main monitoring hub page.
 
-## Customize monitoring hub views
+## Step 7: Customise monitoring hub views
 
-In this exercise you’ve only run a few activities, so it should be fairly easy to find events in the monitoring hub. However, in a real environment you may need to search through a large number of events. Using filters and other view customizations can make this easier.
+In this exercise you’ve only run a few activities, so it should be fairly easy to find events in the monitoring hub. However, in a real environment you may need to search through a large number of events. Using filters and other view customisations can make this easier.
 
 1. In the monitoring hub, use the **Filter** button to apply the following filter:
 
@@ -173,6 +183,8 @@ In this exercise you’ve only run a few activities, so it should be fairly easy
 ## Clean up resources
 
 In this exercise, you have created a lakehouse, a dataflow, and a Spark notebook; and you’ve used the monitoring hub to view item activity.
+
+Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.
 
 1. Navigate to Microsoft Fabric in your browser.
 

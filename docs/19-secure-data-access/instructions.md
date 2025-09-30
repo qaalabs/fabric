@@ -40,7 +40,7 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 > **Note**: When you create a workspace, you automatically become a member of the Workspace Admin role.
 
-## Create a data warehouse
+## Step 3: Create a data warehouse
 
 Next, create a data warehouse in the workspace you created:
 
@@ -51,7 +51,8 @@ Next, create a data warehouse in the workspace you created:
     !!! quote ""
         ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
 
-## Create a lakehouse
+## Step 4: Create a lakehouse
+
 Next, create a lakehouse in the workspace you created.
 
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
@@ -67,7 +68,7 @@ Next, create a lakehouse in the workspace you created.
 
 4. Select the **Start with sample data** tile and then select the **Public holidays** sample. After a minute or so, the lakehouse will be populated with data.
 
-## Apply workspace access controls
+## Step 5: Apply workspace access controls
 
 Workspace roles are used to control access to workspaces and the content within them. Workspace roles can be assigned when users need to see all items in a workspace, when they need to manage workspace access, or create new Fabric items, or when they need specific permissions to view, modify or share content in the workspace.  
 
@@ -114,7 +115,7 @@ In this exercise, you add a user to a workspace role, apply permissions and, see
 
 17. Select the **publicholidays** table and wait for the data to be displayed. Data in the lakehouse table is readable from the SQL analytics endpoint because the user is a member of the Workspace Viewer role that grants read permissions on the SQL analytics endpoint.
 
-## Apply item access control
+## Step 6: Apply item access control
 
 Item permissions control access to individual Fabric items within a workspace, like warehouses, lakehouses and semantic models. In this exercise, you remove the **Workspace Viewer** permissions applied in the previous exercise and then apply item level permissions on the warehouse so a less privileged user can only view the warehouse data, not the lakehouse data.
 
@@ -150,7 +151,7 @@ Item permissions control access to individual Fabric items within a workspace, l
 
 13. When the warehouse view appears, select the **Date** table to view table data. The rows are viewable because the user still has read access to the warehouse because ReadData permissions were applied by using item permissions on the warehouse.
 
-## Apply OneLake data access roles in a Lakehouse
+## Step 7: Apply OneLake data access roles in a Lakehouse
 
 OneLake data access roles let you create custom roles within a Lakehouse and grant read permissions to folders you specify. OneLake data access roles is currently a Preview feature.
 
@@ -217,6 +218,8 @@ In this exercise, you assign an item permission and create a OneLake data access
 20. Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.  
 
 21. Select the **publicholidays** table and wait for the data to load. Only the data in the publicholidays table is accessible to the user because the user was assigned to the custom OneLake data access role. The role permits them to see only the data in the publicholidays table, not data in any of the other tables, files, or folders.
+
+---
 
 ## Clean up resources
 

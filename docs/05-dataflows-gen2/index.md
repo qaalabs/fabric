@@ -16,8 +16,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
 ### Step 2: Create a workspace
 
-- Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
-- When your new workspace opens, it will be empty.
+Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 ### Step 3: Create a lakehouse
 
@@ -44,5 +43,3 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 ## Clean up resources
 
 Once you've finished exploring dataflows in Microsoft Fabric, you should delete the workspace you created for this exercise.
-
----

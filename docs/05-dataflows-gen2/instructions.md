@@ -52,6 +52,14 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
     !!! quote ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
+2. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
+
+    - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
+
+    - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create shortcuts in this folder to reference data that is stored externally.
+
+Currently, there are no tables or files in this lakehouse.
+
 ## Step 4: Create a Dataflow (Gen2) to ingest data
 
 Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an *extract, transform, and load* (ETL) process.
@@ -60,6 +68,10 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
     !!! quote ""
         ![Lakehouse toolbar.](../img/lakehouse-toolbar.png)
+
+    *Make sure that **Enable Git Integration** is NOT selected:*
+
+    ![Enable git integration.](../img/gen2-git-integration-circle.png){ width="300"}
 
     Click **Create**, and after a few seconds, the Power Query editor for your new dataflow opens as shown here:
 
@@ -195,7 +207,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 ??? tip "Tip for Power Bi Desktop users:"
     - In Power BI Desktop, you can connect directly to the data transformations done with your dataflow by using the Power BI dataflows (Legacy) connector.
-    - You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialized datasets.
+    - You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialised datasets.
 
     !!! quote ""
         ![Power BI data source connectors](../img/05-pbid-dataflow-connectors.png){ width="350" }

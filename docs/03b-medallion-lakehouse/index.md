@@ -20,7 +20,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 ### Step 3: Create a lakehouse and upload data to bronze layer
 
-Now that you have a workspace, it’s time to create a data lakehouse for the data you’re going to analyze.
+Now that you have a workspace, it's time to create a data lakehouse for the data you're going to analyse.
 
 ### Step 4: Transform data and load to silver Delta table
 
@@ -32,18 +32,16 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
 
 ### Step 6: Transform data for gold layer
 
-You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. Now you’ll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.
+You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. Now you'll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.
 
 ### Step 7: (OPTIONAL) Create a semantic model
 
-In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.
+In your workspace, you can now use the gold layer to create a report and analyse the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.
 
 ---
 
 ## Clean up resources
 
-In this exercise, you’ve learned how to create a medallion architecture in a Microsoft Fabric lakehouse.
+In this exercise, you've learned how to create a medallion architecture in a Microsoft Fabric lakehouse.
 
-If you’ve finished exploring your lakehouse, you can delete the workspace you created for this exercise.
-
----
+If you've finished exploring your lakehouse, you can delete the workspace you created for this exercise.

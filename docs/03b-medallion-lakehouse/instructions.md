@@ -632,20 +632,7 @@ You have successfully taken data from your bronze layer, transformed it, and loa
 
 !!! success "You now have a curated, modeled **gold** layer that can be used for reporting and analysis."
 
-## Step 7: Create a semantic model (Optional)
-
-!!! note "Before you can create relationships in a semantic model, you need to have a PowerBI Pro licence"
-
-### Get a PowerBi licence
-
-- Click your Workspace
-- In the lakehouse row - hover over semantic model
-- Click the 3 dots **...**
-- Click **Create report**
-
-*A message box should popup offering you a PowerBi Pro trial.*
-
-!!! success "You should now be able to create the semantic model as depicted below."
+## Step 7: Create a semantic model
 
 In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.
 
@@ -664,12 +651,27 @@ Note that you can't use the **default semantic model** that is automatically cre
     - dimproduct_gold
     - factsales_gold
 
-    This will open the semantic model in Fabric where you can create relationships and measures, as shown here:
+    This will open the semantic model in Fabric.
 
-    !!! quote ""
-        ![Semantic model in Fabric.](../img/03b-dataset-relationships.png)
+## Step 8: Create relationships (optional)
 
-## Create a PowerBi report
+!!! note "Before you can create relationships in a semantic model, you need to have a PowerBI Pro licence"
+
+**Get a PowerBi licence:**
+
+- Click your Workspace
+- In the lakehouse row - hover over semantic model
+- Click the 3 dots **...**
+- Click **Create report**
+
+*A message box should popup offering you a PowerBi Pro trial.*
+
+!!! success "You should now be able to create the semantic model as depicted below."
+
+!!! quote ""
+    ![Semantic model in Fabric.](../img/03b-dataset-relationships.png)
+
+## Step 9: Create a PowerBi report (optional)
 
 - You can now create new report
 - Or just auto create a report: **Explore > Auto create report**
