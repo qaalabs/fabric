@@ -255,6 +255,8 @@
       
         
       
+        
+      
     
     
     
@@ -626,18 +628,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7-create-a-semantic-model-optional" class="md-nav__link">
+  <a href="#step-7-create-a-semantic-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7: Create a semantic model (Optional)
+      Step 7: Create a semantic model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-powerbi-report" class="md-nav__link">
+  <a href="#step-8-create-relationships-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a PowerBi report
+      Step 8: Create relationships (optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-create-a-powerbi-report-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Create a PowerBi report (optional)
     </span>
   </a>
   
@@ -1126,12 +1137,12 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../21-deployment-pipelines/" class="md-nav__link ">
+            <a href="../../20-work-with-database/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
-    21 Deployment Pipelines
+    20 Work with SQL Database
     
   </span>
   
@@ -1147,6 +1158,92 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            20 Work with SQL Database
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20-work-with-database/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../21-deployment-pipelines/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    21 Deployment Pipelines
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             21 Deployment Pipelines
           </label>
@@ -1853,21 +1950,7 @@
 <div class="admonition success">
 <p class="admonition-title">You now have a curated, modeled <strong>gold</strong> layer that can be used for reporting and analysis.</p>
 </div>
-<h2 id="step-7-create-a-semantic-model-optional">Step 7: Create a semantic model (Optional)</h2>
-<div class="admonition note">
-<p class="admonition-title">Before you can create relationships in a semantic model, you need to have a PowerBI Pro licence</p>
-</div>
-<h3 id="get-a-powerbi-licence">Get a PowerBi licence</h3>
-<ul>
-<li>Click your Workspace</li>
-<li>In the lakehouse row - hover over semantic model</li>
-<li>Click the 3 dots <strong>...</strong></li>
-<li>Click <strong>Create report</strong></li>
-</ul>
-<p><em>A message box should popup offering you a PowerBi Pro trial.</em></p>
-<div class="admonition success">
-<p class="admonition-title">You should now be able to create the semantic model as depicted below.</p>
-</div>
+<h2 id="step-7-create-a-semantic-model">Step 7: Create a semantic model</h2>
 <p>In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.</p>
 <p>Note that you can't use the <strong>default semantic model</strong> that is automatically created when you create a lakehouse. You must create a new semantic model that includes the gold tables you created in this exercise, from the Explorer.</p>
 <ol>
@@ -1888,13 +1971,28 @@
 <li>dimproduct_gold</li>
 <li>factsales_gold</li>
 </ul>
-<p>This will open the semantic model in Fabric where you can create relationships and measures, as shown here:</p>
+<p>This will open the semantic model in Fabric.</p>
+</li>
+</ol>
+<h2 id="step-8-create-relationships-optional">Step 8: Create relationships (optional)</h2>
+<div class="admonition note">
+<p class="admonition-title">Before you can create relationships in a semantic model, you need to have a PowerBI Pro licence</p>
+</div>
+<p><strong>Get a PowerBi licence:</strong></p>
+<ul>
+<li>Click your Workspace</li>
+<li>In the lakehouse row - hover over semantic model</li>
+<li>Click the 3 dots <strong>...</strong></li>
+<li>Click <strong>Create report</strong></li>
+</ul>
+<p><em>A message box should popup offering you a PowerBi Pro trial.</em></p>
+<div class="admonition success">
+<p class="admonition-title">You should now be able to create the semantic model as depicted below.</p>
+</div>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/03b-dataset-relationships.png" data-desc-position="bottom"><img alt="Semantic model in Fabric." src="../../img/03b-dataset-relationships.png"></a></p>
 </div>
-</li>
-</ol>
-<h2 id="create-a-powerbi-report">Create a PowerBi report</h2>
+<h2 id="step-9-create-a-powerbi-report-optional">Step 9: Create a PowerBi report (optional)</h2>
 <ul>
 <li>You can now create new report</li>
 <li>Or just auto create a report: <strong>Explore &gt; Auto create report</strong></li>

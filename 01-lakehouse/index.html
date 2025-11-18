@@ -255,6 +255,8 @@
       
         
       
+        
+      
     
     
     
@@ -1003,12 +1005,12 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../21-deployment-pipelines/" class="md-nav__link ">
+            <a href="../20-work-with-database/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
-    21 Deployment Pipelines
+    20 Work with SQL Database
     
   </span>
   
@@ -1024,6 +1026,92 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            20 Work with SQL Database
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-work-with-database/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../21-deployment-pipelines/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    21 Deployment Pipelines
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             21 Deployment Pipelines
           </label>
@@ -1086,7 +1174,7 @@
 
 
 <h1 id="lab-01-create-a-microsoft-fabric-lakehouse">Lab 01 - Create a Microsoft Fabric Lakehouse</h1>
-<p>Large-scale data analytics solutions have traditionally been built around a <em>data warehouse</em>, in which data is stored in relational tables and queried using SQL. The growth in “big data” (characterized by high <em>volumes</em>, <em>variety</em>, and <em>velocity</em> of new data assets) together with the availability of low-cost storage and cloud-scale distributed compute technologies has led to an alternative approach to analytical data storage; the <em>data lake</em>. In a data lake, data is stored as files without imposing a fixed schema for storage. Increasingly, data engineers and analysts seek to benefit from the best features of both of these approaches by combining them in a <em>data lakehouse</em>; in which data is stored in files in a data lake and a relational schema is applied to them as a metadata layer so that they can be queried using traditional SQL semantics.</p>
+<p>Large-scale data analytics solutions have traditionally been built around a <em>data warehouse</em>, in which data is stored in relational tables and queried using SQL. The growth in “big data” (characterised by high <em>volumes</em>, <em>variety</em>, and <em>velocity</em> of new data assets) together with the availability of low-cost storage and cloud-scale distributed compute technologies has led to an alternative approach to analytical data storage; the <em>data lake</em>. In a data lake, data is stored as files without imposing a fixed schema for storage. Increasingly, data engineers and analysts seek to benefit from the best features of both of these approaches by combining them in a <em>data lakehouse</em>; in which data is stored in files in a data lake and a relational schema is applied to them as a metadata layer so that they can be queried using traditional SQL semantics.</p>
 <p>In Microsoft Fabric, a lakehouse provides highly scalable file storage in a <em>OneLake</em> store (built on Azure Data Lake Store Gen2) with a metastore for relational objects such as tables and views based on the open source <em>Delta Lake</em> table format. Delta Lake enables you to define a schema of tables in your lakehouse that you can query using SQL.</p>
 <p>This lab takes approximately <strong>30</strong> minutes to complete.</p>
 <div class="admonition info">
@@ -1097,18 +1185,11 @@
 </div>
 <h2 id="overview">Overview</h2>
 <h3 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h3>
-<ul>
-<li>Sign in to Microsoft Fabric using the email and password from the QA Platform.</li>
-</ul>
+<p>Sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
 <h3 id="step-2-create-a-workspace">Step 2: Create a workspace</h3>
-<ul>
-<li>Before working with data in Fabric, you need to create a workspace.</li>
-</ul>
+<p>Before working with data in Fabric, you need to create a workspace.</p>
 <h3 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h3>
-<ul>
-<li>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</li>
-<li>Currently, there are no tables or files in this lakehouse.</li>
-</ul>
+<p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
 <h3 id="step-4-upload-a-file">Step 4: Upload a file</h3>
 <p>Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).</p>
 <p>In this lab we will upload a file ~ <code>sales.csv</code></p>
@@ -1122,9 +1203,8 @@
 <p>While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.</p>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
-<p>In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default semantic model to support data visualizations.</p>
+<p>In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default semantic model to support data visualisations.</p>
 <p>Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.</p>
-<hr>
 
 
 

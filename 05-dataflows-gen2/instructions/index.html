@@ -255,6 +255,8 @@
       
         
       
+        
+      
     
     
     
@@ -1117,12 +1119,12 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../21-deployment-pipelines/" class="md-nav__link ">
+            <a href="../../20-work-with-database/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
-    21 Deployment Pipelines
+    20 Work with SQL Database
     
   </span>
   
@@ -1138,6 +1140,92 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            20 Work with SQL Database
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20-work-with-database/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../21-deployment-pipelines/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    21 Deployment Pipelines
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             21 Deployment Pipelines
           </label>
@@ -1266,7 +1354,19 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-lakehouse.png" data-desc-position="bottom"><img alt="New lakehouse." src="../../img/new-lakehouse.png"></a></p>
 </div>
 </li>
+<li>
+<p>View the new lakehouse, and note that the <strong>Lakehouse explorer</strong> pane on the left enables you to browse tables and files in the lakehouse:</p>
+<ul>
+<li>
+<p>The <strong>Tables</strong> folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source <em>Delta Lake</em> file format, commonly used in Apache Spark.</p>
+</li>
+<li>
+<p>The <strong>Files</strong> folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create shortcuts in this folder to reference data that is stored externally.</p>
+</li>
+</ul>
+</li>
 </ol>
+<p>Currently, there are no tables or files in this lakehouse.</p>
 <h2 id="step-4-create-a-dataflow-gen2-to-ingest-data">Step 4: Create a Dataflow (Gen2) to ingest data</h2>
 <p>Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an <em>extract, transform, and load</em> (ETL) process.</p>
 <ol>
@@ -1275,6 +1375,8 @@
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/lakehouse-toolbar.png" data-desc-position="bottom"><img alt="Lakehouse toolbar." src="../../img/lakehouse-toolbar.png"></a></p>
 </div>
+<p><em>Make sure that <strong>Enable Git Integration</strong> is NOT selected:</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/gen2-git-integration-circle.png" data-desc-position="bottom"><img alt="Enable git integration." src="../../img/gen2-git-integration-circle.png" width="300"></a></p>
 <p>Click <strong>Create</strong>, and after a few seconds, the Power Query editor for your new dataflow opens as shown here:</p>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/05-new-dataflow.png" data-desc-position="bottom"><img alt="New dataflow." src="../../img/05-new-dataflow.png"></a></p>
@@ -1439,7 +1541,7 @@
 <summary>Tip for Power Bi Desktop users:</summary>
 <ul>
 <li>In Power BI Desktop, you can connect directly to the data transformations done with your dataflow by using the Power BI dataflows (Legacy) connector.</li>
-<li>You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialized datasets.</li>
+<li>You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialised datasets.</li>
 </ul>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/05-pbid-dataflow-connectors.png" data-desc-position="bottom"><img alt="Power BI data source connectors" src="../../img/05-pbid-dataflow-connectors.png" width="350"></a></p>
