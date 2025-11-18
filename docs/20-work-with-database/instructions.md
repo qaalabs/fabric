@@ -60,7 +60,7 @@ The SQL query editor provides support for IntelliSense, code completion, syntax 
 
 1. In the **AdventureWorksLT** database page, navigate to **Home**, and select **New query**.
 
-2. In the new blank query pane, enter and run the following T-SQL code.
+2. In the new blank query pane, enter and  :material-play: **run** the following T-SQL code.
 
     ```sql
     SELECT 
@@ -77,7 +77,7 @@ The SQL query editor provides support for IntelliSense, code completion, syntax 
     
     This query joins the `Product` and `ProductCategory` tables to display the product names, their categories, and their list prices, sorted by price in descending order.
 
-3. In a new query editor, enter and run the following T-SQL code.
+3. In a new query editor, enter and :material-play: **run** the following T-SQL code.
 
     ```sql
     SELECT 
@@ -103,7 +103,7 @@ You will integrate an external data about public holidays with sales order. Then
 
 1. Navigate to **Home**, and select **New query**.
 
-2. In the new blank query pane, enter and run the following T-SQL code.
+2. In the new blank query pane, enter and :material-play: **run** the following T-SQL code.
 
     ```sql
     CREATE TABLE SalesLT.PublicHolidays (
@@ -116,7 +116,7 @@ You will integrate an external data about public holidays with sales order. Then
 
     This query creates the `SalesLT.PublicHolidays` table in preparation to the next step.
 
-3. In a new query editor, enter and run the following T-SQL code.
+3. In a new query editor, enter and :material-play: **run** the following T-SQL code.
 
     ```sql
     INSERT INTO SalesLT.PublicHolidays (CountryOrRegion, HolidayName, Date, IsPaidTimeOff)
@@ -177,7 +177,7 @@ Suppose a specific group of users should only have access to data from the Unite
 
 Let's create a view based on the query we used earlier, and add a filter to it.
 
-1. In the new blank query pane, enter and run the following T-SQL code.
+1. In the new blank query pane, enter and :material-play: **run** the following T-SQL code.
 
     ```sql
     CREATE VIEW SalesLT.vw_SalesOrderHoliday AS
