@@ -29,7 +29,7 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 3. Create a **New workspace**:
 
-    - Give it a name of your choice. For example: `fab_workspace`
+    - Give it a unique name. For example: `fab_workspace123`
     - Leave all other options as the default values
     - Click **Apply**
 
