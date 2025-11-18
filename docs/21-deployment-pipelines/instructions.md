@@ -1,10 +1,7 @@
 # Lab 21 ~ Implement deployment pipelines in Microsoft Fabric
 
-Deployment pipelines in Microsoft Fabric let you automate the process of copying   changes made to the content in Fabric items between environments like development, test, and production. You can use deployment pipelines to develop and test content before it reaches end users. In this exercise, you create a deployment pipeline, and assign stages to the pipeline. Then you create some content in a development workspace and use deployment pipelines to deploy it between the Development, Test and Production pipeline stages.
-
 > **Note**: To complete this exercise, you need to be an member of the Fabric workspace admin role. To assign roles see [Roles in workspaces in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/get-started/roles-workspaces).
 
-This lab takes approximately **20** minutes to complete.
 
 ## Create workspaces
 
@@ -20,7 +17,8 @@ Create three workspaces with the Fabric trial enabled.
 
 5. Select the **Workspaces** icon on the menu bar on the left and confirm that there are three workspaces named:  Development, Test, and Production
 
-> **Note**: If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.
+!!! note
+    If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.
 
 ## Create a deployment pipeline
 

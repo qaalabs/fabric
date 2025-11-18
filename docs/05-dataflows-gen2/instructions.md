@@ -21,7 +21,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
 ## Step 2: Create a workspace
 
-Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
+Before working with data in Fabric, you need to create a workspace with a Fabric licence capacity.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
 
