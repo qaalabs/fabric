@@ -24,6 +24,10 @@ nav:
       - 04-ingest-pipeline/index.md
       - Instructions: 04-ingest-pipeline/instructions.md
 
+    - "06 Analyse data in a data warehouse":
+      - 06-data-warehouse/index.md
+      - Instructions: 06-data-warehouse/instructions.md
+
     - "06c Monitor Data Warehouse":
       - 06c-monitor-data-warehouse/index.md
       - Instructions: 06c-monitor-data-warehouse/instructions.md
