@@ -7,30 +7,43 @@ nav:
   - Overview: index.md
 
   - "Microsoft Fabric":
+
     - "01 Lakehouse":
       - 01-lakehouse/index.md
       - Instructions: 01-lakehouse/instructions.md
+
     - "05 Dataflows (Gen2)": 
       - 05-dataflows-gen2/index.md
       - Instructions: 05-dataflows-gen2/instructions.md
+
     - "3b Medallion Architecture":
       - 03b-medallion-lakehouse/index.md
       - Instructions: 03b-medallion-lakehouse/instructions.md
+
     - "04 Ingest Pipeline":
       - 04-ingest-pipeline/index.md
       - Instructions: 04-ingest-pipeline/instructions.md
+
     - "06c Monitor Data Warehouse":
       - 06c-monitor-data-warehouse/index.md
       - Instructions: 06c-monitor-data-warehouse/instructions.md
+
     - "09 Real-time Eventstream":
       - 09-real-time-analytics-eventstream/index.md
       - Instructions: 09-real-time-analytics-eventstream/instructions.md
+
     - "18 Monitor Hub":
       - 18-monitor-hub/index.md
       - Instructions: 18-monitor-hub/instructions.md
+
     - "19 Secure Data Access":
       - 19-secure-data-access/index.md
       - Instructions: 19-secure-data-access/instructions.md
+
+    - "20 Work with SQL Database":
+      - 20-work-with-database/index.md
+      - Instructions: 20-work-with-database/instructions.md
+
     - "21 Deployment Pipelines":
       - 21-deployment-pipelines/index.md
       - Instructions: 21-deployment-pipelines/instructions.md

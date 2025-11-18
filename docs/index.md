@@ -10,5 +10,11 @@ This site hosts the instructions for MS Fabric labs:
 - [09  - Real-time Analytics eventstream](09-real-time-analytics-eventstream/index.md)
 - [18  - Monitor Hub](18-monitor-hub/index.md)
 - [19  - Secure Data Access](19-secure-data-access/index.md)
+- [20  - Work with SQL Database](20-work-with-database/index.md)
 - [21  - Deployment Pipelines](21-deployment-pipelines/index.md)
 
+---
+
+The full list of MSFabric labs can be found here:
+
+- https://microsoftlearning.github.io/mslearn-fabric/
