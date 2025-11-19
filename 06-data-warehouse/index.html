@@ -6,7 +6,7 @@
       
       
       
-        <link rel="prev" href="../06-data-warehouse/instructions/">
+        <link rel="prev" href="../04-ingest-pipeline/instructions/">
       
       
         <link rel="next" href="instructions/">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Lab 06c - Monitor a data warehouse in Microsoft Fabric - MS Fabric Labs</title>
+        <title>Lab 06 - Analyse data in a data warehouse - MS Fabric Labs</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-06c-monitor-a-data-warehouse-in-microsoft-fabric" class="md-skip">
+        <a href="#lab-06-analyse-data-in-a-data-warehouse" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 06c - Monitor a data warehouse in Microsoft Fabric
+              Lab 06 - Analyse data in a data warehouse
             
           </span>
         </div>
@@ -638,6 +638,8 @@
                 
   
   
+    
+  
   
   
     
@@ -653,15 +655,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../06-data-warehouse/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -674,13 +676,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             06 Analyse data in a data warehouse
@@ -696,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-data-warehouse/instructions/" class="md-nav__link">
+      <a href="instructions/" class="md-nav__link">
         
   
   
@@ -724,8 +726,6 @@
                 
   
   
-    
-  
   
   
     
@@ -741,15 +741,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../06c-monitor-data-warehouse/" class="md-nav__link ">
               
   
   
@@ -762,13 +762,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             06c Monitor Data Warehouse
@@ -784,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="instructions/" class="md-nav__link">
+      <a href="../06c-monitor-data-warehouse/instructions/" class="md-nav__link">
         
   
   
@@ -1261,31 +1261,29 @@
 
 
 
-<h1 id="lab-06c-monitor-a-data-warehouse-in-microsoft-fabric">Lab 06c - Monitor a data warehouse in Microsoft Fabric</h1>
-<p>In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Data warehouses in Microsoft Fabric include dynamic management views that you can use to monitor activity and queries.</p>
+<h1 id="lab-06-analyse-data-in-a-data-warehouse">Lab 06 - Analyse data in a data warehouse</h1>
+<p>In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics; including the ability to insert, update, and delete data in the tables.</p>
 <p>This lab will take approximately <strong>30</strong> minutes to complete.</p>
-<div class="admonition info">
-<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
-</div>
 <h2 id="overview">Overview</h2>
 <h3 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h3>
 <p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
 <h3 id="step-2-create-a-workspace">Step 2: Create a workspace</h3>
 <p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
-<h2 id="step-3-create-a-sample-data-warehouse">Step 3: Create a sample data warehouse</h2>
-<p>Now that you have a workspace, it's time to create a data warehouse.</p>
-<h2 id="step-4-explore-dynamic-management-views">Step 4: Explore dynamic management views</h2>
-<p>Microsoft Fabric data warehouses include <em>dynamic management views</em> (DMVs), which you can use to identify current activity in the data warehouse instance.</p>
-<h2 id="step-5-explore-query-insights">Step 5: Explore query insights</h2>
-<p>Microsoft Fabric data warehouses provide <em>query insights</em> - a special set of views that provide details about the queries being run in your data warehouse.</p>
-<p><em>Initially you may see no data, this is because it takes a couple of minutes for query insights to populate.</em></p>
+<h3 id="step-3-create-a-data-warehouse">Step 3: Create a data warehouse</h3>
+<p>Now that you have a workspace, it’s time to create a data warehouse.</p>
+<h3 id="step-4-create-tables-and-insert-data">Step 4: Create tables and insert data</h3>
+<p>A warehouse is a relational database in which you can define tables and other objects.</p>
+<h3 id="step-5-query-data-warehouse-tables">Step 5: Query data warehouse tables</h3>
+<p>Since the data warehouse is a relational database, you can use SQL to query its tables.</p>
+<h3 id="step-6-create-a-view">Step 6: Create a view</h3>
+<p>A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like <em>views</em> and <em>stored procedures</em> to encapsulate SQL logic.</p>
+<h3 id="step-7-create-a-visual-query">Step 7: Create a visual query</h3>
+<p>Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code.</p>
+<h3 id="step-8-optional-define-a-data-model">Step 8: (OPTIONAL) Define a data model</h3>
+<p>A relational data warehouse typically consists of <em>fact</em> and <em>dimension</em> tables. The fact tables contain numeric measures you can aggregate to analyse business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.</p>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
-<p>In this exercise, you have used dynamic management views and query insights to monitor activity in a Microsoft Fabric data warehouse.</p>
-<p>If you've finished exploring your data warehouse, you can delete the workspace you created for this exercise.</p>
+<p>If you’ve finished exploring your data warehouse, you should delete the workspace you created for this exercise.</p>
 
 
 

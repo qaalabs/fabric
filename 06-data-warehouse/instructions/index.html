@@ -9,7 +9,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../18-monitor-hub/">
+        <link rel="next" href="../../06c-monitor-data-warehouse/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-09-ingest-real-time-data-with-eventstream-in-fabric" class="md-skip">
+        <a href="#lab-06-analyse-data-in-a-data-warehouse" class="md-skip">
           Skip to content
         </a>
       
@@ -638,6 +638,8 @@
                 
   
   
+    
+  
   
   
     
@@ -653,15 +655,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../06-data-warehouse/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -680,7 +682,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             06 Analyse data in a data warehouse
@@ -693,10 +695,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../06-data-warehouse/instructions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Instructions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -707,6 +731,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-signing-in-to-microsoft-fabric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Signing in to Microsoft Fabric
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-a-data-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create a data warehouse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-tables-and-insert-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Create tables and insert data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-query-data-warehouse-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Query data warehouse tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-create-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Create a view
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-create-a-visual-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Create a visual query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-define-a-data-model-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Define a data model (optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-create-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Create relationships
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean up resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -810,8 +944,6 @@
                 
   
   
-    
-  
   
   
     
@@ -827,15 +959,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../09-real-time-analytics-eventstream/" class="md-nav__link ">
               
   
   
@@ -854,7 +986,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             09 Real-time Eventstream
@@ -867,32 +999,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Instructions
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../09-real-time-analytics-eventstream/instructions/" class="md-nav__link">
         
   
   
@@ -903,116 +1013,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-signing-in-to-microsoft-fabric" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Signing in to Microsoft Fabric
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Create a workspace
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-create-an-eventhouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Create an eventhouse
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-create-an-eventstream" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Create an Eventstream
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-add-a-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 5: Add a source
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-add-a-destination" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 6: Add a destination
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-query-captured-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 7: Query captured data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-8-transform-event-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 8: Transform event data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-9-query-the-transformed-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 9: Query the transformed data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clean-up-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clean up resources
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1393,7 +1393,7 @@
 
 
 
-<h1 id="lab-09-ingest-real-time-data-with-eventstream-in-fabric">Lab 09 ~ Ingest real-time data with Eventstream in Fabric</h1>
+<h1 id="lab-06-analyse-data-in-a-data-warehouse">Lab 06 ~ Analyse data in a data warehouse</h1>
 <div class="admonition info">
 <p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
 </div>
@@ -1412,8 +1412,6 @@
 <li>Email</li>
 <li>Password</li>
 </ul>
-</li>
-<li>
 <p>After signing in, you will be redirected to the Fabric home page:</p>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
@@ -1440,233 +1438,265 @@
 <li>
 <p>When your new workspace opens, it should be empty.</p>
 <div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-workspace.png" data-desc-position="bottom"><img alt="Empty workspace in Fabric." src="../../img/new-workspace.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-workspace.png" data-desc-position="bottom"><img alt="Screenshot of an empty workspace in Fabric." src="../../img/new-workspace.png"></a></p>
 </div>
 </li>
 </ol>
-<h2 id="step-3-create-an-eventhouse">Step 3: Create an eventhouse</h2>
-<p>Now that you have a workspace, you can start creating the Fabric items you'll need for your real-time intelligence solution. we'll start by creating an eventhouse.</p>
+<h2 id="step-3-create-a-data-warehouse">Step 3: Create a data warehouse</h2>
+<p><em>Now that you have a workspace, it's time to create a data warehouse.</em></p>
 <ol>
 <li>
-<p>In the workspace you just created, select <strong>+ New item</strong>. In the <em>New item</em> pane, select <strong>Eventhouse</strong>, giving it a unique name of your choice.</p>
-</li>
-<li>
-<p>Close any tips or prompts that are displayed until you see your new empty eventhouse.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-create-eventhouse.png" data-desc-position="bottom"><img alt="Create eventhouse" src="../../img/09-create-eventhouse.png"></a></p>
-</li>
-<li>
-<p>In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse.</p>
-</li>
-<li>
-<p>Select the KQL database to view it.</p>
-<div class="admonition note">
-<p class="admonition-title">Note: Currently there are no tables in the database.</p>
-<p>In the rest of this exercise you'll use an eventstream to load data from a real-time source into a table.</p>
+<p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Warehouse</em> section, select <strong>Warehouse</strong>. </p>
+<p>Give it a name of your choice. For example: <code>fab_warehouse</code></p>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
+</div>
+<p>After a minute or so, a new warehouse will be created:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/06-new-data-warehouse.png" data-desc-position="bottom"><img alt="Screenshot of a new warehouse." src="../../img/06-new-data-warehouse.png"></a></p>
 </div>
 </li>
 </ol>
-<h2 id="step-4-create-an-eventstream">Step 4: Create an Eventstream</h2>
+<h2 id="step-4-create-tables-and-insert-data">Step 4: Create tables and insert data</h2>
+<p><em>A warehouse is a relational database in which you can define tables and other objects.</em></p>
 <ol>
 <li>
-<p>In the main page of your KQL database, select <strong>Get data</strong>.</p>
-</li>
-<li>
-<p>For the data source, select <strong>Eventstream</strong> &gt; <strong>New eventstream</strong>. Name the Eventstream <code>Bicycle-data</code>.</p>
-<p>The creation of your new event stream in the workspace will be completed in just a few moments. Once established, you will be automatically redirected to the primary editor, ready to begin integrating sources into your event stream.</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-empty-eventstream.png" data-desc-position="bottom"><img alt="Empty eventstream." src="../../img/09-empty-eventstream.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-5-add-a-source">Step 5: Add a source</h2>
-<ol>
-<li>
-<p>In the Eventstream canvas, select <strong>Use sample data</strong>.</p>
-</li>
-<li>
-<p>Name the source <code>Bicycles</code>, and select the <strong>Bicycles</strong> sample data.</p>
-<p>Your stream will be mapped and you will be automatically displayed on the <strong>eventstream canvas</strong>.</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-real-time-intelligence-eventstream-sourced.png" data-desc-position="bottom"><img alt="Review the eventstream canvas" src="../../img/09-real-time-intelligence-eventstream-sourced.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-6-add-a-destination">Step 6: Add a destination</h2>
-<ol>
-<li>
-<p>Select the <strong>Transform events or add destination</strong> tile and search for <strong>Eventhouse</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Eventhouse</strong> pane, configure the following setup options.</p>
-</li>
-<li><strong>Data ingestion mode:</strong>: Event processing before ingestion</li>
-<li><strong>Destination name:</strong> <code>bikes-table</code></li>
-<li><strong>Workspace:</strong> <em>Select the workspace you created at the beginning of this exercise</em></li>
-<li><strong>Eventhouse</strong>: <em>Select your eventhouse</em></li>
-<li><strong>KQL database:</strong> <em>Select your KQL database</em></li>
-<li><strong>Destination table:</strong> Create a new table named <code>bikes</code></li>
-<li>
-<p><strong>Input data format:</strong> JSON</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-kql-database-event-processing-before-ingestion.png" data-desc-position="bottom"><img alt="Eventstream destination settings." src="../../img/09-kql-database-event-processing-before-ingestion.png"></a></p>
-</div>
-</li>
-<li>
-<p>In the <strong>Eventhouse</strong> pane, select <strong>Save</strong>. </p>
-</li>
-<li>
-<p>On the toolbar, select <strong>Publish</strong>.</p>
-</li>
-<li>
-<p>Wait a minute or so for the data destination to become active. Then select the <strong>bikes-table</strong> node in the design canvas and view the <strong>Data preview</strong> pane underneath to see the latest data that has been ingested:</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-stream-data-preview.png" data-desc-position="bottom"><img alt="A destination table in an eventstream." src="../../img/09-stream-data-preview.png"></a></p>
-</div>
-</li>
-<li>
-<p>Wait a few minutes and then use the <strong>Refresh</strong> button to refresh the <strong>Data preview</strong> pane. The stream is running perpetually, so new data may have been added to the table.</p>
-</li>
-<li>
-<p>Beneath the eventstream design canvas, view the <strong>Data insights</strong> tab to see details of the data events that have been captured.</p>
-</li>
-</ol>
-<h2 id="step-7-query-captured-data">Step 7: Query captured data</h2>
-<p>The eventstream you have created takes data from the sample source of bicycle data and loads it into the database in your eventhouse. You can analyze the captured data by querying the table in the database.</p>
-<ol>
-<li>
-<p>In the menu bar on the left, select your KQL database.</p>
-</li>
-<li>
-<p>On the <strong>database</strong> tab, in the toolbar for your KQL database, use the <strong>Refresh</strong> button to refresh the view until you see the <strong>bikes</strong> table under the database. Then select the <strong>bikes</strong> table.</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-kql-table.png" data-desc-position="bottom"><img alt="A table in a KQL database." src="../../img/09-kql-table.png"></a></p>
-</div>
-</li>
-<li>
-<p>In the <strong>...</strong> menu for the <strong>bikes</strong> table, select <strong>Query table</strong> &gt; <strong>Records ingested in the last 24 hours</strong>.</p>
-</li>
-<li>
-<p>In the query pane, note that the following query has been generated and run, with the results shown beneath:</p>
-<div class="highlight"><pre><span></span><code><span class="c">// See the most recent data - records ingested in the last 24 hours.</span>
-<span class="n">bikes</span>
-<span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ingestion_time</span><span class="p">()</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="p">(</span><span class="n">now</span><span class="p">(-</span><span class="mi">1</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="err">..</span><span class="w"> </span><span class="n">now</span><span class="p">())</span>
+<p>In your new warehouse, select the <strong>T-SQL</strong> tile, and add the following CREATE TABLE statement:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">DimProduct</span>
+<span class="p">(</span>
+<span class="w">   </span><span class="n">ProductKey</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="n">ProductAltKey</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="n">ProductName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="n">Category</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="n">ListPrice</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+<span class="k">GO</span>
 </code></pre></div>
 </li>
 <li>
-<p>Select the query code and run it to see 24 hours of data from the table.</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-kql-query.png" data-desc-position="bottom"><img alt="KQL query." src="../../img/09-kql-query.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-8-transform-event-data">Step 8: Transform event data</h2>
-<p>The data you've captured is unaltered from the source. In many scenarios, you may want to transform the data in the event stream before loading it into a destination.</p>
-<ol>
-<li>
-<p>In the menu bar on the left, select the <strong>Bicycle-data</strong> eventstream.</p>
+<p>Use the  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> button to run the SQL script, which creates a new table named <strong>DimProduct</strong> in the <strong>dbo</strong> schema of the data warehouse.</p>
 </li>
 <li>
-<p>On the toolbar, select <strong>Edit</strong> to edit the eventstream.</p>
+<p>Use the <strong>Refresh</strong> button next to your warehouse name to refresh the display. Then, in the <strong>Explorer</strong> pane, expand <strong>Schemas</strong> &gt; <strong>dbo</strong> &gt; <strong>Tables</strong> and verify that the <strong>DimProduct</strong> table has been created.</p>
 </li>
 <li>
-<p>In the <strong>Transform events</strong> menu, select <strong>Group by</strong> to add a new <strong>Group by</strong> node to the eventstream.</p>
+<p>On the <strong>Home</strong> menu tab, use the <strong>New SQL Query</strong> button to create a new query, and enter the following INSERT statement:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">DimProduct</span>
+<span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'RING1'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Bicycle bell'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Accessories'</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">.</span><span class="mi">99</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">'BRITE1'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Front light'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Accessories'</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">.</span><span class="mi">49</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">'BRITE2'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Rear light'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Accessories'</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">.</span><span class="mi">49</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
 </li>
 <li>
-<p>Drag a connection from the output of the <strong>Bicycle-data</strong> node to the input of the new <strong>Group by</strong> node Then use the <em>pencil</em> icon in the <strong>Group by</strong> node to edit it.</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-eventstream-add-aggregates.png" data-desc-position="bottom"><img alt="Add group by to the transformation event." src="../../img/09-eventstream-add-aggregates.png"></a></p>
-</div>
+<p>Run the new query to insert three rows into the <strong>DimProduct</strong> table.</p>
 </li>
 <li>
-<p>Configure out the properties of the <strong>Group by</strong> settings section:</p>
+<p>When the query has finished, in the <strong>Explorer</strong> pane, select the <strong>DimProduct</strong> table and verify that the three rows have been added to the table.</p>
+</li>
+<li>
+<p>On the <strong>Home</strong> menu tab, use the <strong>New SQL Query</strong> button to create a new query. Then copy and paste the Transact-SQL code from <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt">https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt</a> into the new query pane.</p>
+</li>
+<li>
+<p>Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.</p>
+</li>
+<li>
+<p>Use the <strong>Refresh</strong> button next to your warehouse name to refresh the display. Then in the <strong>Explorer</strong> pane, verify that the <strong>dbo</strong> schema in the data warehouse now contains the following four tables:</p>
 <ul>
-<li><strong>Operation name:</strong> GroupByStreet</li>
-<li><strong>Aggregate type:</strong> <em>Select</em> Sum</li>
-<li><strong>Field:</strong> <em>select</em> No_Bikes. <em>Then select <strong>Add</strong> to create the function</em> SUM of No_Bikes</li>
-<li><strong>Group aggregations by (optional):</strong> Street</li>
-<li><strong>Time window</strong>: Tumbling</li>
-<li><strong>Duration</strong>: 5 seconds</li>
-<li><strong>Offset</strong>: 0 seconds</li>
+<li><strong>DimCustomer</strong></li>
+<li><strong>DimDate</strong></li>
+<li><strong>DimProduct</strong></li>
+<li><strong>FactSalesOrder</strong></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">This configuration will cause the eventstream to calculate the total number of bicycles in each street every 5 seconds.</p>
-</div>
-</li>
-<li>
-<p>Save the configuration and return to the eventstream canvas, where an error is indicated (because you need to store the output from the transformation somewhere!).</p>
-</li>
-<li>
-<p>Use the <strong>+</strong> icon to the right of the <strong>GroupByStreet</strong> node to add a new <strong>Eventhouse</strong> node.</p>
-</li>
-<li>
-<p>Configure the new eventhouse node with the following options:</p>
-</li>
-<li><strong>Data ingestion mode:</strong>: Event processing before ingestion</li>
-<li><strong>Destination name:</strong> <code>bikes-by-street-table</code></li>
-<li><strong>Workspace:</strong> <em>Select the workspace you created at the beginning of this exercise</em></li>
-<li><strong>Eventhouse</strong>: <em>Select your eventhouse</em></li>
-<li><strong>KQL database:</strong> <em>Select your KQL database</em></li>
-<li><strong>Destination table:</strong> Create a new table named <code>bikes-by-street</code></li>
-<li>
-<p><strong>Input data format:</strong> JSON</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-group-by-table.png" data-desc-position="bottom"><img alt="Table for grouped data." src="../../img/09-group-by-table.png"></a></p>
-</div>
-</li>
-<li>
-<p>In the <strong>Eventhouse</strong> pane, select <strong>Save</strong>. </p>
-</li>
-<li>
-<p>On the toolbar, select <strong>Publish</strong>.</p>
-</li>
-<li>
-<p>Wait a minute or so for the changes to become active.</p>
-</li>
-<li>
-<p>In the design canvas, select the <strong>bikes-by-street-table</strong> node, and view the <strong>data preview</strong> pane beneath the canvas.</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-stream-table-with-windows.png" data-desc-position="bottom"><img alt="Table for grouped data." src="../../img/09-stream-table-with-windows.png"></a></p>
-</div>
-<p>Note that the trasformed data includes the grouping field you specified (<strong>Street</strong>), the aggregation you specified (<strong>SUM_no_Bikes</strong>), and a timestamp field indicating the end of the 5 second tumbling window in which the event occurred (<strong>Window_End_Time</strong>).</p>
 </li>
 </ol>
-<h2 id="step-9-query-the-transformed-data">Step 9: Query the transformed data</h2>
-<p>Now you can query the bicycle data that has been transformed and loaded into a table by your eventstream</p>
+<div class="admonition tip">
+<p class="admonition-title">If the schema takes a while to load, just refresh the browser page.</p>
+</div>
+<h2 id="step-5-query-data-warehouse-tables">Step 5: Query data warehouse tables</h2>
+<p><em>Since the data warehouse is a relational database, you can use SQL to query its tables.</em></p>
+<h3 id="query-fact-and-dimension-tables">Query fact and dimension tables</h3>
+<p>Most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).</p>
 <ol>
 <li>
-<p>In the menu bar on the left, select your KQL database.</p>
+<p>Navigate back to the browser tab with your warehouse and create a new SQL Query, and <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> the following code:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthName</span><span class="p">,</span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="n">so</span><span class="p">.</span><span class="n">SalesTotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FactSalesOrder</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">so</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimDate</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">SalesOrderDateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DateKey</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The attributes in the date dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.</p>
+</div>
 </li>
 <li>
-<p>On the <strong>database</strong> tab, in the toolbar for your KQL database, use the <strong>Refresh</strong> button to refresh the view until you see the <strong>bikes-by-street</strong> table under the database.</p>
-</li>
-<li>
-<p>In the <strong>...</strong> menu for the <strong>bikes-by-street</strong> table, select <strong>Query data</strong> &gt; <strong>Show any 100 records</strong>.</p>
-</li>
-<li>
-<p>In the query pane, note that the following query is generated and run:</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s">'bikes-by-street'</span><span class="p">]</span>
-<span class="p">|</span><span class="w"> </span><span class="k">take</span><span class="w"> </span><span class="mi">100</span>
+<p>Modify the query as follows to add a second dimension to the aggregation.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthName</span><span class="p">,</span>
+<span class="w">       </span><span class="k">c</span><span class="p">.</span><span class="n">CountryRegion</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">,</span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="n">so</span><span class="p">.</span><span class="n">SalesTotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FactSalesOrder</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">so</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimDate</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">SalesOrderDateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DateKey</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimCustomer</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">CustomerKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerKey</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CountryRegion</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">;</span>
 </code></pre></div>
 </li>
 <li>
-<p>Modify the KQL query to retrieve the total number of bikes per street within each 5 second window:</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s">'bikes-by-street'</span><span class="p">]</span>
-<span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">TotalBikes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">tolong</span><span class="p">(</span><span class="n">SUM_No_Bikes</span><span class="p">))</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Window_End_Time</span><span class="p">,</span><span class="w"> </span><span class="n">Street</span>
-<span class="p">|</span><span class="w"> </span><span class="k">sort</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Window_End_Time</span><span class="w"> </span><span class="n">desc</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Street</span><span class="w"> </span><span class="n">asc</span>
+<p>Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region.</p>
+</li>
+</ol>
+<h2 id="step-6-create-a-view">Step 6: Create a view</h2>
+<p>A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like <em>views</em> and <em>stored procedures</em> to encapsulate SQL logic.</p>
+<ol>
+<li>
+<p>Modify the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view).</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">vSalesByRegion</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthName</span><span class="p">,</span>
+<span class="w">       </span><span class="k">c</span><span class="p">.</span><span class="n">CountryRegion</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">,</span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="n">so</span><span class="p">.</span><span class="n">SalesTotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FactSalesOrder</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">so</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimDate</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">SalesOrderDateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DateKey</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimCustomer</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">CustomerKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerKey</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CountryRegion</span><span class="p">;</span>
 </code></pre></div>
 </li>
 <li>
-<p>Select the modified query and run it.</p>
-<p>The results show the number of bikes observed in each street within each 5 second time period.</p>
+<p>Run the query to create the view.</p>
+<div class="admonition success">
+<p class="admonition-title">Refresh the data warehouse schema and verify that the new view is listed in the <strong>Explorer</strong> pane.</p>
+</div>
+</li>
+<li>
+<p>Create a new SQL query and <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> the following SELECT statement:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span><span class="w"> </span><span class="n">MonthName</span><span class="p">,</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">,</span><span class="w"> </span><span class="n">SalesRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vSalesByRegion</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">;</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="step-7-create-a-visual-query">Step 7: Create a visual query</h2>
+<p>Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.</p>
+<ol>
+<li>
+<p>On the <strong>Home</strong> menu, expand the options under <strong>New SQL query</strong> and select <strong>New visual query</strong>.</p>
+</li>
+<li>
+<p>Drag <strong>FactSalesOrder</strong> onto the <strong>canvas</strong>. Notice that a preview of the table is displayed in the <strong>Preview</strong> pane below.</p>
+</li>
+<li>
+<p>Drag <strong>DimProduct</strong> onto the <strong>canvas</strong>. We now have two tables in our query.</p>
+</li>
+<li>
+<p>Select the <strong>FactSalesOrder</strong> box, and click the <strong>(+)</strong> button on the canvas to <strong>Merge queries</strong>.</p>
 <div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/09-kql-group-query.png" data-desc-position="bottom"><img alt="Query returning grouped data." src="../../img/09-kql-group-query.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/06-visual-query-merge.png" data-desc-position="bottom"><img alt="Canvas with the FactSalesOrder table selected." src="../../img/06-visual-query-merge.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Merge queries</strong> window, select <strong>DimProduct</strong> as the right table for merge. Select <strong>ProductKey</strong> in both queries, leave the default <strong>Left outer</strong> join type, and click <strong>OK</strong>.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/06-dw-merge.png" data-desc-position="bottom"><img alt="Merge options." src="../../img/06-dw-merge.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Preview</strong>, note that the new <strong>DimProduct</strong> column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select <strong>ProductName</strong> and click <strong>OK</strong>.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/06-visual-query-preview.png" data-desc-position="bottom"><img alt="preview pane with the DimProduct column expanded, ProductName selected." src="../../img/06-visual-query-preview.png"></a></p>
+</div>
+</li>
+<li>
+<p>If you're interested in looking at data for a single product, per a manager request, you can now use the <strong>ProductName</strong> column to filter the data in the query. Filter the <strong>ProductName</strong> column to look at <strong>Cable Lock</strong> data only.</p>
+</li>
+<li>
+<p>From here, you can analyse the results of this single query by selecting <strong>Visualize results</strong> or <strong>Download Excel file</strong>. You can now see exactly what the manager was asking for, so we don't need to analyse the results further.</p>
+</li>
+</ol>
+<h2 id="step-8-define-a-data-model-optional">Step 8: Define a data model (optional)</h2>
+<p>A relational data warehouse typically consists of <em>fact</em> and <em>dimension</em> tables. The fact tables contain numeric measures you can aggregate to analyse business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.</p>
+<ol>
+<li>
+<p>In the toolbar, select <strong>New semantic model</strong>.</p>
+</li>
+<li>
+<p>In the <strong>New semantic model</strong> window, name the semantic model and select all four tables. Select <strong>Confirm</strong>.</p>
+</li>
+<li>
+<p>A new browser tab will automatically open with your new semantic model. In the model pane, rearrange the tables in your data warehouse so that the <strong>FactSalesOrder</strong> table is in the middle, like this:</p>
+<div class="admonition note">
+<p class="admonition-title">If your model doesn't open automatically:</p>
+<ul>
+<li>Click your workspace</li>
+<li>Then select the semantic model</li>
+<li>Then: open semantic model</li>
+</ul>
+</div>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/06-model-dw.png" data-desc-position="bottom"><img alt="Screenshot of the data warehouse model page." src="../../img/06-model-dw.png"></a></p>
+</div>
+</li>
+</ol>
+<hr>
+<div class="admonition warning">
+<p class="admonition-title">You need a Power BI license to create and edit semantic models.</p>
+</div>
+<p>To get a PowerBi licence do the following:</p>
+<div class="codehilite"><pre><span></span><code>- Click your workspace
+- Next to your semantic model click the ... 
+- Select: Create report
+- You should now be offered a 60-day trial for PowerBi
+</code></pre></div>
+
+<h2 id="step-9-create-relationships">Step 9: Create relationships</h2>
+<div class="admonition note">
+<p class="admonition-title">Make sure that you are in Editing mode and not Viewing mode</p>
+</div>
+<ol>
+<li>
+<p>Drag the <strong>ProductKey</strong> field from the <strong>FactSalesOrder</strong> table and drop it on the <strong>ProductKey</strong> field in the <strong>DimProduct</strong> table. Then confirm the following relationship details:</p>
+<ul>
+<li><strong>From table</strong>: FactSalesOrder</li>
+<li><strong>Column</strong>: ProductKey</li>
+<li><strong>To table</strong>: DimProduct</li>
+<li><strong>Column</strong>: ProductKey</li>
+<li><strong>Cardinality</strong>: Many to one (*:1)</li>
+<li><strong>Cross filter direction</strong>: Single</li>
+<li><strong>Make this relationship active</strong>: Selected</li>
+<li><strong>Assume referential integrity</strong>: Unselected</li>
+</ul>
+</li>
+<li>
+<p>Repeat the process to create many-to-one relationships between the following tables:</p>
+<ul>
+<li><strong>FactSalesOrder.CustomerKey</strong> → <strong>DimCustomer.CustomerKey</strong></li>
+<li><strong>FactSalesOrder.SalesOrderDateKey</strong> → <strong>DimDate.DateKey</strong></li>
+</ul>
+<p>When all of the relationships have been defined, the model should look like this:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/06-dw-relationships.png" data-desc-position="bottom"><img alt="Screenshot of the model with relationships." src="../../img/06-dw-relationships.png"></a></p>
+</div>
+</li>
+<li>
+<p>Now go back to your semantic model in your workspace and click: <strong>Auto-create report</strong></p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/06-powerbi-report.png" data-desc-position="bottom"><img alt="PowerBi Report." src="../../img/06-powerbi-report.png"></a></p>
 </div>
 </li>
 </ol>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
-<p>In this exercise, you have created an eventhouse and populated tables in its database by using an eventstream.</p>
-<p>When you've finished exploring your KQL database, you can delete the workspace you created for this exercise.</p>
+<p>In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and queried tables using T-SQL and the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset for downstream analytics and reporting.</p>
+<p>If you've finished exploring your data warehouse, you should delete the workspace you created for this exercise.</p>
 <ol>
 <li>
 <p>Navigate to Microsoft Fabric in your browser.</p>
@@ -1683,7 +1713,7 @@
 </ol>
 <hr>
 <p><small><b>Source:
-<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/09-real-time-analytics-eventstream.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/09-real-time-analytics-eventstream.html</a>
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06-data-warehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06-data-warehouse.html</a>
 </b></small></p>
 
 
