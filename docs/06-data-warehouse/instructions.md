@@ -40,9 +40,11 @@ Before working with data in Fabric, you need to create a workspace with a Fabric
 
 ## Step 3: Create a data warehouse
 
-Now that you have a workspace, it's time to create a data warehouse.
+*Now that you have a workspace, it's time to create a data warehouse.*
 
-1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Warehouse* section, select **Warehouse**. Give it a unique name of your choice.
+1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Warehouse* section, select **Warehouse**. 
+    
+    Give it a name of your choice. For example: `fab_warehouse`
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -53,9 +55,9 @@ Now that you have a workspace, it's time to create a data warehouse.
 
 ## Step 4: Create tables and insert data
 
-A warehouse is a relational database in which you can define tables and other objects.
+*A warehouse is a relational database in which you can define tables and other objects.*
 
-1. In your new warehouse, select the **T-SQL** tile, and use the following CREATE TABLE statement:
+1. In your new warehouse, select the **T-SQL** tile, and add the following CREATE TABLE statement:
 
     ```sql
     CREATE TABLE dbo.DimProduct
@@ -71,7 +73,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 2. Use the  :material-play: **Run** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
 
-3. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
+3. Use the **Refresh** button next to your warehouse name to refresh the display. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
 
 4. On the **Home** menu tab, use the **New SQL Query** button to create a new query, and enter the following INSERT statement:
 
@@ -92,7 +94,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 8. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
-9. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
+9. Use the **Refresh** button next to your warehouse name to refresh the display. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
     - **DimCustomer**
     - **DimDate**
     - **DimProduct**
@@ -102,7 +104,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 ## Step 5: Query data warehouse tables
 
-Since the data warehouse is a relational database, you can use SQL to query its tables.
+*Since the data warehouse is a relational database, you can use SQL to query its tables.*
 
 ### Query fact and dimension tables
 
@@ -183,12 +185,15 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 3. Drag **DimProduct** onto the **canvas**. We now have two tables in our query.
 
-4. Use the **(+)** button on the **FactSalesOrder** table on the canvas to **Merge queries**.
+4. Select the **FactSalesOrder** box, and click the **(+)** button on the canvas to **Merge queries**.
 
     !!! quote ""
         ![Canvas with the FactSalesOrder table selected.](../img/06-visual-query-merge.png)
 
 5. In the **Merge queries** window, select **DimProduct** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** join type, and click **OK**.
+
+    !!! quote ""
+        ![Merge options.](../img/06-dw-merge.png)
 
 6. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
 
@@ -201,8 +206,6 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 ## Step 8: Define a data model (optional)
 
-!!! warning "You need a Power BI license to create and edit semantic models."
-
 A relational data warehouse typically consists of *fact* and *dimension* tables. The fact tables contain numeric measures you can aggregate to analyse business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.
 
 1. In the toolbar, select **New semantic model**.
@@ -211,10 +214,30 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 3. A new browser tab will automatically open with your new semantic model. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
+    !!! note "If your model doesn't open automatically:"
+        - Click your workspace
+        - Then select the semantic model
+        - Then: open semantic model
+
     !!! quote ""
         ![Screenshot of the data warehouse model page.](../img/06-model-dw.png)
 
-4. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
+---
+
+!!! warning "You need a Power BI license to create and edit semantic models."
+
+To get a PowerBi licence do the following:
+
+    - Click your workspace
+    - Next to your semantic model click the ... 
+    - Select: Create report
+    - You should now be offered a 60-day trial for PowerBi
+
+## Step 9: Create relationships
+
+!!! note "Make sure that you are in Editing mode and not Viewing mode"
+
+2. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
     - **From table**: FactSalesOrder
     - **Column**: ProductKey
     - **To table**: DimProduct
@@ -224,7 +247,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
     - **Make this relationship active**: Selected
     - **Assume referential integrity**: Unselected
 
-5. Repeat the process to create many-to-one relationships between the following tables:
+3. Repeat the process to create many-to-one relationships between the following tables:
     - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
     - **FactSalesOrder.SalesOrderDateKey** &#8594; **DimDate.DateKey**
 
@@ -232,6 +255,11 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
     !!! quote ""
         ![Screenshot of the model with relationships.](../img/06-dw-relationships.png)
+
+4. Now go back to your semantic model in your workspace and click: **Auto-create report**
+
+    !!! quote ""
+        ![PowerBi Report.](../img/06-powerbi-report.png)
 
 ---
 
