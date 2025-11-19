@@ -368,9 +368,7 @@ db.customers.find({ "name": "David Thompson" }).pretty()
 
 ```javascript
 // Find customers with more than 2 orders
-db.customers.find({
-  $expr: { $gt: [ { $size: "$orders" }, 2 ] }
-})
+db.customers.find({ "orders.2": { $exists: true } })
 ```
 
 ```javascript
