@@ -12,10 +12,6 @@ nav:
       - 01-lakehouse/index.md
       - Instructions: 01-lakehouse/instructions.md
 
-    - "05 Dataflows (Gen2)": 
-      - 05-dataflows-gen2/index.md
-      - Instructions: 05-dataflows-gen2/instructions.md
-
     - "3b Medallion Architecture":
       - 03b-medallion-lakehouse/index.md
       - Instructions: 03b-medallion-lakehouse/instructions.md
@@ -23,6 +19,10 @@ nav:
     - "04 Ingest Pipeline":
       - 04-ingest-pipeline/index.md
       - Instructions: 04-ingest-pipeline/instructions.md
+
+    - "05 Dataflows (Gen2)": 
+      - 05-dataflows-gen2/index.md
+      - Instructions: 05-dataflows-gen2/instructions.md
 
     - "06 Analyse data in a data warehouse":
       - 06-data-warehouse/index.md
