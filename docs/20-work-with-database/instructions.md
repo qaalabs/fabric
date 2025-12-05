@@ -1,4 +1,5 @@
 # Lab 20 ~ Work with SQL Database in Microsoft Fabric
+
 !!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
@@ -209,6 +210,7 @@ Let's create a view based on the query we used earlier, and add a filter to it.
 
 !!! sucess "In this exercise, you have created, queried, and secured data in a SQL database in Microsoft Fabric."
 
+---
 
 ## Clean up resources
 

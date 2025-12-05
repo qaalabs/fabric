@@ -1,7 +1,8 @@
 # Lab 21 ~ Implement deployment pipelines in Microsoft Fabric
 
-> **Note**: To complete this exercise, you need to be an member of the Fabric workspace admin role. To assign roles see [Roles in workspaces in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/get-started/roles-workspaces).
+!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
+!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
 ## Create workspaces
 

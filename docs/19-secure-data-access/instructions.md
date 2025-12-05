@@ -1,8 +1,8 @@
 # Lab 19 ~ Secure data access in Microsoft Fabric
 
-Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles.
+!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
 
-This lab takes approximately **45** minutes to complete.
+!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
 ## Step 1: Signing in to Microsoft Fabric
 
@@ -46,7 +46,7 @@ Next, create a data warehouse in the workspace you created:
 
 1. Click **+ New Item**. On the *New item* page, under the *Store Data* section, select **Sample warehouse** and create a new data warehouse with a name of your choice.
 
-     After a minute or so, a new warehouse will be created:
+    After a minute or so, a new warehouse will be created:
 
     !!! quote ""
         ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
@@ -61,7 +61,7 @@ Next, create a lakehouse in the workspace you created.
 
 3. In the workspace, select the **+ New Item** button and then select **Lakehouse**. Create a new Lakehouse with the name of your choice.
 
-   After a minute or so, a new Lakehouse will be created:
+    After a minute or so, a new Lakehouse will be created:
 
     !!! quote ""
         ![Screenshot of a new lakehouse in Fabric.](../img/sample-lakehouse.png)
@@ -234,3 +234,22 @@ In this exercise, you secured data using workspace access controls, item access 
 4. Select **Delete** to delete the workspace.
 
 ---
+
+## Clean up resources
+
+In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.
+
+Once you've finished, you should delete the workspace you created for this exercise.
+
+1. Navigate to Microsoft Fabric in your browser.
+
+2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
+
+3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
+
+4. Select **Delete** to delete the workspace.
+
+---
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html
+</b></small>

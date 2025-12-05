@@ -180,6 +180,8 @@ In this exercise you’ve only run a few activities, so it should be fairly easy
     !!! quote ""
         ![Screenshot of the monitoring hub with custom columns.](../img/18-monitor-columns.png)
 
+---
+
 ## Clean up resources
 
 In this exercise, you have created a lakehouse, a dataflow, and a Spark notebook; and you’ve used the monitoring hub to view item activity.

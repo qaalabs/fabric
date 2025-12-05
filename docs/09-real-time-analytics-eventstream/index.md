@@ -22,6 +22,8 @@ Now that you have a workspace, you can start creating the Fabric items you’ll 
 
 ### Step 4: Create an Eventstream
 
+In this step you create a new event stream in your workspace. Once established, you will be automatically redirected to the primary editor, ready to begin integrating sources into your event stream.
+
 ### Step 5: Add a source
 
 ### Step 6: Add a destination

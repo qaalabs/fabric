@@ -4,10 +4,6 @@ In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perfor
 
 This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise. This lab takes **approximately 30 minutes** to complete.
 
-!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
-
-!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
-
 ## Overview
 
 ### Step 1: Signing in to Microsoft Fabric
