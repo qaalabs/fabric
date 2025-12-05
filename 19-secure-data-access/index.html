@@ -17,7 +17,7 @@
     
     
       
-        <title>Lab - MS Fabric Labs</title>
+        <title>Lab 19 - Secure data access in Microsoft Fabric - MS Fabric Labs</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab" class="md-skip">
+        <a href="#lab-19-secure-data-access-in-microsoft-fabric" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab
+              Lab 19 - Secure data access in Microsoft Fabric
             
           </span>
         </div>
@@ -1261,22 +1261,30 @@
 
 
 
-<h1 id="lab">Lab</h1>
-<p>This lab will take approximately <strong>??</strong> minutes to complete.</p>
+<h1 id="lab-19-secure-data-access-in-microsoft-fabric">Lab 19 - Secure data access in Microsoft Fabric</h1>
+<p>Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles.</p>
+<p>This lab takes approximately <strong>45</strong> minutes to complete.</p>
 <h2 id="overview">Overview</h2>
 <h3 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h3>
-<ul>
-<li>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</li>
-</ul>
+<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
 <h3 id="step-2-create-a-workspace">Step 2: Create a workspace</h3>
-<ul>
-<li>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</li>
-</ul>
-<h3 id="step-3">Step 3:</h3>
-<h3 id="step-4">Step 4:</h3>
-<h3 id="step-5">Step 5:</h3>
-<h3 id="step-6">Step 6:</h3>
+<p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
+<h3 id="step-3-create-a-data-warehouse">Step 3: Create a data warehouse</h3>
+<p>Next, create a data warehouse in the workspace you created.</p>
+<h3 id="step-4-create-a-lakehouse">Step 4: Create a lakehouse</h3>
+<p>Next, create a lakehouse in the workspace you created.</p>
+<h3 id="step-5-apply-workspace-access-controls">Step 5: Apply workspace access controls</h3>
+<p>Workspace roles are used to control access to workspaces and the content within them. Workspace roles can be assigned when users need to see all items in a workspace, when they need to manage workspace access, or create new Fabric items, or when they need specific permissions to view, modify or share content in the workspace.</p>
+<p>In this exercise, you add a user to a workspace role, apply permissions and, see what is viewable when each set of permissions is applied.</p>
+<h3 id="step-6-apply-item-access-control">Step 6: Apply item access control</h3>
+<p>Item permissions control access to individual Fabric items within a workspace, like warehouses, lakehouses and semantic models. In this exercise, you remove the Workspace Viewer permissions applied in the previous exercise and then apply item level permissions on the warehouse so a less privileged user can only view the warehouse data, not the lakehouse data.</p>
+<h3 id="step-6-apply-onelake-data-access-roles-in-a-lakehouse">Step 6: Apply OneLake data access roles in a Lakehouse</h3>
+<p>OneLake data access roles let you create custom roles within a Lakehouse and grant read permissions to folders you specify. OneLake data access roles is currently a Preview feature.</p>
+<p>In this exercise, you assign an item permission and create a OneLake data access role and experiment with how they work together to restrict access to data in a Lakehouse.</p>
 <hr>
+<h2 id="clean-up-resources">Clean up resources</h2>
+<p>In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.</p>
+<p>If you’ve finished exploring, you can delete the workspace you created for this exercise.</p>
 
 
 

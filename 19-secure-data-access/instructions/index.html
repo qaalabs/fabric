@@ -1163,6 +1163,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#clean-up-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean up resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1376,8 +1385,12 @@
 
 
 <h1 id="lab-19-secure-data-access-in-microsoft-fabric">Lab 19 ~ Secure data access in Microsoft Fabric</h1>
-<p>Microsoft Fabric has a multi-layer security model for managing data access. Security can be set for an entire workspace, for individual items, or through granular permissions in each Fabric engine. In this exercise, you secure data using workspace, and item access controls and OneLake data access roles.</p>
-<p>This lab takes approximately <strong>45</strong> minutes to complete.</p>
+<div class="admonition info">
+<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
+</div>
 <h2 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h2>
 <p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
 <ol>
@@ -1447,15 +1460,14 @@
 </li>
 <li>
 <p>In the workspace, select the <strong>+ New Item</strong> button and then select <strong>Lakehouse</strong>. Create a new Lakehouse with the name of your choice.</p>
-</li>
-</ol>
 <p>After a minute or so, a new Lakehouse will be created:</p>
-<div class="codehilite"><pre><span></span><code>!!! quote ""
-    ![Screenshot of a new lakehouse in Fabric.](../img/sample-lakehouse.png)
-</code></pre></div>
-
-<ol>
-<li>Select the <strong>Start with sample data</strong> tile and then select the <strong>Public holidays</strong> sample. After a minute or so, the lakehouse will be populated with data.</li>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/sample-lakehouse.png" data-desc-position="bottom"><img alt="Screenshot of a new lakehouse in Fabric." src="../img/sample-lakehouse.png"></a></p>
+</div>
+</li>
+<li>
+<p>Select the <strong>Start with sample data</strong> tile and then select the <strong>Public holidays</strong> sample. After a minute or so, the lakehouse will be populated with data.</p>
+</li>
 </ol>
 <h2 id="step-5-apply-workspace-access-controls">Step 5: Apply workspace access controls</h2>
 <p>Workspace roles are used to control access to workspaces and the content within them. Workspace roles can be assigned when users need to see all items in a workspace, when they need to manage workspace access, or create new Fabric items, or when they need specific permissions to view, modify or share content in the workspace.  </p>
@@ -1675,6 +1687,27 @@
 </li>
 </ol>
 <hr>
+<h2 id="clean-up-resources_1">Clean up resources</h2>
+<p>In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.</p>
+<p>Once you've finished, you should delete the workspace you created for this exercise.</p>
+<ol>
+<li>
+<p>Navigate to Microsoft Fabric in your browser.</p>
+</li>
+<li>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
+</li>
+<li>
+<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Delete</strong> to delete the workspace.</p>
+</li>
+</ol>
+<hr>
+<p><small><b>Source:
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html</a>
+</b></small></p>
 
 
 
