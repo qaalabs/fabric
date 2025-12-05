@@ -49,7 +49,7 @@ Next, create a data warehouse in the workspace you created:
     After a minute or so, a new warehouse will be created:
 
     !!! quote ""
-        ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
+        ![Screenshot of a new warehouse.](../img/19-new-sample-warehouse.png)
 
 ## Step 4: Create a lakehouse
 
@@ -64,7 +64,7 @@ Next, create a lakehouse in the workspace you created.
     After a minute or so, a new Lakehouse will be created:
 
     !!! quote ""
-        ![Screenshot of a new lakehouse in Fabric.](../img/sample-lakehouse.png)
+        ![Screenshot of a new lakehouse in Fabric.](../img/19-new-sample-lakehouse.png)
 
 4. Select the **Start with sample data** tile and then select the **Public holidays** sample. After a minute or so, the lakehouse will be populated with data.
 
