@@ -4,6 +4,7 @@
 
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
+
 ## Step 1: Signing in to Microsoft Fabric
 
 In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
@@ -18,6 +19,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
     !!! quote ""
         ![Fabric home page](../img/qa-fabric-home.png)
+
 
 ## Step 2: Create a workspace
 
@@ -38,12 +40,14 @@ Before working with data in Fabric, you need to create a workspace with a Fabric
     !!! quote ""
         ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
 
+
 ## Step 3: Create a lakehouse
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
-1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
-    - Give it a name of your choice. For example: `fab_lakehouse`
+1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
+    - Give it a unique name of your choice. For example: `fab_lakehouse123`
+    - Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -59,6 +63,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
     - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create shortcuts in this folder to reference data that is stored externally.
 
 Currently, there are no tables or files in this lakehouse.
+
 
 ## Step 4: Create a Dataflow (Gen2) to ingest data
 
@@ -83,10 +88,9 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
     - **Link to file**: *Selected*
     - **File path or URL**: https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv
     - **Connection**: Create new connection
-    - **Connection Name**: *default value* ~ or *orders.csv* if name already exists
+    - **Connection Name**: *Specify a unique name*
     - **data gateway**: (none)
     - **Authentication kind**: Anonymous
-    - **Privacy Level**: None
 
 3. Select **Next** to preview the file data, and then **Create** the data source.
 
@@ -94,6 +98,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
     !!! quote ""
         ![Query in the Power Query editor.](../img/05-power-query.png)
+
 
 ## Step 5: Transform the data using Power Query
 
@@ -132,40 +137,46 @@ You can now transform the data. In this lab we will add a column using a custom 
     !!! quote ""
         ![OrderData column type.](../img/05-order-date-column.png)
 
+
 ## Step 6: Add data destination for Dataflow
 
 The next step is to define a destination for your transformed data. This will be the lakehouse you created in Step 3.
 
-1. On the toolbar ribbon, select the **Home** tab. Then in the **Add data destination** drop-down menu, select **Lakehouse**.
+1. On the toolbar ribbon, select the **Home** tab. Then in the **Query** section, choose **Add data destination**
 
-    !!! note
-        - If this option is grayed out, you may already have a data destination set.
-        - Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor.
-        - If a default destination is already set, you can remove it and add a new one.
+    !!! quote ""
+        ![Add data destination.](../img/05-add-data-destination.png)
 
-2. In the **Connect to data destination** dialog box, use the existing connection credentials:
+2. Select **Lakehouse**.
+
+3. In the **Connect to data destination** dialog box, use the existing connection credentials:
 
     !!! quote ""
         ![Data destination configuration page.](../img/qa-05-dataflow-connection.png){ width="700" }
 
-3. Select **Next** and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. Then specify a new table named **orders**:
+4. Select **Next** and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. 
+    
+    - Then specify a new table named **orders**:
 
     !!! quote ""
         ![Data destination configuration page.](../img/05-data-destination-target.png)
 
-4. Select **Next** and on the **Choose destination settings** page:
+5. Select **Next** and on the **Choose destination settings** page:
 
-    - Disable the **Use automatic settings** option, select **Append**, and then **Save settings**.
+    - Disable the **Use automatic settings** option
+    - Select **Append**
+    - Then click **Save settings**.
 
     !!! quote ""
         ![Data destination settings page.](../img/qa-05-destination-settings.png)
 
-5. On the Menu bar, open **View** and select **Diagram view**. Notice the **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
+6. On the Menu bar, open **View** and select **Diagram view**. Notice the **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
 
     !!! quote ""
         ![Query with a lakehouse destination.](../img/05-lakehouse-destination.png)
 
-6. On the toolbar ribbon, select the **Home** tab. Then select **Save & run** and wait for the **Dataflow 1 dataflow** to be created in your workspace.
+7. On the toolbar ribbon, select the **Home** tab. Then select **Save & run** and wait for the **Dataflow 1** dataflow to be created in your workspace.
+
 
 ## Step 7: Add a dataflow to a pipeline
 
@@ -184,7 +195,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 2. Select **Pipeline activity**, and add a **Dataflow** activity to the pipeline.
 
-3. With the new **Dataflow1** activity selected, on the **Settings** tab, in the **Dataflow** drop-down list, select **Dataflow 1** (the data flow you created previously)
+3. With the new **Dataflow1** activity selected, on the **Settings** tab, in the **Dataflow** drop-down list, select **Dataflow1** (the data flow you created previously)
 
     !!! quote ""
         ![Pipeline with a dataflow activity.](../img/qa-05-dataflow-activity.png)
@@ -230,3 +241,4 @@ Once you've finished exploring dataflows in Microsoft Fabric, you should delete 
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html
 </b></small>
+
