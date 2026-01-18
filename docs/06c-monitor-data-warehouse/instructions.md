@@ -4,6 +4,7 @@
 
 !!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
 
+
 ## Step 1: Signing in to Microsoft Fabric
 
 In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
@@ -18,6 +19,7 @@ In this lab, you will sign in to Microsoft Fabric using the email and password f
 
     !!! quote ""
         ![Fabric home page](../img/qa-fabric-home.png)
+
 
 ## Step 2: Create a workspace
 
@@ -38,11 +40,12 @@ Before working with data in Fabric, you need to create a workspace with a Fabric
     !!! quote ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
+
 ## Step 3: Create a sample data warehouse
 
 Now that you have a workspace, it's time to create a data warehouse.
 
-1. On the menu bar on the left, select **Create**. In the New page, under the *Data Warehouse* section, select **Sample warehouse** and create a new data warehouse named `sample-dw`
+1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Warehouse* section, select **Sample warehouse** and create a new data warehouse named `sample-dw`
 
     !!! note "If the Create option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -51,13 +54,14 @@ Now that you have a workspace, it's time to create a data warehouse.
     !!! quote ""
         ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
 
+
 ## Step 4: Explore dynamic management views
 
 Microsoft Fabric data warehouses include *dynamic management views* (DMVs), which you can use to identify current activity in the data warehouse instance.
 
 1. In the **sample-dw** data warehouse page, in the **New SQL query** drop-down list, select **New SQL query**.
 
-2. In the new blank query pane, enter the following Transact-SQL code to query the `sys.dm_exec_connections` DMV:
+2. In the new blank query pane, enter the following Transact-SQL code to query the **sys.dm_exec_connections** DMV:
 
     ```sql
     SELECT * FROM sys.dm_exec_connections;
@@ -65,7 +69,7 @@ Microsoft Fabric data warehouses include *dynamic management views* (DMVs), whic
 
 3. Use the :material-play: **Run** button to run the SQL script and view the results, which include details of all connections to the data warehouse.
 
-4. Modify the SQL code to query the `sys.dm_exec_sessions` DMV, like this:
+4. Modify the SQL code to query the **sys.dm_exec_sessions** DMV, like this:
 
     ```sql
     SELECT * FROM sys.dm_exec_sessions;
@@ -73,7 +77,7 @@ Microsoft Fabric data warehouses include *dynamic management views* (DMVs), whic
 
 5. Run the modified query and view the results, which show details of all authenticated sessions.
 
-6. Modify the SQL code to query the sys.dm_exec_requests DMV, like this:
+6. Modify the SQL code to query the **sys.dm_exec_requests** DMV, like this:
 
     ```sql
     SELECT * FROM sys.dm_exec_requests;
@@ -108,11 +112,14 @@ Microsoft Fabric data warehouses include *dynamic management views* (DMVs), whic
 
     !!! question "What does this code do: `WHILE 1 = 1`?"
 
-11. Leave the query running, and return to the tab containing the code to query the DMVs and re-run it. This time, the results should include the second query that is running in the other tab. Note the elapsed time for that query.
+11. Leave the query running, and return to the tab containing the code to query the DMVs and re-run it. This time, the results should include the second query that is running in the other tab.
+    - Note the elapsed time for that query.
 
-12. Wait a few seconds and re-run the code to query the DMVs again. The elapsed time for the query in the other tab should have increased.
+12. Wait a few seconds and re-run the code to query the DMVs again.
+    - The elapsed time for the query in the other tab should have increased.
 
-13. Return to the second query tab where the query is still running and select **Cancel** to cancel it.
+13. Return to the second query tab where the query is still running
+    - Select **Cancel** to cancel it.
 
 14. Back on the tab with the code to query the DMVs, re-run the query to confirm that the second query is no longer running.
 
@@ -120,6 +127,7 @@ Microsoft Fabric data warehouses include *dynamic management views* (DMVs), whic
 
 !!! info "Further Information"
     See [Monitor connections, sessions, and requests using DMVs](https://learn.microsoft.com/fabric/data-warehouse/monitor-using-dmv) in the Microsoft Fabric documentation for more information about using DMVs.
+
 
 ## Step 5: Explore query insights
 
@@ -176,3 +184,4 @@ If you've finished exploring your data warehouse, you can delete the workspace y
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06c-monitor-data-warehouse.html
 </b></small>
+
