@@ -44,6 +44,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
     - Give it a uniquename of your choice. For example: `fab_lakehouse`
+    - Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -116,7 +117,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     !!! quote ""
         ![Screenshot of a pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
 
-11. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the :material-refresh: (*Refresh*) icon to refresh the status, and wait until it has succeeeded.
+11. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the :material-refresh: (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
 12. In the menu bar on the left, select your lakehouse.
 
@@ -134,7 +135,10 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     table_name = "sales"
     ```
 
-3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. 
+
+    !!! info "Toggle parameter cell"
+        This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
 4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
@@ -162,7 +166,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 5. Verify that your notebooks looks similar to this, and then use the :material-play: **Run all** button on the toolbar to run all of the cells it contains.
 
     !!! quote ""
-        ![Screenshot of a notebook with a parameters cell and code to transform data.](../img/04-notebook.png)
+        ![Notebook with parameters cell and code to transform data.](../img/04-notebook.png)
 
     !!! note
         - Since this is the first time you've run any Spark code in this session, the Spark pool must be started.
@@ -170,11 +174,14 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 6. When the notebook run has completed, in the **Explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
-7. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to `Load Sales` and close the settings pane.
+7. In the notebook menu bar, use the ⚙️  **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to `Load Sales` and close the settings pane.
 
 8. In the hub menu bar on the left, select your lakehouse.
 
 9. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
+
+    !!! warning "If the preview won't load you may need to first cancel the running notebook"
+        - To do this click the **Monitor" tab and cancel any running activities
 
 ## Step 6: Modify the pipeline
 
@@ -184,8 +191,12 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 2. On the **Activities** tab, in the **All activities** list, select **Delete data**. Then position the new **Delete data** activity to the left of the **Copy data** activity and connect its **On completion** output to the **Copy data** activity, as shown here:
 
+    !!! note "If you can't see the **All activities** option - click the **...**"
+
     !!! quote ""
         ![Screenshot of a pipeline with Delete data and Copy data activities.](../img/04-delete-data-activity.png)
+
+    !!! note "If you are unable to click the **Activity** tab - refreshing the page may help"
 
 3. Select the **Delete data** activity, and in the pane below the design canvas, set the following properties:
 
@@ -209,7 +220,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 5. Select the **Copy data** activity and then connect its **On Completion** output to the **Notebook** activity as shown here:
 
     !!! quote ""
-        ![Screenshot of a pipeline with Copy Data and Notebook activities.](../img/04-pipeline.png)
+        ![A pipeline with Copy Data and Notebook activities.](../img/04-pipeline.png)
 
 6. Select the **Notebook** activity, and then in the pane below the design canvas, set the following properties:
 
@@ -262,3 +273,4 @@ Once you've finished exploring your pipeline, you should delete the workspace yo
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html
 </b></small>
+
