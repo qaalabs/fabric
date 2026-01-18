@@ -42,8 +42,9 @@ Before working with data in Fabric, you need to create a workspace with a Fabric
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
-1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
+1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
     - Give it a name of your choice. For example: `fab_lakehouse`
+    - Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -134,7 +135,7 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
-1. At the top-right of the Lakehouse page, switch from Lakehouse to SQL analytics endpoint.
+1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint**.
 
     - Then wait a short time until the SQL analytics endpoint for your lakehouse opens in a visual interface from which you can query its tables.
 
@@ -144,6 +145,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
     SELECT Item, SUM(Quantity * UnitPrice) AS Revenue
     FROM sales
     GROUP BY Item
+    ORDER BY Revenue DESC;
     ```
 
 3. Use the :material-play: **Run** button to run the query and view the results, which should show the total revenue for each product.
@@ -201,3 +203,4 @@ Once you've finished exploring your lakehouse, you should delete the workspace y
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html
 </b></small>
+
