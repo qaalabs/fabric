@@ -14,35 +14,43 @@ This lab will take approximately **30** minutes to complete.
 
 ### Step 1: Signing in to Microsoft Fabric
 
-In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
+- In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
 
 ### Step 2: Create a workspace
 
-Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
+- Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
 
 ### Step 3: Create an eventhouse
 
-Now that you have a workspace, you can start creating the Fabric items you'll need for your real-time intelligence solution. we'll start by creating an eventhouse.
+- Now that you have a workspace, you can start creating the Fabric items you'll need for your real-time intelligence solution.
+- We'll start by creating an eventhouse.
 
 ### Step 4: Create an Eventstream
 
-In this step you create a new event stream in your workspace. Once established, you will be automatically redirected to the primary editor, ready to begin integrating sources into your event stream.
+- In this step you create a new event stream in your workspace. 
+- Once established, you will be automatically redirected to the primary editor, ready to begin integrating sources into your event stream.
 
 ### Step 5: Add a source
 
+- Add a source - we will use **Bicycles** sample data.
+
 ### Step 6: Add a destination
+
+- Add a destination for the data.
 
 ### Step 7: Query captured data
 
-The eventstream you have created takes data from the sample source of bicycle data and loads it into the database in your eventhouse. You can analyze the captured data by querying the table in the database.
+- The eventstream you have created takes data from the sample source of bicycle data and loads it into the database in your eventhouse.
+- You can analyze the captured data by querying the table in the database.
 
 ### Step 8: Transform event data
 
-The data you've captured is unaltered from the source. In many scenarios, you may want to transform the data in the event stream before loading it into a destination.
+- The data you've captured is unaltered from the source.
+- In many scenarios, you may want to transform the data in the event stream before loading it into a destination.
 
 ### Step 9: Query the transformed data
 
-Now you can query the bicycle data that has been transformed and loaded into a table by your eventstream
+- Now you can query the bicycle data that has been transformed and loaded into a table by your eventstream
 
 ---
 
