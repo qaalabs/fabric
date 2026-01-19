@@ -1,0 +1,302 @@
+# Lab 06 ~ Analyse data in a data warehouse
+
+!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
+
+!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
+
+
+## Step 1: Signing in to Microsoft Fabric
+
+In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
+
+1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
+
+2. Follow the prompts, and sign in with the user credentials from the QA Platform:
+    - Email
+    - Password
+
+    After signing in, you will be redirected to the Fabric home page:
+
+    !!! quote ""
+        ![Fabric home page](../img/qa-fabric-home.png)
+
+
+## Step 2: Create a workspace
+
+Before working with data in Fabric, you need to create a workspace with a Fabric licence capacity.
+
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
+
+2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
+
+3. Create a **New workspace**:
+
+    - Give it a unique name. For example: `fab_workspace123`
+    - Leave all other options as the default values
+    - Click **Apply**
+
+4. When your new workspace opens, it should be empty.
+
+    !!! quote ""
+        ![Screenshot of an empty workspace in Fabric.](../img/new-workspace.png)
+
+
+## Step 3: Create a data warehouse
+
+*Now that you have a workspace, it's time to create a data warehouse.*
+
+1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Warehouse* section, select **Warehouse**. 
+    
+    Give it a name of your choice. For example: `fab_warehouse`
+
+    !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
+
+    After a minute or so, a new warehouse will be created:
+
+    !!! quote ""
+        ![Screenshot of a new warehouse.](../img/06-new-data-warehouse.png)
+
+
+## Step 4: Create tables and insert data
+
+*A warehouse is a relational database in which you can define tables and other objects.*
+
+1. In your new warehouse, select the **T-SQL** tile, and add the following CREATE TABLE statement:
+
+    ```sql
+    CREATE TABLE dbo.DimProduct
+    (
+       ProductKey INTEGER NOT NULL,
+       ProductAltKey VARCHAR(25) NULL,
+       ProductName VARCHAR(50) NOT NULL,
+       Category VARCHAR(50) NULL,
+       ListPrice DECIMAL(5,2) NULL
+    );
+    GO
+    ```
+
+2. Use the  :material-play: **Run** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
+
+3. Use the **Refresh** button next to your warehouse name to refresh the display. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
+
+4. On the **Home** menu tab, use the **New SQL Query** button to create a new query, and enter the following INSERT statement:
+
+    ```sql
+    INSERT INTO dbo.DimProduct
+    VALUES
+    (1, 'RING1', 'Bicycle bell', 'Accessories', 5.99),
+    (2, 'BRITE1', 'Front light', 'Accessories', 15.49),
+    (3, 'BRITE2', 'Rear light', 'Accessories', 15.49);
+    GO
+    ```
+
+5. Run the new query to insert three rows into the **DimProduct** table.
+
+6. When the query has finished, in the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
+
+7. On the **Home** menu tab, use the **New SQL Query** button to create a new query. Then copy and paste the Transact-SQL code from `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt` into the new query pane.
+
+8. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
+
+9. Use the **Refresh** button next to your warehouse name to refresh the display. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
+    - **DimCustomer**
+    - **DimDate**
+    - **DimProduct**
+    - **FactSalesOrder**
+
+!!! tip "If the schema takes a while to load, just refresh the browser page."
+
+
+## Step 5: Query data warehouse tables
+
+*Since the data warehouse is a relational database, you can use SQL to query its tables.*
+
+### Query fact and dimension tables
+
+Most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).
+
+1. Navigate back to the browser tab with your warehouse and create a new SQL Query, and :material-play: **Run** the following code:
+
+    ```sql
+    SELECT d.[Year] AS CalendarYear,
+           d.[Month] AS MonthOfYear,
+           d.MonthName AS MonthName,
+           SUM(so.SalesTotal) AS SalesRevenue
+    FROM FactSalesOrder AS so
+    JOIN DimDate AS d ON so.SalesOrderDateKey = d.DateKey
+    GROUP BY d.[Year], d.[Month], d.MonthName
+    ORDER BY CalendarYear, MonthOfYear;
+    ```
+
+    !!! note
+        The attributes in the date dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
+
+2. Modify the query as follows to add a second dimension to the aggregation.
+
+    ```sql
+    SELECT d.[Year] AS CalendarYear,
+           d.[Month] AS MonthOfYear,
+           d.MonthName AS MonthName,
+           c.CountryRegion AS SalesRegion,
+           SUM(so.SalesTotal) AS SalesRevenue
+    FROM FactSalesOrder AS so
+    JOIN DimDate AS d ON so.SalesOrderDateKey = d.DateKey
+    JOIN DimCustomer AS c ON so.CustomerKey = c.CustomerKey
+    GROUP BY d.[Year], d.[Month], d.MonthName, c.CountryRegion
+    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
+    ```
+
+3. Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region.
+
+
+## Step 6: Create a view
+
+A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like *views* and *stored procedures* to encapsulate SQL logic.
+
+1. Modify the query you created previously as follows to create a view
+
+    !!! note "You need to remove the ORDER BY clause to create a view."
+
+    ```sql
+    CREATE VIEW vSalesByRegion
+    AS
+    SELECT d.[Year] AS CalendarYear,
+           d.[Month] AS MonthOfYear,
+           d.MonthName AS MonthName,
+           c.CountryRegion AS SalesRegion,
+           SUM(so.SalesTotal) AS SalesRevenue
+    FROM FactSalesOrder AS so
+    JOIN DimDate AS d ON so.SalesOrderDateKey = d.DateKey
+    JOIN DimCustomer AS c ON so.CustomerKey = c.CustomerKey
+    GROUP BY d.[Year], d.[Month], d.MonthName, c.CountryRegion;
+    ```
+
+2. Run the query to create the view.
+
+    !!! success "Refresh the data warehouse schema and verify that the new view is listed in the **Explorer** pane."
+
+3. Create a new SQL query and :material-play: **Run** the following SELECT statement:
+
+    ```SQL
+    SELECT CalendarYear, MonthName, SalesRegion, SalesRevenue
+    FROM vSalesByRegion
+    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
+    ```
+
+
+## Step 7: Create a visual query
+
+Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.
+
+1. On the **Home** menu, expand the options under **New SQL query** and select **New visual query**.
+
+2. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
+
+3. Drag **DimProduct** onto the **canvas**. We now have two tables in our query.
+
+4. Select the **FactSalesOrder** box, and click the **(+)** button on the canvas to **Merge queries**.
+
+    !!! quote ""
+        ![Canvas with the FactSalesOrder table selected.](../img/06-visual-query-merge.png)
+
+5. In the **Merge queries** window, select **DimProduct** as the right table for merge.
+    - Select **ProductKey** in both queries
+    - Leave the default **Left outer** join type
+    - Click **OK**.
+
+    !!! quote ""
+        ![Merge options.](../img/06-dw-merge.png)
+
+6. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table.
+    - Expand the column by clicking the arrow to the right of the column name.
+    - Select **ProductName**
+    - Click **OK**.
+
+    !!! quote ""
+        ![preview pane with the DimProduct column expanded, ProductName selected.](../img/06-visual-query-preview.png)
+
+7. If you're interested in looking at data for a single product, per a manager request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
+
+8. From here, you can analyse the results of this single query by selecting **Visualize results** or **Download Excel file**. You can now see exactly what the manager was asking for, so we don't need to analyse the results further.
+
+
+## Step 8: Define a data model (optional)
+
+A relational data warehouse typically consists of *fact* and *dimension* tables. The fact tables contain numeric measures you can aggregate to analyse business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.
+
+1. In the toolbar, select **New semantic model**.
+
+2. In the **New semantic model** window, name the semantic model and select all four tables. Select **Confirm**.
+
+3. A new browser tab will automatically open with your new semantic model. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
+
+    !!! note "If your model doesn't open automatically:"
+        - Click your workspace
+        - Then select the semantic model
+        - Then: open semantic model
+
+    !!! quote ""
+        ![Screenshot of the data warehouse model page.](../img/06-model-dw.png)
+
+---
+
+!!! warning "You need a Power BI license to create and edit semantic models."
+
+To get a PowerBi licence - do the following:
+
+    - Click your workspace
+    - Next to your semantic model click the ... 
+    - Select: Create report
+    - You should now be offered a 60-day trial for PowerBi
+
+
+## Step 9: Create relationships
+
+!!! note "Make sure that you are in Editing mode and not Viewing mode"
+
+1. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
+    - **From table**: FactSalesOrder
+    - **Column**: ProductKey
+    - **To table**: DimProduct
+    - **Column**: ProductKey
+    - **Cardinality**: Many to one (*:1)
+    - **Cross filter direction**: Single
+    - **Make this relationship active**: Selected
+    - **Assume referential integrity**: Unselected
+
+3. Repeat the process to create many-to-one relationships between the following tables:
+    - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
+    - **FactSalesOrder.SalesOrderDateKey** &#8594; **DimDate.DateKey**
+
+    When all of the relationships have been defined, the model should look like this:
+
+    !!! quote ""
+        ![Screenshot of the model with relationships.](../img/06-dw-relationships.png)
+
+4. Now go back to your semantic model in your workspace
+    - Click: **Auto-create report**
+
+    !!! quote ""
+        ![PowerBi Report.](../img/06-powerbi-report.png)
+
+---
+
+## Clean up resources
+
+In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and queried tables using T-SQL and the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset for downstream analytics and reporting.
+
+If you've finished exploring your data warehouse, you should delete the workspace you created for this exercise.
+
+1. Navigate to Microsoft Fabric in your browser.
+
+2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
+
+3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
+
+4. Select **Delete** to delete the workspace.
+
+---
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06-data-warehouse.html
+</b></small>
+

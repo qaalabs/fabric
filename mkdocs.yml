@@ -10,47 +10,52 @@ nav:
 
     - "01 Lakehouse":
       - 01-lakehouse/index.md
-      - Summary: 01-lakehouse/summary.md
+      - Instructions: 01-lakehouse/instructions.md
 
     - "3b Medallion Architecture":
       - 03b-medallion-lakehouse/index.md
-      - Summary: 03b-medallion-lakehouse/summary.md
+      - Instructions: 03b-medallion-lakehouse/instructions.md
 
     - "04 Ingest Pipeline":
       - 04-ingest-pipeline/index.md
-      - Summary: 04-ingest-pipeline/summary.md
+      - Instructions: 04-ingest-pipeline/instructions.md
 
     - "05 Dataflows (Gen2)": 
       - 05-dataflows-gen2/index.md
-      - Summary: 05-dataflows-gen2/summary.md
+      - Instructions: 05-dataflows-gen2/instructions.md
 
     - "06 Analyse data in a data warehouse":
       - 06-data-warehouse/index.md
-      - Summary: 06-data-warehouse/summary.md
+      - Instructions: 06-data-warehouse/instructions.md
 
     - "06c Monitor Data Warehouse":
       - 06c-monitor-data-warehouse/index.md
-      - Summary: 06c-monitor-data-warehouse/summary.md
+      - Instructions: 06c-monitor-data-warehouse/instructions.md
 
     - "09 Real-time Eventstream":
       - 09-real-time-analytics-eventstream/index.md
-      - Summary: 09-real-time-analytics-eventstream/summary.md
+      - Instructions: 09-real-time-analytics-eventstream/instructions.md
+
+    - "09 Real-time Eventstream":
+      - 09-real-time-analytics-eventstream/index.md
+      - Instructions: 09-real-time-analytics-eventstream/instructions.md
+
 
     - "18 Monitor Hub":
       - 18-monitor-hub/index.md
-      - Summary: 18-monitor-hub/summary.md
+      - Instructions: 18-monitor-hub/instructions.md
 
     - "19 Secure Data Access":
       - 19-secure-data-access/index.md
-      - Summary: 19-secure-data-access/summary.md
+      - Instructions: 19-secure-data-access/instructions.md
 
     - "20 Work with SQL Database":
       - 20-work-with-database/index.md
-      - Summary: 20-work-with-database/summary.md
+      - Instructions: 20-work-with-database/instructions.md
 
     - "21 Deployment Pipelines":
       - 21-implement-cicd/index.md
-      - Summary: 21-implement-cicd/summary.md
+      - Instructions: 21-implement-cicd/instructions.md
 
 # Theme
 theme:
