@@ -1,41 +1,75 @@
 # Lab 21 ~ Implement deployment pipelines in Microsoft Fabric
 
-!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
+## Step 1: Access Microsoft Fabric
 
-!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
-
-## Create workspaces
-
-Create three workspaces with the Fabric trial enabled.
-
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser and sign in with your Fabric credentials.
-
-2. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
-
-3. Create a new workspace named Development, selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
-
-4. Repeat steps 1 & 2, creating two more workspaces named Test, and Production. Your workspaces are: Development, Test, and Production.
-
-5. Select the **Workspaces** icon on the menu bar on the left and confirm that there are three workspaces named:  Development, Test, and Production
+In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.
 
 !!! note
-    If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.
+    The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.
 
-## Create a deployment pipeline
+1. In the QA Platform, wait until the lab status shows **Ready**.
+
+2. Then right-click **Open** and choose **Open in a private browsing window** (InPrivate in Edge, Incognito in Chrome).
+
+3. When prompted, sign in using:
+
+    - **Username** from the QA Platform (used as the email address)
+    - **Password** from the QA Platform (used as a Temporary Access Pass)
+
+    - If prompted to "Stay signed in?", select **No**. This ensures the session ends when the private window is closed.
+
+    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
+
+4. In the same private browsing window, **open a new tab**.
+
+5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com) at: https://app.fabric.microsoft.com
+
+6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
+
+7. After confirmation, you should be be redirected to the **Microsoft Fabric home page**:
+
+    !!! quote ""
+        ![Fabric home page](../img/qa-fabric-home.png)
+
+
+## Step 2: Create workspaces
+
+For this lab you need to create three workspaces: **Development**, **Test**, and **Production**.
+
+1. In the left-hand navigation, select **Workspaces** (the icon looks similar to 🗇).
+
+2. Select **+ New workspace**, then create a workspace using the naming format below:
+
+    - Start the name with `Development`
+    - Add random numbers to make it unique (for example, `Development123`)
+    - Leave all other options as the default values
+    - Click **Apply**
+
+3. Repeat steps 1 & 2, creating two more workspaces named `Test`, and `Production`.
+    
+4. Select the **Workspaces** icon on left-hand navigation
+    - Confirm that there are three workspaces named: **Development**, **Test**, and **Production**
+
+
+## Step 3: Create a deployment pipeline
 
 Next, create a deployment pipeline.
 
-1. In the menu bar on the left, select **Workspaces**.
+1. In the left-hand navigation, select **Workspaces**.
 
-2. Select **Deployment Pipelines**, then **New pipeline**.
+2. Select: **:material-rocket-launch-outline: Deployment Pipelines**, then select **New pipeline**
 
-3. In the **Add a new deployment pipeline** window, give the pipeline a unique name and select **Next**.
+3. In the **Add a new deployment pipeline** window:
 
-4. In the new pipeline window, select **Create and continue**.
+    - Enter the Pipeline name as: `Lab pipeline`
+    - Select **Next**.
 
-## Assign workspaces to stages of a deployment pipeline
+4. In the new pipeline window, select: **:material-rocket-launch-outline: Create and continue**
 
-1. On the left menu bar, select the pipeline you created. 
+
+## Step 4: Assign workspaces to stages of a deployment pipeline
+
+1. On the left-hand navigation, select the pipeline you created. 
 
 2. In the window that appears, expand the options under **Assign a workspace** on each deployment stage and select the name of the workspace that matches the name of the stage.
 
@@ -44,17 +78,23 @@ Next, create a deployment pipeline.
     !!! quote ""
         ![Screenshot of deployment pipeline.](../img/21-deployment-pipeline.png)
 
-## Create content
 
-Fabric items haven't been created in your workspaces yet. Next, create a lakehouse in the development workspace.
+## Step 5: Create content
 
-1. In the menu bar on the left, select **Workspaces**.
+Fabric items haven't been created in your workspaces yet. Next, create a lakehouse in the **Development** workspace.
+
+1. In the left-hand navigation, select **Workspaces**.
 
 2. Select the **Development** workspace.
 
 3. Select **New Item**.
 
-4. In the window that appears, select **Lakehouse** and in the **New lakehouse window**, name the lakehouse, **LabLakehouse**.
+4. In the New Item window that appears, scroll down to "Store data"
+
+    - Select **Lakehouse**
+    - Name the lakehouse: `LabLakehouse`
+    - The Location should be your Development workspace
+    - Ensure **Lakehouse schemas** is disabled
 
 5. Select **Create**.
 
@@ -65,39 +105,70 @@ Fabric items haven't been created in your workspaces yet. Next, create a lakehou
 
 7. Select the sample **NYCTaxi**.
 
-8. In the menu bar on the left, select the pipeline you created.
 
-9. Select the **Development** stage, and under the deployment pipeline canvas you can see the lakehouse you created as a stage item. In the left edge of the **Test** stage, there's an **X** within a circle. The **X** indicates that the Development and Test stages aren't synchronized.
+## Step 6: Review your pipeline
 
-10. Select the **Test** stage and under the deployment pipeline canvas you can see that the lakehouse you created is only a stage item in the source, which in this case refers to the **Development** stage.  
+1. In the menu bar on the left, select the pipeline you created.
+
+    - If you can't see it on the left, select …, then "Deployment pipelines", then "Lab pipeline"
+
+2. Select the **Development** stage, and under the deployment pipeline canvas you can see the lakehouse you created as a stage item. In the left edge of the **Test** stage, there's an **X** within a circle. The **X** indicates that the Development and Test stages aren't synchronized.
+
+3. Select the **Test** stage and under the deployment pipeline canvas you can see that the lakehouse you created is only a stage item in the source, which in this case refers to the **Development** stage.  
 
     !!! quote ""
         ![Deployment pipeline showing content mismatches between stages.](../img/21-lab-pipeline-compare.png)
 
-## Deploy content between stages
 
-Deploy the lakehouse from the **Development** stage to the **Test** and **Production** stages.
+## Step 7: Deploy content from Development to Test
+
+You will now deploy the lakehouse from the **Development** stage to the **Test** stage.
 
 1. Select the **Test** stage in the deployment pipeline canvas.
 
-2. Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item. Then select the **Deploy** button to copy the lakehouse in its current state to the **Test** stage.
+2. Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item.
 
-3. In the **Deploy to next stage** window that appears, select **Deploy**.
- There is now an X in a circle in the Production stage in the deployment pipeline canvas. The lakehouse exists in the Development and Test stages but not yet in the Production stage.
+3. Select the **Deploy** button to copy the lakehouse in its current state to the **Test** stage:
 
-4. Select the **Production** stage in the deployment canvas.
+    !!! quote ""
+        ![Deployment pipeline from Development to Test.](../img/21-deploy-dev-to-test.png)
 
-5. Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item. Then select the **Deploy** button to copy the lakehouse in its current state to the **Production** stage.
+4. In the **Deploy to next stage** window that appears, select **Deploy**.
+    - Wait for the deployment to complete (it may take a while)
 
-6. In the **Deploy to next stage** window that appears, select **Deploy**. The green check marks between the stages indicates that all stages in sync and contain the same content.
+!!! note 
+    - You may see an X in a circle in the Production stage.
+    - This is expected and indicates that nothing has been deployed to Production yet.
 
-7. Using deployment pipelines to deploy between stages also updates the content in the workspaces corresponding to the deployment stage. Let's confirm.
 
-8. In the menu bar on the left, select **Workspaces**.
+## Step 8: Deploy content from Test to Production
 
-9. Select the **Test** workspace. The lakehouse was copied there.
+You will now deploy the lakehouse from the **Test** stage to the **Production** stage.
 
-10. Open the **Production** workspace from the **Workspaces** icon on the left menu. The lakehouse was copied to the Production workspace too.
+5. Select the **Production** stage in the deployment canvas.
+
+6. Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item.
+    - Then select the **Deploy** button to copy the lakehouse in its current state to the **Production** stage.
+
+7. In the **Deploy to next stage** window that appears, select **Deploy**.
+
+!!! success "A green check mark inside each stage indicates that all stages are in sync and contain the same content."
+
+
+## Step 9: Confirm the deployment
+
+Using deployment pipelines creates the same Fabric artefacts in each deployment stage. Let's confirm.
+
+1. In the menu bar on the left, select **Workspaces**.
+
+2. Open the **Test** workspace and confirm that the lakehouse exists.
+
+3. Open the **Production** workspace and confirm that the lakehouse exists.
+
+!!! info "The lakehouse will be empty!"
+    - Deployment pipelines create and align **Fabric artefacts** across workspaces.
+    - They do **not** copy data between environments.
+    - At this stage, the lakehouse will exist in Test and Production, but it won't contain any data.
 
 ---
 
