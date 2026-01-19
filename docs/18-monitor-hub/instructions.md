@@ -89,7 +89,8 @@ In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide ra
 
     ![Enable git integration.](../img/gen2-git-integration-circle.png){ width="300"}
 
-2. Name the new dataflow `Get Product Data` and select **Create**.
+2. Name the new dataflow: `Get Product Data`
+    - Select **Create**
 
     !!! quote ""
         ![Screenshot of a new dataflow.](../img/18-new-data-flow.png)
@@ -103,14 +104,18 @@ In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide ra
 
 4. Publish the dataflow.
 
-5. In the navigation bar on the left, select **Monitor** to view the monitoring hub and observe that your dataflow is in-progress (if not, refresh the view until you see it).
+5. In the navigation bar on the left, select **Monitor** to view the monitoring hub and observe that your dataflow is in-progress
+    - If you can't see it, refresh the view until you see it in progress.
 
     !!! quote ""
         ![Screenshot of the monitoring hub with a dataflow in-progress.](../img/18-monitor-dataflow.png)
 
 6. Wait for a few seconds, and then refresh the page until the status of the dataflow is **Succeeded**.
 
-7. In the navigation pane, select your lakehouse. Then expand the **Tables** folder to verify that a table named **products** has been created and loaded by the dataflow (you may need to refresh the **Tables** folder).
+7. In the navigation pane, select your lakehouse.
+
+    - Then expand the **Tables** folder to verify that a table named **products** has been created and loaded by the dataflow.
+    - If you can't see it, you may need to refresh the **Tables** folder.
 
     !!! quote ""
         ![Screenshot of the products table in the lakehouse page.](../img/18-products-table.png)
@@ -126,7 +131,8 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
     !!! quote ""
         ![Screenshot of a new notebook.](../img/18-new-notebook.png)
 
-2. At the top left of the notebook, select **Notebook 1** to view its details, and change its name to `Query Products`
+2. At the top left of the notebook, select **Notebook 1** to view its details
+    - Change its name to: `Query Products`
 
 3. In the notebook editor, in the **Explorer** pane, select **Add data items** and then select **Existing data sources**.
 

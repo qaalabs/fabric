@@ -46,7 +46,7 @@ Before working with data in Fabric, you need to create a workspace.
 3. Select **+ New workspace**, then create a workspace using the naming format below:
 
     - Start the name with `fab_workspace`
-    - Add random numbers to make it unique (for example, `fab_workspace123`)
+    - **Add your name** to make it unique (for example, `fab_workspace_dave`)
     - Leave all other options as the default values
     - Click **Apply**
 
@@ -242,22 +242,6 @@ In this exercise, you assign an item permission and create a OneLake data access
 ## Clean up resources
 
 In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
-
----
-
-## Clean up resources
-
-In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.
-
-Once you've finished, you should delete the workspace you created for this exercise.
 
 1. Navigate to Microsoft Fabric in your browser.
 
