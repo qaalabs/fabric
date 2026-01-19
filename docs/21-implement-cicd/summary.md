@@ -12,14 +12,28 @@ This lab takes approximately **20** minutes to complete.
 
 ### Step 2: Create a workspace
 
-- Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.
+- Create three workspaces with the Fabric trial enabled.
 
-### Step 3: 
+### Step 3: Create a deployment pipeline
 
-### Step 4: 
+- Next, create a deployment pipeline.
 
-### Step 5: 
+### Step 4: Assign workspaces to stages of a deployment pipeline
 
-### Step 6: 
+- Assign workspaces to the stages of the deployment pipeline.
+
+### Step 5: Create content
+
+- Fabric items haven’t been created in your workspaces yet. Next, create a lakehouse in the development workspace.
+
+### Step 6: Deploy content between stages
+
+- Deploy the lakehouse from the Development stage to the Test and Production stages.
 
 ---
+
+## Clean up resources
+
+In this exercise, you created a deployment pipeline, and assigned stages to the pipeline. Then you created content in a development workspace and deployed it between pipeline stages using deployment pipelines.
+
+If you've finished exploring your database, you can delete the pipeline, and the 3 workspaces you created for this exercise.
