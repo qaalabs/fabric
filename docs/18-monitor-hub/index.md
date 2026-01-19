@@ -4,6 +4,10 @@ The monitoring hub in Microsoft Fabric provides a central place where you can mo
 
 This lab will take approximately **30** minutes to complete.
 
+!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
+
+!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
+
 ## Overview
 
 ### Step 1: Signing in to Microsoft Fabric
