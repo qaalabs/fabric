@@ -85,7 +85,7 @@ Currently, there are no tables or files in this lakehouse.
 
 Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).
 
-1. Download the [sales.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv) file from https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv, 
+1. Download the [sales.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv) file from: https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
 
     - Save it as `sales.csv` on your local computer (or lab VM if applicable).
 
