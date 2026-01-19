@@ -314,4 +314,3 @@ If you've finished exploring your data warehouse, you should delete the workspac
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06-data-warehouse.html
 </b></small>
-

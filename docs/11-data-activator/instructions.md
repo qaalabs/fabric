@@ -1,4 +1,4 @@
-# Use Activator in Fabric
+# Lab 11 ~ Use Activator in Fabric
 
 !!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
 
@@ -60,17 +60,24 @@ Before working with data in Fabric, you need to create a workspace.
 
 In this lab, you´ll use the Activator in Fabric to create triggers based on data changes. Fabric's Activator conveniently provides a sample dataset that you can use to explore the Activator's capabilities. You´ll use this sample data to analyze some real-time data streaming and create a trigger to send an email out when a condition is met.
 
-> **Note**: The Activator sample process generates some random data in the background. The more complex your conditions and filters are, the more time it takes to trigger them. If you don't see any data in the graph, wait a few minutes and refresh the page. That said, you don't need to wait for the data to be displayed in the graphs to continue with the lab.
+!!! note
+    - The Activator sample process generates some random data in the background.
+    - The more complex your conditions and filters are, the more time it takes to trigger them.
+    - If you don't see any data in the graph, wait a few minutes and refresh the page.
+    - That said, you don't need to wait for the data to be displayed in the graphs to continue with the lab.
 
-Next, create an Activator in the workspace you created:
+Create an Activator in the workspace you created:
 
-1. On the menu bar on the left, select **Create**. In the *New* page, under the *Real-Time Intelligence* section, select **Activator**.
+1. On the menu bar on the left, select **Create**
 
-    >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
+    - In the *New* page, under the *Real-Time Intelligence* section, select **Activator**.
+
+    !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
     After a minute or so, a new activator will be created:
 
-    ![Screenshot of the Activator Home screen.](./Images/activator-home-screen.png)
+    !!! quote ""
+        ![Screenshot of the Activator Home screen.](../img/11-activator-home-screen.png)
 
     On a real production environment, you would use your own data. However, for this lab, you use the sample data provided by Activator. 
 
@@ -80,7 +87,8 @@ Next, create an Activator in the workspace you created:
 
 1. Select the pulldown besides the current Activator name on the upper left-hand corner and change the name to ***Contoso Shipping Activator*** for our example.
 
-    ![Screenshot of the Activator home screen.](./Images/activator-reflex-home-screen.png)
+    !!! quote ""
+        ![Screenshot of the Activator home screen.](../img/11-activator-reflex-home-screen.png)
 
 Our Activator project is now created and we can start navigating through its objects, properties and rules.
 
@@ -93,16 +101,19 @@ Let's explore the eventstream data this sample is built on.
 
     These events show the real-time status of packages that are in the process of being delivered.
 
-    ![Screenshot of the Event details live table.](./Images/activator-event-details.png)
+    !!! quote ""
+        ![Screenshot of the Event details live table.](../img/11-activator-event-details.png)
 
 1. Review the data in the **Event details** live table. Each data point contains information about incoming events. You might have to scroll to see it all.
 
     The **Explorer** pane displays objects that use data from eventstreams. These objects have properties from which rules can be created. In this example, **Package** is the object created from the **Package delivery events** eventstream.
 
 1. In the **Explorer** pane, under the **Temperature** property, select the rule **Too hot for medicine**.
+
 1. In the **Definition** pane, review how the rule works. In the **Monitor** section, the **Temperature** property is selected as attribute being monitored. The temperature values come from the Temperature column in the **Event details** table that we saw earlier in the eventstream. 
 
-    ![Screenshot of the temperature rule.](./Images/activator-temperature-rule.png) 
+    !!! quote ""
+        ![Screenshot of the temperature rule.](../img/11-activator-temperature-rule.png) 
 
 1. In the **Condition** section, you see the rule condition to monitor temperatures that are higher than 20 degrees Celsius.
 
@@ -126,9 +137,11 @@ In a real world scenario, there might not be a need to create a new object for t
 
 1. Select **Create**.
 
-    ![Screenshot of the Activator Build object pane.](./Images/activator-build-object.png)
+    !!! quote ""
+        ![Screenshot of the Activator Build object pane.](../img/11-activator-build-object.png)
 
 In the **Explorer** pane, a new object called **Redmond Packages** has been added. Time to create your rule.
+
 
 ## Step 6: Create a rule
 
@@ -146,7 +159,8 @@ Let's review what you want your rule to do: *You want to create an alert rule th
 
 1. A new rule is created with the default name of *Temperature alert*. Change the name to ***Medicine temp out of range*** by selecting the pencil icon next to the rule's name in the middle pane.
 
-    ![Screenshot of the Activator new rule.](./Images/activator-new-rule.png)
+    !!! quote ""
+        ![Screenshot of the Activator new rule.](../img/11-activator-new-rule.png)
 
     So far you´ve defined the property and condition you want the rule to fire on, but that still doesn't include all the parameters you need. You still need to make sure that the trigger only fires for the *city* of **Redmond** and for the *special care* type of **Medicine**. Let's go ahead and add a couple of filters for those conditions.  
 
@@ -158,7 +172,8 @@ Let's review what you want your rule to do: *You want to create an alert rule th
 
 1. Let's add one more filter just to make sure that the medicine is refrigerated. Select the **Add filter** button, set the ***ColdChainType*** attribute, set it to **Is equal to** and enter **Refrigerated** as the value.
 
-    ![Screenshot of the Activator rule with filters set.](./Images/activator-rule-filters.png)
+    !!! quote ""
+        ![Screenshot of the Activator rule with filters set.](../img/11-activator-rule-filters.png)
 
     You're almost there! You just need to define what action you want to take when the trigger fires. In this case, you want to send an email to the shipping department.
 
@@ -169,7 +184,8 @@ Let's review what you want your rule to do: *You want to create an alert rule th
     - **Headline**: *Temperature too high*
     - **Context**: Select the *Temperature* property from the checkbox list.
 
-    ![Screenshot of the Activator define action.](./Images/activator-define-action.png)
+    !!! quote ""
+        ![Screenshot of the Activator define action.](../img/11-activator-define-action.png)
 
 1. Select **Save and start**.
 
@@ -186,5 +202,11 @@ In this exercise, you have created an Activator with an alert rule. You should n
 If you've finished exploring your Activator, you can delete the workspace you created for this exercise.
 
 1. In the left navigation bar, select the icon for your workspace to view all of the items it contains.
+
 2. In the menu on the top toolbar, select **Workspace settings**.
+
 3. In the **General** section, select **Remove this workspace**.
+
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/11-data-activator.html
+</b></small>
