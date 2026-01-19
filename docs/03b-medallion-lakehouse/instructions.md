@@ -123,7 +123,7 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 4. Paste the following code into the first cell:
 
     ```python
-    # Cell 1 ~ Transform the data before you load it
+    # Silver: Cell 1 ~ Transform the data before you load it
     from pyspark.sql.types import *
     
     # Create the schema for the table
@@ -177,7 +177,7 @@ Now that you have transformed data, you can use a notebook to load it to a delta
     - Use the **+ Code** button to **add a new code block** and add the following code to the cell:
 
     ```python
-    # Cell 2 ~ Add columns for data validation and cleanup
+    # Silver: Cell 2 ~ Add columns for data validation and cleanup
     from pyspark.sql.functions import when, lit, col, current_timestamp, input_file_name
         
     # Add columns IsFlagged, CreatedTS and ModifiedTS
@@ -201,7 +201,7 @@ Now that you have transformed data, you can use a notebook to load it to a delta
 1. Next, you'll define the schema for the **sales_silver** table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:
 
     ```python
-    # Cell 3 ~ Define the schema for the sales_silver table
+    # Silver: Cell 3 ~ Define the schema for the sales_silver table
     from pyspark.sql.types import *
     from delta.tables import *
         
@@ -236,7 +236,7 @@ Now you're going to perform an upsert operation on a Delta table, updating exist
 1. Add a new code block and paste the following code:
 
     ```python
-    # Cell 4 ~ Update existing records and insert new ones based on a condition
+    # Silver: Cell 4 ~ Update existing records and insert new ones based on a condition
     from delta.tables import *
         
     deltaTable = DeltaTable.forPath(spark, 'Tables/sales_silver')
@@ -345,12 +345,14 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 
 2. In the Explorer pane, add your **Sales** lakehouse by selecting **Add data items** and then selecting the **Sales** lakehouse you created earlier. You should see the **sales_silver** table listed in the **Tables** section of the explorer pane.
 
-3. In the existing code block, remove the commented text and **add the following code** to load data to your dataframe and start building your star schema, then run it:
+3. In the existing code block, remove the commented text and **add the following code** to load data to your dataframe and start building your star schema:
 
     ```python
-    # Cell 1 ~ Load data to the dataframe as a starting point to create the gold layer
+    # Gold: Cell 1 ~ Load data to the dataframe as a starting point to create the gold layer
     df = spark.read.table("Sales.sales_silver")
     ```
+    
+    Use the **:material-play: (Run cell)** button on the left of the cell to run the code.
 
     !!! warning "If you receive a `TooManyRequestsForCapacity` error when running the first cell:"
         - Make sure you stopped the session previously running in the first notebook.
@@ -358,7 +360,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 4. **Add a new code block** and paste the following code to create your date dimension table and run it:
 
     ```python
-    # Cell 2 ~ Create the date dimension table
+    # Gold: Cell 2 ~ Create the date dimension table
     from pyspark.sql.types import *
     from delta.tables import*
         
@@ -377,7 +379,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 5. In a new code block, **add and run the following code** to create a dataframe for your date dimension, **dimdate_gold**:
 
     ```python
-    # Cell 3 ~ Create dataframe for dimDate_gold
+    # Gold: Cell 3 ~ Create dataframe for dimDate_gold
     from pyspark.sql.functions import col, dayofmonth, month, year, date_format
         
     dfdimDate_gold = df.dropDuplicates(["OrderDate"]).select(col("OrderDate"), \
@@ -398,7 +400,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 6. In another new code block, **add and run the following code** to update the date dimension as new data comes in:
 
     ```python
-    # Cell 4 ~ Update the date dimension as new data comes in
+    # Gold: Cell 4 ~ Update the date dimension as new data comes in
     from delta.tables import *
         
     deltaTable = DeltaTable.forPath(spark, 'Tables/dimdate_gold')
@@ -433,7 +435,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 7. To build out the customer dimension table, **add a new code block**, paste and run the following code:
 
     ```python
-    # Cell 5 ~ Build the customer dimension table
+    # Gold: Cell 5 ~ Build the customer gold dimension table
     from pyspark.sql.types import *
     from delta.tables import *
         
@@ -451,7 +453,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 8. In a new code block, **add and run the following code** to drop duplicate customers, select specific columns, and split the "CustomerName" column to create "First" and "Last" name columns:
 
     ```python
-    # Cell 6 ~ Create customer dimension dataframe
+    # Gold: Cell 6 ~ Create customer dimension dataframe
     from pyspark.sql.functions import col, split
         
     # Create customer_silver dataframe
@@ -472,7 +474,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 9. Next we'll create the ID column for our customers. **In a new code block**, paste and run the following:
 
     ```python
-    # Cell 7 ~ Create customer ID column
+    # Gold: Cell 7 ~ Create customer ID column
     from pyspark.sql.functions import monotonically_increasing_id, col, when, coalesce, max, lit
         
     dfdimCustomer_temp = spark.read.table("Sales.dimCustomer_gold")
@@ -495,7 +497,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
     **In a new code block**, paste and run the following:
 
     ```python
-    # Cell 8 ~ Keep the customer table up-to-date as new data comes in
+    # Gold: Cell 8 ~ Keep the customer table up-to-date as new data comes in
     from delta.tables import *
 
     deltaTable = DeltaTable.forPath(spark, 'Tables/dimcustomer_gold')
@@ -529,27 +531,23 @@ Now you'll use a new notebook to transform the data further, model it into a sta
     **In a new code block**, paste and run the following:
 
     ```python
-    # Cell 9 ~ 
-    from pyspark.sql.functions import col, split, lit, when
+    # Gold: Cell 9 ~ Create product gold dimension
+    from pyspark.sql.types import *
+    from delta.tables import *
         
-    # Create product_silver dataframe
-        
-    dfdimProduct_silver = df.dropDuplicates(["Item"]).select(col("Item")) \
-        .withColumn("ItemName",split(col("Item"), ", ").getItem(0)) \
-        .withColumn("ItemInfo",when((split(col("Item"), ", ").getItem(1).isNull() | (split(col("Item"), ", ").getItem(1)=="")),lit("")).otherwise(split(col("Item"), ", ").getItem(1))) 
-        
-    # Display the first 10 rows of the dataframe to preview your data
-
-    display(dfdimProduct_silver.head(10))
+    DeltaTable.createIfNotExists(spark) \
+        .tableName("sales.dimproduct_gold") \
+        .addColumn("ItemName", StringType()) \
+        .addColumn("ItemID", LongType()) \
+        .addColumn("ItemInfo", StringType()) \
+        .execute()
     ```
 
 12. **Add another code block** to create the **product_silver** dataframe.
 
     ```python
-    # Cell 10 ~ 
+    # Gold: Cell 10 ~  Create the product_silver dataframe
     from pyspark.sql.functions import col, split, lit, when
-        
-    # Create product_silver dataframe
         
     dfdimProduct_silver = df.dropDuplicates(["Item"]).select(col("Item")) \
         .withColumn("ItemName",split(col("Item"), ", ").getItem(0)) \
@@ -565,10 +563,9 @@ Now you'll use a new notebook to transform the data further, model it into a sta
     Add the following syntax to a new code block and run it:
 
     ```python
-    # Cell 11 ~ 
+    # Gold: Cell 11 ~ Create IDs for dimProduct_gold table
     from pyspark.sql.functions import monotonically_increasing_id, col, lit, max, coalesce
         
-    #dfdimProduct_temp = dfdimProduct_silver
     dfdimProduct_temp = spark.read.table("Sales.dimProduct_gold")
         
     MAXProductID = dfdimProduct_temp.select(coalesce(max(col("ItemID")),lit(0)).alias("MAXItemID")).first()[0]
@@ -589,7 +586,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
     **In a new code block**, paste and run the following:
 
     ```python
-    # Cell 12 ~ 
+    # Gold: Cell 12 ~ Ensure that your product table remains up-to-date
     from delta.tables import *
         
     deltaTable = DeltaTable.forPath(spark, 'Tables/dimproduct_gold')
@@ -598,30 +595,30 @@ Now you'll use a new notebook to transform the data further, model it into a sta
                 
     deltaTable.alias('gold') \
     .merge(
-            dfUpdates.alias('updates'),
-            'gold.ItemName = updates.ItemName AND gold.ItemInfo = updates.ItemInfo'
-            ) \
-            .whenMatchedUpdate(set =
-            {
+        dfUpdates.alias('updates'),
+        'gold.ItemName = updates.ItemName AND gold.ItemInfo = updates.ItemInfo'
+    ) \
+    .whenMatchedUpdate(set =
+        {
                 
-            }
-            ) \
-            .whenNotMatchedInsert(values =
-            {
-            "ItemName": "updates.ItemName",
-            "ItemInfo": "updates.ItemInfo",
-            "ItemID": "updates.ItemID"
-            }
-            ) \
-            .execute()
+        }
+    ) \
+        .whenNotMatchedInsert(values =
+        {
+        "ItemName": "updates.ItemName",
+        "ItemInfo": "updates.ItemInfo",
+        "ItemID": "updates.ItemID"
+        }
+    ) \
+    .execute()
     ```
 
     Now that you have your dimensions built out, the final step is to create the fact table.
 
-15. In a new code block, paste and run the following code to create the fact table:
+15. In a new code block, paste and run the following code to **create the fact table**:
 
     ```python
-    # Cell 13 ~ 
+    # Gold: Cell 13 ~ Create the fact table
     from pyspark.sql.types import *
     from delta.tables import *
         
@@ -639,7 +636,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 16. **In a new code block**, paste and run the following code to create a **new dataframe** to combine sales data with customer and product information include customer ID, item ID, order date, quantity, unit price, and tax:
 
     ```python
-    # Cell 14 ~ 
+    # Gold: Cell 14 ~ Combine sales data with customer and product information
     from pyspark.sql.functions import col
         
     dfdimCustomer_temp = spark.read.table("Sales.dimCustomer_gold")
@@ -647,7 +644,6 @@ Now you'll use a new notebook to transform the data further, model it into a sta
         
     df = df.withColumn("ItemName",split(col("Item"), ", ").getItem(0)) \
         .withColumn("ItemInfo",when((split(col("Item"), ", ").getItem(1).isNull() | (split(col("Item"), ", ").getItem(1)=="")),lit("")).otherwise(split(col("Item"), ", ").getItem(1))) \
-        
         
     # Create Sales_gold dataframe
         
@@ -669,11 +665,11 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 17. Now you'll ensure that sales data remains up-to-date by running the following code in a **new code block**:
 
     ```python
-    # Cell 15 ~ 
+    # Gold: Cell 15 ~ Ensure that sales data remains up-to-date
     from delta.tables import *
         
     deltaTable = DeltaTable.forPath(spark, 'Tables/factsales_gold')
-        
+    
     dfUpdates = dffactSales_gold
         
     deltaTable.alias('gold') \
@@ -703,7 +699,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 
 !!! success "You now have a curated, modeled **gold** layer that can be used for reporting and analysis."
 
-## Step 7: Create a semantic model
+## Step 11: Create a semantic model
 
 In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.
 
@@ -724,25 +720,34 @@ Note that you can't use the **default semantic model** that is automatically cre
 
     This will open the semantic model in Fabric.
 
-## Step 8: Create relationships (optional)
+## Step 12: Create relationships (optional)
 
 !!! note "Before you can create relationships in a semantic model, you need to have a PowerBI Pro licence"
 
-**Get a PowerBi licence:**
+!!! info "Get a PowerBi licence:"
+    - Click your Workspace
+    - In the lakehouse row - hover over semantic model
+    - Click the 3 dots **...**
+    - Click **Create report**
 
-- Click your Workspace
-- In the lakehouse row - hover over semantic model
-- Click the 3 dots **...**
-- Click **Create report**
+!!! success "A message box should popup offering you a PowerBi Pro trial."
 
-*A message box should popup offering you a PowerBi Pro trial.*
+1. Before you can make any changes you need to change to Editing mode:
 
-!!! success "You should now be able to create the semantic model as depicted below."
+    - In the top right hand corner, change the dropdown from **Viewing** to **Editing**
+
+!!! note "You should now be able to create the semantic model as depicted below"
+
+2. Create the following relationships:
+
+    - **dimcustomer_gold: CustomerID** --> **factsales_gold: CustomerID**
+    - **dimdate_gold: OrderDate** --> **factsales_gold: OrderDate**
+    - **dimproduct_gold: ItemID** --> **factsales_gold: ItemID**
 
 !!! quote ""
     ![Semantic model in Fabric.](../img/03b-dataset-relationships.png)
 
-## Step 9: Create a PowerBi report (optional)
+## Step 13: Create a PowerBi report (optional)
 
 - You can now create new report
 - Or just auto create a report: **Explore > Auto create report**
