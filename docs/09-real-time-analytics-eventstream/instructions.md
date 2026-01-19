@@ -1,42 +1,60 @@
 # Lab 09 ~ Ingest real-time data with Eventstream in Fabric
 
-!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
+!!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
 
-!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
+!!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
 
-## Step 1: Signing in to Microsoft Fabric
 
-In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
+## Step 1: Access Microsoft Fabric
 
-1. Using an **incognito/private mode browser tab** navigate to the [Fabric portal](https://app.fabric.microsoft.com/) at: https://fabric.microsoft.com
+In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.
 
-2. Follow the prompts, and sign in with the user credentials from the QA Platform:
-    - Email
-    - Password
+!!! note
+    The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.
 
-3. After signing in, you will be redirected to the Fabric home page:
+1. In the QA Platform, wait until the lab status shows **Ready**.
+
+2. Then right-click **Open** and choose **Open in a private browsing window** (InPrivate in Edge, Incognito in Chrome).
+
+3. When prompted, sign in using:
+
+    - **Username** from the QA Platform (used as the email address)
+    - **Password** from the QA Platform (used as a Temporary Access Pass)
+
+    - If prompted to "Stay signed in?", select **No**. This ensures the session ends when the private window is closed.
+
+    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
+
+4. In the same private browsing window, **open a new tab**.
+
+5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com) at: https://app.fabric.microsoft.com
+
+6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
+
+7. After confirmation, you should be be redirected to the **Microsoft Fabric home page**:
 
     !!! quote ""
         ![Fabric home page](../img/qa-fabric-home.png)
 
+
 ## Step 2: Create a workspace
 
-Before working with data in Fabric, you need to create a workspace with a Fabric licence capacity.
+Before working with data in Fabric, you need to create a workspace.
 
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in an incognito/private mode browser tab browser, and sign in with the Fabric credentials from the QA Platform.
+1. In the left-hand navigation, select **Workspaces** (the icon looks similar to 🗇).
 
-2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
+3. Select **+ New workspace**, then create a workspace using the naming format below:
 
-3. Create a **New workspace**:
-
-    - Give it a unique name. For example: `fab_workspace123`
+    - Start the name with `fab_workspace`
+    - Add random numbers to make it unique (for example, `fab_workspace123`)
     - Leave all other options as the default values
     - Click **Apply**
 
-4. When your new workspace opens, it should be empty.
+4. When your new workspace opens, it should be empty:
 
     !!! quote ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
+
 
 ## Step 3: Create an eventhouse
 

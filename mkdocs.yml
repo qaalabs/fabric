@@ -36,10 +36,9 @@ nav:
       - 09-real-time-analytics-eventstream/index.md
       - Instructions: 09-real-time-analytics-eventstream/instructions.md
 
-    - "09 Real-time Eventstream":
-      - 09-real-time-analytics-eventstream/index.md
-      - Instructions: 09-real-time-analytics-eventstream/instructions.md
-
+    - "11 Data Activator":
+      - 11-data-activator/index.md
+      - Instructions: 11-data-activator/instructions.md
 
     - "18 Monitor Hub":
       - 18-monitor-hub/index.md
