@@ -112,3 +112,6 @@ In this exercise, you created a deployment pipeline, and assigned stages to the 
 4. Select **Delete** to delete the workspace.
 
 ---
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/20-work-with-database.html
+</b></small>
