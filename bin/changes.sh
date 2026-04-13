@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FABRIC="/mnt/ssd/qaalabs/fabric/mslearn"
-MSLEARN="/mnt/ssd/qaalabs/mslearn-fabric/Instructions/Labs"
+FABRIC="/mnt/ssd/projects/qaalabs/fabric/mslearn"
+MSLEARN="/mnt/ssd/projects/qaalabs/mslearn-fabric/Instructions/Labs"
 
 # See if directories exist
 if [[ ! -d ${FABRIC} ]]; then
@@ -56,19 +56,27 @@ case $LAB in
     LABFILE="unknown"
     ;;
 esac
-echo $LABFILE
 
 # See if files exists
 if [[ ! -f ${FABRIC}/${LABFILE} ]]; then
   echo "Error: File not found ~ ${FABRIC}/${LABFILE}"
+  echo "Lab must be one of: 01 03b 04 05 06 06c 09 11 18 19 20 21"
   exit 3
 fi 
 if [[ ! -f ${MSLEARN}/${LABFILE} ]]; then
   echo "Error: File not found ~ ${MSLEARN}/${LABFILE}"
+  echo "Lab must be one of: 01 03b 04 05 06 06c 09 11 18 19 20 21"
   exit 4
 fi 
 
 # Show the difference in the 2 files
-diff ${FABRIC}/${LABFILE} ${MSLEARN}/${LABFILE}
+tmpfile="/tmp/lab${LAB}.txt"
+diff ${FABRIC}/${LABFILE} ${MSLEARN}/${LABFILE} > ${tmpfile}
+
+count=$(cat ${tmpfile} | wc -l)
+
+echo "${LABFILE} ~ diff has ${count} lines"
+
+cat ${tmpfile}
 
 #EOF
