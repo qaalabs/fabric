@@ -130,23 +130,25 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 1. In the **Explorer** pane, select the **Files/data** folder so you can see the **sales.csv** file it contains.
 
-2. In the **...** menu for the **sales.csv** file, select **Load to Tables > New table**.
+2. In the **...** menu for the **sales.csv** file, select **Load to Tables** > **New table**.
 
     !!! quote ""
         ![Load to tables - New table.](../img/qa-01-load-to-tables.png)
 
-3. In **Load to table** dialog box, set the table name to **sales** and confirm the load operation.
+3. In **Load to table** dialog box, set the table name to `sales` and confirm the load operation.
+
+4. Select **CSV** for the file type.
 
     - Then wait for the table to be created and loaded.
 
-    !!! tip "If the **sales** table does not automatically appear, in the **...** menu for the **Tables** folder, select **Refresh**."
+    !!! tip "If the `sales` table does not automatically appear, in the **...** menu for the **Tables** folder, select **Refresh**."
 
-4. In the **Explorer** pane, select the **sales** table that has been created to view the data:
+5. In the **Explorer** pane, select the `sales` table that has been created to view the data:
 
     !!! quote ""
         ![Screenshot of a table preview.](../img/qa-01-table-preview.png)
 
-5. In the **...** menu for the **sales** table, select **View files** to see the underlying files for this table:
+5. In the **...** menu for the `sales` table, select **View files** to see the underlying files for this table:
 
     !!! quote ""
         ![Screenshot of a table preview.](../img/qa-01-delta-table-files.png)
@@ -183,7 +185,7 @@ While many data professionals are familiar with SQL, those with Power BI experie
 
 1. On the toolbar, expand the **New SQL query** option and select **New visual query**.
 
-2. Drag the **sales** table (under dbo > Tables) to the new visual query editor pane that opens to create a Power Query as shown here:
+2. Drag the `sales` table (under dbo > Tables) to the new visual query editor pane that opens to create a Power Query as shown here:
 
     !!! quote ""
         ![Visual query.](../img/qa-01-visual-query.png)
@@ -211,7 +213,7 @@ While many data professionals are familiar with SQL, those with Power BI experie
 
 ## Clean up resources
 
-In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default semantic model to support data visualisations.
+In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL.
 
 Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.
 
