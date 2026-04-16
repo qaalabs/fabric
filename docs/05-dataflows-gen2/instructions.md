@@ -162,6 +162,9 @@ The next step is to define a destination for your transformed data. This will be
     !!! quote ""
         ![Add data destination.](../img/05-add-data-destination.png)
 
+    !!! note
+        If the **Add data destination** option is grayed out or a lakehouse destination is already shown in the query, your lakehouse has been automatically attached as the default destination because you created the dataflow from within the lakehouse. Select the existing lakehouse destination icon in the query to open the destination settings, and then continue from step 5.
+
 2. Select **Lakehouse**.
 
 3. In the **Connect to data destination** dialog box, use the existing connection credentials:
@@ -195,7 +198,7 @@ The next step is to define a destination for your transformed data. This will be
 
 ## Step 7: Add a dataflow to a pipeline
 
-You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created in a few different experiences, including Data Factory experience.
+You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created from your workspace by selecting **+ New item** > **Data pipeline**.
 
 1. From your Fabric-enabled workspace, select **+ New item > Data pipeline**
 
