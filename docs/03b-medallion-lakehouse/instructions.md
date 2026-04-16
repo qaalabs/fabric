@@ -695,13 +695,13 @@ Now you'll use a new notebook to transform the data further, model it into a sta
     .execute()
     ```
 
-    Here you're using Delta Lake's merge operation to synchronize and update the factsales_gold table with new sales data (`dffactSales_gold`). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.
+   Here you're using Delta Lake's merge operation to synchronize and update the factsales_gold table with new sales data (dffactSales_gold). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.
 
 !!! success "You now have a curated, modeled **gold** layer that can be used for reporting and analysis."
 
 ## Step 11: Create a semantic model
 
-In your workspace, you can now use the gold layer to create a report and analyze the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.
+You can now use the gold layer to create a report and analyze the data. First, you must create a semantic model to define relationships and measures for reporting.
 
 Note that you can't use the **default semantic model** that is automatically created when you create a lakehouse. You must create a new semantic model that includes the gold tables you created in this exercise, from the Explorer.
 
