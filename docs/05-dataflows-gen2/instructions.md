@@ -163,7 +163,9 @@ The next step is to define a destination for your transformed data. This will be
         ![Add data destination.](../img/05-add-data-destination.png)
 
     !!! note
-        If the **Add data destination** option is grayed out or a lakehouse destination is already shown in the query, your lakehouse has been automatically attached as the default destination because you created the dataflow from within the lakehouse. Select the existing lakehouse destination icon in the query to open the destination settings, and then continue from step 5.
+        If the **Add data destination** option is grayed out or a lakehouse destination is already shown in the query, your lakehouse has been automatically attached as the default destination because you created the dataflow from within the lakehouse.
+
+        Select the existing lakehouse destination icon in the query to open the destination settings, and then continue from step 5.
 
 2. Select **Lakehouse**.
 
