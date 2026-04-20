@@ -32,6 +32,10 @@ nav:
       - 06c-monitor-data-warehouse/index.md
       - Instructions: 06c-monitor-data-warehouse/instructions.md
 
+    - "07 Real-time Intelligence":
+      - 07-real-time-intelligence/index.md
+      - Instructions: 07-real-time-intelligence/instructions.md
+
     - "09 Real-time Eventstream":
       - 09-real-time-analytics-eventstream/index.md
       - Instructions: 09-real-time-analytics-eventstream/instructions.md
