@@ -1,0 +1,2144 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../09-real-time-analytics-eventstream/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Instructions - MS Fabric Labs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-07-real-time-intelligence-in-ms-fabric" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MS Fabric Labs" class="md-header__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MS Fabric Labs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instructions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MS Fabric Labs" class="md-nav__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
+
+    </a>
+    MS Fabric Labs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Fabric
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Microsoft Fabric
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../01-lakehouse/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 Lakehouse
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 Lakehouse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-lakehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../03b-medallion-lakehouse/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3b Medallion Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3b Medallion Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03b-medallion-lakehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../04-ingest-pipeline/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 Ingest Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 Ingest Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-ingest-pipeline/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-dataflows-gen2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 Dataflows (Gen2)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    05 Dataflows (Gen2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-dataflows-gen2/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../06-data-warehouse/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 Analyse data in a data warehouse
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    06 Analyse data in a data warehouse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-data-warehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../06c-monitor-data-warehouse/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06c Monitor Data Warehouse
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    06c Monitor Data Warehouse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06c-monitor-data-warehouse/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 Real-time Intelligence
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    07 Real-time Intelligence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Access Microsoft Fabric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Create a workspace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-an-eventstream" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Create an eventstream
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-an-eventhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Create an eventhouse
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-query-the-captured-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Query the captured data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-create-a-real-time-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Create a real-time dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-create-an-alert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Create an alert
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clean up resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../09-real-time-analytics-eventstream/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 Real-time Eventstream
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    09 Real-time Eventstream
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-real-time-analytics-eventstream/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../11-data-activator/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 Data Activator
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    11 Data Activator
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-data-activator/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../18-monitor-hub/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18 Monitor Hub
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    18 Monitor Hub
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../18-monitor-hub/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../19-secure-data-access/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19 Secure Data Access
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    19 Secure Data Access
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19-secure-data-access/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../20-work-with-database/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20 Work with SQL Database
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    20 Work with SQL Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20-work-with-database/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../21-implement-cicd/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21 Deployment Pipelines
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    21 Deployment Pipelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../21-implement-cicd/instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-07-real-time-intelligence-in-ms-fabric">Lab 07 ~ Real-Time Intelligence in MS Fabric</h1>
+<div class="admonition info">
+<p class="admonition-title">For this lab, you will access the QA Platform and sign in using the credentials provided.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
+</div>
+<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
+<p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.</p>
+</div>
+<ol>
+<li>
+<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
+</li>
+<li>
+<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
+</li>
+<li>
+<p>When prompted, sign in using:</p>
+<ul>
+<li><strong>Username</strong> from the QA Platform (used as the email address)</li>
+<li>
+<p><strong>Password</strong> from the QA Platform (used as a Temporary Access Pass)</p>
+</li>
+<li>
+<p>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</p>
+</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
+</div>
+</li>
+<li>
+<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
+</li>
+<li>
+<p>Navigate to the <a href="https://app.fabric.microsoft.com">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com">https://app.fabric.microsoft.com</a></p>
+</li>
+<li>
+<p>If prompted, <strong>re-enter your email address</strong> to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.</p>
+</li>
+<li>
+<p>After confirmation, you should be be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<p>Before working with data in Fabric, you need to create a workspace.</p>
+<ol>
+<li>
+<p>In the left-hand navigation, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Select <strong>+ New workspace</strong>, then create a workspace using the naming format below:</p>
+<ul>
+<li>Start the name with <code>fab_workspace</code></li>
+<li>Add random numbers to make it unique (for example, <code>fab_workspace123</code>)</li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
+</ul>
+</li>
+<li>
+<p>When your new workspace opens, it should be empty:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-workspace.png" data-desc-position="bottom"><img alt="Empty workspace in Fabric." src="../../img/new-workspace.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-3-create-an-eventstream">Step 3: Create an eventstream</h2>
+<p>Now you're ready to find and ingest real-time data from a streaming source. To do this, you'll start in the Fabric Real-Time Hub. The real-time hub provides an easy way to find and manage sources of streaming data.</p>
+<blockquote>
+<p><strong>Tip</strong>: The first time you use the Real-Time Hub, some <em>Getting started</em> tips may be displayed. You can close these.</p>
+</blockquote>
+<ol>
+<li>
+<p>In the menu bar on the left, select the <strong>Real-Time</strong> hub.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don't see the <strong>Real-Time hub</strong>, select the ellipsis <strong>(...)</strong> and then pin the Real-Time hub to the menu bar.</p>
+</div>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/pin-real-time-hub.png" data-desc-position="bottom"><img alt="Pinning the Real-Time hub to the menu bar." src="../../img/pin-real-time-hub.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Real-Time hub</strong>, select <strong>Add data</strong>.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/real-time-hub.png" data-desc-position="bottom"><img alt="Real-Time hub." src="../../img/real-time-hub.png"></a></p>
+</div>
+</li>
+<li>
+<p>Select the <strong>Stock market</strong> sample data source.</p>
+</li>
+<li>
+<p>Configure the data source as follows:</p>
+<ul>
+<li><strong>Source name</strong>: <code>stock</code></li>
+<li><strong>Workspace</strong>: Select the workspace you created</li>
+<li><strong>Eventstream name</strong>: <code>stock-data</code></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">The default stream associated with this data will automatically be named <code>stock-data-stream</code></p>
+</div>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/name-eventstream.png" data-desc-position="bottom"><img alt="a new eventstream." src="../../img/name-eventstream.png"></a></p>
+</div>
+</li>
+<li>
+<p>Select <strong>Next</strong>, then <strong>Connect</strong> to create the eventstream. </p>
+</li>
+<li>
+<p>Select <strong>Open eventstream</strong>. The eventstream will show the <strong>stock</strong> source and the <strong>stock-data-stream</strong> on the design canvas:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/new-stock-stream.png" data-desc-position="bottom"><img alt="eventstream canvas." src="../../img/new-stock-stream.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-4-create-an-eventhouse">Step 4: Create an eventhouse</h2>
+<p>The eventstream ingests the real-time stock data, but doesn't currently do anything with it. Let's create an eventhouse where we can store the captured data in a table.</p>
+<ol>
+<li>
+<p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Real-Time Intelligence</em> section, select <strong>Eventhouse</strong>. Give it a unique name of your choice.</p>
+<div class="admonition note">
+<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (<strong>...</strong>) option first.</p>
+</div>
+<p>Close any tips or prompts that are displayed until you see your new empty eventhouse.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/create-eventhouse.png" data-desc-position="bottom"><img alt="new eventhouse" src="../../img/create-eventhouse.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse. You can create tables for your real-time data in this database, or create additional databases as necessary.</p>
+</li>
+<li>
+<p>Select the database, and note that there is an associated <em>queryset</em>. This file contains some sample KQL queries that you can use to get started querying the tables in your database.</p>
+<p>However, currently there are no tables to query. Let's resolve that problem by getting data from the eventstream into a new table.</p>
+</li>
+<li>
+<p>In the main page of your KQL database, select <strong>Get data</strong>.</p>
+</li>
+<li>
+<p>For the data source, select <strong>Eventstream</strong> &gt; <strong>Existing eventstream</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Select or create a destination table</strong> pane, create a new table named <code>stock</code>. Then in the <strong>Configure the data source</strong> pane, select your workspace and the <strong>stock-data</strong> eventstream and name the connection <code>stock-table</code>.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/configure-destination.png" data-desc-position="bottom"><img alt="configuration for loading a table from an eventstream." src="../../img/configure-destination.png"></a></p>
+</div>
+</li>
+<li>
+<p>Use the <strong>Next</strong> button to complete the steps to inspect the data and then finish the configuration. Then close the configuration window to see your eventhouse with the stock table.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/eventhouse-with-table.png" data-desc-position="bottom"><img alt="eventhouse with a table." src="../../img/eventhouse-with-table.png"></a></p>
+</div>
+<p>The connection between the stream and the table has been created. Let's verify that in the eventstream.</p>
+</li>
+<li>
+<p>In the menu bar on the left, select the <strong>Real-Time</strong> hub. In the <strong>...</strong> menu for the <strong>stock-data-stream</strong> stream, select <strong>Open eventstream</strong>.</p>
+<p>The eventstream now shows a destination for the stream:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/eventstream-destination.png" data-desc-position="bottom"><img alt="eventstream with a destination." src="../../img/eventstream-destination.png"></a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Select the destination on the design canvas, and if no data preview is shown beneath it, select <strong>Refresh</strong>.</p>
+</div>
+<p>In this exercise, you've created a very simple eventstream that captures real-time data and loads it into a table. In a real solution, you'd typically add transformations to aggregate the data over temporal windows (for example, to capture the average price of each stock over five-minute periods).</p>
+<p>Now let's explore how you can query and analyze the captured data.</p>
+</li>
+</ol>
+<h2 id="step-5-query-the-captured-data">Step 5: Query the captured data</h2>
+<p>The eventstream captures real-time stock market data and loads it into a table in your KQL database. You can query this table to see the captured data.</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select your eventhouse database.</p>
+</li>
+<li>
+<p>Select the <em>queryset</em> for your database.</p>
+</li>
+<li>
+<p>In the query pane, modify the first example query as shown here:</p>
+<div class="highlight"><pre><span></span><code><span class="n">stock</span>
+<span class="p">|</span><span class="w"> </span><span class="k">take</span><span class="w"> </span><span class="mi">100</span>
+</code></pre></div>
+</li>
+<li>
+<p>Select the query code and run it to see 100 rows of data from the table.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/kql-stock-query.png" data-desc-position="bottom"><img alt="Screenshot of a KQL query." src="../../img/kql-stock-query.png"></a></p>
+</div>
+</li>
+<li>
+<p>Review the results, then modify the query to retrieve the average price for each stock symbol in the last 5 minutes:</p>
+<div class="highlight"><pre><span></span><code><span class="n">stock</span>
+<span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="p">[</span><span class="s">"time"</span><span class="p">]</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">ago</span><span class="p">(</span><span class="mi">5</span><span class="n">m</span><span class="p">)</span>
+<span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">avgPrice</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">avg</span><span class="p">(</span><span class="n">todecimal</span><span class="p">(</span><span class="n">bidPrice</span><span class="p">))</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">symbol</span>
+<span class="p">|</span><span class="w"> </span><span class="k">project</span><span class="w"> </span><span class="n">symbol</span><span class="p">,</span><span class="w"> </span><span class="n">avgPrice</span>
+</code></pre></div>
+</li>
+<li>
+<p>Highlight the modified query and run it to see the results.</p>
+</li>
+<li>
+<p>Wait a few seconds and run it again, noting that the average prices change as new data is added to the table from the real-time stream.</p>
+</li>
+</ol>
+<h2 id="step-6-create-a-real-time-dashboard">Step 6: Create a real-time dashboard</h2>
+<p>Now that you have a table that is being populated by stream of data, you can use a real-time dashboard to visualize the data.</p>
+<ol>
+<li>
+<p>In the query editor, select the KQL query you used to retrieve the average stock prices for the last five minutes.</p>
+</li>
+<li>
+<p>On the toolbar, select <strong>Save to dashboard</strong>. Then pin the query <strong>in a new dashboard</strong> with the following settings:</p>
+<ul>
+<li><strong>Dashboard name</strong>: <code>Stock Dashboard</code></li>
+<li><strong>Tile name</strong>: <code>Average Prices</code></li>
+</ul>
+</li>
+<li>
+<p>Create the dashboard and open it. It should look like this:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/stock-dashboard-table.png" data-desc-position="bottom"><img alt="Screenshot of a new dashboard." src="../../img/stock-dashboard-table.png"></a></p>
+</div>
+</li>
+<li>
+<p>At the top-right of the dashboard, switch from <strong>Viewing</strong> mode to <strong>Editing</strong> mode.</p>
+</li>
+<li>
+<p>Select the <strong>Edit</strong> (<em>pencil</em>) icon for the <strong>Average Prices</strong> tile.</p>
+</li>
+<li>
+<p>In the <strong>Visual formatting</strong> pane, change the <strong>Visual</strong> from <em>Table</em> to <em>Column chart</em>:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/edit-dashboard-tile.png" data-desc-position="bottom"><img alt="Screenshot of a dashboard tile being edited." src="../../img/edit-dashboard-tile.png"></a></p>
+</div>
+</li>
+<li>
+<p>At the top of the dashboard, select <strong>Apply changes</strong> and view your modified dashboard:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/stock-dashboard-chart.png" data-desc-position="bottom"><img alt="Screenshot of a dashboard with a chart tile." src="../../img/stock-dashboard-chart.png"></a></p>
+</div>
+<p>Now you have a live visualization of your real-time stock data.</p>
+</li>
+</ol>
+<h2 id="step-7-create-an-alert">Step 7: Create an alert</h2>
+<p>Real-Time Intelligence in Microsoft Fabric includes a technology named <em>Activator</em>, which can trigger actions based on real-time events. Let's use it to alert you when the average stock price increases by a specific amount.</p>
+<ol>
+<li>
+<p>In the dashboard window containing your stock price visualization, in the toolbar, select <strong>Set alert</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Set alert</strong> pane, create an alert with the following settings:</p>
+<ul>
+<li><strong>Run query every</strong>: 5 minutes</li>
+<li><strong>Check</strong>: On each event grouped by</li>
+<li><strong>Grouping field</strong>: symbol</li>
+<li><strong>When</strong>: avgPrice</li>
+<li><strong>Condition</strong>: Increases by</li>
+<li><strong>Value</strong>: 100</li>
+<li><strong>Action</strong>: Send me an email</li>
+<li><strong>Save location</strong>:<ul>
+<li><strong>Workspace</strong>: <em>Your workspace</em></li>
+<li><strong>Item</strong>: Create a new item</li>
+<li><strong>New item name</strong>: <em>A unique name of your choice</em></li>
+</ul>
+</li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/configure-activator.png" data-desc-position="bottom"><img alt="Screenshot of alert settings." src="../../img/configure-activator.png"></a></p>
+</div>
+</li>
+<li>
+<p>Create the alert and wait for it to be saved. Then close the pane confirming it has been created.</p>
+</li>
+<li>
+<p>In the menu bar on the left, select the page for your workspace (saving any unsaved changes to your dashboard if prompted).</p>
+</li>
+<li>
+<p>On the workspace page, view the items you have created in this exercise, including the activator for your alert.</p>
+</li>
+<li>
+<p>Open the activator, and in its page, under the <strong>avgPrice</strong> node, select the unique identifier for your alert. Then view its <strong>History</strong> tab.</p>
+<p>Your alert may not have been triggered, in which case the history will contain no data. If the average stock price ever changes by more than 100, the activator will send you an email and the alert will be recorded in the history.</p>
+</li>
+</ol>
+<hr>
+<h2 id="clean-up-resources">Clean up resources</h2>
+<p>In this exercise, you have create an eventhouse, ingested real-time data using an eventstream, queried the ingested data in a KQL database table, created a real-time dashboard to visualize the real-time data, and configured an alert using Activator.</p>
+<p>Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.</p>
+<ol>
+<li>
+<p>Navigate to Microsoft Fabric in your browser.</p>
+</li>
+<li>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
+</li>
+<li>
+<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Delete</strong> to delete the workspace.</p>
+</li>
+</ol>
+<hr>
+<p><small><b>Source:
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/07-real-time-Intelligence.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/07-real-time-Intelligence.html</a>
+</b></small></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
