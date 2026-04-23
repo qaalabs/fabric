@@ -1856,6 +1856,10 @@
 </ol>
 <h2 id="step-4-create-a-pipeline">Step 4: Create a pipeline</h2>
 <p>A simple way to ingest data is to use a <strong>Copy Data</strong> activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <em>Copy Job</em> and a <em>Copy Data</em> activity are different methods for moving data in Fabric. A Copy Job is a standalone, simplified data movement tool and doesn’t require a pipeline. A Copy Data activity is configured within a pipeline and supports orchestration with other activities. In this exercise, you use a <strong>Copy Data</strong> activity in a pipeline.</p>
+</div>
 <ol>
 <li>
 <p>On the <strong>Home</strong> page for your lakehouse, select <strong>Get data</strong> and then select <strong>New copy job</strong>, and create a new data pipeline named <code>Ingest Sales Data</code></p>

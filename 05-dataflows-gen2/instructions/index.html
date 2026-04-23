@@ -1882,8 +1882,6 @@
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/lakehouse-toolbar.png" data-desc-position="bottom"><img alt="Lakehouse toolbar." src="../../img/lakehouse-toolbar.png"></a></p>
 </div>
-<p><em>Make sure that <strong>Enable Git Integration</strong> is NOT selected:</em></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/gen2-git-integration-circle.png" data-desc-position="bottom"><img alt="Enable git integration." src="../../img/gen2-git-integration-circle.png" width="300"></a></p>
 <p>Click <strong>Create</strong>, and after a few seconds, the Power Query editor for your new dataflow opens as shown here:</p>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/05-new-dataflow.png" data-desc-position="bottom"><img alt="New dataflow." src="../../img/05-new-dataflow.png"></a></p>
@@ -1895,7 +1893,7 @@
 <li><strong>Link to file</strong>: <em>Selected</em></li>
 <li><strong>File path or URL</strong>: <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv">https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv</a></li>
 <li><strong>Connection</strong>: Create new connection</li>
-<li><strong>Connection Name</strong>: <em>Specify a unique name</em></li>
+<li><strong>Connection Name</strong>: <em>Specify a name</em> ~ e.g. orders</li>
 <li><strong>data gateway</strong>: (none)</li>
 <li><strong>Authentication kind</strong>: Anonymous</li>
 </ul>
@@ -1912,7 +1910,11 @@
 <p>You can now transform the data. In this lab we will add a column using a custom formula.</p>
 <ol>
 <li>
-<p>On the toolbar ribbon, select the <strong>Add column</strong> tab. Then select <strong>Custom column</strong> and create a new column.</p>
+<p>On the toolbar ribboni:</p>
+<ul>
+<li>Select the <strong>Add column</strong> tab. </li>
+<li>Then select <strong>Custom column</strong> and create a new column.</li>
+</ul>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/05-power-query-add-column.png" data-desc-position="bottom"><img alt="Power Query Add Column." src="../../img/05-power-query-add-column.png"></a></p>
 </div>
@@ -1964,7 +1966,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the <strong>Add data destination</strong> option is grayed out or a lakehouse destination is already shown in the query, your lakehouse has been automatically attached as the default destination because you created the dataflow from within the lakehouse.</p>
-<p>Select the existing lakehouse destination icon in the query to open the destination settings, and then continue from step 5.</p>
+<p><mark>Delete the lakehouse in the bottom right hand corner before continuing.</mark></p>
 </div>
 </li>
 <li>
@@ -2008,6 +2010,9 @@
 </ol>
 <h2 id="step-7-add-a-dataflow-to-a-pipeline">Step 7: Add a dataflow to a pipeline</h2>
 <p>You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created from your workspace by selecting <strong>+ New item</strong> &gt; <strong>Data pipeline</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">You now need to add the pipeline to your workspace.</p>
+</div>
 <ol>
 <li>
 <p>From your Fabric-enabled workspace, select <strong>+ New item &gt; Data pipeline</strong></p>
