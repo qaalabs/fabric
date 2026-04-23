@@ -89,10 +89,6 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
     !!! quote ""
         ![Lakehouse toolbar.](../img/lakehouse-toolbar.png)
 
-    *Make sure that **Enable Git Integration** is NOT selected:*
-
-    ![Enable git integration.](../img/gen2-git-integration-circle.png){ width="300"}
-
     Click **Create**, and after a few seconds, the Power Query editor for your new dataflow opens as shown here:
 
     !!! quote ""
@@ -103,7 +99,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
     - **Link to file**: *Selected*
     - **File path or URL**: https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv
     - **Connection**: Create new connection
-    - **Connection Name**: *Specify a unique name*
+    - **Connection Name**: *Specify a name* ~ e.g. orders
     - **data gateway**: (none)
     - **Authentication kind**: Anonymous
 
@@ -119,7 +115,10 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 You can now transform the data. In this lab we will add a column using a custom formula.
 
-1. On the toolbar ribbon, select the **Add column** tab. Then select **Custom column** and create a new column.
+1. On the toolbar ribboni:
+
+    - Select the **Add column** tab. 
+    - Then select **Custom column** and create a new column.
 
     !!! quote ""
         ![Power Query Add Column.](../img/05-power-query-add-column.png)
@@ -165,7 +164,7 @@ The next step is to define a destination for your transformed data. This will be
     !!! note
         If the **Add data destination** option is grayed out or a lakehouse destination is already shown in the query, your lakehouse has been automatically attached as the default destination because you created the dataflow from within the lakehouse.
 
-        Select the existing lakehouse destination icon in the query to open the destination settings, and then continue from step 5.
+        <mark>Delete the lakehouse in the bottom right hand corner before continuing.</mark>
 
 2. Select **Lakehouse**.
 
@@ -201,6 +200,8 @@ The next step is to define a destination for your transformed data. This will be
 ## Step 7: Add a dataflow to a pipeline
 
 You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created from your workspace by selecting **+ New item** > **Data pipeline**.
+
+!!! note "You now need to add the pipeline to your workspace."
 
 1. From your Fabric-enabled workspace, select **+ New item > Data pipeline**
 
