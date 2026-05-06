@@ -36,7 +36,7 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
 For this lab you need to create three workspaces: **Development**, **Test**, and **Production**.
 
-1. In the left-hand navigation, select **Workspaces** (the icon looks similar to 🗇).
+1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
 2. Select **+ New workspace**, then create a workspace using the naming format below:
 

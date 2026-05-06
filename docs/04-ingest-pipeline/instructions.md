@@ -41,16 +41,16 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
 Before working with data in Fabric, you need to create a workspace.
 
-1. In the left-hand navigation, select **Workspaces** (the icon looks similar to 🗇).
+1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
-3. Select **+ New workspace**, then create a workspace using the naming format below:
+2. Select **+ New workspace**, then create a workspace using the naming format below:
 
     - Start the name with `fab_workspace`
     - Add random numbers to make it unique (for example, `fab_workspace123`)
     - Leave all other options as the default values
     - Click **Apply**
 
-4. When your new workspace opens, it should be empty:
+3. When your new workspace opens, it should be empty:
 
     !!! quote ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
@@ -60,7 +60,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
-1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
+1. On the navigation pane on the left, select **Create**, and choose **Lakehouse**.
     - Give it a name of your choice. For example: `fab_lakehouse`
     - Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
 
@@ -73,6 +73,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 2. On the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**
 
+
 ## Step 4: Create a pipeline
 
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
@@ -80,16 +81,19 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 !!! note 
     A *Copy Job* and a *Copy Data* activity are different methods for moving data in Fabric. A Copy Job is a standalone, simplified data movement tool and doesn’t require a pipeline. A Copy Data activity is configured within a pipeline and supports orchestration with other activities. In this exercise, you use a **Copy Data** activity in a pipeline.
 
-1. On the **Home** page for your lakehouse, select **Get data** and then select **New copy job**, and create a new data pipeline named `Ingest Sales Data`
+1. In the navigation pane on the left, select the name of your workspace.
 
-2. If the **Copy Job** wizard doesn't open automatically, select **From any source to any destination** in the pipeline editor page.
+2. In the workspace, select **New item**, search for **Pipeline**
 
-3. In the **Copy Job** wizard, on the **Choose data source** page, type HTTP in the search bar and then select **HTTP** in the **New sources** section.
+3. Create a new pipeline named: `Ingest Sales Data`
+
+4. In the pipeline editor canvas, select **Add pipeline activity** and then select **Copy activity**.
+    - A **Copy Data** activity is added to the pipeline canvas.
 
     !!! quote ""
-        ![Screenshot of the Choose data source page.](../img/04-choose-data-source.png)
+        ![Screenshot of a pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
 
-4. In the **Connect to data source** pane, enter the following settings for the connection to your data source:
+5. In the **Connect to data source** pane, enter the following settings for the connection to your data source:
 
     - **URL**: https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
     - **Connection**: Create new connection
@@ -97,7 +101,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Data gateway**: (none)
     - **Authentication kind**: Anonymous
 
-5. Select **Next**. Then ensure the following settings are selected:
+6. Select **Next**. Then ensure the following settings are selected:
 
     - **Relative URL**: *Leave blank*
     - **Request method**: GET
@@ -106,7 +110,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Request timeout**: *Leave blank*
     - **Max concurrent connections**: *Leave blank*
 
-6. Select **Next**, and wait for the data to be sampled and then ensure that the following settings are selected:
+7. Select **Next**, and wait for the data to be sampled and then ensure that the following settings are selected:
 
     - **File format**: DelimitedText
     - **Column delimiter**: Comma (,)
@@ -114,16 +118,16 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **First row as header**: Selected
     - **Compression type**: None
 
-7. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
+8. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
 
-8. On the **Connect to data destination** page, set the following data destination options, and then select **Next**:
+9. On the **Connect to data destination** page, set the following data destination options, and then select **Next**:
 
     - **Root folder**: Files
     - **Folder path name**: new_data
     - **File name**: sales.csv
     - **Copy behavior**: None
 
-9. Set the following file format options and then select **Next**:
+10. Set the following file format options and then select **Next**:
 
     - **File format**: DelimitedText
     - **Column delimiter**: Comma (,)
@@ -131,18 +135,19 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Add header to file**: Selected
     - **Compression type**: None
 
-10. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+11. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
     !!! quote ""
         ![Screenshot of a pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
 
-11. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the :material-refresh: (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+12. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the :material-refresh: (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
-12. In the menu bar on the left, select your lakehouse.
+13. In the menu bar on the left, select your lakehouse.
 
-13. On the **Home** page, in the **Explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
+14. On the **Home** page, in the **Explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
+
 
 ## Step 5: Create a notebook
 
@@ -203,6 +208,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     !!! warning "If the preview won't load you may need to first cancel the running notebook"
         - To do this click the **Monitor" tab and cancel any running activities
+
 
 ## Step 6: Modify the pipeline
 

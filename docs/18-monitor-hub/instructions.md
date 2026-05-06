@@ -41,9 +41,9 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
 Before working with data in Fabric, you need to create a workspace.
 
-1. In the left-hand navigation, select **Workspaces** (the icon looks similar to 🗇).
+1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
-3. Select **+ New workspace**, then create a workspace using the naming format below:
+2. Select **+ New workspace**, then create a workspace using the naming format below:
 
     - Start the name with `fab_workspace`
     - Add random numbers to make it unique (for example, `fab_workspace123`)

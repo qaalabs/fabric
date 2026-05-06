@@ -8,6 +8,11 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Operations and lifecycle management
+  courses:
+    - DP-700
+    - DP-601
 ---
 
 # Ingest data with a pipeline in Microsoft Fabric
@@ -18,15 +23,12 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 This lab will take approximately **45** minutes to complete.
 
-> [!Note] 
-> You need access to a [Microsoft Fabric tenant](https://learn.microsoft.com/fabric/get-started/fabric-trial) to complete this exercise.
-
 ## Create a workspace
 
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at `https://app.fabric.microsoft.com/home?experience=fabric-developer` in a browser and sign in with your Fabric credentials.
-1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
+1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 1. Create a new workspace with a name of your choice, selecting a licensing mode in the **Advanced** section that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
 1. When your new workspace opens, it should be empty.
 
@@ -36,7 +38,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 Now that you have a workspace, it's time to create a data lakehouse into which you will ingest data.
 
-1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**. Give it a unique name of your choice. Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
+1. On the navigation pane on the left, select **Create**, and choose **Lakehouse**. Give it a unique name of your choice. Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
 
     >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
 
@@ -48,11 +50,13 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
-1. On the **Home** page for your lakehouse, select **Get data** and then select **New copy job**, and create a new data pipeline named `Ingest Sales Data`.
-1. If the **Copy Job** wizard doesn't open automatically, select **From any source to any destination** in the pipeline editor page.
-1. In the **Copy Job** wizard, on the **Choose data source** page, type HTTP in the search bar and then select **HTTP** in the **New sources** section.
+> **Note**: A *Copy Job* and a *Copy Data* activity are different methods for moving data in Fabric. A Copy Job is a standalone, simplified data movement tool and doesn't require a pipeline. A Copy Data activity is configured within a pipeline and supports orchestration with other activities. In this exercise, you use a **Copy Data** activity in a pipeline.
 
-    ![Screenshot of the Choose data source page.](./Images/choose-data-source.png)
+1. In the navigation pane on the left, select the name of your workspace.
+1. In the workspace, select **New item**, search for **Pipeline**, and create a new pipeline named `Ingest Sales Data`.
+1. In the pipeline editor canvas, select **Add pipeline activity** and then select **Copy activity**. A **Copy Data** activity is added to the pipeline canvas.
+
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
 1. In the **Connect to data source** pane, enter the following settings for the connection to your data source:
     - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
