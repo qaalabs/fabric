@@ -4,7 +4,7 @@ dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
 nav:
-  - Overview: index.md
+  - Instructions: index.md
 
   - "Microsoft Fabric":
 
@@ -27,6 +27,10 @@ nav:
     - "06 Analyse data in a data warehouse":
       - 06-data-warehouse/index.md
       - Instructions: 06-data-warehouse/instructions.md
+
+    - "06b Query a Data Warehouse":
+      - 06b-data-warehouse-query/index.md
+      - Instructions: 06b-data-warehouse-query/instructions.md
 
     - "06c Monitor Data Warehouse":
       - 06c-monitor-data-warehouse/index.md

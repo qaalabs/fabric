@@ -71,7 +71,8 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
     !!! quote ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
-2. On the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**
+2. On the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **New subfolder**
+    - Create a subfolder named: **new_data**
 
 
 ## Step 4: Create a pipeline
@@ -87,75 +88,102 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 3. Create a new pipeline named: `Ingest Sales Data`
 
-4. In the pipeline editor canvas, select **Add pipeline activity** and then select **Copy activity**.
-    - A **Copy Data** activity is added to the pipeline canvas.
+4. In the pipeline editor canvas:
+    - Select: **Add pipeline activity**
+    - Then select: **Copy activity**
+    - A **Copy Data** activity is added to the pipeline canvas:
 
     !!! quote ""
         ![Screenshot of a pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
 
-5. In the **Connect to data source** pane, enter the following settings for the connection to your data source:
+### Configure the Source
+
+1. Select the **Copy Data** activity on the canvas
+
+2. Then in the pane below the canvas select the **Source** tab.
+
+3. In the **Connection** drop-down, select **Browse all**.
+
+4. In the **New connection** dialog, search for **HTTP** and select it, then select **Continue**.
+
+5. Configure the following settings and then select **Connect**:
 
     - **URL**: https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
-    - **Connection**: Create new connection
     - **Connection name**: *Specify a unique name*
     - **Data gateway**: (none)
     - **Authentication kind**: Anonymous
 
-6. Select **Next**. Then ensure the following settings are selected:
+6. Back on the **Source tab**, configure the following source settings:
 
     - **Relative URL**: *Leave blank*
-    - **Request method**: GET
-    - **Additional headers**: *Leave blank*
-    - **Binary copy**: <u>Un</u>selected
-    - **Request timeout**: *Leave blank*
-    - **Max concurrent connections**: *Leave blank*
-
-7. Select **Next**, and wait for the data to be sampled and then ensure that the following settings are selected:
-
-    - **File format**: DelimitedText
-    - **Column delimiter**: Comma (,)
-    - **Row delimiter**: Line feed (\n)
-    - **First row as header**: Selected
-    - **Compression type**: None
-
-8. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
-
-9. On the **Connect to data destination** page, set the following data destination options, and then select **Next**:
-
-    - **Root folder**: Files
-    - **Folder path name**: new_data
-    - **File name**: sales.csv
-    - **Copy behavior**: None
-
-10. Set the following file format options and then select **Next**:
-
-    - **File format**: DelimitedText
-    - **Column delimiter**: Comma (,)
-    - **Row delimiter**: Line feed (\n)
-    - **Add header to file**: Selected
-    - **Compression type**: None
-
-11. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
-
-    A new pipeline containing a **Copy Data** activity is created, as shown here:
+    - **File format**: Select `DelimitedText` from the drop-down
 
     !!! quote ""
-        ![Screenshot of a pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
+        ![Source tab showing HTTP connection & file format settings.](../img/04-copy-data-source-tab.png)
 
-12. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the :material-refresh: (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+6. Select the **Settings** button next to the **File format** drop-down. In the **File format settings** dialog, ensure the following settings are configured and then select **OK**:
 
-13. In the menu bar on the left, select your lakehouse.
+    - **Compression type**: No compression
+    - **Column delimiter**: Comma (,)
+    - **Row delimiter**: Line feed (\n)
+    - **First row as header**: *Selected*
 
-14. On the **Home** page, in the **Explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
+    !!! quote ""
+        ![File format settings dialog.](../img/04-file-format-settings.png)
+
+7. Select **Test connection** to verify the connection works.
+
+8. *Optional*: Select **Preview data** to confirm the data looks correct.
+
+### Configure the Destination
+
+1. Select the **Destination** tab. Then in the **Connection** drop-down, select **Browse all**.
+
+2. In the **New connection** dialog box, find and select your lakehouse in the *OneLake Catalog* section.
+
+3. After the connection is created, return to the **Destination** tab and configure the following settings:
+
+    - **Connection**: *Your newly created lakehouse connection*
+    - **Lakehouse**: *Select the lakehouse you created earlier*
+    - **Root folder**: Files
+    - **File path**: *Directory*: new_data / *File name*: sales.csv
+
+    !!! quote ""
+        ![copy data activity destination settings.](../img/04-copy-data-destination.png)
+
+4. No other changes are necessary.
+
+### Run the pipeline
+
+1. On the **Home** tab, use the **&#128427;** (*Save*) icon to save the pipeline.
+
+2. Then use the **&#9655; Run** button to run the pipeline.
+
+3. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer.
+
+    - Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+
+4. In the navigation pane on the left, select your lakehouse.
+
+5. On the **Home** page, in the **Explorer** pane, expand **Files**
+
+    - Select the **new_data** folder to verify that the **sales.csv** file has been copied.
+
+    !!! quote ""
+        ![the sales.csv file in the new_data folder.](../img/04-pipeline-file-loaded.png)
 
 
 ## Step 5: Create a notebook
 
+!!! info "Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text)."
+
 1. On the **Home** page for your lakehouse, in the **Open notebook** menu, select **New notebook**.
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+    After a few seconds, a new notebook containing a single *cell* will open. 
 
-2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
+2. Select the existing cell in the notebook, which contains some simple code
+
+    - Replace the default code with the following variable declaration.
 
     ```python
     table_name = "sales"
@@ -198,13 +226,21 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
         - Since this is the first time you've run any Spark code in this session, the Spark pool must be started.
         - This means that the first cell can take a minute or so to complete.
 
-6. When the notebook run has completed, in the **Explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+### Run completed
 
-7. In the notebook menu bar, use the ⚙️  **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to `Load Sales` and close the settings pane.
+When the notebook run has completed:
 
-8. In the hub menu bar on the left, select your lakehouse.
+1. In the **Explorer** pane on the left, in the **...** menu for **Tables** select **Refresh**
 
-9. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
+    - Verify that a **sales** table has been created.
+
+2. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
+
+    - Then set the **Name** of the notebook to `Load Sales` and close the settings pane.
+
+3. In the hub menu bar on the left, select your lakehouse.
+
+4. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
     !!! warning "If the preview won't load you may need to first cancel the running notebook"
         - To do this click the **Monitor" tab and cancel any running activities
@@ -231,7 +267,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
         - **Name**: `Delete old files`
 
     - **Source**:
-        - **Connection**: *Your lakehouse*
+        - **Connection**: Browse all, and select your lakehouse
         - **File path type**: Wildcard file path
         - **Folder path**: Files / **new_data**
         - **Wildcard file name**: `*.csv`
@@ -255,14 +291,16 @@ Now that you've implemented a notebook to transform data and load it into a tabl
         - **Name**: `Load Sales notebook`
 
     - **Settings**:
-        - **Notebook**: Load Sales
+        - **Notebook**: Select your *Load Sales* notebook
         - **Base parameters**: *Add a new parameter with the following properties:*
 
-        | Name      | Type  | Value    |
-        |-----------|-------|----------|
-        | table_name| String| new_sales|
+        | Name       | Type   | Value     |
+        |------------|--------|-----------|
+        | table_name | String | new_sales |
 
-    The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
+    !!! info "Passing in parameters o a notebook"
+        - The **table_name** parameter will be passed to the notebook
+        - This will override the default value assigned to the **table_name** variable in the parameters cell.
 
 7. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline. Then use the :material-play: **Run** button to run the pipeline, and wait for all of the activities to complete.
 
