@@ -1815,7 +1815,7 @@
 <p>Before working with data in Fabric, you need to create a workspace.</p>
 <ol>
 <li>
-<p>In the left-hand navigation, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
+<p>In the navigation pane on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
 </li>
 <li>
 <p>Select <strong>+ New workspace</strong>, then create a workspace using the naming format below:</p>
@@ -1837,7 +1837,7 @@
 <p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
 <ol>
 <li>
-<p>On the menu bar on the left, select <strong>Create</strong>. In the New page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
+<p>On the navigation pane on the left, select <strong>Create</strong>, and choose <strong>Lakehouse</strong>.</p>
 <ul>
 <li>Give it a name of your choice. For example: <code>fab_lakehouse</code></li>
 <li>Make sure the "Lakehouse schemas (Public Preview)" option is disabled.</li>
@@ -1862,15 +1862,21 @@
 </div>
 <ol>
 <li>
-<p>On the <strong>Home</strong> page for your lakehouse, select <strong>Get data</strong> and then select <strong>New copy job</strong>, and create a new data pipeline named <code>Ingest Sales Data</code></p>
+<p>In the navigation pane on the left, select the name of your workspace.</p>
 </li>
 <li>
-<p>If the <strong>Copy Job</strong> wizard doesn't open automatically, select <strong>From any source to any destination</strong> in the pipeline editor page.</p>
+<p>In the workspace, select <strong>New item</strong>, search for <strong>Pipeline</strong></p>
 </li>
 <li>
-<p>In the <strong>Copy Job</strong> wizard, on the <strong>Choose data source</strong> page, type HTTP in the search bar and then select <strong>HTTP</strong> in the <strong>New sources</strong> section.</p>
+<p>Create a new pipeline named: <code>Ingest Sales Data</code></p>
+</li>
+<li>
+<p>In the pipeline editor canvas, select <strong>Add pipeline activity</strong> and then select <strong>Copy activity</strong>.</p>
+<ul>
+<li>A <strong>Copy Data</strong> activity is added to the pipeline canvas.</li>
+</ul>
 <div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/04-choose-data-source.png" data-desc-position="bottom"><img alt="Screenshot of the Choose data source page." src="../../img/04-choose-data-source.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/04-copy-data-pipeline.png" data-desc-position="bottom"><img alt="Screenshot of a pipeline with a Copy Data activity." src="../../img/04-copy-data-pipeline.png"></a></p>
 </div>
 </li>
 <li>
