@@ -155,7 +155,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 ### Run the pipeline
 
-1. On the **Home** tab, use the **&#128427;** (*Save*) icon to save the pipeline.
+1. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline.
 
 2. Then use the **&#9655; Run** button to run the pipeline.
 
@@ -298,11 +298,11 @@ Now that you've implemented a notebook to transform data and load it into a tabl
         |------------|--------|-----------|
         | table_name | String | new_sales |
 
-    !!! info "Passing in parameters o a notebook"
-        - The **table_name** parameter will be passed to the notebook
+    !!! info "Passing parameters into a notebook"
+        - The **table_name** parameter will be passed to the notebook.
         - This will override the default value assigned to the **table_name** variable in the parameters cell.
 
-7. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline. Then use the :material-play: **Run** button to run the pipeline, and wait for all of the activities to complete.
+7. On the **Home** tab, use the  :material-content-save: (*Save*) icon to save the pipeline. Then use the :material-play: **Run** button to run the pipeline, and wait for all of the activities to complete.
 
     !!! quote ""
         ![Screenshot of a pipeline with a Dataflow activity.](../img/04-pipeline-run.png)
