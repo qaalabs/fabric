@@ -12,7 +12,7 @@ nav:
       - 01-lakehouse/index.md
       - Instructions: 01-lakehouse/instructions.md
 
-    - "3b Medallion Architecture":
+    - "03b Medallion Architecture":
       - 03b-medallion-lakehouse/index.md
       - Instructions: 03b-medallion-lakehouse/instructions.md
 
@@ -24,7 +24,7 @@ nav:
       - 05-dataflows-gen2/index.md
       - Instructions: 05-dataflows-gen2/instructions.md
 
-    - "06 Analyse data in a data warehouse":
+    - "06 Analyse data in a Data Warehouse":
       - 06-data-warehouse/index.md
       - Instructions: 06-data-warehouse/instructions.md
 
@@ -32,7 +32,7 @@ nav:
       - 06b-data-warehouse-query/index.md
       - Instructions: 06b-data-warehouse-query/instructions.md
 
-    - "06c Monitor Data Warehouse":
+    - "06c Monitor a Data Warehouse":
       - 06c-monitor-data-warehouse/index.md
       - Instructions: 06c-monitor-data-warehouse/instructions.md
 
