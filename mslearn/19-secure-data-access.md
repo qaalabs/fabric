@@ -8,6 +8,11 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Security and governance
+  courses:
+    - DP-700
+    - DP-600
 ---
 
 # Secure data access in Microsoft Fabric
@@ -18,9 +23,11 @@ Microsoft Fabric has a multi-layer security model for managing data access. Secu
 
 This lab takes approximately **45** minutes to complete.
 
+> **Tip:** For related training content, see [Secure data access in Microsoft Fabric](https://learn.microsoft.com/training/modules/secure-data-access-in-fabric/).
+
 ## Create a workspace
 
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser and sign in with your Fabric credentials.
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).

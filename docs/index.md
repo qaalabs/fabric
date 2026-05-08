@@ -9,7 +9,7 @@ This site hosts the instructions for MS Fabric labs:
 - [06  - Analyse data in a data warehouse](06-data-warehouse/index.md)
 - [06c - Monitor Data Warehouse](06c-monitor-data-warehouse/index.md)
 - [09  - Real-time Analytics eventstream](09-real-time-analytics-eventstream/index.md)
-
+- [11  - Data Activator](11-data-activator/index.md)
 - [18  - Monitor Hub](18-monitor-hub/index.md)
 - [19  - Secure Data Access](19-secure-data-access/index.md)
 - [20  - Work with SQL Database](20-work-with-database/index.md)
