@@ -62,7 +62,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
     - Give it a unique name of your choice. For example: `fab_lakehouse`
-    - Make sure the "Lakehouse schemas" option is disabled.
+    - Leave the **Lakehouse schemas** checkbox selected.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -79,15 +79,12 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 Currently, there are no tables or files in this lakehouse.
 
+
 ## Step 4: Create and monitor a Dataflow
 
 In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide range of sources. In this exercise, you'll use a dataflow to get data from a CSV file and load it into a table in your lakehouse.
 
 1. On the **Home** page for your lakehouse, in the **Get data** menu, select **New Dataflow Gen2**.
-
-    *Make sure that **Enable Git Integration** is NOT selected:*
-
-    ![Enable git integration.](../img/gen2-git-integration-circle.png){ width="300"}
 
 2. Name the new dataflow: `Get Product Data`
     - Select **Create**
@@ -102,7 +99,8 @@ In Microsoft Fabric, you can use a Dataflow (Gen2) to ingest data from a wide ra
     !!! quote ""
         ![Screenshot of a dataflow query.](../img/18-data-flow-query.png)
 
-4. Publish the dataflow.
+4. Use the **Save and run** option to save and run the dataflow.
+    - Then close it.
 
 5. In the navigation bar on the left, select **Monitor** to view the monitoring hub and observe that your dataflow is in-progress
     - If you can't see it, refresh the view until you see it in progress.
@@ -126,15 +124,15 @@ In Microsoft Fabric, you can use notebooks to run Spark code.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the Data Engineering section, select **Notebook**.
 
-    A new notebook named **Notebook 1** is created and opened.
+    A new notebook named **Notebook_1** is created and opened.
 
     !!! quote ""
         ![Screenshot of a new notebook.](../img/18-new-notebook.png)
 
-2. At the top left of the notebook, select **Notebook 1** to view its details
+2. At the top left of the notebook, select the gear icon to view the notebook details.
     - Change its name to: `Query Products`
 
-3. In the notebook editor, in the **Explorer** pane, select **Add data items** and then select **Existing data sources**.
+1. In the notebook editor, in the **Explorer** pane, select **Add data items** and then select **From OneLake catalog**.
 
 4. Add the lakehouse you created previously.
 
@@ -178,10 +176,10 @@ Some items in a workspace might be run multiple times. You can use the monitorin
 
 In this exercise you've only run a few activities, so it should be fairly easy to find events in the monitoring hub. However, in a real environment you may need to search through a large number of events. Using filters and other view customisations can make this easier.
 
-1. In the monitoring hub, use the **Filter** button to apply the following filter:
+1. Return to the monitoring hub main view. Use the **Filter** button to apply the following filter:
 
-    - **Status**: Succeeeded
-    - **Item type**: Dataflow Gen2
+    - **Status**: Succeeded
+    - **Item type**: Dataflow Gen2 (CI/CD)
 
     With the filter applied, only successful runs of dataflows are listed.
 
@@ -200,10 +198,7 @@ In this exercise you've only run a few activities, so it should be fairly easy t
     - Duration
     - Refresh type
 
-    You may need to scroll horizontally to see all of the columns:
-
-    !!! quote ""
-        ![Screenshot of the monitoring hub with custom columns.](../img/18-monitor-columns.png)
+    You may need to scroll horizontally to see all of the columns.
 
 ---
 
