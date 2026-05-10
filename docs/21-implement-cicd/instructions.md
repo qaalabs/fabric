@@ -89,12 +89,11 @@ Fabric items haven't been created in your workspaces yet. Next, create a lakehou
 
 3. Select **New Item**.
 
-4. In the New Item window that appears, scroll down to "Store data"
+4. In the that appears:
 
-    - Select **Lakehouse**
-    - Name the lakehouse: `LabLakehouse`
-    - The Location should be your Development workspace
-    - Ensure **Lakehouse schemas** is disabled
+    - Select: **Lakehouse**
+    - in the **New lakehouse window**, name the lakehouse: `LabLakehouse`
+    - Leave the **Lakehouse schemas** checkbox selected.
 
 5. Select **Create**.
 
@@ -102,8 +101,6 @@ Fabric items haven't been created in your workspaces yet. Next, create a lakehou
 
     !!! quote ""
         ![Screenshot of Lakehouse Explorer.](../img/21-lakehouse-explorer.png)
-
-7. Select the sample **NYCTaxi**.
 
 
 ## Step 6: Review your pipeline
