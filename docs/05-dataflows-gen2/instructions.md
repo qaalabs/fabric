@@ -27,7 +27,7 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
 4. In the same private browsing window, **open a new tab**.
 
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com) at: https://app.fabric.microsoft.com
+5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
 
 6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
 
@@ -216,14 +216,19 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 2. Select **Pipeline activity**, and add a **Dataflow** activity to the pipeline.
 
-3. With the new **Dataflow1** activity selected, on the **Settings** tab, in the **Dataflow** drop-down list, select **Dataflow1** (the data flow you created previously)
+3. With the new **Dataflow1** activity selected:
+
+    - On the **Settings** tab, in the **Dataflow** drop-down list, select **Dataflow1**
+    - *This is the data flow you created previously*
 
     !!! quote ""
         ![Pipeline with a dataflow activity.](../img/qa-05-dataflow-activity.png)
 
 4. On the **Home** tab, save the pipeline using the :material-content-save: (Save) icon.
 
-5. Use the :material-play: **Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
+5. Use the :material-play: **Run** button to run the pipeline.
+
+    - Wait for it to complete. It may take a few minutes.
 
     !!! quote ""
         ![Pipeline with a dataflow that has completed successfully.](../img/qa-05-dataflow-pipeline-succeeded.png)
