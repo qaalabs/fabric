@@ -94,7 +94,7 @@ Next, you'll ingest some data into the data lakehouse for analysis. There are mu
     - Then upload the 3 files (2019.csv, 2020.csv, and 2021.csv) from your local computer (or lab VM if applicable) to the lakehouse. 
     - Use the shift key to upload all 3 files at once.
 
-    !!! tip "Make sure that the files are in the *branze* subfolder"
+    !!! tip "Make sure that the files are in the *bronze* subfolder"
 
 4. After the files have been uploaded, select the **bronze** folder; and verify that the files have been uploaded, as shown here:
 
@@ -120,10 +120,10 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 3. Select the existing cell in the notebook, which contains some simple commented-out code.
 
-    - Highlight and **delete the two lines** - you will not need this code.
+    - Highlight and delete the two lines - you will not need this code.
 
     !!! note
-        - Notebooks enable you to run code in a variety of languages, including Python, Scala, and SQL."
+        - Notebooks enable you to run code in a variety of languages, including Python, Scala, and SQL.
         - In this exercise, you’ll use PySpark and SQL. 
         - You can also add markdown cells to provide formatted text and images to document your code.
 
@@ -323,7 +323,9 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
     !!! quote ""
         ![Screenshot of the results of a SQL query in a lakehouse.](../img/03b-total-sales-sql.png)
 
-4. Next you'll review which customers are purchasing the most (in terms of quantity). Paste the following query into the query editor and select **Run**:
+4. Next you'll review which customers are purchasing the most (in terms of quantity).
+
+    Paste the following query into the query editor and select **Run**:
 
     ```sql
     SELECT TOP 10 CustomerName, SUM(Quantity) AS TotalQuantity
