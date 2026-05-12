@@ -62,7 +62,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
 1. On the navigation pane on the left, select **Create**, and choose **Lakehouse**.
     - Give it a name of your choice. For example: `fab_lakehouse`
-    - Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
+    - Make sure the "Lakehouse schemas" option is disabled.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -89,12 +89,12 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 3. Create a new pipeline named: `Ingest Sales Data`
 
 4. In the pipeline editor canvas:
-    - Select: **Add pipeline activity**
-    - Then select: **Copy activity**
+    - Select: **Pipeline activity**
+    - Then select: **Copy Data**
     - A **Copy Data** activity is added to the pipeline canvas:
 
     !!! quote ""
-        ![Screenshot of a pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
+        ![Pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
 
 ### Configure the Source
 
@@ -109,7 +109,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 5. Configure the following settings and then select **Connect**:
 
     - **URL**: https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
-    - **Connection name**: *Specify a unique name*
+    - **Connection name**: sales
     - **Data gateway**: (none)
     - **Authentication kind**: Anonymous
 
@@ -121,7 +121,9 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     !!! quote ""
         ![Source tab showing HTTP connection & file format settings.](../img/04-copy-data-source-tab.png)
 
-6. Select the **Settings** button next to the **File format** drop-down. In the **File format settings** dialog, ensure the following settings are configured and then select **OK**:
+6. Select the **Settings** button next to the **File format** drop-down.
+
+    In the **File format settings** dialog, ensure the following settings are configured and then select **OK**:
 
     - **Compression type**: No compression
     - **Column delimiter**: Comma (,)
@@ -130,6 +132,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     !!! quote ""
         ![File format settings dialog.](../img/04-file-format-settings.png)
+
+    !!! tip "Make sure you select: **Line feed (\n)"
 
 7. Select **Test connection** to verify the connection works.
 
@@ -302,7 +306,9 @@ Now that you've implemented a notebook to transform data and load it into a tabl
         - The **table_name** parameter will be passed to the notebook.
         - This will override the default value assigned to the **table_name** variable in the parameters cell.
 
-7. On the **Home** tab, use the  :material-content-save: (*Save*) icon to save the pipeline. Then use the :material-play: **Run** button to run the pipeline, and wait for all of the activities to complete.
+7. On the **Home** tab, use the  :material-content-save: (*Save*) icon to save the pipeline.
+
+8. Then use the :material-play: **Run** button to run the pipeline, and wait for all of the activities to complete.
 
     !!! quote ""
         ![Screenshot of a pipeline with a Dataflow activity.](../img/04-pipeline-run.png)
@@ -314,9 +320,9 @@ Now that you've implemented a notebook to transform data and load it into a tabl
         - select **Remove all Lakehouses** and then add it again.
         - Go back to the pipeline designer and select :material-play: **Run**.
 
-8. In the hub menu bar on the left edge of the portal, select your lakehouse.
+9. In the hub menu bar on the left edge of the portal, select your lakehouse.
 
-9. In the **Explorer** pane, expand **Tables** and select the **new_sales** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
+10. In the **Explorer** pane, expand **Tables** and select the **new_sales** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
 
 In this exercise, you implemented a data ingestion solution that uses a pipeline to copy data to your lakehouse from an external source, and then uses a Spark notebook to transform the data and load it into a table.
 
