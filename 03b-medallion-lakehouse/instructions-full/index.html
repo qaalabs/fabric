@@ -6,10 +6,6 @@
       
       
       
-        <link rel="prev" href="../">
-      
-      
-        <link rel="next" href="../../04-ingest-pipeline/">
       
       
         
@@ -20,7 +16,7 @@
     
     
       
-        <title>Instructions - MS Fabric Labs</title>
+        <title>Lab 03b ~ Create Medallion Architecture in a Fabric Lakehouse - MS Fabric Labs</title>
       
     
     
@@ -115,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instructions
+              Lab 03b ~ Create Medallion Architecture in a Fabric Lakehouse
             
           </span>
         </div>
@@ -237,10 +233,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -276,11 +270,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -301,7 +295,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -416,8 +410,6 @@
                 
   
   
-    
-  
   
   
     
@@ -433,11 +425,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <div class="md-nav__link md-nav__container">
@@ -465,7 +457,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -482,37 +474,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Instructions
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../instructions/" class="md-nav__link">
         
   
   
@@ -528,180 +493,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Access Microsoft Fabric
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Create a workspace
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-create-a-lakehouse" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Create a lakehouse
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-upload-data-to-bronze-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Upload data to bronze layer
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-transform-the-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Transform the data
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-data-validation-and-cleanup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Data validation and cleanup
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-define-the-schema-for-the-silver-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 7: Define the schema for the silver table
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-8-insert-and-update-records" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 8: Insert and update records
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-9-explore-data-in-the-silver-layer-using-the-sql-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 9: Explore data in the silver layer using the SQL endpoint
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-10-transform-data-for-gold-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 10: Transform data for gold layer
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-11-create-a-semantic-model-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 11: Create a semantic model (optional)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-12-create-relationships-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 12: Create relationships (optional)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-13-create-a-powerbi-report-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 13: Create a PowerBi report (optional)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clean-up-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clean up resources
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2045,9 +1836,7 @@
 <li>
 <p>Return to the web browser tab containing your lakehouse:</p>
 <ul>
-<li>In the <strong>...</strong> menu for the <strong>Files</strong> folder in the <strong>Explorer</strong> pane</li>
-<li>Select <strong>New subfolder</strong></li>
-<li>Create a folder named <strong>bronze</strong></li>
+<li>In the <strong>...</strong> menu for the <strong>Files</strong> folder in the <strong>Explorer</strong> pane, select <strong>New subfolder</strong> and create a folder named <strong>bronze</strong></li>
 </ul>
 </li>
 <li>
@@ -2056,9 +1845,6 @@
 <li>Then upload the 3 files (2019.csv, 2020.csv, and 2021.csv) from your local computer (or lab VM if applicable) to the lakehouse. </li>
 <li>Use the shift key to upload all 3 files at once.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Make sure that the files are in the <em>branze</em> subfolder</p>
-</div>
 </li>
 <li>
 <p>After the files have been uploaded, select the <strong>bronze</strong> folder; and verify that the files have been uploaded, as shown here:</p>
@@ -2071,17 +1857,13 @@
 <p>Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data before you load it to a delta table in the silver layer.</p>
 <ol>
 <li>
-<p>On the <strong>Home</strong> page of the Lakehouse, in the <strong>Open notebook</strong> menu, select <strong>New notebook</strong>.</p>
+<p>On the <strong>Home</strong> page while viewing the contents of the <strong>bronze</strong> folder in your data lake, in the <strong>Open notebook</strong> menu, select <strong>New notebook</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">After a few seconds, a new notebook containing a <em>single cell</em> will open.</p>
 </div>
 </li>
 <li>
-<p>In the notebook menu bar, use the ⚙️ <strong>Settings</strong> icon to view the notebook settings.</p>
-<ul>
-<li>Then set the <strong>Name</strong> of the notebook to <code>Transform data for Silver</code></li>
-<li>Close the settings pane to save the changes.</li>
-</ul>
+<p>When the notebook opens, rename it to <code>Transform data for Silver</code> by selecting the <code>Notebook 1</code> text at the top left of the notebook and entering the new name.</p>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/03b-sales-notebook-rename.png" data-desc-position="bottom"><img alt="New notebook named Transform data for silver." src="../../img/03b-sales-notebook-rename.png"></a></p>
 </div>
@@ -2266,11 +2048,8 @@
 </li>
 <li>
 <p>After running the last cell, select the <strong>Run</strong> tab above the ribbon and then select: <strong>Stop session</strong></p>
-<ul>
-<li>This stops the compute resource being used by the notebook.</li>
-</ul>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/03b-run-stop-session.png" data-desc-position="bottom"><img alt="Run - Stop Session Notebook button." src="../../img/03b-run-stop-session.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">This stops the compute resource being used by the notebook.</p>
 </div>
 </li>
 </ol>
@@ -2334,44 +2113,15 @@
 </div>
 <ol>
 <li>
-<p>On the <strong>Home</strong> page of the Lakehouse, in the <strong>Open notebook</strong> menu, select <strong>New notebook</strong>.</p>
+<p>Return to the workspace home page and create a new notebook called: <code>Transform data for Gold</code></p>
 </li>
 <li>
-<p>In the notebook menu bar, use the ⚙️ <strong>Settings</strong> icon to view the notebook settings.</p>
-<ul>
-<li>Then set the <strong>Name</strong> of the notebook to <code>Transform data for Gold</code></li>
-</ul>
+<p>In the Explorer pane, add your <strong>Sales</strong> lakehouse by selecting <strong>Add data items</strong> and then selecting the <strong>Sales</strong> lakehouse you created earlier. You should see the <strong>sales_silver</strong> table listed in the <strong>Tables</strong> section of the explorer pane.</p>
 </li>
 <li>
 <p>In the existing code block, remove the commented text and <strong>add the following code</strong> to load data to your dataframe and start building your star schema:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">dayofmonth</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span>
-
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 1 ~ Load data to the dataframe as a starting point to create the gold layer</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"Sales.sales_silver"</span><span class="p">)</span>
-
-<span class="c1"># dim: date</span>
-<span class="n">dimDate</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
-    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">,</span> <span class="n">year</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span> \
-    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">,</span> <span class="n">month</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span> \
-    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Day"</span><span class="p">,</span> <span class="n">dayofmonth</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span>
-<span class="n">dimDate</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimdate_gold"</span><span class="p">)</span>
-
-<span class="c1"># dim: customer</span>
-<span class="n">dimCustomer</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="s2">"Email"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
-    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">dimCustomer</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimcustomer_gold"</span><span class="p">)</span>
-
-<span class="c1"># dim: product</span>
-<span class="n">dimProduct</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
-    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ItemID"</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">dimProduct</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimproduct_gold"</span><span class="p">)</span>
-
-<span class="c1"># fact: sales</span>
-<span class="n">factSales</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dimCustomer</span><span class="p">,</span> <span class="p">[</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="s2">"Email"</span><span class="p">],</span> <span class="s2">"left"</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dimProduct</span><span class="p">,</span> <span class="p">[</span><span class="s2">"Item"</span><span class="p">],</span> <span class="s2">"left"</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span> <span class="s2">"ItemID"</span><span class="p">,</span> <span class="s2">"OrderDate"</span><span class="p">,</span> <span class="s2">"Quantity"</span><span class="p">,</span> <span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="s2">"Tax"</span><span class="p">)</span>
-<span class="n">factSales</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.factsales_gold"</span><span class="p">)</span>
-
-<span class="c1"># End of cell</span>
 </code></pre></div>
 <p>Use the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> (Run cell)</strong> button on the left of the cell to run the code.</p>
 <div class="admonition warning">
@@ -2382,32 +2132,330 @@
 </div>
 </li>
 <li>
-<p>After the cell has finished running, refresh the Tables pane and you should now see 4 new tables:</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/03b-gold-tables-created.png" data-desc-position="bottom"><img alt="Gold tables created." src="../../img/03b-gold-tables-created.png"></a></p>
+<p><strong>Add a new code block</strong> and paste the following code to create your date dimension table and run it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 2 ~ Create the date dimension table</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span><span class="o">*</span>
+
+<span class="c1"># Define the schema for the dimdate_gold table</span>
+<span class="n">DeltaTable</span><span class="o">.</span><span class="n">createIfNotExists</span><span class="p">(</span><span class="n">spark</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">tableName</span><span class="p">(</span><span class="s2">"sales.dimdate_gold"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Day"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"mmmyyyy"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"yyyymm"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>In a new code block, <strong>add and run the following code</strong> to create a dataframe for your date dimension, <strong>dimdate_gold</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 3 ~ Create dataframe for dimDate_gold</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="n">dayofmonth</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">date_format</span>
+
+<span class="n">dfdimDate_gold</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s2">"OrderDate"</span><span class="p">])</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">),</span> \
+        <span class="n">dayofmonth</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"Day"</span><span class="p">),</span> \
+        <span class="n">month</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">),</span> \
+        <span class="n">year</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">),</span> \
+        <span class="n">date_format</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">),</span> <span class="s2">"MMM-yyyy"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"mmmyyyy"</span><span class="p">),</span> \
+        <span class="n">date_format</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">),</span> <span class="s2">"yyyyMM"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"yyyymm"</span><span class="p">),</span> \
+    <span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)</span>
+
+<span class="c1"># Display the first 10 rows of the dataframe to preview your data</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">dfdimDate_gold</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">You're separating the code out into code blocks to understand and watch what's happening in the notebook as you transform the data.</p>
 </div>
 </li>
+<li>
+<p>In another new code block, <strong>add and run the following code</strong> to update the date dimension as new data comes in:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 4 ~ Update the date dimension as new data comes in</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">'Tables/dimdate_gold'</span><span class="p">)</span>
+
+<span class="n">dfUpdates</span> <span class="o">=</span> <span class="n">dfdimDate_gold</span>
+
+<span class="n">deltaTable</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'gold'</span><span class="p">)</span> \
+<span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">dfUpdates</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'updates'</span><span class="p">),</span>
+    <span class="s1">'gold.OrderDate = updates.OrderDate'</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenMatchedUpdate</span><span class="p">(</span><span class="nb">set</span> <span class="o">=</span>
+    <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenNotMatchedInsert</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span>
+    <span class="p">{</span>
+    <span class="s2">"OrderDate"</span><span class="p">:</span> <span class="s2">"updates.OrderDate"</span><span class="p">,</span>
+    <span class="s2">"Day"</span><span class="p">:</span> <span class="s2">"updates.Day"</span><span class="p">,</span>
+    <span class="s2">"Month"</span><span class="p">:</span> <span class="s2">"updates.Month"</span><span class="p">,</span>
+    <span class="s2">"Year"</span><span class="p">:</span> <span class="s2">"updates.Year"</span><span class="p">,</span>
+    <span class="s2">"mmmyyyy"</span><span class="p">:</span> <span class="s2">"updates.mmmyyyy"</span><span class="p">,</span>
+    <span class="s2">"yyyymm"</span><span class="p">:</span> <span class="s2">"updates.yyyymm"</span>
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">The date dimension is now set up. Now you'll create your customer dimension.</p>
+</div>
+</li>
+<li>
+<p>To build out the customer dimension table, <strong>add a new code block</strong>, paste and run the following code:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 5 ~ Build the customer gold dimension table</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create customer_gold dimension delta table</span>
+<span class="n">DeltaTable</span><span class="o">.</span><span class="n">createIfNotExists</span><span class="p">(</span><span class="n">spark</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">tableName</span><span class="p">(</span><span class="s2">"sales.dimcustomer_gold"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Email"</span><span class="p">,</span>  <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"First"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Last"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span> <span class="n">LongType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>In a new code block, <strong>add and run the following code</strong> to drop duplicate customers, select specific columns, and split the "CustomerName" column to create "First" and "Last" name columns:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 6 ~ Create customer dimension dataframe</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="n">split</span>
+
+<span class="c1"># Create customer_silver dataframe</span>
+
+<span class="n">dfdimCustomer_silver</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s2">"CustomerName"</span><span class="p">,</span><span class="s2">"Email"</span><span class="p">])</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span><span class="n">col</span><span class="p">(</span><span class="s2">"Email"</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"First"</span><span class="p">,</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span> <span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Last"</span><span class="p">,</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">),</span> <span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> 
+
+<span class="c1"># Display the first 10 rows of the dataframe to preview your data</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">dfdimCustomer_silver</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+<p>Here you have created a new DataFrame <code>dfdimCustomer_silver</code> by performing various transformations such as dropping duplicates, selecting specific columns, and splitting the "CustomerName" column to create "First" and "Last" name columns.</p>
+<p>The result is a DataFrame with cleaned and structured customer data, including separate "First" and "Last" name columns extracted from the "CustomerName"" column.</p>
+</li>
+<li>
+<p>Next we'll create the ID column for our customers. <strong>In a new code block</strong>, paste and run the following:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 7 ~ Create customer ID column</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">monotonically_increasing_id</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">when</span><span class="p">,</span> <span class="n">coalesce</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="n">lit</span>
+
+<span class="n">dfdimCustomer_temp</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"Sales.dimCustomer_gold"</span><span class="p">)</span>
+
+<span class="n">MAXCustomerID</span> <span class="o">=</span> <span class="n">dfdimCustomer_temp</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">coalesce</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">)),</span><span class="n">lit</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"MAXCustomerID"</span><span class="p">))</span><span class="o">.</span><span class="n">first</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">dfdimCustomer_gold</span> <span class="o">=</span> <span class="n">dfdimCustomer_silver</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dfdimCustomer_temp</span><span class="p">,(</span><span class="n">dfdimCustomer_silver</span><span class="o">.</span><span class="n">CustomerName</span> <span class="o">==</span> <span class="n">dfdimCustomer_temp</span><span class="o">.</span><span class="n">CustomerName</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">dfdimCustomer_silver</span><span class="o">.</span><span class="n">Email</span> <span class="o">==</span> <span class="n">dfdimCustomer_temp</span><span class="o">.</span><span class="n">Email</span><span class="p">),</span> <span class="s2">"left_anti"</span><span class="p">)</span>
+
+<span class="n">dfdimCustomer_gold</span> <span class="o">=</span> <span class="n">dfdimCustomer_gold</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span><span class="n">monotonically_increasing_id</span><span class="p">()</span> <span class="o">+</span> <span class="n">MAXCustomerID</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Display the first 10 rows of the dataframe to preview your data</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">dfdimCustomer_gold</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+<p>Here you're cleaning and transforming customer data (<code>dfdimCustomer_silver</code>) by performing a left anti join to exclude duplicates that already exist in the <code>dimCustomer_gold</code> table, and then generating unique CustomerID values using the <code>monotonically_increasing_id()</code> function.</p>
+</li>
+<li>
+<p>Now you'll ensure that your customer table remains up-to-date as new data comes in.</p>
+<p><strong>In a new code block</strong>, paste and run the following:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 8 ~ Keep the customer table up-to-date as new data comes in</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">'Tables/dimcustomer_gold'</span><span class="p">)</span>
+
+<span class="n">dfUpdates</span> <span class="o">=</span> <span class="n">dfdimCustomer_gold</span>
+
+<span class="n">deltaTable</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'gold'</span><span class="p">)</span> \
+<span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">dfUpdates</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'updates'</span><span class="p">),</span>
+    <span class="s1">'gold.CustomerName = updates.CustomerName AND gold.Email = updates.Email'</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenMatchedUpdate</span><span class="p">(</span><span class="nb">set</span> <span class="o">=</span>
+    <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenNotMatchedInsert</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span>
+    <span class="p">{</span>
+    <span class="s2">"CustomerName"</span><span class="p">:</span> <span class="s2">"updates.CustomerName"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"updates.Email"</span><span class="p">,</span>
+    <span class="s2">"First"</span><span class="p">:</span> <span class="s2">"updates.First"</span><span class="p">,</span>
+    <span class="s2">"Last"</span><span class="p">:</span> <span class="s2">"updates.Last"</span><span class="p">,</span>
+    <span class="s2">"CustomerID"</span><span class="p">:</span> <span class="s2">"updates.CustomerID"</span>
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Now you'll <strong>repeat those steps to create your product dimension</strong>. </p>
+<p><strong>In a new code block</strong>, paste and run the following:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 9 ~ Create product gold dimension</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">DeltaTable</span><span class="o">.</span><span class="n">createIfNotExists</span><span class="p">(</span><span class="n">spark</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">tableName</span><span class="p">(</span><span class="s2">"sales.dimproduct_gold"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"ItemName"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"ItemID"</span><span class="p">,</span> <span class="n">LongType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"ItemInfo"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Add another code block</strong> to create the <strong>product_silver</strong> dataframe.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 10 ~  Create the product_silver dataframe</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">lit</span><span class="p">,</span> <span class="n">when</span>
+
+<span class="n">dfdimProduct_silver</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s2">"Item"</span><span class="p">])</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ItemName"</span><span class="p">,</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">),</span> <span class="s2">", "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ItemInfo"</span><span class="p">,</span><span class="n">when</span><span class="p">((</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">),</span> <span class="s2">", "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isNull</span><span class="p">()</span> <span class="o">|</span> <span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">),</span> <span class="s2">", "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="s2">""</span><span class="p">)),</span><span class="n">lit</span><span class="p">(</span><span class="s2">""</span><span class="p">))</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">),</span> <span class="s2">", "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span> 
+
+<span class="c1"># Display the first 10 rows of the dataframe to preview your data</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">dfdimProduct_silver</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+</li>
+<li>
+<p>Now you'll create IDs for your <strong>dimProduct_gold table</strong>. </p>
+<p>Add the following syntax to a new code block and run it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 11 ~ Create IDs for dimProduct_gold table</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">monotonically_increasing_id</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">lit</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="n">coalesce</span>
+
+<span class="n">dfdimProduct_temp</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"Sales.dimProduct_gold"</span><span class="p">)</span>
+
+<span class="n">MAXProductID</span> <span class="o">=</span> <span class="n">dfdimProduct_temp</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">coalesce</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"ItemID"</span><span class="p">)),</span><span class="n">lit</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"MAXItemID"</span><span class="p">))</span><span class="o">.</span><span class="n">first</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">dfdimProduct_gold</span> <span class="o">=</span> <span class="n">dfdimProduct_silver</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dfdimProduct_temp</span><span class="p">,(</span><span class="n">dfdimProduct_silver</span><span class="o">.</span><span class="n">ItemName</span> <span class="o">==</span> <span class="n">dfdimProduct_temp</span><span class="o">.</span><span class="n">ItemName</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">dfdimProduct_silver</span><span class="o">.</span><span class="n">ItemInfo</span> <span class="o">==</span> <span class="n">dfdimProduct_temp</span><span class="o">.</span><span class="n">ItemInfo</span><span class="p">),</span> <span class="s2">"left_anti"</span><span class="p">)</span>
+
+<span class="n">dfdimProduct_gold</span> <span class="o">=</span> <span class="n">dfdimProduct_gold</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ItemID"</span><span class="p">,</span><span class="n">monotonically_increasing_id</span><span class="p">()</span> <span class="o">+</span> <span class="n">MAXProductID</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Display the first 10 rows of the dataframe to preview your data</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">dfdimProduct_gold</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+<p>This calculates the next available product ID based on the current data in the table, assigns these new IDs to the products, and then displays the updated product information.</p>
+</li>
+<li>
+<p>Similar to what you've done with your other dimensions, you need to ensure that your product table remains up-to-date as new data comes in.</p>
+<p><strong>In a new code block</strong>, paste and run the following:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 12 ~ Ensure that your product table remains up-to-date</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">'Tables/dimproduct_gold'</span><span class="p">)</span>
+
+<span class="n">dfUpdates</span> <span class="o">=</span> <span class="n">dfdimProduct_gold</span>
+
+<span class="n">deltaTable</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'gold'</span><span class="p">)</span> \
+<span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">dfUpdates</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'updates'</span><span class="p">),</span>
+    <span class="s1">'gold.ItemName = updates.ItemName AND gold.ItemInfo = updates.ItemInfo'</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenMatchedUpdate</span><span class="p">(</span><span class="nb">set</span> <span class="o">=</span>
+    <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">)</span> \
+    <span class="o">.</span><span class="n">whenNotMatchedInsert</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span>
+    <span class="p">{</span>
+    <span class="s2">"ItemName"</span><span class="p">:</span> <span class="s2">"updates.ItemName"</span><span class="p">,</span>
+    <span class="s2">"ItemInfo"</span><span class="p">:</span> <span class="s2">"updates.ItemInfo"</span><span class="p">,</span>
+    <span class="s2">"ItemID"</span><span class="p">:</span> <span class="s2">"updates.ItemID"</span>
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+<p>Now that you have your dimensions built out, the final step is to create the fact table.</p>
+</li>
+<li>
+<p>In a new code block, paste and run the following code to <strong>create the fact table</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 13 ~ Create the fact table</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">DeltaTable</span><span class="o">.</span><span class="n">createIfNotExists</span><span class="p">(</span><span class="n">spark</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">tableName</span><span class="p">(</span><span class="s2">"sales.factsales_gold"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span> <span class="n">LongType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"ItemID"</span><span class="p">,</span> <span class="n">LongType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Quantity"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Tax"</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>In a new code block</strong>, paste and run the following code to create a <strong>new dataframe</strong> to combine sales data with customer and product information include customer ID, item ID, order date, quantity, unit price, and tax:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 14 ~ Combine sales data with customer and product information</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">col</span>
+
+<span class="n">dfdimCustomer_temp</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"Sales.dimCustomer_gold"</span><span class="p">)</span>
+<span class="n">dfdimProduct_temp</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"Sales.dimProduct_gold"</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ItemName"</span><span class="p">,</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">),</span> <span class="s2">", "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ItemInfo"</span><span class="p">,</span><span class="n">when</span><span class="p">((</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">),</span> <span class="s2">", "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isNull</span><span class="p">()</span> <span class="o">|</span> <span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">),</span> <span class="s2">", "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">==</span><span class="s2">""</span><span class="p">)),</span><span class="n">lit</span><span class="p">(</span><span class="s2">""</span><span class="p">))</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">),</span> <span class="s2">", "</span><span class="p">)</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span> \
+
+<span class="c1"># Create Sales_gold dataframe</span>
+
+<span class="n">dffactSales_gold</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"df1"</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dfdimCustomer_temp</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"df2"</span><span class="p">),(</span><span class="n">df</span><span class="o">.</span><span class="n">CustomerName</span> <span class="o">==</span> <span class="n">dfdimCustomer_temp</span><span class="o">.</span><span class="n">CustomerName</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Email</span> <span class="o">==</span> <span class="n">dfdimCustomer_temp</span><span class="o">.</span><span class="n">Email</span><span class="p">),</span> <span class="s2">"left"</span><span class="p">)</span> \
+        <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dfdimProduct_temp</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"df3"</span><span class="p">),(</span><span class="n">df</span><span class="o">.</span><span class="n">ItemName</span> <span class="o">==</span> <span class="n">dfdimProduct_temp</span><span class="o">.</span><span class="n">ItemName</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ItemInfo</span> <span class="o">==</span> <span class="n">dfdimProduct_temp</span><span class="o">.</span><span class="n">ItemInfo</span><span class="p">),</span> <span class="s2">"left"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"df2.CustomerID"</span><span class="p">)</span> \
+        <span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">"df3.ItemID"</span><span class="p">)</span> \
+        <span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">"df1.OrderDate"</span><span class="p">)</span> \
+        <span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">"df1.Quantity"</span><span class="p">)</span> \
+        <span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">"df1.UnitPrice"</span><span class="p">)</span> \
+        <span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">"df1.Tax"</span><span class="p">)</span> \
+    <span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"df1.OrderDate"</span><span class="p">),</span> <span class="n">col</span><span class="p">(</span><span class="s2">"df2.CustomerID"</span><span class="p">),</span> <span class="n">col</span><span class="p">(</span><span class="s2">"df3.ItemID"</span><span class="p">))</span>
+
+<span class="c1"># Display the first 10 rows of the dataframe to preview your data</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">dffactSales_gold</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+</li>
+<li>
+<p>Now you'll ensure that sales data remains up-to-date by running the following code in a <strong>new code block</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Gold: Cell 15 ~ Ensure that sales data remains up-to-date</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">'Tables/factsales_gold'</span><span class="p">)</span>
+
+<span class="n">dfUpdates</span> <span class="o">=</span> <span class="n">dffactSales_gold</span>
+
+<span class="n">deltaTable</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'gold'</span><span class="p">)</span> \
+<span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">dfUpdates</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'updates'</span><span class="p">),</span>
+    <span class="s1">'gold.OrderDate = updates.OrderDate AND gold.CustomerID = updates.CustomerID AND gold.ItemID = updates.ItemID'</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenMatchedUpdate</span><span class="p">(</span><span class="nb">set</span> <span class="o">=</span>
+    <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenNotMatchedInsert</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span>
+    <span class="p">{</span>
+    <span class="s2">"CustomerID"</span><span class="p">:</span> <span class="s2">"updates.CustomerID"</span><span class="p">,</span>
+    <span class="s2">"ItemID"</span><span class="p">:</span> <span class="s2">"updates.ItemID"</span><span class="p">,</span>
+    <span class="s2">"OrderDate"</span><span class="p">:</span> <span class="s2">"updates.OrderDate"</span><span class="p">,</span>
+    <span class="s2">"Quantity"</span><span class="p">:</span> <span class="s2">"updates.Quantity"</span><span class="p">,</span>
+    <span class="s2">"UnitPrice"</span><span class="p">:</span> <span class="s2">"updates.UnitPrice"</span><span class="p">,</span>
+    <span class="s2">"Tax"</span><span class="p">:</span> <span class="s2">"updates.Tax"</span>
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
 </ol>
+<p>Here you're using Delta Lake's merge operation to synchronize and update the factsales_gold table with new sales data (dffactSales_gold). The operation compares the order date, customer ID, and item ID between the existing data (silver table) and the new data (updates DataFrame), updating matching records and inserting new records as needed.</p>
 <div class="admonition success">
 <p class="admonition-title">You now have a curated, modeled <strong>gold</strong> layer that can be used for reporting and analysis.</p>
 </div>
-<h2 id="step-11-create-a-semantic-model-optional">Step 11: Create a semantic model (optional)</h2>
-<div class="admonition note">
-<p class="admonition-title">Before you can create a semantic model, you need to have a PowerBI Pro licence</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Get a PowerBi licence:</p>
-<ul>
-<li>Click your Workspace</li>
-<li>In the lakehouse row - hover over the default semantic model</li>
-<li>Click the 3 dots <strong>...</strong></li>
-<li>Click <strong>Create report</strong></li>
-</ul>
-</div>
-<div class="admonition success">
-<p class="admonition-title">A message box should popup offering you a PowerBi Pro trial.</p>
-</div>
-<p>You can now use the gold layer to create a report and analyze the data. But first, you must create a semantic model to define relationships and measures for reporting.</p>
+<h2 id="step-11-create-a-semantic-model">Step 11: Create a semantic model</h2>
+<p>You can now use the gold layer to create a report and analyze the data. First, you must create a semantic model to define relationships and measures for reporting.</p>
+<p>Note that you can't use the <strong>default semantic model</strong> that is automatically created when you create a lakehouse. You must create a new semantic model that includes the gold tables you created in this exercise, from the Explorer.</p>
 <ol>
 <li>
 <p>In your workspace, navigate to your <strong>Sales</strong> lakehouse.</p>
@@ -2429,10 +2477,22 @@
 <p>This will open the semantic model in Fabric.</p>
 </li>
 </ol>
-<div class="admonition tip">
-<p class="admonition-title">If the tables are not showing, select the ... next to Tables in the Explorer pane and select Refresh</p>
-</div>
 <h2 id="step-12-create-relationships-optional">Step 12: Create relationships (optional)</h2>
+<div class="admonition note">
+<p class="admonition-title">Before you can create relationships in a semantic model, you need to have a PowerBI Pro licence</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Get a PowerBi licence:</p>
+<ul>
+<li>Click your Workspace</li>
+<li>In the lakehouse row - hover over semantic model</li>
+<li>Click the 3 dots <strong>...</strong></li>
+<li>Click <strong>Create report</strong></li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">A message box should popup offering you a PowerBi Pro trial.</p>
+</div>
 <ol>
 <li>
 <p>Before you can make any changes you need to change to Editing mode:</p>
@@ -2455,14 +2515,14 @@
 </li>
 </ol>
 <div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-03b-dataset-relationships.png" data-desc-position="bottom"><img alt="Semantic model in Fabric." src="../../img/qa-03b-dataset-relationships.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/03b-dataset-relationships.png" data-desc-position="bottom"><img alt="Semantic model in Fabric." src="../../img/03b-dataset-relationships.png"></a></p>
 </div>
 <h2 id="step-13-create-a-powerbi-report-optional">Step 13: Create a PowerBi report (optional)</h2>
 <ul>
-<li>You can now create a report: <strong>File</strong> &gt; <strong>Create new report</strong></li>
-<li>Or auto create a report from the semantic model in the Workspace</li>
+<li>You can now create new report</li>
+<li>Or just auto create a report: <strong>Explore &gt; Auto create report</strong></li>
 </ul>
-<p>From here on you can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they'll always reflect the latest data.</p>
+<p>From here you can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they'll always reflect the latest data.</p>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
 <p>In this exercise, you've learned how to create a medallion architecture in a Microsoft Fabric lakehouse.</p>
