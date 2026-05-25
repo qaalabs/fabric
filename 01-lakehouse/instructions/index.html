@@ -2117,6 +2117,15 @@
 <ul>
 <li>It will take a moment to start the Spark session the first time.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">If you see an <code>InvalidHttpRequest [TooManyRequestsForCapacity]</code> error:</p>
+<p>The <strong>View files</strong> action in the previous step may have left a Spark session running in the background. To fix this:</p>
+<ul>
+<li>In the left navigation bar, select <strong>Monitor</strong></li>
+<li>Find any activity that is still running and cancel it</li>
+<li>Return to your notebook and run the cell again</li>
+</ul>
+</div>
 <div class="admonition success">
 <p class="admonition-title">The sales table is displayed as an interactive grid below the cell.</p>
 </div>
