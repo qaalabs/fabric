@@ -2127,11 +2127,11 @@
 </ul>
 </div>
 <div class="admonition success">
-<p class="admonition-title">The sales table is displayed as an interactive grid below the cell.</p>
+<p class="admonition-title">The sales table should be displayed as an interactive grid below the cell.</p>
 </div>
 </li>
 <li>
-<p>Add a new cell and enter the following code to calculate revenue by item:</p>
+<p>Below the interactive grid, click <strong>+ Code</strong> to add a new code cell, and enter the following code to calculate revenue by item:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="nb">sum</span><span class="p">,</span> <span class="nb">round</span>
 
 <span class="n">revenue</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">)</span>
@@ -2143,9 +2143,6 @@
 </li>
 <li>
 <p>Run the new cell and review the results.</p>
-<div class="admonition success">
-<p class="admonition-title">You should see the same revenue totals per item that you will get from the SQL query in the next step.</p>
-</div>
 </li>
 <li>
 <p>After exploring the notebook, select the <strong>Run</strong> tab above the ribbon and select <strong>Stop session</strong>.</p>
@@ -2178,6 +2175,9 @@
 <p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> button to run the query and view the results, which should show the total revenue for each product.</p>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-01-sql-query.png" data-desc-position="bottom"><img alt="SQL query with results." src="../../img/qa-01-sql-query.png"></a></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">You should see the same revenue totals per item that you saw in the notebook.</p>
 </div>
 </li>
 </ol>
