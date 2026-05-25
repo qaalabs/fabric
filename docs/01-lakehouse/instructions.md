@@ -85,9 +85,9 @@ Currently, there are no tables or files in this lakehouse.
 
 Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).
 
-1. Download the [sales.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv) file from: https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
+1. Locate the `sales.csv` file in the `files` directory on your Virtual Machine.
 
-    - Save it as `sales.csv` on your local computer (or lab VM if applicable).
+    - If you are not using a VM, or the file is not there, download it from: https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv
 
     !!! note
         - To download the file, open a new tab in the browser and paste in the URL.
@@ -156,7 +156,53 @@ The sales data you uploaded is in a file, which you can work with directly by us
     > Files for a delta table are stored in *Parquet* format, and include a subfolder named `_delta_log` in which details of transactions applied to the table are logged.
 
 
-## Step 7: Use SQL to query tables
+## Step 7: Use a notebook to query tables
+
+Fabric notebooks let you write and run code directly against your lakehouse tables using Apache Spark. This is useful for more complex transformations and analysis beyond what SQL alone can do.
+
+1. Return to your lakehouse by selecting it from the navigation bar on the left.
+
+2. On the **Home** tab, select **Open notebook** > **New notebook**.
+
+    - Rename the notebook to `Explore Sales` by clicking on the default name at the top.
+
+3. In the first cell, enter the following code to load and display the sales table:
+
+    ```python
+    df = spark.read.table("sales")
+    display(df)
+    ```
+
+4. Use the :material-play: **(Run cell)** button to run the cell.
+
+    - It will take a moment to start the Spark session the first time.
+
+    !!! success "The sales table is displayed as an interactive grid below the cell."
+
+5. Add a new cell and enter the following code to calculate revenue by item:
+
+    ```python
+    from pyspark.sql.functions import col, sum, round
+
+    revenue = (df.groupBy("Item")
+                 .agg(round(sum(col("Quantity") * col("UnitPrice")), 2).alias("Revenue"))
+                 .orderBy("Revenue", ascending=False))
+
+    display(revenue)
+    ```
+
+6. Run the new cell and review the results.
+
+    !!! success "You should see the same revenue totals per item that you will get from the SQL query in the next step."
+
+7. After exploring the notebook, select the **Run** tab above the ribbon and select **Stop session**.
+    - This stops the compute resource being used by the notebook.
+
+    !!! quote ""
+        ![Run - Stop Session Notebook button.](../img/03b-run-stop-session.png)
+
+
+## Step 8: Use SQL to query tables
 
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
@@ -179,7 +225,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
         ![SQL query with results.](../img/qa-01-sql-query.png)
 
 
-## Step 8: Create a visual query
+## Step 9: Create a visual query
 
 While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.
 
