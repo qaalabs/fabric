@@ -161,11 +161,11 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline.
 
-2. Then use the **&#9655; Run** button to run the pipeline.
+2. Then use the :material-play: **Run** button to run the pipeline.
 
 3. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer.
 
-    - Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+    - Use the :material-refresh: (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
 4. In the navigation pane on the left, select your lakehouse.
 
