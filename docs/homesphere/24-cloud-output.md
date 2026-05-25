@@ -1,4 +1,4 @@
-# Build the Trusted Output
+# Lab 2.4 ~ Build the Trusted Output
 
 ## What you are doing
 
@@ -6,7 +6,7 @@ Your cleaned Sales data is now a Delta table in the lakehouse.
 Flatten the Product catalogue, join it to Sales, and save the trusted output
 as a second Delta table - then answer the revenue question using SQL.
 
-Open the notebook: **`day2_output.ipynb`**
+Open the notebook: **`cloud_output.ipynb`**
 
 ---
 
@@ -54,6 +54,11 @@ Any analyst in the workspace can run this query.
 
 ## Discussion
 
-- On Day 1 the output was a CSV on your VM. Today it is a Delta table in OneLake. What is the practical difference for someone who wants to use this data?
-- You answered the revenue question in Python on Day 1 and in SQL today. Which felt more natural for this kind of question?
+On Day 1 the output was a CSV on your VM. Today it is a Delta table in OneLake.
+
+- What is the practical difference for someone who wants to use this data?
+
+You answered the revenue question in Python on Day 1 and in SQL today. 
+
+- Which felt more natural for this kind of question?
 - What would break if `sales_raw.csv` arrived tomorrow with a new column added?

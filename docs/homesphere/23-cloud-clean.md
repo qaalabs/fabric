@@ -1,11 +1,11 @@
-# Clean the Sales Data in Fabric
+# Lab 2.3 ~ Clean the Sales Data in Fabric
 
 ## What you are doing
 
 The same cleaning pipeline you built on Day 1 - but running in a Fabric notebook,
 reading from OneLake, and saving to a Delta table instead of a CSV file.
 
-Open the notebook: **`day2_clean.ipynb`**
+Open the notebook in MS Fabric: **`cloud_clean.ipynb`**
 
 ---
 
@@ -42,4 +42,7 @@ and is immediately queryable via the SQL analytics endpoint.
 ## Discussion
 
 - What changed? What stayed the same?
-- The output is now a Delta table instead of a CSV - what does that enable that a CSV cannot do?
+
+The output is now a Delta table instead of a CSV
+
+- What does that enable that a CSV cannot do?
