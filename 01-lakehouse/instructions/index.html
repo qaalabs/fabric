@@ -1975,7 +1975,7 @@
 <p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
 <ul>
 <li>Name the lakehouse <code>fab_lakehouse</code></li>
-<li>Ensure <strong>Lakehouse schemas</strong> is disabled to keep the lakehouse structure consistent with the lab instructions.</li>
+<li>Leave <strong>Lakehouse schemas</strong> selected.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
@@ -2002,7 +2002,7 @@
 <p>Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).</p>
 <ol>
 <li>
-<p>In the <strong>Explorer</strong> pane, click the <strong>...</strong> menu for the <strong>Files</strong> folder and select <strong>New subfolder</strong>.</p>
+<p>In the <strong>Explorer</strong> pane of the lakehouse, click the <strong>...</strong> menu for the <strong>Files</strong> folder and select <strong>New subfolder</strong>.</p>
 <ul>
 <li>Name the new subfolder: <code>data</code></li>
 <li>Click <strong>Create</strong></li>
@@ -2066,13 +2066,13 @@
 </div>
 </li>
 <li>
-<p>In <strong>Load to table</strong> dialog box, set the table name to <code>sales</code> and confirm the load operation.</p>
-</li>
-<li>
-<p>Select <strong>CSV</strong> for the file type.</p>
+<p>In <strong>Load to table</strong> dialog box:</p>
 <ul>
-<li>Then wait for the table to be created and loaded.</li>
+<li>Make sure that the new table name is : <code>sales</code></li>
+<li>Column header should be selected, and seperator should be a comma.</li>
+<li>Click <strong>Load</strong>.</li>
 </ul>
+<p>Wait for the table to be created and loaded.</p>
 <div class="admonition tip">
 <p class="admonition-title">If the <code>sales</code> table does not automatically appear, in the <strong>...</strong> menu for the <strong>Tables</strong> folder, select <strong>Refresh</strong>.</p>
 </div>
@@ -2088,9 +2088,9 @@
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-01-delta-table-files.png" data-desc-position="bottom"><img alt="Screenshot of a table preview." src="../../img/qa-01-delta-table-files.png"></a></p>
 </div>
-<blockquote>
+<div class="admonition info">
 <p>Files for a delta table are stored in <em>Parquet</em> format, and include a subfolder named <code>_delta_log</code> in which details of transactions applied to the table are logged.</p>
-</blockquote>
+</div>
 </li>
 </ol>
 <h2 id="step-7-use-a-notebook-to-query-tables">Step 7: Use a notebook to query tables</h2>
