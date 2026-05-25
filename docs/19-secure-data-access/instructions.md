@@ -129,7 +129,7 @@ In this exercise, you add a user to a workspace role, apply permissions and, see
 
 15. Next, select the **Workspaces** icon on the left menu bar, then select the lakehouse.
 
-16. When the lakehouse opens, click on the dropdown box at the top right corner of the screen that says **Lakehouse** and select **SQL analytics endpoint**.
+16. When the lakehouse opens, select **Analyze data with** at the top-right of the page and choose **SQL analytics endpoint**.
 
 17. Select the **publicholidays** table and wait for the data to be displayed. Data in the lakehouse table is readable from the SQL analytics endpoint because the user is a member of the Workspace Viewer role that grants read permissions on the SQL analytics endpoint.
 
