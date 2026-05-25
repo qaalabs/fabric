@@ -133,7 +133,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     !!! quote ""
         ![File format settings dialog.](../img/04-file-format-settings.png)
 
-    !!! tip "Make sure you select: **Line feed (\n)"
+    !!! tip "Make sure you select: **Line feed (\n)**"
 
 7. Select **Test connection** to verify the connection works.
 
