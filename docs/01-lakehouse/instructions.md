@@ -63,7 +63,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
     - Name the lakehouse `fab_lakehouse`
-    - Ensure **Lakehouse schemas** is disabled to keep the lakehouse structure consistent with the lab instructions.
+    - Leave **Lakehouse schemas** selected.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -85,19 +85,18 @@ Currently, there are no tables or files in this lakehouse.
 
 Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).
 
-1. Locate the `sales.csv` file in the `files` directory on your Virtual Machine.
+1. In the **Explorer** pane of the lakehouse, click the **...** menu for the **Files** folder and select **New subfolder**.
+
+    - Name the new subfolder: `data`
+    - Click **Create**
+
+2. Locate the `sales.csv` file in the `files` directory on your Virtual Machine.
 
     - If you are not using a VM, or the file is not there, download it from: https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv
 
     !!! note
         - To download the file, open a new tab in the browser and paste in the URL.
         - Right click anywhere on the page containing the data and select "Save as" to save the data as a CSV file.
-
-2. Return to the web browser tab containing your lakehouse
-
-    - Click the **...** menu for the **Files** folder in the **Explorer pane** select **New subfolder**
-    - Name the new subfolder: `data`
-    - Click **Create**
 
 3. In the **...** menu for the new **data** folder, select **Upload** and **Upload files**.
 
@@ -135,15 +134,17 @@ The sales data you uploaded is in a file, which you can work with directly by us
     !!! quote ""
         ![Load to tables - New table.](../img/qa-01-load-to-tables.png)
 
-3. In **Load to table** dialog box, set the table name to `sales` and confirm the load operation.
+3. In **Load to table** dialog box:
 
-4. Select **CSV** for the file type.
+    - Make sure that the new table name is : `sales`
+    - Column header should be selected, and seperator should be a comma.
+    - Click **Load**.
 
-    - Then wait for the table to be created and loaded.
+    Wait for the table to be created and loaded.
 
     !!! tip "If the `sales` table does not automatically appear, in the **...** menu for the **Tables** folder, select **Refresh**."
 
-5. In the **Explorer** pane, select the `sales` table that has been created to view the data:
+4. In the **Explorer** pane, select the `sales` table that has been created to view the data:
 
     !!! quote ""
         ![Screenshot of a table preview.](../img/qa-01-table-preview.png)
@@ -153,18 +154,20 @@ The sales data you uploaded is in a file, which you can work with directly by us
     !!! quote ""
         ![Screenshot of a table preview.](../img/qa-01-delta-table-files.png)
 
-    > Files for a delta table are stored in *Parquet* format, and include a subfolder named `_delta_log` in which details of transactions applied to the table are logged.
+    !!! info ""
+        Files for a delta table are stored in *Parquet* format, and include a subfolder named `_delta_log` in which details of transactions applied to the table are logged.
 
 
 ## Step 7: Use a notebook to query tables
 
 Fabric notebooks let you write and run code directly against your lakehouse tables using Apache Spark. This is useful for more complex transformations and analysis beyond what SQL alone can do.
 
-1. Return to your lakehouse by selecting it from the navigation bar on the left.
+1. On the **Home** tab of your lakehouse, select **Open notebook** > **New notebook**.
 
-2. On the **Home** tab, select **Open notebook** > **New notebook**.
+2. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
 
-    - Rename the notebook to `Explore Sales` by clicking on the default name at the top.
+    - Then set the **Name** of the notebook to `Explore Sales`
+    - Close the settings pane to save the changes.
 
 3. In the first cell, enter the following code to load and display the sales table:
 
@@ -177,9 +180,16 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
     - It will take a moment to start the Spark session the first time.
 
-    !!! success "The sales table is displayed as an interactive grid below the cell."
+    !!! warning "If you see an `InvalidHttpRequest [TooManyRequestsForCapacity]` error:"
+        The **View files** action in the previous step may have left a Spark session running in the background. To fix this:
 
-5. Add a new cell and enter the following code to calculate revenue by item:
+        - In the left navigation bar, select **Monitor**
+        - Find any activity that is still running and cancel it
+        - Return to your notebook and run the cell again
+
+    !!! success "The sales table should be displayed as an interactive grid below the cell."
+
+5. Below the interactive grid, click **+ Code** to add a new code cell, and enter the following code to calculate revenue by item:
 
     ```python
     from pyspark.sql.functions import col, sum, round
@@ -193,7 +203,6 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
 6. Run the new cell and review the results.
 
-    !!! success "You should see the same revenue totals per item that you will get from the SQL query in the next step."
 
 7. After exploring the notebook, select the **Run** tab above the ribbon and select **Stop session**.
     - This stops the compute resource being used by the notebook.
@@ -206,7 +215,9 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
-1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint**.
+1. In the left navigation bar, return to your lakehouse `fab_lakehouse`.
+
+2. At the top-right of the Lakehouse page, select **Analyze data with** and choose **SQL analytics endpoint**.
 
     - Then wait a short time until the SQL analytics endpoint for your lakehouse opens in a visual interface from which you can query its tables.
 
@@ -224,12 +235,13 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
     !!! quote ""
         ![SQL query with results.](../img/qa-01-sql-query.png)
 
+    !!! success "You should see the same revenue totals per item that you saw in the notebook."
 
 ## Step 9: Create a visual query
 
 While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.
 
-1. On the toolbar, expand the **New SQL query** option and select **New visual query**.
+1. On the toolbar of the `fab_lakehouse`, expand the **New SQL query** option and select **New visual query**.
 
 2. Drag the `sales` table (under dbo > Tables) to the new visual query editor pane that opens to create a Power Query as shown here:
 
