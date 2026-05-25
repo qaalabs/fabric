@@ -511,10 +511,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7-use-sql-to-query-tables" class="md-nav__link">
+  <a href="#step-7-use-a-notebook-to-query-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 7: Use SQL to query tables
+        Step 7: Use a notebook to query tables
       
     </span>
   </a>
@@ -522,10 +522,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-8-create-a-visual-query" class="md-nav__link">
+  <a href="#step-8-use-sql-to-query-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 8: Create a visual query
+        Step 8: Use SQL to query tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-create-a-visual-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 9: Create a visual query
       
     </span>
   </a>
@@ -1991,9 +2002,9 @@
 <p>Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).</p>
 <ol>
 <li>
-<p>Download the <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv">sales.csv</a> file from: <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv">https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv</a></p>
+<p>Locate the <code>sales.csv</code> file in the <code>files</code> directory on your Virtual Machine.</p>
 <ul>
-<li>Save it as <code>sales.csv</code> on your local computer (or lab VM if applicable).</li>
+<li>If you are not using a VM, or the file is not there, download it from: <a href="https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv">https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv</a></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2083,7 +2094,61 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="step-7-use-sql-to-query-tables">Step 7: Use SQL to query tables</h2>
+<h2 id="step-7-use-a-notebook-to-query-tables">Step 7: Use a notebook to query tables</h2>
+<p>Fabric notebooks let you write and run code directly against your lakehouse tables using Apache Spark. This is useful for more complex transformations and analysis beyond what SQL alone can do.</p>
+<ol>
+<li>
+<p>Return to your lakehouse by selecting it from the navigation bar on the left.</p>
+</li>
+<li>
+<p>On the <strong>Home</strong> tab, select <strong>Open notebook</strong> &gt; <strong>New notebook</strong>.</p>
+<ul>
+<li>Rename the notebook to <code>Explore Sales</code> by clicking on the default name at the top.</li>
+</ul>
+</li>
+<li>
+<p>In the first cell, enter the following code to load and display the sales table:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"sales"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>(Run cell)</strong> button to run the cell.</p>
+<ul>
+<li>It will take a moment to start the Spark session the first time.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">The sales table is displayed as an interactive grid below the cell.</p>
+</div>
+</li>
+<li>
+<p>Add a new cell and enter the following code to calculate revenue by item:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="nb">sum</span><span class="p">,</span> <span class="nb">round</span>
+
+<span class="n">revenue</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">)</span>
+             <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"Quantity"</span><span class="p">)</span> <span class="o">*</span> <span class="n">col</span><span class="p">(</span><span class="s2">"UnitPrice"</span><span class="p">)),</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"Revenue"</span><span class="p">))</span>
+             <span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">"Revenue"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run the new cell and review the results.</p>
+<div class="admonition success">
+<p class="admonition-title">You should see the same revenue totals per item that you will get from the SQL query in the next step.</p>
+</div>
+</li>
+<li>
+<p>After exploring the notebook, select the <strong>Run</strong> tab above the ribbon and select <strong>Stop session</strong>.</p>
+<ul>
+<li>This stops the compute resource being used by the notebook.</li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/03b-run-stop-session.png" data-desc-position="bottom"><img alt="Run - Stop Session Notebook button." src="../../img/03b-run-stop-session.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-8-use-sql-to-query-tables">Step 8: Use SQL to query tables</h2>
 <p>When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL <code>SELECT</code> statements.</p>
 <ol>
 <li>
@@ -2107,7 +2172,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-8-create-a-visual-query">Step 8: Create a visual query</h2>
+<h2 id="step-9-create-a-visual-query">Step 9: Create a visual query</h2>
 <p>While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.</p>
 <ol>
 <li>
