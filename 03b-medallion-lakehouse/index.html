@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../01-lakehouse/instructions/">
+        <link rel="prev" href="../01-lakehouse/summary/">
       
       
-        <link rel="next" href="instructions/">
+        <link rel="next" href="summary/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Lab 03b - Create Medallion Architecture in a Fabric Lakehouse - MS Fabric Labs</title>
+        <title>Lab 03b ~ Create Medallion Architecture in a Fabric Lakehouse - MS Fabric Labs</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 03b - Create Medallion Architecture in a Fabric Lakehouse
+              Lab 03b ~ Create Medallion Architecture in a Fabric Lakehouse
             
           </span>
         </div>
@@ -383,14 +383,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-lakehouse/instructions/" class="md-nav__link">
+      <a href="../01-lakehouse/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -485,14 +485,14 @@
   
   
     <li class="md-nav__item">
-      <a href="instructions/" class="md-nav__link">
+      <a href="summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -585,14 +585,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-ingest-pipeline/instructions/" class="md-nav__link">
+      <a href="../04-ingest-pipeline/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -685,14 +685,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-dataflows-gen2/instructions/" class="md-nav__link">
+      <a href="../05-dataflows-gen2/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -785,14 +785,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-data-warehouse/instructions/" class="md-nav__link">
+      <a href="../06-data-warehouse/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -885,14 +885,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../06b-data-warehouse-query/instructions/" class="md-nav__link">
+      <a href="../06b-data-warehouse-query/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -985,14 +985,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../06c-monitor-data-warehouse/instructions/" class="md-nav__link">
+      <a href="../06c-monitor-data-warehouse/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1085,14 +1085,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-real-time-intelligence/instructions/" class="md-nav__link">
+      <a href="../07-real-time-intelligence/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1185,14 +1185,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../09-real-time-analytics-eventstream/instructions/" class="md-nav__link">
+      <a href="../09-real-time-analytics-eventstream/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1285,14 +1285,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../11-data-activator/instructions/" class="md-nav__link">
+      <a href="../11-data-activator/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1385,14 +1385,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../18-monitor-hub/instructions/" class="md-nav__link">
+      <a href="../18-monitor-hub/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1485,14 +1485,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../19-secure-data-access/instructions/" class="md-nav__link">
+      <a href="../19-secure-data-access/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1585,14 +1585,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../20-work-with-database/instructions/" class="md-nav__link">
+      <a href="../20-work-with-database/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1685,14 +1685,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../21-implement-cicd/instructions/" class="md-nav__link">
+      <a href="../21-implement-cicd/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1738,34 +1738,523 @@
 
 
 
-<h1 id="lab-03b-create-medallion-architecture-in-a-fabric-lakehouse">Lab 03b - Create Medallion Architecture in a Fabric Lakehouse</h1>
-<p>In this exercise you will build out a medallion architecture in a Fabric lakehouse using notebooks. You will create a workspace, create a lakehouse, upload data to the bronze layer, transform the data and load it to the silver Delta table, transform the data further and load it to the gold Delta tables, and then explore the semantic model and create relationships.</p>
-<p>This lab should take approximately <strong>45</strong> minutes to complete</p>
+<h1 id="lab-03b-create-medallion-architecture-in-a-fabric-lakehouse">Lab 03b ~ Create Medallion Architecture in a Fabric Lakehouse</h1>
 <div class="admonition info">
-<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
+<p class="admonition-title">For this lab, you will access the QA Platform and sign in using the credentials provided.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
+<p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
 </div>
-<h2 id="overview">Overview</h2>
-<h3 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h3>
-<p>For this lab, you must sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
-<h3 id="step-2-create-a-workspace">Step 2: Create a workspace</h3>
-<p>Before working with data in Fabric, create a workspace with the Fabric trial enabled.</p>
-<h3 id="step-3-create-a-lakehouse-and-upload-data-to-bronze-layer">Step 3: Create a lakehouse and upload data to bronze layer</h3>
-<p>Now that you have a workspace, it's time to create a data lakehouse for the data you're going to analyse.</p>
-<h3 id="step-4-transform-data-and-load-to-silver-delta-table">Step 4: Transform data and load to silver Delta table</h3>
-<p>Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data and load it to a delta table in the silver layer.</p>
-<h3 id="step-5-explore-data-in-the-silver-layer-using-the-sql-endpoint">Step 5: Explore data in the silver layer using the SQL endpoint</h3>
-<p>Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis.</p>
-<h3 id="step-6-transform-data-for-gold-layer">Step 6: Transform data for gold layer</h3>
-<p>You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. Now you'll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.</p>
-<h3 id="step-7-optional-create-a-semantic-model">Step 7: (OPTIONAL) Create a semantic model</h3>
-<p>In your workspace, you can now use the gold layer to create a report and analyse the data. You can access the semantic model directly in your workspace to create relationships and measures for reporting.</p>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
+<p>Before working with data in Fabric, you need to create a workspace.</p>
+<ol>
+<li>
+<p>In the navigation pane on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Select <strong>+ New workspace</strong>, then create a workspace using the naming format below:</p>
+<ul>
+<li>Start the name with <code>fab_workspace</code></li>
+<li>Add random numbers to make it unique (for example, <code>fab_workspace123</code>)</li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
+</ul>
+</li>
+<li>
+<p>When your new workspace opens, it should be empty:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/new-workspace.png" data-desc-position="bottom"><img alt="Empty workspace in Fabric." src="../img/new-workspace.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-create-a-lakehouse">Step 2: Create a lakehouse</h2>
+<p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
+<ol>
+<li>
+<p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
+<ul>
+<li>Name the lakehouse: <code>Sales</code></li>
+<li>Ensure <strong>Lakehouse schemas</strong> is disabled to keep the lakehouse structure consistent with the lab instructions.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
+</div>
+<p>After a minute or so, a new empty lakehouse will be created.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/new-lakehouse.png" data-desc-position="bottom"><img alt="New lakehouse." src="../img/new-lakehouse.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-3-upload-data-to-bronze-layer">Step 3: Upload data to bronze layer</h2>
+<p>Next, you'll ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply download a text file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.</p>
+<ol>
+<li>
+<p>Download the data file for this exercise from <code>https://github.com/MicrosoftLearning/dp-data/blob/main/orders.zip</code></p>
+<ul>
+<li>Extract the files and save them with their original names on your local computer (or lab VM if applicable).</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">There should be 3 files containing sales data for 3 years: 2019.csv, 2020.csv, and 2021.csv</p>
+</div>
+</li>
+<li>
+<p>Return to the web browser tab containing your lakehouse:</p>
+<ul>
+<li>In the <strong>...</strong> menu for the <strong>Files</strong> folder in the <strong>Explorer</strong> pane</li>
+<li>Select <strong>New subfolder</strong></li>
+<li>Create a folder named <strong>bronze</strong></li>
+</ul>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>bronze</strong> folder, select <strong>Upload</strong> and <strong>Upload files</strong></p>
+<ul>
+<li>Then upload the 3 files (2019.csv, 2020.csv, and 2021.csv) from your local computer (or lab VM if applicable) to the lakehouse. </li>
+<li>Use the shift key to upload all 3 files at once.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Make sure that the files are in the <em>bronze</em> subfolder</p>
+</div>
+</li>
+<li>
+<p>After the files have been uploaded, select the <strong>bronze</strong> folder; and verify that the files have been uploaded, as shown here:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03b-bronze-files.png" data-desc-position="bottom"><img alt="Uploaded products.csv file in a lakehouse." src="../img/03b-bronze-files.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-4-transform-the-data">Step 4: Transform the data</h2>
+<p>Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data before you load it to a delta table in the silver layer.</p>
+<ol>
+<li>
+<p>On the <strong>Home</strong> tab of your lakehouse, select <strong>Open notebook</strong> &gt; <strong>New notebook</strong>.</p>
+<p>At the top-right of the Lakehouse page:</p>
+<ul>
+<li>Select <strong>Analyze data with</strong> dropdown and choose: <strong>Notebook</strong> &gt; <strong>New notebook</strong></li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-lakehouse-notebook.png" data-desc-position="bottom"><img alt="Lakehouse new notebook" src="../img/qa-lakehouse-notebook.png"></a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">After a few seconds, a new notebook containing a <em>single cell</em> will open.</p>
+</div>
+</li>
+<li>
+<p>In the notebook menu bar, use the ⚙️ <strong>Settings</strong> icon to view the notebook settings.</p>
+<ul>
+<li>Then set the <strong>Name</strong> of the notebook to <code>Transform data for Silver</code></li>
+<li>Close the settings pane to save the changes.</li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03b-sales-notebook-rename.png" data-desc-position="bottom"><img alt="New notebook named Transform data for silver." src="../img/03b-sales-notebook-rename.png"></a></p>
+</div>
+</li>
+<li>
+<p>Select the existing cell in the notebook, which contains some simple commented-out code.</p>
+<ul>
+<li>Highlight and delete the two lines - you will not need this code.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Notebooks enable you to run code in a variety of languages, including Python, Scala, and SQL.</li>
+<li>In this exercise, you’ll use PySpark and SQL. </li>
+<li>You can also add markdown cells to provide formatted text and images to document your code.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Paste the following code into the first cell:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Silver: Cell 1 ~ Transform the data before you load it</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create the schema for the table</span>
+<span class="n">orderSchema</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">([</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"SalesOrderNumber"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"SalesOrderLineNumber"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">,</span> <span class="n">DateType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"Email"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"Quantity"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">()),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"Tax"</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">())</span>
+    <span class="p">])</span>
+
+<span class="c1"># Import all files from bronze folder of lakehouse</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"csv"</span><span class="p">)</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">"header"</span><span class="p">,</span> <span class="s2">"false"</span><span class="p">)</span><span class="o">.</span><span class="n">schema</span><span class="p">(</span><span class="n">orderSchema</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"Files/bronze/*.csv"</span><span class="p">)</span>
+
+<span class="c1"># Display the first 10 rows of the dataframe to preview your data</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+</li>
+<li>
+<p>Use the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> (Run cell)</strong> button on the left of the cell to run the code.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Since this is the first time you've run any Spark code in this notebook, a Spark session must be started.</li>
+<li>This means that the first run can take a minute or so to complete. </li>
+<li>Subsequent runs will be quicker.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When the cell command has completed, review the output below the cell, which should look similar to this:</p>
+<div class="highlight"><pre><span></span><code>| Index | SalesOrderNumber | SalesOrderLineNumber | OrderDate  | CustomerName | Email             | Item                 | Quantity | UnitPrice | Tax      |
+| ----- | ---------------- | -------------------- | ---------- | ------------ | ----------------- | -------------------- | -------- | --------- | -------- |
+| 1     | SO49172          | 1                    | 2021-01-01 | Brian Howard | brian@example.com | Road-250 Red, 52     | 1        | 2443.35   | 195.468  |
+| 2     | SO49173          | 1                    | 2021-01-01 | Linda Alvarez| linda@example.com | Mount-200 Silver, 38 | 1        | 2071.4197 | 165.7136 |
+| ...   | ...              | ...                  | ...        | ...          | ...               | ...                  | ...      | ...       | ...      |
+</code></pre></div>
+<p>The code you ran loaded the data from the CSV files in the bronze folder into a Spark dataframe, and then displayed the first few rows of the dataframe.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: You can clear, hide, and auto-resize the contents of the cell output by selecting the <strong>...</strong> menu at the top left of the output pane.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-5-data-validation-and-cleanup">Step 5: Data validation and cleanup</h2>
+<p>Now that you have transformed data, you can use a notebook to load it to a delta table in the silver layer.</p>
+<ol>
+<li>
+<p>Now you'll <strong>add columns for data validation and cleanup</strong>, using a PySpark dataframe to add columns and update the values of some of the existing columns. </p>
+<ul>
+<li>Use the <strong>+ Code</strong> button to <strong>add a new code block</strong> and add the following code to the cell:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Silver: Cell 2 ~ Add columns for data validation and cleanup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">when</span><span class="p">,</span> <span class="n">lit</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">current_timestamp</span><span class="p">,</span> <span class="n">input_file_name</span>
+
+<span class="c1"># Add columns IsFlagged, CreatedTS and ModifiedTS</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"FileName"</span><span class="p">,</span> <span class="n">input_file_name</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"IsFlagged"</span><span class="p">,</span> <span class="n">when</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)</span> <span class="o">&lt;</span> <span class="s1">'2019-08-01'</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"CreatedTS"</span><span class="p">,</span> <span class="n">current_timestamp</span><span class="p">())</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ModifiedTS"</span><span class="p">,</span> <span class="n">current_timestamp</span><span class="p">())</span>
+
+<span class="c1"># Update CustomerName to "Unknown" if CustomerName null or empty</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="n">when</span><span class="p">((</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">)</span><span class="o">.</span><span class="n">isNull</span><span class="p">()</span> <span class="o">|</span> <span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">)</span><span class="o">==</span><span class="s2">""</span><span class="p">)),</span><span class="n">lit</span><span class="p">(</span><span class="s2">"Unknown"</span><span class="p">))</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">)))</span>
+</code></pre></div>
+<ul>
+<li>The first line of the code imports the necessary functions from PySpark. </li>
+<li>You're then adding new columns to the dataframe so you can track the source file name, whether the order was flagged as being a before the fiscal year of interest, and when the row was created and modified.</li>
+<li>Finally, you're updating the CustomerName column to "Unknown" if it's null or empty.</li>
+</ul>
+</li>
+<li>
+<p>Run the cell to execute the code using the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> (Run cell)</strong> button.</p>
+</li>
+</ol>
+<h2 id="step-6-define-the-schema-for-the-silver-table">Step 6: Define the schema for the silver table</h2>
+<ol>
+<li>
+<p>Next, you'll define the schema for the <strong>sales_silver</strong> table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Silver: Cell 3 ~ Define the schema for the sales_silver table</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">DeltaTable</span><span class="o">.</span><span class="n">createIfNotExists</span><span class="p">(</span><span class="n">spark</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">tableName</span><span class="p">(</span><span class="s2">"sales.sales_silver"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"SalesOrderNumber"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"SalesOrderLineNumber"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Email"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Quantity"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"Tax"</span><span class="p">,</span> <span class="n">FloatType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"FileName"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"IsFlagged"</span><span class="p">,</span> <span class="n">BooleanType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"CreatedTS"</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"ModifiedTS"</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
+    <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run the cell to execute the code using the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> (Run cell)</strong> button.</p>
+</li>
+<li>
+<p>Select the <strong>...</strong> in the Tables section of the Explorer pane and select Refresh. You should now see the new <strong>sales_silver</strong> table listed. The <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 21h22L12 2"></path></svg></span> (triangle icon) indicates that it's a Delta table.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: If you don't see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-7-insert-and-update-records">Step 7: Insert and update records</h2>
+<p>Now you're going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found.</p>
+<ol>
+<li>
+<p>Add a new code block and paste the following code:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Silver: Cell 4 ~ Update existing records and insert new ones based on a condition</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">'Tables/sales_silver'</span><span class="p">)</span>
+
+<span class="n">dfUpdates</span> <span class="o">=</span> <span class="n">df</span>
+
+<span class="n">deltaTable</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'silver'</span><span class="p">)</span> \
+<span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">dfUpdates</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">'updates'</span><span class="p">),</span>
+    <span class="s1">'silver.SalesOrderNumber = updates.SalesOrderNumber and silver.OrderDate = updates.OrderDate and silver.CustomerName = updates.CustomerName and silver.Item = updates.Item'</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenMatchedUpdate</span><span class="p">(</span><span class="nb">set</span> <span class="o">=</span>
+    <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">whenNotMatchedInsert</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span>
+    <span class="p">{</span>
+    <span class="s2">"SalesOrderNumber"</span><span class="p">:</span> <span class="s2">"updates.SalesOrderNumber"</span><span class="p">,</span>
+    <span class="s2">"SalesOrderLineNumber"</span><span class="p">:</span> <span class="s2">"updates.SalesOrderLineNumber"</span><span class="p">,</span>
+    <span class="s2">"OrderDate"</span><span class="p">:</span> <span class="s2">"updates.OrderDate"</span><span class="p">,</span>
+    <span class="s2">"CustomerName"</span><span class="p">:</span> <span class="s2">"updates.CustomerName"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"updates.Email"</span><span class="p">,</span>
+    <span class="s2">"Item"</span><span class="p">:</span> <span class="s2">"updates.Item"</span><span class="p">,</span>
+    <span class="s2">"Quantity"</span><span class="p">:</span> <span class="s2">"updates.Quantity"</span><span class="p">,</span>
+    <span class="s2">"UnitPrice"</span><span class="p">:</span> <span class="s2">"updates.UnitPrice"</span><span class="p">,</span>
+    <span class="s2">"Tax"</span><span class="p">:</span> <span class="s2">"updates.Tax"</span><span class="p">,</span>
+    <span class="s2">"FileName"</span><span class="p">:</span> <span class="s2">"updates.FileName"</span><span class="p">,</span>
+    <span class="s2">"IsFlagged"</span><span class="p">:</span> <span class="s2">"updates.IsFlagged"</span><span class="p">,</span>
+    <span class="s2">"CreatedTS"</span><span class="p">:</span> <span class="s2">"updates.CreatedTS"</span><span class="p">,</span>
+    <span class="s2">"ModifiedTS"</span><span class="p">:</span> <span class="s2">"updates.ModifiedTS"</span>
+    <span class="p">}</span>
+<span class="p">)</span> \
+<span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run the cell to execute the code using the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> (Run cell)</strong> button.</p>
+<p>This operation is important because it enables you to update existing records in the table based on the values of specific columns, and insert new records when no match is found. This is a common requirement when you're loading data from a source system that may contain updates to existing and new records.</p>
+<div class="admonition success">
+<p class="admonition-title">You now have data in your silver delta table that is ready for further transformation and modeling.</p>
+</div>
+</li>
+<li>
+<p>After running the last cell, select the <strong>Run</strong> tab above the ribbon and then select: <strong>Stop session</strong></p>
+<ul>
+<li>This stops the compute resource being used by the notebook.</li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03b-run-stop-session.png" data-desc-position="bottom"><img alt="Run - Stop Session Notebook button." src="../img/03b-run-stop-session.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-8-explore-data-in-the-silver-layer-using-the-sql-endpoint">Step 8: Explore data in the silver layer using the SQL endpoint</h2>
+<p>Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis. This is useful if you're familiar with SQL and want to do some basic exploration of your data. In this exercise we're using the SQL endpoint view in Fabric, but you can use other tools like SQL Server Management Studio (SSMS) and Azure Data Explorer.</p>
+<ol>
+<li>
+<p>Navigate back to your workspace and notice that you now have several items listed.</p>
+<ul>
+<li>Select the <strong>Sales SQL analytics endpoint</strong> to open your lakehouse in the SQL analytics endpoint view.</li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03b-sql-endpoint-item.png" data-desc-position="bottom"><img alt="SQL endpoint in a lakehouse." src="../img/03b-sql-endpoint-item.png"></a></p>
+</div>
+</li>
+<li>
+<p>Select <strong>New SQL query</strong> from the ribbon, which will open a SQL query editor. Note that you can rename your query using the <strong>...</strong> menu item next to the existing query name in the Explorer pane.</p>
+<p>Next, you'll run two sql queries to explore the data.</p>
+</li>
+<li>
+<p>Paste the following query into the query editor and select <strong>Run</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">Year</span>
+<span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="k">CAST</span><span class="w"> </span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">UnitPrice</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Tax</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalSales</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_silver</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span>
+</code></pre></div>
+<p>This query calculates the total sales for each year in the sales_silver table. Your results should look like this:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03b-total-sales-sql.png" data-desc-position="bottom"><img alt="Screenshot of the results of a SQL query in a lakehouse." src="../img/03b-total-sales-sql.png"></a></p>
+</div>
+</li>
+<li>
+<p>Next you'll review which customers are purchasing the most (in terms of quantity).</p>
+<p>Paste the following query into the query editor and select <strong>Run</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">CustomerName</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalQuantity</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_silver</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CustomerName</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalQuantity</span><span class="w"> </span><span class="k">DESC</span>
+</code></pre></div>
+<p>This query calculates the total quantity of items purchased by each customer in the sales_silver table, and then returns the top 10 customers in terms of quantity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: Data exploration at the <strong>Silver layer</strong> is useful for basic analysis ...</p>
+<ul>
+<li>But you need to transform the data further and model it into a star schema.</li>
+<li>This will enable you to do more advanced analysis and reporting.</li>
+<li>You'll do that in the next section.</li>
+</ul>
+</div>
+</li>
+</ol>
+<h2 id="step-9-transform-data-for-gold-layer">Step 9: Transform data for gold layer</h2>
+<p>You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. </p>
+<p>Now you'll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: You could have done all of this in a single notebook ...</p>
+<ul>
+<li>But for this exercise you're using separate notebooks</li>
+<li>This will better demonstrate the process of transforming data from bronze to silver and then from silver to gold.</li>
+<li>And it makes it easier to do debugging, troubleshooting, and for reuse.</li>
+</ul>
+</div>
+<ol>
+<li>
+<p>On the <strong>Home</strong> tab of your lakehouse, select <strong>Open notebook</strong> &gt; <strong>New notebook</strong>.</p>
+<p>At the top-right of the Lakehouse page:</p>
+<ul>
+<li>Select <strong>Analyze data with</strong> dropdown and choose: <strong>Notebook</strong> &gt; <strong>New notebook</strong></li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-lakehouse-notebook.png" data-desc-position="bottom"><img alt="Lakehouse new notebook" src="../img/qa-lakehouse-notebook.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the notebook menu bar, use the ⚙️ <strong>Settings</strong> icon to view the notebook settings.</p>
+<ul>
+<li>Then set the <strong>Name</strong> of the notebook to <code>Transform data for Gold</code></li>
+</ul>
+</li>
+<li>
+<p>In the existing code block, remove the commented text and <strong>add the following code</strong> to load data to your dataframe and start building your star schema:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">dayofmonth</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"Sales.sales_silver"</span><span class="p">)</span>
+
+<span class="c1"># dim: date</span>
+<span class="n">dimDate</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">,</span> <span class="n">year</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">,</span> <span class="n">month</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Day"</span><span class="p">,</span> <span class="n">dayofmonth</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span>
+<span class="n">dimDate</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimdate_gold"</span><span class="p">)</span>
+
+<span class="c1"># dim: customer</span>
+<span class="n">dimCustomer</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="s2">"Email"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">dimCustomer</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimcustomer_gold"</span><span class="p">)</span>
+
+<span class="c1"># dim: product</span>
+<span class="n">dimProduct</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ItemID"</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">dimProduct</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimproduct_gold"</span><span class="p">)</span>
+
+<span class="c1"># fact: sales</span>
+<span class="n">factSales</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dimCustomer</span><span class="p">,</span> <span class="p">[</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="s2">"Email"</span><span class="p">],</span> <span class="s2">"left"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dimProduct</span><span class="p">,</span> <span class="p">[</span><span class="s2">"Item"</span><span class="p">],</span> <span class="s2">"left"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span> <span class="s2">"ItemID"</span><span class="p">,</span> <span class="s2">"OrderDate"</span><span class="p">,</span> <span class="s2">"Quantity"</span><span class="p">,</span> <span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="s2">"Tax"</span><span class="p">)</span>
+<span class="n">factSales</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.factsales_gold"</span><span class="p">)</span>
+
+<span class="c1"># End of cell</span>
+</code></pre></div>
+<p>Use the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> (Run cell)</strong> button on the left of the cell to run the code.</p>
+<div class="admonition warning">
+<p class="admonition-title">If you receive a <code>TooManyRequestsForCapacity</code> error when running the first cell:</p>
+<ul>
+<li>Make sure you stopped the session previously running in the first notebook.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>After the cell has finished running, refresh the Tables pane and you should now see 4 new tables:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03b-gold-tables-created.png" data-desc-position="bottom"><img alt="Gold tables created." src="../img/03b-gold-tables-created.png"></a></p>
+</div>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">You now have a curated, modeled <strong>gold</strong> layer that can be used for reporting and analysis.</p>
+</div>
+<h2 id="step-10-create-a-semantic-model-optional">Step 10: Create a semantic model (optional)</h2>
+<div class="admonition note">
+<p class="admonition-title">Before you can create a semantic model, you need to have a PowerBI Pro licence</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Get a PowerBi licence:</p>
+<ul>
+<li>Click your Workspace</li>
+<li>In the lakehouse row - hover over the default semantic model</li>
+<li>Click the 3 dots <strong>...</strong></li>
+<li>Click <strong>Create report</strong></li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">A message box should popup offering you a PowerBi Pro trial.</p>
+</div>
+<p>You can now use the gold layer to create a report and analyze the data. But first, you must create a semantic model to define relationships and measures for reporting.</p>
+<ol>
+<li>
+<p>In your workspace, navigate to your <strong>Sales</strong> lakehouse.</p>
+</li>
+<li>
+<p>Select <strong>New semantic model</strong> from the ribbon of the Explorer view.</p>
+</li>
+<li>
+<p>Assign the name <strong>Sales_Gold</strong> to your new semantic model.</p>
+</li>
+<li>
+<p>Select your transformed gold tables to include in your semantic model and select <strong>Confirm</strong>.</p>
+<ul>
+<li>dimcustomer_gold</li>
+<li>dimdate_gold</li>
+<li>dimproduct_gold</li>
+<li>factsales_gold</li>
+</ul>
+<p>This will open the semantic model in Fabric.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">If the tables are not showing, select the ... next to Tables in the Explorer pane and select Refresh</p>
+</div>
+<h2 id="step-11-create-relationships-optional">Step 11: Create relationships (optional)</h2>
+<ol>
+<li>
+<p>Before you can make any changes you need to change to Editing mode:</p>
+<ul>
+<li>In the top right hand corner, change the dropdown from <strong>Viewing</strong> to <strong>Editing</strong></li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">You should now be able to create the semantic model as depicted below</p>
+</div>
+<ol>
+<li>
+<p>Create the following relationships:</p>
+<ul>
+<li><strong>dimcustomer_gold: CustomerID</strong> → <strong>factsales_gold: CustomerID</strong></li>
+<li><strong>dimdate_gold: OrderDate</strong> → <strong>factsales_gold: OrderDate</strong></li>
+<li><strong>dimproduct_gold: ItemID</strong> → <strong>factsales_gold: ItemID</strong></li>
+</ul>
+</li>
+</ol>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-03b-dataset-relationships.png" data-desc-position="bottom"><img alt="Semantic model in Fabric." src="../img/qa-03b-dataset-relationships.png"></a></p>
+</div>
+<h2 id="step-12-create-a-powerbi-report-optional">Step 12: Create a PowerBi report (optional)</h2>
+<ul>
+<li>You can now create a report: <strong>File</strong> &gt; <strong>Create new report</strong></li>
+<li>Or auto create a report from the semantic model in the Workspace</li>
+</ul>
+<p>From here on you can create reports and dashboards based on the data in your lakehouse. These reports will be connected directly to the gold layer of your lakehouse, so they'll always reflect the latest data.</p>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
 <p>In this exercise, you've learned how to create a medallion architecture in a Microsoft Fabric lakehouse.</p>
-<p>If you've finished exploring your lakehouse, you can delete the workspace you created for this exercise.</p>
+<p>If you've finished exploring the medallion architecture, you can delete the workspace you created for this exercise.</p>
+<ol>
+<li>
+<p>Navigate to Microsoft Fabric in your browser.</p>
+</li>
+<li>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
+</li>
+<li>
+<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Delete</strong> to delete the workspace.</p>
+</li>
+</ol>
+<hr>
+<p><small><b>Source:
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html</a>
+</b></small></p>
 
 
 

@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../05-dataflows-gen2/instructions/">
+        <link rel="prev" href="../05-dataflows-gen2/summary/">
       
       
-        <link rel="next" href="instructions/">
+        <link rel="next" href="summary/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Lab 06 - Analyse data in a data warehouse - MS Fabric Labs</title>
+        <title>Lab 06 ~ Analyse data in a data warehouse - MS Fabric Labs</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 06 - Analyse data in a data warehouse
+              Lab 06 ~ Analyse data in a data warehouse
             
           </span>
         </div>
@@ -383,14 +383,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-lakehouse/instructions/" class="md-nav__link">
+      <a href="../01-lakehouse/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -483,14 +483,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../03b-medallion-lakehouse/instructions/" class="md-nav__link">
+      <a href="../03b-medallion-lakehouse/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -583,14 +583,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-ingest-pipeline/instructions/" class="md-nav__link">
+      <a href="../04-ingest-pipeline/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -683,14 +683,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-dataflows-gen2/instructions/" class="md-nav__link">
+      <a href="../05-dataflows-gen2/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -785,14 +785,14 @@
   
   
     <li class="md-nav__item">
-      <a href="instructions/" class="md-nav__link">
+      <a href="summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -885,14 +885,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../06b-data-warehouse-query/instructions/" class="md-nav__link">
+      <a href="../06b-data-warehouse-query/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -985,14 +985,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../06c-monitor-data-warehouse/instructions/" class="md-nav__link">
+      <a href="../06c-monitor-data-warehouse/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1085,14 +1085,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-real-time-intelligence/instructions/" class="md-nav__link">
+      <a href="../07-real-time-intelligence/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1185,14 +1185,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../09-real-time-analytics-eventstream/instructions/" class="md-nav__link">
+      <a href="../09-real-time-analytics-eventstream/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1285,14 +1285,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../11-data-activator/instructions/" class="md-nav__link">
+      <a href="../11-data-activator/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1385,14 +1385,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../18-monitor-hub/instructions/" class="md-nav__link">
+      <a href="../18-monitor-hub/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1485,14 +1485,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../19-secure-data-access/instructions/" class="md-nav__link">
+      <a href="../19-secure-data-access/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1585,14 +1585,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../20-work-with-database/instructions/" class="md-nav__link">
+      <a href="../20-work-with-database/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1685,14 +1685,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../21-implement-cicd/instructions/" class="md-nav__link">
+      <a href="../21-implement-cicd/summary/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    Summary
   
 
     
@@ -1738,35 +1738,324 @@
 
 
 
-<h1 id="lab-06-analyse-data-in-a-data-warehouse">Lab 06 - Analyse data in a data warehouse</h1>
-<p>In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics; including the ability to insert, update, and delete data in the tables.</p>
-<p>This lab will take approximately <strong>30</strong> minutes to complete.</p>
+<h1 id="lab-06-analyse-data-in-a-data-warehouse">Lab 06 ~ Analyse data in a data warehouse</h1>
 <div class="admonition info">
-<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
+<p class="admonition-title">For this lab, you will access the QA Platform and sign in using the credentials provided.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
+<p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
 </div>
-<h2 id="overview">Overview</h2>
-<h3 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h3>
-<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
-<h3 id="step-2-create-a-workspace">Step 2: Create a workspace</h3>
-<p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
-<h3 id="step-3-create-a-data-warehouse">Step 3: Create a data warehouse</h3>
-<p>Now that you have a workspace, it's time to create a data warehouse.</p>
-<h3 id="step-4-create-tables-and-insert-data">Step 4: Create tables and insert data</h3>
-<p>A warehouse is a relational database in which you can define tables and other objects.</p>
-<h3 id="step-5-query-data-warehouse-tables">Step 5: Query data warehouse tables</h3>
-<p>Since the data warehouse is a relational database, you can use SQL to query its tables.</p>
-<h3 id="step-6-create-a-view">Step 6: Create a view</h3>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
+<p>Before working with data in Fabric, you need to create a workspace.</p>
+<ol>
+<li>
+<p>In the navigation pane on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Select <strong>+ New workspace</strong>, then create a workspace using the naming format below:</p>
+<ul>
+<li>Start the name with <code>fab_workspace</code></li>
+<li>Add random numbers to make it unique (for example, <code>fab_workspace123</code>)</li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
+</ul>
+</li>
+<li>
+<p>When your new workspace opens, it should be empty:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/new-workspace.png" data-desc-position="bottom"><img alt="Empty workspace in Fabric." src="../img/new-workspace.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-create-a-data-warehouse">Step 2: Create a data warehouse</h2>
+<p><em>Now that you have a workspace, it's time to create a data warehouse.</em></p>
+<ol>
+<li>
+<p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Warehouse</em> section, select <strong>Warehouse</strong>. </p>
+<p>Give it a name of your choice. For example: <code>fab_warehouse</code></p>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
+</div>
+<p>After a minute or so, a new warehouse will be created:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/06-new-data-warehouse.png" data-desc-position="bottom"><img alt="Screenshot of a new warehouse." src="../img/06-new-data-warehouse.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-3-create-tables-and-insert-data">Step 3: Create tables and insert data</h2>
+<p><em>A warehouse is a relational database in which you can define tables and other objects.</em></p>
+<ol>
+<li>
+<p>In your new warehouse, select the <strong>T-SQL</strong> tile, and add the following CREATE TABLE statement:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">DimProduct</span>
+<span class="p">(</span>
+<span class="w">   </span><span class="n">ProductKey</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="n">ProductAltKey</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="n">ProductName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="n">Category</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="n">ListPrice</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+</li>
+<li>
+<p>Use the  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> button to run the SQL script, which creates a new table named <strong>DimProduct</strong> in the <strong>dbo</strong> schema of the data warehouse.</p>
+</li>
+<li>
+<p>Use the <strong>Refresh</strong> button next to your warehouse name to refresh the display. Then, in the <strong>Explorer</strong> pane, expand <strong>Schemas</strong> &gt; <strong>dbo</strong> &gt; <strong>Tables</strong> and verify that the <strong>DimProduct</strong> table has been created.</p>
+</li>
+<li>
+<p>On the <strong>Home</strong> menu tab, use the <strong>New SQL Query</strong> button to create a new query, and enter the following INSERT statement:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">DimProduct</span>
+<span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'RING1'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Bicycle bell'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Accessories'</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">.</span><span class="mi">99</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">'BRITE1'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Front light'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Accessories'</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">.</span><span class="mi">49</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">'BRITE2'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Rear light'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Accessories'</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">.</span><span class="mi">49</span><span class="p">);</span>
+<span class="k">GO</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run the new query to insert three rows into the <strong>DimProduct</strong> table.</p>
+</li>
+<li>
+<p>When the query has finished, in the <strong>Explorer</strong> pane, select the <strong>DimProduct</strong> table and verify that the three rows have been added to the table.</p>
+</li>
+<li>
+<p>On the <strong>Home</strong> menu tab, use the <strong>New SQL Query</strong> button to create a new query. Then copy and paste the Transact-SQL code from <code>https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt</code> into the new query pane.</p>
+</li>
+<li>
+<p>Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.</p>
+</li>
+<li>
+<p>Use the <strong>Refresh</strong> button next to your warehouse name to refresh the display. Then in the <strong>Explorer</strong> pane, verify that the <strong>dbo</strong> schema in the data warehouse now contains the following four tables:</p>
+<ul>
+<li><strong>DimCustomer</strong></li>
+<li><strong>DimDate</strong></li>
+<li><strong>DimProduct</strong></li>
+<li><strong>FactSalesOrder</strong></li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">If the schema takes a while to load, just refresh the browser page.</p>
+</div>
+<h2 id="step-4-query-data-warehouse-tables">Step 4: Query data warehouse tables</h2>
+<p><em>Since the data warehouse is a relational database, you can use SQL to query its tables.</em></p>
+<h3 id="query-fact-and-dimension-tables">Query fact and dimension tables</h3>
+<p>Most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).</p>
+<ol>
+<li>
+<p>Navigate back to the browser tab with your warehouse and create a new SQL Query, and <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> the following code:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthName</span><span class="p">,</span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="n">so</span><span class="p">.</span><span class="n">SalesTotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FactSalesOrder</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">so</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimDate</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">SalesOrderDateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DateKey</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The attributes in the date dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.</p>
+</div>
+</li>
+<li>
+<p>Modify the query as follows to add a second dimension to the aggregation.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthName</span><span class="p">,</span>
+<span class="w">       </span><span class="k">c</span><span class="p">.</span><span class="n">CountryRegion</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">,</span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="n">so</span><span class="p">.</span><span class="n">SalesTotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FactSalesOrder</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">so</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimDate</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">SalesOrderDateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DateKey</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimCustomer</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">CustomerKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerKey</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CountryRegion</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region.</p>
+</li>
+</ol>
+<h2 id="step-5-create-a-view">Step 5: Create a view</h2>
 <p>A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like <em>views</em> and <em>stored procedures</em> to encapsulate SQL logic.</p>
-<h3 id="step-7-create-a-visual-query">Step 7: Create a visual query</h3>
-<p>Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code.</p>
-<h3 id="step-8-optional-define-a-data-model">Step 8: (OPTIONAL) Define a data model</h3>
+<ol>
+<li>
+<p>Modify the query you created previously as follows to create a view</p>
+<div class="admonition note">
+<p class="admonition-title">You need to remove the ORDER BY clause to create a view.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">vSalesByRegion</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span>
+<span class="w">       </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MonthName</span><span class="p">,</span>
+<span class="w">       </span><span class="k">c</span><span class="p">.</span><span class="n">CountryRegion</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">,</span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="n">so</span><span class="p">.</span><span class="n">SalesTotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">SalesRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FactSalesOrder</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">so</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimDate</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">SalesOrderDateKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DateKey</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">DimCustomer</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">so</span><span class="p">.</span><span class="n">CustomerKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerKey</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Year</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.[</span><span class="k">Month</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">MonthName</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CountryRegion</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Run the query to create the view.</p>
+<div class="admonition success">
+<p class="admonition-title">Refresh the data warehouse schema and verify that the new view is listed in the <strong>Explorer</strong> pane.</p>
+</div>
+</li>
+<li>
+<p>Create a new SQL query and <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> the following SELECT statement:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span><span class="w"> </span><span class="n">MonthName</span><span class="p">,</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">,</span><span class="w"> </span><span class="n">SalesRevenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vSalesByRegion</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CalendarYear</span><span class="p">,</span><span class="w"> </span><span class="n">MonthOfYear</span><span class="p">,</span><span class="w"> </span><span class="n">SalesRegion</span><span class="p">;</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="step-6-create-a-visual-query">Step 6: Create a visual query</h2>
+<p>Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.</p>
+<ol>
+<li>
+<p>On the <strong>Home</strong> menu, expand the options under <strong>New SQL query</strong> and select <strong>New visual query</strong>.</p>
+</li>
+<li>
+<p>Drag <strong>FactSalesOrder</strong> onto the <strong>canvas</strong>. Notice that a preview of the table is displayed in the <strong>Preview</strong> pane below.</p>
+</li>
+<li>
+<p>Drag <strong>DimProduct</strong> onto the <strong>canvas</strong>. We now have two tables in our query.</p>
+</li>
+<li>
+<p>Select the <strong>FactSalesOrder</strong> box, and click the <strong>(+)</strong> button on the canvas to <strong>Merge queries</strong>.</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/06-visual-query-merge.png" data-desc-position="bottom"><img alt="Canvas with the FactSalesOrder table selected." src="../img/06-visual-query-merge.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Merge queries</strong> window, select <strong>DimProduct</strong> as the right table for merge.</p>
+<ul>
+<li>Select <strong>ProductKey</strong> in both queries</li>
+<li>Leave the default <strong>Left outer</strong> join type</li>
+<li>Click <strong>OK</strong>.</li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/06-dw-merge.png" data-desc-position="bottom"><img alt="Merge options." src="../img/06-dw-merge.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Preview</strong>, note that the new <strong>DimProduct</strong> column has been added to the FactSalesOrder table.</p>
+<ul>
+<li>Expand the column by clicking the arrow to the right of the column name.</li>
+<li>Select <strong>ProductName</strong></li>
+<li>Click <strong>OK</strong>.</li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/06-visual-query-preview.png" data-desc-position="bottom"><img alt="preview pane with the DimProduct column expanded, ProductName selected." src="../img/06-visual-query-preview.png"></a></p>
+</div>
+</li>
+<li>
+<p>If you're interested in looking at data for a single product, per a manager request, you can now use the <strong>ProductName</strong> column to filter the data in the query. Filter the <strong>ProductName</strong> column to look at <strong>Cable Lock</strong> data only.</p>
+</li>
+<li>
+<p>From here, you can analyse the results of this single query by selecting <strong>Visualize results</strong> or <strong>Download Excel file</strong>. You can now see exactly what the manager was asking for, so we don't need to analyse the results further.</p>
+</li>
+</ol>
+<h2 id="step-7-define-a-data-model-optional">Step 7: Define a data model (optional)</h2>
 <p>A relational data warehouse typically consists of <em>fact</em> and <em>dimension</em> tables. The fact tables contain numeric measures you can aggregate to analyse business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.</p>
+<ol>
+<li>
+<p>In the toolbar, select <strong>New semantic model</strong>.</p>
+</li>
+<li>
+<p>In the <strong>New semantic model</strong> window, name the semantic model and select all four tables. Select <strong>Confirm</strong>.</p>
+</li>
+<li>
+<p>A new browser tab will automatically open with your new semantic model. In the model pane, rearrange the tables in your data warehouse so that the <strong>FactSalesOrder</strong> table is in the middle, like this:</p>
+<div class="admonition note">
+<p class="admonition-title">If your model doesn't open automatically:</p>
+<ul>
+<li>Click your workspace</li>
+<li>Then select the semantic model</li>
+<li>Then: open semantic model</li>
+</ul>
+</div>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/06-model-dw.png" data-desc-position="bottom"><img alt="Screenshot of the data warehouse model page." src="../img/06-model-dw.png"></a></p>
+</div>
+</li>
+</ol>
+<hr>
+<div class="admonition warning">
+<p class="admonition-title">You need a Power BI license to create and edit semantic models.</p>
+</div>
+<p>To get a PowerBi licence - do the following:</p>
+<div class="codehilite"><pre><span></span><code>- Click your workspace
+- Next to your semantic model click the ... 
+- Select: Create report
+- You should now be offered a 60-day trial for PowerBi
+</code></pre></div>
+
+<h2 id="step-8-create-relationships">Step 8: Create relationships</h2>
+<div class="admonition note">
+<p class="admonition-title">Make sure that you are in Editing mode and not Viewing mode</p>
+</div>
+<ol>
+<li>
+<p>Drag the <strong>ProductKey</strong> field from the <strong>FactSalesOrder</strong> table and drop it on the <strong>ProductKey</strong> field in the <strong>DimProduct</strong> table. Then confirm the following relationship details:</p>
+<ul>
+<li><strong>From table</strong>: FactSalesOrder</li>
+<li><strong>Column</strong>: ProductKey</li>
+<li><strong>To table</strong>: DimProduct</li>
+<li><strong>Column</strong>: ProductKey</li>
+<li><strong>Cardinality</strong>: Many to one (*:1)</li>
+<li><strong>Cross filter direction</strong>: Single</li>
+<li><strong>Make this relationship active</strong>: Selected</li>
+<li><strong>Assume referential integrity</strong>: Unselected</li>
+</ul>
+</li>
+<li>
+<p>Repeat the process to create many-to-one relationships between the following tables:</p>
+<ul>
+<li><strong>FactSalesOrder.CustomerKey</strong> → <strong>DimCustomer.CustomerKey</strong></li>
+<li><strong>FactSalesOrder.SalesOrderDateKey</strong> → <strong>DimDate.DateKey</strong></li>
+</ul>
+<p>When all of the relationships have been defined, the model should look like this:</p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/06-dw-relationships.png" data-desc-position="bottom"><img alt="Screenshot of the model with relationships." src="../img/06-dw-relationships.png"></a></p>
+</div>
+</li>
+<li>
+<p>Now go back to your semantic model in your workspace</p>
+<ul>
+<li>Click: <strong>Auto-create report</strong></li>
+</ul>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/06-powerbi-report.png" data-desc-position="bottom"><img alt="PowerBi Report." src="../img/06-powerbi-report.png"></a></p>
+</div>
+</li>
+</ol>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
+<p>In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and queried tables using T-SQL and the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset for downstream analytics and reporting.</p>
 <p>If you've finished exploring your data warehouse, you should delete the workspace you created for this exercise.</p>
+<ol>
+<li>
+<p>Navigate to Microsoft Fabric in your browser.</p>
+</li>
+<li>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
+</li>
+<li>
+<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Delete</strong> to delete the workspace.</p>
+</li>
+</ol>
+<hr>
+<p><small><b>Source:
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06-data-warehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06-data-warehouse.html</a>
+</b></small></p>
 
 
 
