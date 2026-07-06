@@ -30,7 +30,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
     - Name the lakehouse: `Sales`
-    - Ensure **Lakehouse schemas** is disabled to keep the lakehouse structure consistent with the lab instructions.
+    - Leave the **Lakehouse schemas** checkbox selected.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -183,7 +183,7 @@ Now that you have transformed data, you can use a notebook to load it to a delta
     from delta.tables import *
         
     DeltaTable.createIfNotExists(spark) \
-        .tableName("sales.sales_silver") \
+        .tableName("sales.dbo.sales_silver") \
         .addColumn("SalesOrderNumber", StringType()) \
         .addColumn("SalesOrderLineNumber", IntegerType()) \
         .addColumn("OrderDate", DateType()) \
@@ -216,7 +216,7 @@ Now you're going to perform an upsert operation on a Delta table, updating exist
     # Silver: Cell 4 ~ Update existing records and insert new ones based on a condition
     from delta.tables import *
         
-    deltaTable = DeltaTable.forPath(spark, 'Tables/sales_silver')
+    deltaTable = DeltaTable.forPath(spark, 'Tables/dbo/sales_silver')
         
     dfUpdates = df
         
@@ -282,7 +282,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
     ```sql
     SELECT YEAR(OrderDate) AS Year
         , CAST (SUM(Quantity * (UnitPrice + Tax)) AS DECIMAL(12, 2)) AS TotalSales
-    FROM sales_silver
+    FROM dbo.sales_silver
     GROUP BY YEAR(OrderDate) 
     ORDER BY YEAR(OrderDate)
     ```
@@ -297,10 +297,11 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
     Paste the following query into the query editor and select **Run**:
 
     ```sql
-    SELECT TOP 10 CustomerName, SUM(Quantity) AS TotalQuantity
-    FROM sales_silver
+    SELECT CustomerName, SUM(Quantity) AS TotalQuantity
+    FROM dbo.sales_silver
     GROUP BY CustomerName
     ORDER BY TotalQuantity DESC
+    LIMIT 10
     ```
 
     This query calculates the total quantity of items purchased by each customer in the sales_silver table, and then returns the top 10 customers in terms of quantity.
@@ -339,30 +340,30 @@ Now you'll use a new notebook to transform the data further, model it into a sta
     ```python
     from pyspark.sql.functions import year, month, dayofmonth, monotonically_increasing_id
 
-    df = spark.read.table("Sales.sales_silver")
+    df = spark.read.table("Sales.dbo.sales_silver")
 
     # dim: date
     dimDate = df.select("OrderDate").distinct() \
         .withColumn("Year", year("OrderDate")) \
         .withColumn("Month", month("OrderDate")) \
         .withColumn("Day", dayofmonth("OrderDate"))
-    dimDate.write.mode("overwrite").saveAsTable("Sales.dimdate_gold")
+    dimDate.write.mode("overwrite").saveAsTable("Sales.dbo.dimdate_gold")
 
     # dim: customer
     dimCustomer = df.select("CustomerName", "Email").distinct() \
         .withColumn("CustomerID", monotonically_increasing_id() + 1)
-    dimCustomer.write.mode("overwrite").saveAsTable("Sales.dimcustomer_gold")
+    dimCustomer.write.mode("overwrite").saveAsTable("Sales.dbo.dimcustomer_gold")
 
     # dim: product
     dimProduct = df.select("Item").distinct() \
         .withColumn("ItemID", monotonically_increasing_id() + 1)
-    dimProduct.write.mode("overwrite").saveAsTable("Sales.dimproduct_gold")
+    dimProduct.write.mode("overwrite").saveAsTable("Sales.dbo.dimproduct_gold")
 
     # fact: sales
     factSales = df.join(dimCustomer, ["CustomerName", "Email"], "left") \
         .join(dimProduct, ["Item"], "left") \
         .select("CustomerID", "ItemID", "OrderDate", "Quantity", "UnitPrice", "Tax")
-    factSales.write.mode("overwrite").saveAsTable("Sales.factsales_gold")
+    factSales.write.mode("overwrite").saveAsTable("Sales.dbo.factsales_gold")
 
     # End of cell
     ```

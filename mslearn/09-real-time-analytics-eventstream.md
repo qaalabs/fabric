@@ -8,6 +8,11 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Real-Time Intelligence
+  courses:
+    - DP-700
+    - DP-603
 ---
 
 # Ingest real-time data with Eventstream in Microsoft Fabric
@@ -18,11 +23,9 @@ In this exercise, you'll ingest data from a sample data source that emits a stre
 
 This lab takes approximately **30** minutes to complete.
 
-> **Note**: You need a [Microsoft Fabric tenant](https://learn.microsoft.com/fabric/get-started/fabric-trial) to complete this exercise.
-
 ## Create a workspace
 
-Before working with data in Fabric, you need to create a workspace with the Fabric capacity enabled.
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser and sign in with your Fabric credentials.
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
@@ -72,7 +75,7 @@ Now that you have a workspace, you can start creating the Fabric items you'll ne
    - **Workspace:** *Select the workspace you created at the beginning of this exercise*
    - **Eventhouse**: *Select your eventhouse*
    - **KQL database:** *Select your KQL database*
-   - **Destination table:** Create a new table named `bikes`
+   - **KQL Destination table:** Under the text box, select **Create new** (do *not* type directly into the text box — if you do, the **Save** button will remain greyed out). In the **Create new table** box that appears, enter the table name `bikes` and select **Done**.
    - **Input data format:** JSON
 
    ![Eventstream destination settings.](./Images/kql-database-event-processing-before-ingestion.png)

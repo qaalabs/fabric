@@ -38,9 +38,7 @@ This lab will take approximately **45** minutes to complete.
 
 Now that you have a workspace, it's time to create a data lakehouse into which you will ingest data.
 
-1. On the navigation pane on the left, select **Create**, and choose **Lakehouse**. Give it a unique name of your choice. Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
-
-    >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
+1. In the workspace, select **+ New item** and create a new **Lakehouse** with a unique name of your choice. Leave the **Lakehouse schemas** checkbox selected.
 
     After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
@@ -54,27 +52,27 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. In the navigation pane on the left, select the name of your workspace.
 1. In the workspace, select **New item**, search for **Pipeline**, and create a new pipeline named `Ingest Sales Data`.
-1. In the pipeline editor canvas, select **Add pipeline activity** and then select **Copy activity**. A **Copy Data** activity is added to the pipeline canvas.
+1. In the pipeline editor, on the toolbar select **Copy data** > **Add copy data activity**. A **Copy Data** activity is added to the pipeline canvas.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/04-copy-data-pipeline.png)
 
 ### Configure the Source
 
 1. Select the **Copy Data** activity on the canvas, and then in the pane below the canvas select the **Source** tab.
-1. In the **Connection** drop-down, select **Browse all**.
-1. In the **New connection** dialog, search for **HTTP** and select it, then select **Continue**.
-1. Configure the following settings and then select **Connect**:
+1. In the **Connection** drop-down, select **Browse all**. A connector selection page opens — select **HTTP**. A **Create a connection** form opens. Configure the following settings and then select **Connect**:
     - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
     - **Connection name**: *Specify a unique name*
     - **Data gateway**: (none)
     - **Authentication kind**: Anonymous
-1. Back on the **Source tab**, configure the following source settings:
+    - **Privacy level**: None
+1. Select **Connect**
+2. Back on the **Source tab**, configure the following source settings:
     - **Relative URL**: *Leave blank*
     - **File format**: Select **DelimitedText** from the drop-down
 
     ![Screenshot of the Source tab showing the HTTP connection and file format settings.](./Images/copy-data-source-tab.png)
 
-1. Select the **Settings** button next to the **File format** drop-down. In the **File format settings** dialog, ensure the following settings are configured and then select **OK**:
+3. Select the **Settings** button next to the **File format** drop-down. In the **File format settings** dialog, ensure the following settings are configured and then select **OK**:
     - **Compression type**: No compression
     - **Column delimiter**: Comma (,)
     - **Row delimiter**: Line feed (\n)
@@ -82,8 +80,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![Screenshot of the File format settings dialog.](./Images/file-format-settings.png)
 
-1. Select **Test connection** to verify the connection works.
-2. *Optional*: Select **Preview data** to confirm the data looks correct.
+4. Select **Test connection** to verify the connection works.
+5. *Optional*: Select **Preview data** to confirm the data looks correct.
 
 ### Configure the Destination
 
@@ -118,7 +116,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 1. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
 
     ```python
-   table_name = "sales"
+   table_name = "dbo.sales"
     ```
 
 1. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
@@ -146,7 +144,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
 
-1. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
+1. Verify that your notebook looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
@@ -194,7 +192,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
             | Name | Type | Value |
             | -- | -- | -- |
-            | table_name | String | new_sales |
+            | table_name | String | dbo.new_sales |
 
     The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
 

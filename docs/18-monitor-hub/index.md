@@ -28,6 +28,7 @@ Before working with data in Fabric, you need to create a workspace.
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the menu bar on the left, select **Create**. In the New page, under the *Data Engineering* section, select **Lakehouse**.
+
     - Give it a unique name of your choice. For example: `fab_lakehouse`
     - Leave the **Lakehouse schemas** checkbox selected.
 

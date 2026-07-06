@@ -28,8 +28,9 @@ Before working with data in Fabric, you need to create a workspace.
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
 1. On the navigation pane on the left, select **Create**, and choose **Lakehouse**.
+
     - Give it a name of your choice. For example: `fab_lakehouse`
-    - Make sure the "Lakehouse schemas" option is disabled.
+    - Leave the **Lakehouse schemas** checkbox selected.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -56,7 +57,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 4. In the pipeline editor canvas:
     - Select: **Pipeline activity**
-    - Then select: **Copy Data**
+    - Then select: **Copy Data** > **Add copy data activity**
     - A **Copy Data** activity is added to the pipeline canvas:
 
     !!! quote ""
@@ -72,14 +73,17 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 4. In the **New connection** dialog, search for **HTTP** and select it, then select **Continue**.
 
-5. Configure the following settings and then select **Connect**:
+5. Configure the following settings:
 
     - **URL**: https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
     - **Connection name**: sales
     - **Data gateway**: (none)
     - **Authentication kind**: Anonymous
+    - **Privacy level**: None
 
-6. Back on the **Source tab**, configure the following source settings:
+6. select **Connect**
+
+7. Back on the **Source tab**, configure the following source settings:
 
     - **Relative URL**: *Leave blank*
     - **File format**: Select `DelimitedText` from the drop-down
@@ -87,7 +91,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     !!! quote ""
         ![Source tab showing HTTP connection & file format settings.](../img/04-copy-data-source-tab.png)
 
-6. Select the **Settings** button next to the **File format** drop-down.
+8. Select the **Settings** button next to the **File format** drop-down.
 
     In the **File format settings** dialog, ensure the following settings are configured and then select **OK**:
 
@@ -101,9 +105,9 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     !!! tip "Make sure you select: **Line feed (\n)**"
 
-7. Select **Test connection** to verify the connection works.
+9. Select **Test connection** to verify the connection works.
 
-8. *Optional*: Select **Preview data** to confirm the data looks correct.
+10. *Optional*: Select **Preview data** to confirm the data looks correct.
 
 ### Configure the Destination
 
@@ -162,7 +166,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - Replace the default code with the following variable declaration.
 
     ```python
-    table_name = "sales"
+    table_name = "dbo.sales"
     ```
 
 3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. 
@@ -193,7 +197,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
 
-5. Verify that your notebooks looks similar to this, and then use the :material-play: **Run all** button on the toolbar to run all of the cells it contains.
+5. Verify that your notebook looks similar to this, and then use the :material-play: **Run all** button on the toolbar to run all of the cells it contains.
 
     !!! quote ""
         ![Notebook with parameters cell and code to transform data.](../img/04-notebook.png)
@@ -269,9 +273,9 @@ Now that you've implemented a notebook to transform data and load it into a tabl
         - **Notebook**: Select your *Load Sales* notebook
         - **Base parameters**: *Add a new parameter with the following properties:*
 
-        | Name       | Type   | Value     |
-        |------------|--------|-----------|
-        | table_name | String | new_sales |
+        | Name       | Type   | Value         |
+        |------------|--------|---------------|
+        | table_name | String | dbo.new_sales |
 
     !!! info "Passing parameters into a notebook"
         - The **table_name** parameter will be passed to the notebook.

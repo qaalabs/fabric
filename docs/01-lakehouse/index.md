@@ -31,7 +31,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
     - Name the lakehouse `fab_lakehouse`
-    - Leave **Lakehouse schemas** selected.
+    - Leave the **Lakehouse schemas** checkbox selected.
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
