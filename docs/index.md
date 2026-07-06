@@ -3,9 +3,9 @@
 This site hosts the instructions for MS Fabric labs:
 
 - [01  - Create a Microsoft Fabric Lakehouse](01-lakehouse/index.md)
-- [05  - Dataflows Gen2](05-dataflows-gen2/index.md)
 - [03b - Medallion Lakehouse](03b-medallion-lakehouse/index.md)
 - [04  - Ingest Pipeline](04-ingest-pipeline/index.md)
+- [05  - Dataflows Gen2](05-dataflows-gen2/index.md)
 - [06  - Analyse data in a data warehouse](06-data-warehouse/index.md)
 - [06c - Monitor Data Warehouse](06c-monitor-data-warehouse/index.md)
 - [09  - Real-time Analytics eventstream](09-real-time-analytics-eventstream/index.md)
