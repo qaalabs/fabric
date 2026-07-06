@@ -157,7 +157,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 ## Step 6: Create a notebook
 
-1. At the top-right of the Lakehouse page click the **Analyze data with** dropdown
+1. At the top-right of the Lakehouse page click the "**Analyze data with**" dropdown
 
     - Click **Notebook** then **New notebook**
 
