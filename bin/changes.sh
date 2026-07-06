@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FABRIC="/mnt/ssd/projects/qaalabs/fabric/mslearn"
-MSLEARN="/mnt/ssd/projects/qaalabs/mslearn-fabric/Instructions/Labs"
+FABRIC="/mnt/ssd/PROJECTS/qaalabs/fabric/mslearn"
+MSLEARN="/mnt/ssd/PROJECTS/qaalabs/mslearn-fabric/Instructions/Labs"
 
 # See if directories exist
 if [[ ! -d ${FABRIC} ]]; then
