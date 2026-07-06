@@ -1,55 +1,155 @@
-# Lab 21 - Implement deployment pipelines in Microsoft Fabric
+# Lab 21 ~ Implement deployment pipelines in Microsoft Fabric
 
-Deployment pipelines in Microsoft Fabric let you automate the process of copying   changes made to the content in Fabric items between environments like development, test, and production. You can use deployment pipelines to develop and test content before it reaches end users. In this exercise, you create a deployment pipeline, and assign stages to the pipeline. Then you create some content in a development workspace and use deployment pipelines to deploy it between the Development, Test and Production pipeline stages.
+## Step 1: Create workspaces
 
-This lab takes approximately **20** minutes to complete.
+For this lab you need to create three workspaces: **Development**, **Test**, and **Production**.
 
-!!! info "For this lab you need to navigate to QA Platform and login using the credentials provided"
+1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
-!!! warning "It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login"
+2. Select **+ New workspace**, then create a workspace using the naming format below:
 
-## Overview
+    - Start the name with `Development`
+    - Add random numbers to make it unique (for example, `Development123`)
+    - Leave all other options as the default values
+    - Click **Apply**
 
-### Step 1: Signing in to Microsoft Fabric
+3. Repeat steps 1 & 2, creating two more workspaces named `Test`, and `Production`.
+    
+4. Select the **Workspaces** icon on left-hand navigation
+    - Confirm that there are three workspaces named: **Development**, **Test**, and **Production**
 
-- In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.
+## Step 2: Create a deployment pipeline
 
-### Step 2: Create a workspace
+Next, create a deployment pipeline.
 
-- Create three workspaces with the Fabric trial enabled.
+1. In the left-hand navigation, select **Workspaces**.
 
-### Step 3: Create a deployment pipeline
+2. Select: **:material-rocket-launch-outline: Deployment Pipelines**, then select **New pipeline**
 
-- Next, create a deployment pipeline.
+3. In the **Add a new deployment pipeline** window:
 
-### Step 4: Assign workspaces to stages of a deployment pipeline
+    - Enter the Pipeline name as: `Lab pipeline`
+    - Select **Next**.
 
-- Assign workspaces to the stages of the deployment pipeline.
+4. In the new pipeline window, select: **:material-rocket-launch-outline: Create and continue**
 
-### Step 5: Create content
+## Step 3: Assign workspaces to stages of a deployment pipeline
 
-- Fabric items haven’t been created in your workspaces yet. Next, create a lakehouse in the development workspace.
+1. On the left-hand navigation, select the pipeline you created. 
 
-### Step 6: Review your pipeline
+2. In the window that appears, expand the options under **Assign a workspace** on each deployment stage and select the name of the workspace that matches the name of the stage.
 
-- Review the pipeline.
+3. Select the check mark **Assign** for each deployment stage.
 
-### Step 7: Deploy content from Development to Test
+    !!! quote ""
+        ![Screenshot of deployment pipeline.](../img/21-deployment-pipeline.png)
 
-- Deploy the lakehouse from the Development to Test.
+## Step 4: Create content
 
-## Step 8: Deploy content from Test to Production
+Fabric items haven't been created in your workspaces yet. Next, create a lakehouse in the **Development** workspace.
 
-- Deploy the lakehouse from the Test to Production.
+1. In the left-hand navigation, select **Workspaces**.
 
-## Step 9: Confirm the deployment
+2. Select the **Development** workspace.
+
+3. Select **New Item**.
+
+4. In the that appears:
+
+    - Select: **Lakehouse**
+    - in the **New lakehouse window**, name the lakehouse: `LabLakehouse`
+    - Leave the **Lakehouse schemas** checkbox selected.
+
+5. Select **Create**.
+
+6. In the Lakehouse Explorer window, select **Start with sample data** to populate the new lakehouse with data.
+
+    !!! quote ""
+        ![Screenshot of Lakehouse Explorer.](../img/21-lakehouse-explorer.png)
+
+## Step 5: Review your pipeline
+
+1. In the menu bar on the left, select the pipeline you created.
+
+    - If you can't see it on the left, select …, then "Deployment pipelines", then "Lab pipeline"
+
+2. Select the **Development** stage, and under the deployment pipeline canvas you can see the lakehouse you created as a stage item. In the left edge of the **Test** stage, there's an **X** within a circle. The **X** indicates that the Development and Test stages aren't synchronized.
+
+3. Select the **Test** stage and under the deployment pipeline canvas you can see that the lakehouse you created is only a stage item in the source, which in this case refers to the **Development** stage.  
+
+    !!! quote ""
+        ![Deployment pipeline showing content mismatches between stages.](../img/21-lab-pipeline-compare.png)
+
+## Step 6: Deploy content from Development to Test
+
+You will now deploy the lakehouse from the **Development** stage to the **Test** stage.
+
+1. Select the **Test** stage in the deployment pipeline canvas.
+
+2. Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item.
+
+3. Select the **Deploy** button to copy the lakehouse in its current state to the **Test** stage:
+
+    !!! quote ""
+        ![Deployment pipeline from Development to Test.](../img/21-deploy-dev-to-test.png)
+
+4. In the **Deploy to next stage** window that appears, select **Deploy**.
+    - Wait for the deployment to complete (it may take a while)
+
+!!! note 
+    - You may see an X in a circle in the Production stage.
+    - This is expected and indicates that nothing has been deployed to Production yet.
+
+## Step 7: Deploy content from Test to Production
+
+You will now deploy the lakehouse from the **Test** stage to the **Production** stage.
+
+5. Select the **Production** stage in the deployment canvas.
+
+6. Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item.
+    - Then select the **Deploy** button to copy the lakehouse in its current state to the **Production** stage.
+
+7. In the **Deploy to next stage** window that appears, select **Deploy**.
+
+!!! success "A green check mark inside each stage indicates that all stages are in sync and contain the same content."
+
+## Step 8: Confirm the deployment
 
 Using deployment pipelines creates the same Fabric artefacts in each deployment stage. Let's confirm.
 
+1. In the menu bar on the left, select **Workspaces**.
+
+2. Open the **Test** workspace and confirm that the lakehouse exists.
+
+3. Open the **Production** workspace and confirm that the lakehouse exists.
+
+!!! info "The lakehouse will be empty!"
+    - Deployment pipelines create and align **Fabric artefacts** across workspaces.
+    - They do **not** copy data between environments.
+    - At this stage, the lakehouse will exist in Test and Production, but it won't contain any data.
+
 ---
 
-## Clean up resources
+## Clean up
 
 In this exercise, you created a deployment pipeline, and assigned stages to the pipeline. Then you created content in a development workspace and deployed it between pipeline stages using deployment pipelines.
 
-If you've finished exploring your database, you can delete the pipeline, and the three workspaces you created for this exercise.
+- In the left navigation bar, select **Deployment pipelines**, select your pipeline, and then select **Delete this pipeline** from the settings menu to remove the deployment pipeline.
+
+!!! quote ""
+    ![Screenshot of deployment pipeline, highlighting the Delete pipeline action.](../img/21-delete-pipeline.png)
+
+After deleting the pipeline, delete each workspace you created:
+
+1. In the bar on the left, select the icon for the workspace to view all of the items it contains.
+
+2. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
+
+3. Select **Delete** to delete the workspace.
+
+!!! success "Do this for all 3 workspaces - Dev, Test, and Production."
+
+---
+<small><b>Source:
+https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html
+</b></small>

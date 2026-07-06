@@ -5,39 +5,7 @@
 !!! warning "You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to."
 
 
-## Step 1: Access Microsoft Fabric
-
-In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.
-
-!!! note
-    The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.
-
-1. In the QA Platform, wait until the lab status shows **Ready**.
-
-2. Then right-click **Open** and choose **Open in a private browsing window** (InPrivate in Edge, Incognito in Chrome).
-
-3. When prompted, sign in using:
-
-    - **Username** from the QA Platform (used as the email address)
-    - **Password** from the QA Platform (used as a Temporary Access Pass)
-
-    - If prompted to "Stay signed in?", select **No**. This ensures the session ends when the private window is closed.
-
-    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
-
-4. In the same private browsing window, **open a new tab**.
-
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
-
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
-
-7. After confirmation, you should be be redirected to the **Microsoft Fabric home page**:
-
-    !!! quote ""
-        ![Fabric home page](../img/qa-fabric-home.png)
-
-
-## Step 2: Create a workspace
+## Step 1: Create a workspace
 
 Before working with data in Fabric, you need to create a workspace.
 
@@ -55,8 +23,7 @@ Before working with data in Fabric, you need to create a workspace.
     !!! quote ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
-
-## Step 3: Create a lakehouse
+## Step 2: Create a lakehouse
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
@@ -72,8 +39,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
     !!! quote ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
-
-## Step 4: Upload data to bronze layer
+## Step 3: Upload data to bronze layer
 
 Next, you'll ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply download a text file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.
 
@@ -97,12 +63,18 @@ Next, you'll ingest some data into the data lakehouse for analysis. There are mu
     !!! quote ""
         ![Uploaded products.csv file in a lakehouse.](../img/03b-bronze-files.png)
 
-
-## Step 5: Transform the data
+## Step 4: Transform the data
 
 Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data before you load it to a delta table in the silver layer.
 
-1. On the **Home** page while viewing the contents of the **bronze** folder in your data lake, in the **Open notebook** menu, select **New notebook**.
+1. On the **Home** tab of your lakehouse, select **Open notebook** > **New notebook**.
+
+    At the top-right of the Lakehouse page:
+
+    - Select **Analyze data with** dropdown and choose: **Notebook** > **New notebook**
+
+    !!! quote ""
+        ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)
 
     !!! info "After a few seconds, a new notebook containing a *single cell* will open."
 
@@ -167,8 +139,7 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
     !!! note "Note: You can clear, hide, and auto-resize the contents of the cell output by selecting the **...** menu at the top left of the output pane."
 
-
-## Step 6: Data validation and cleanup
+## Step 5: Data validation and cleanup
 
 Now that you have transformed data, you can use a notebook to load it to a delta table in the silver layer.
 
@@ -195,8 +166,7 @@ Now that you have transformed data, you can use a notebook to load it to a delta
 
 8. Run the cell to execute the code using the **:material-play: (Run cell)** button.
 
-
-## Step 7: Define the schema for the silver table
+## Step 6: Define the schema for the silver table
 
 1. Next, you'll define the schema for the **sales_silver** table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:
 
@@ -229,7 +199,7 @@ Now that you have transformed data, you can use a notebook to load it to a delta
 
     !!! note "Note: If you don't see the new table, wait a few seconds and then select Refresh again, or refresh the entire browser tab."
 
-## Step 8: Insert and update records
+## Step 7: Insert and update records
 
 Now you're going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found.
 
@@ -283,8 +253,7 @@ Now you're going to perform an upsert operation on a Delta table, updating exist
 
     !!! info "This stops the compute resource being used by the notebook."
 
-
-## Step 9: Explore data in the silver layer using the SQL endpoint
+## Step 8: Explore data in the silver layer using the SQL endpoint
 
 Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis. This is useful if you're familiar with SQL and want to do some basic exploration of your data. In this exercise we're using the SQL endpoint view in Fabric, but you can use other tools like SQL Server Management Studio (SSMS) and Azure Data Explorer.
 
@@ -330,7 +299,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
         - This will enable you to do more advanced analysis and reporting.
         - You'll do that in the next section.
 
-## Step 10: Transform data for gold layer
+## Step 9: Transform data for gold layer
 
 You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. 
 
@@ -699,7 +668,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 
 !!! success "You now have a curated, modeled **gold** layer that can be used for reporting and analysis."
 
-## Step 11: Create a semantic model
+## Step 10: Create a semantic model
 
 You can now use the gold layer to create a report and analyze the data. First, you must create a semantic model to define relationships and measures for reporting.
 
@@ -720,7 +689,7 @@ Note that you can't use the **default semantic model** that is automatically cre
 
     This will open the semantic model in Fabric.
 
-## Step 12: Create relationships (optional)
+## Step 11: Create relationships (optional)
 
 !!! note "Before you can create relationships in a semantic model, you need to have a PowerBI Pro licence"
 
@@ -747,7 +716,7 @@ Note that you can't use the **default semantic model** that is automatically cre
 !!! quote ""
     ![Semantic model in Fabric.](../img/03b-dataset-relationships.png)
 
-## Step 13: Create a PowerBi report (optional)
+## Step 12: Create a PowerBi report (optional)
 
 - You can now create new report
 - Or just auto create a report: **Explore > Auto create report**

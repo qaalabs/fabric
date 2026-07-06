@@ -4,65 +4,65 @@ dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
 nav:
-  - Instructions: index.md
+  - "VM Logon Instructions": run-inside-vm.md
 
   - "Microsoft Fabric":
 
     - "01 Lakehouse":
       - 01-lakehouse/index.md
-      - Instructions: 01-lakehouse/instructions.md
+      - Summary: 01-lakehouse/summary.md
 
     - "03b Medallion Architecture":
       - 03b-medallion-lakehouse/index.md
-      - Instructions: 03b-medallion-lakehouse/instructions.md
+      - Summary: 03b-medallion-lakehouse/summary.md
 
     - "04 Ingest Pipeline":
       - 04-ingest-pipeline/index.md
-      - Instructions: 04-ingest-pipeline/instructions.md
+      - Summary: 04-ingest-pipeline/summary.md
 
     - "05 Dataflows (Gen2)": 
       - 05-dataflows-gen2/index.md
-      - Instructions: 05-dataflows-gen2/instructions.md
+      - Summary: 05-dataflows-gen2/summary.md
 
     - "06 Analyse data in a Data Warehouse":
       - 06-data-warehouse/index.md
-      - Instructions: 06-data-warehouse/instructions.md
+      - Summary: 06-data-warehouse/summary.md
 
     - "06b Query a Data Warehouse":
       - 06b-data-warehouse-query/index.md
-      - Instructions: 06b-data-warehouse-query/instructions.md
+      - Summary: 06b-data-warehouse-query/summary.md
 
     - "06c Monitor a Data Warehouse":
       - 06c-monitor-data-warehouse/index.md
-      - Instructions: 06c-monitor-data-warehouse/instructions.md
+      - Summary: 06c-monitor-data-warehouse/summary.md
 
     - "07 Real-time Intelligence":
       - 07-real-time-intelligence/index.md
-      - Instructions: 07-real-time-intelligence/instructions.md
+      - Summary: 07-real-time-intelligence/summary.md
 
     - "09 Real-time Eventstream":
       - 09-real-time-analytics-eventstream/index.md
-      - Instructions: 09-real-time-analytics-eventstream/instructions.md
+      - Summary: 09-real-time-analytics-eventstream/summary.md
 
     - "11 Data Activator":
       - 11-data-activator/index.md
-      - Instructions: 11-data-activator/instructions.md
+      - Summary: 11-data-activator/summary.md
 
     - "18 Monitor Hub":
       - 18-monitor-hub/index.md
-      - Instructions: 18-monitor-hub/instructions.md
+      - Summary: 18-monitor-hub/summary.md
 
     - "19 Secure Data Access":
       - 19-secure-data-access/index.md
-      - Instructions: 19-secure-data-access/instructions.md
+      - Summary: 19-secure-data-access/summary.md
 
     - "20 Work with SQL Database":
       - 20-work-with-database/index.md
-      - Instructions: 20-work-with-database/instructions.md
+      - Summary: 20-work-with-database/summary.md
 
     - "21 Deployment Pipelines":
       - 21-implement-cicd/index.md
-      - Instructions: 21-implement-cicd/instructions.md
+      - Summary: 21-implement-cicd/summary.md
 
 # Theme
 theme:
