@@ -1774,7 +1774,7 @@
 <p>On the navigation pane on the left, select <strong>Create</strong>, and choose <strong>Lakehouse</strong>.</p>
 <ul>
 <li>Give it a name of your choice. For example: <code>fab_lakehouse</code></li>
-<li>Make sure the "Lakehouse schemas" option is disabled.</li>
+<li>Leave the <strong>Lakehouse schemas</strong> checkbox selected.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
@@ -1784,14 +1784,15 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/new-lakehouse.png" data-desc-position="bottom"><img alt="New lakehouse." src="../img/new-lakehouse.png"></a></p>
 </div>
 </li>
-<li>
-<p>On the <strong>Explorer</strong> pane on the left, in the <strong>...</strong> menu for the <strong>Files</strong> node, select <strong>New subfolder</strong></p>
-<ul>
+</ol>
+<h2 id="step-3-create-a-subfolder">Step 3: Create a subfolder</h2>
+<ol>
+<li>On the <strong>Explorer</strong> pane on the left, in the <strong>...</strong> menu for the <strong>Files</strong> node, select <strong>New subfolder</strong><ul>
 <li>Create a subfolder named: <strong>new_data</strong></li>
 </ul>
 </li>
 </ol>
-<h2 id="step-3-create-a-pipeline">Step 3: Create a pipeline</h2>
+<h2 id="step-4-create-a-pipeline">Step 4: Create a pipeline</h2>
 <p>A simple way to ingest data is to use a <strong>Copy Data</strong> activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1799,19 +1800,19 @@
 </div>
 <ol>
 <li>
-<p>In the navigation pane on the left, select the name of your workspace.</p>
+<p>In the navigation pane on the left, select your <code>fab_workspace</code>.</p>
 </li>
 <li>
 <p>In the workspace, select <strong>New item</strong>, search for <strong>Pipeline</strong></p>
 </li>
 <li>
-<p>Create a new pipeline named: <code>Ingest Sales Data</code></p>
+<p>Create a new pipeline with the Name: <code>Ingest Sales Data</code></p>
 </li>
 <li>
-<p>In the pipeline editor canvas:</p>
+<p>In the pipeline editor canvas start with a blank canvas:</p>
 <ul>
 <li>Select: <strong>Pipeline activity</strong></li>
-<li>Then select: <strong>Copy Data</strong></li>
+<li>Then select: <strong>Copy data</strong></li>
 <li>A <strong>Copy Data</strong> activity is added to the pipeline canvas:</li>
 </ul>
 <div class="admonition quote">
@@ -1825,22 +1826,26 @@
 <p>Select the <strong>Copy Data</strong> activity on the canvas</p>
 </li>
 <li>
-<p>Then in the pane below the canvas select the <strong>Source</strong> tab.</p>
+<p>In the pane below the canvas select the <strong>Source</strong> tab.</p>
 </li>
 <li>
-<p>In the <strong>Connection</strong> drop-down, select <strong>Browse all</strong>.</p>
+<p>In the <strong>Connection</strong> drop-down, select <strong>Browse all</strong></p>
 </li>
 <li>
-<p>In the <strong>New connection</strong> dialog, search for <strong>HTTP</strong> and select it, then select <strong>Continue</strong>.</p>
+<p>Search for <strong>HTTP</strong> and select it.</p>
 </li>
 <li>
-<p>Configure the following settings and then select <strong>Connect</strong>:</p>
+<p>Then configure the following settings:</p>
 <ul>
 <li><strong>URL</strong>: <a href="https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv">https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv</a></li>
 <li><strong>Connection name</strong>: sales</li>
 <li><strong>Data gateway</strong>: (none)</li>
 <li><strong>Authentication kind</strong>: Anonymous</li>
+<li><strong>Privacy level</strong>: None</li>
 </ul>
+</li>
+<li>
+<p>Click <strong>Connect</strong></p>
 </li>
 <li>
 <p>Back on the <strong>Source tab</strong>, configure the following source settings:</p>
@@ -1869,10 +1874,10 @@
 </div>
 </li>
 <li>
-<p>Select <strong>Test connection</strong> to verify the connection works.</p>
+<p>Click <strong>OK</strong></p>
 </li>
 <li>
-<p><em>Optional</em>: Select <strong>Preview data</strong> to confirm the data looks correct.</p>
+<p>Select <strong>Test connection</strong> to verify the connection works.</p>
 </li>
 </ol>
 <h3 id="configure-the-destination">Configure the Destination</h3>
@@ -1881,15 +1886,16 @@
 <p>Select the <strong>Destination</strong> tab. Then in the <strong>Connection</strong> drop-down, select <strong>Browse all</strong>.</p>
 </li>
 <li>
-<p>In the <strong>New connection</strong> dialog box, find and select your lakehouse in the <em>OneLake Catalog</em> section.</p>
+<p>In the <strong>Choose Destination</strong> dialog box, select <em>OneLake catalog</em> on the left hand menu.</p>
+<p>Then select your <code>fab_lakehouse</code></p>
 </li>
 <li>
 <p>After the connection is created, return to the <strong>Destination</strong> tab and configure the following settings:</p>
 <ul>
 <li><strong>Connection</strong>: <em>Your newly created lakehouse connection</em></li>
-<li><strong>Lakehouse</strong>: <em>Select the lakehouse you created earlier</em></li>
 <li><strong>Root folder</strong>: Files</li>
-<li><strong>File path</strong>: <em>Directory</em>: new_data / <em>File name</em>: sales.csv</li>
+<li><strong>File path</strong>: <code>new_data</code> / <code>sales.csv</code></li>
+<li><strong>File format</strong>: DelimitedText</li>
 </ul>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04-copy-data-destination.png" data-desc-position="bottom"><img alt="copy data activity destination settings." src="../img/04-copy-data-destination.png"></a></p>
@@ -1899,7 +1905,7 @@
 <p>No other changes are necessary.</p>
 </li>
 </ol>
-<h3 id="run-the-pipeline">Run the pipeline</h3>
+<h2 id="step-5-run-the-pipeline">Step 5: Run the pipeline</h2>
 <ol>
 <li>
 <p>On the <strong>Home</strong> tab, use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"></path></svg></span> (<em>Save</em>) icon to save the pipeline.</p>
@@ -1919,23 +1925,19 @@
 <li>
 <p>On the <strong>Home</strong> page, in the <strong>Explorer</strong> pane, expand <strong>Files</strong></p>
 <ul>
-<li>Select the <strong>new_data</strong> folder to verify that the <strong>sales.csv</strong> file has been copied.</li>
+<li>Select the <strong>new_data</strong> folder to verify that the <strong>sales.csv</strong> file has been created.</li>
 </ul>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04-pipeline-file-loaded.png" data-desc-position="bottom"><img alt="the sales.csv file in the new_data folder." src="../img/04-pipeline-file-loaded.png"></a></p>
 </div>
 </li>
 </ol>
-<h2 id="step-4-create-a-notebook">Step 4: Create a notebook</h2>
-<div class="admonition info">
-<p class="admonition-title">Notebooks are made up of one or more cells that can contain <em>code</em> or <em>markdown</em> (formatted text).</p>
-</div>
+<h2 id="step-6-create-a-notebook">Step 6: Create a notebook</h2>
 <ol>
 <li>
-<p>On the <strong>Home</strong> tab of your lakehouse, select <strong>Open notebook</strong> &gt; <strong>New notebook</strong>.</p>
-<p>At the top-right of the Lakehouse page:</p>
+<p>At the top-right of the Lakehouse page click the "<strong>Analyze data with</strong>" dropdown</p>
 <ul>
-<li>Select <strong>Analyze data with</strong> dropdown and choose: <strong>Notebook</strong> &gt; <strong>New notebook</strong></li>
+<li>Click <strong>Notebook</strong> then <strong>New notebook</strong></li>
 </ul>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-lakehouse-notebook.png" data-desc-position="bottom"><img alt="Lakehouse new notebook" src="../img/qa-lakehouse-notebook.png"></a></p>
@@ -1947,11 +1949,14 @@
 <ul>
 <li>Replace the default code with the following variable declaration.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">"sales"</span>
+<div class="highlight"><pre><span></span><code><span class="n">table_name</span> <span class="o">=</span> <span class="s2">"dbo.sales"</span>
 </code></pre></div>
 </li>
 <li>
 <p>In the <strong>...</strong> menu for the cell (at its top-right) select <strong>Toggle parameter cell</strong>. </p>
+<div class="admonition quote">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04-notebook-toggle-cell.png" data-desc-position="bottom"><img alt="Notebook Toggle Parameter Cell" src="../img/04-notebook-toggle-cell.png"></a></p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Toggle parameter cell</p>
 <p>This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.</p>
@@ -1979,7 +1984,7 @@
 <p>This code loads the data from the sales.csv file that was ingested by the <strong>Copy Data</strong> activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.</p>
 </li>
 <li>
-<p>Verify that your notebooks looks similar to this, and then use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run all</strong> button on the toolbar to run all of the cells it contains.</p>
+<p>Verify that your notebook looks similar to this, and then use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run all</strong> button on the toolbar to run all of the cells it contains.</p>
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04-notebook.png" data-desc-position="bottom"><img alt="Notebook with parameters cell and code to transform data." src="../img/04-notebook.png"></a></p>
 </div>
@@ -1992,9 +1997,11 @@
 </div>
 </li>
 </ol>
-<h3 id="run-completed">Run completed</h3>
-<p>When the notebook run has completed:</p>
+<h3 id="when-the-run-has-completed">When the run has completed:</h3>
 <ol>
+<li>
+<p>On the <strong>Home</strong> menu or the <strong>Run</strong> menu, click <strong>Stop Session</strong></p>
+</li>
 <li>
 <p>In the <strong>Explorer</strong> pane on the left, in the <strong>...</strong> menu for <strong>Tables</strong> select <strong>Refresh</strong></p>
 <ul>
@@ -2020,7 +2027,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-5-modify-the-pipeline">Step 5: Modify the pipeline</h2>
+<h2 id="step-7-modify-the-pipeline">Step 7: Modify the pipeline</h2>
 <p>Now that you've implemented a notebook to transform data and load it into a table, you can incorporate the notebook into a pipeline to create a reusable ETL process.</p>
 <ol>
 <li>
@@ -2050,7 +2057,7 @@
 <li>
 <p><strong>Source</strong>:</p>
 <ul>
-<li><strong>Connection</strong>: Browse all, and select your lakehouse</li>
+<li><strong>Connection</strong>: Browse all, and select your lakehouse by clicking <strong>OneLake catalog</strong></li>
 <li><strong>File path type</strong>: Wildcard file path</li>
 <li><strong>Folder path</strong>: Files / <strong>new_data</strong></li>
 <li><strong>Wildcard file name</strong>: <code>*.csv</code></li>
@@ -2102,7 +2109,7 @@
 <tr>
 <td>table_name</td>
 <td>String</td>
-<td>new_sales</td>
+<td>dbo.new_sales</td>
 </tr>
 </tbody>
 </table>
@@ -2145,23 +2152,6 @@
 </li>
 </ol>
 <p>In this exercise, you implemented a data ingestion solution that uses a pipeline to copy data to your lakehouse from an external source, and then uses a Spark notebook to transform the data and load it into a table.</p>
-<hr>
-<h2 id="clean-up-resources">Clean up resources</h2>
-<p>Once you've finished exploring your pipeline, you should delete the workspace you created for this exercise.</p>
-<ol>
-<li>
-<p>Navigate to Microsoft Fabric in your browser.</p>
-</li>
-<li>
-<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
-</li>
-<li>
-<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
-</li>
-<li>
-<p>Select <strong>Delete</strong> to delete the workspace.</p>
-</li>
-</ol>
 <hr>
 <p><small><b>Source:
 <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html</a>

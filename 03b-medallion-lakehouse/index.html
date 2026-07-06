@@ -1774,7 +1774,7 @@
 <p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
 <ul>
 <li>Name the lakehouse: <code>Sales</code></li>
-<li>Ensure <strong>Lakehouse schemas</strong> is disabled to keep the lakehouse structure consistent with the lab instructions.</li>
+<li>Leave the <strong>Lakehouse schemas</strong> checkbox selected.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
@@ -1950,7 +1950,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">DeltaTable</span><span class="o">.</span><span class="n">createIfNotExists</span><span class="p">(</span><span class="n">spark</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">tableName</span><span class="p">(</span><span class="s2">"sales.sales_silver"</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">tableName</span><span class="p">(</span><span class="s2">"sales.dbo.sales_silver"</span><span class="p">)</span> \
     <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"SalesOrderNumber"</span><span class="p">,</span> <span class="n">StringType</span><span class="p">())</span> \
     <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"SalesOrderLineNumber"</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">())</span> \
     <span class="o">.</span><span class="n">addColumn</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">,</span> <span class="n">DateType</span><span class="p">())</span> \
@@ -1985,7 +1985,7 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># Silver: Cell 4 ~ Update existing records and insert new ones based on a condition</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">delta.tables</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">'Tables/sales_silver'</span><span class="p">)</span>
+<span class="n">deltaTable</span> <span class="o">=</span> <span class="n">DeltaTable</span><span class="o">.</span><span class="n">forPath</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="s1">'Tables/dbo/sales_silver'</span><span class="p">)</span>
 
 <span class="n">dfUpdates</span> <span class="o">=</span> <span class="n">df</span>
 
@@ -2056,7 +2056,7 @@
 <p>Paste the following query into the query editor and select <strong>Run</strong>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">Year</span>
 <span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="k">CAST</span><span class="w"> </span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">UnitPrice</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Tax</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalSales</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">sales_silver</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">sales_silver</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span><span class="w"> </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">OrderDate</span><span class="p">)</span>
 </code></pre></div>
@@ -2068,10 +2068,11 @@
 <li>
 <p>Next you'll review which customers are purchasing the most (in terms of quantity).</p>
 <p>Paste the following query into the query editor and select <strong>Run</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">CustomerName</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalQuantity</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">sales_silver</span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">CustomerName</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalQuantity</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dbo</span><span class="p">.</span><span class="n">sales_silver</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CustomerName</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalQuantity</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span>
 </code></pre></div>
 <p>This query calculates the total quantity of items purchased by each customer in the sales_silver table, and then returns the top 10 customers in terms of quantity.</p>
 <div class="admonition note">
@@ -2116,30 +2117,30 @@
 <p>In the existing code block, remove the commented text and <strong>add the following code</strong> to load data to your dataframe and start building your star schema:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">dayofmonth</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"Sales.sales_silver"</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"Sales.dbo.sales_silver"</span><span class="p">)</span>
 
 <span class="c1"># dim: date</span>
 <span class="n">dimDate</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
     <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">,</span> <span class="n">year</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span> \
     <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">,</span> <span class="n">month</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span> \
     <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"Day"</span><span class="p">,</span> <span class="n">dayofmonth</span><span class="p">(</span><span class="s2">"OrderDate"</span><span class="p">))</span>
-<span class="n">dimDate</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimdate_gold"</span><span class="p">)</span>
+<span class="n">dimDate</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dbo.dimdate_gold"</span><span class="p">)</span>
 
 <span class="c1"># dim: customer</span>
 <span class="n">dimCustomer</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="s2">"Email"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
     <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">dimCustomer</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimcustomer_gold"</span><span class="p">)</span>
+<span class="n">dimCustomer</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dbo.dimcustomer_gold"</span><span class="p">)</span>
 
 <span class="c1"># dim: product</span>
 <span class="n">dimProduct</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"Item"</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> \
     <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"ItemID"</span><span class="p">,</span> <span class="n">monotonically_increasing_id</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">dimProduct</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dimproduct_gold"</span><span class="p">)</span>
+<span class="n">dimProduct</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dbo.dimproduct_gold"</span><span class="p">)</span>
 
 <span class="c1"># fact: sales</span>
 <span class="n">factSales</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dimCustomer</span><span class="p">,</span> <span class="p">[</span><span class="s2">"CustomerName"</span><span class="p">,</span> <span class="s2">"Email"</span><span class="p">],</span> <span class="s2">"left"</span><span class="p">)</span> \
     <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dimProduct</span><span class="p">,</span> <span class="p">[</span><span class="s2">"Item"</span><span class="p">],</span> <span class="s2">"left"</span><span class="p">)</span> \
     <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"CustomerID"</span><span class="p">,</span> <span class="s2">"ItemID"</span><span class="p">,</span> <span class="s2">"OrderDate"</span><span class="p">,</span> <span class="s2">"Quantity"</span><span class="p">,</span> <span class="s2">"UnitPrice"</span><span class="p">,</span> <span class="s2">"Tax"</span><span class="p">)</span>
-<span class="n">factSales</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.factsales_gold"</span><span class="p">)</span>
+<span class="n">factSales</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">"Sales.dbo.factsales_gold"</span><span class="p">)</span>
 
 <span class="c1"># End of cell</span>
 </code></pre></div>
