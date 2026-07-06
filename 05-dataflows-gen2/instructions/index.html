@@ -213,14 +213,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../run-inside-vm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    VM Logon Instructions
   
 
     
@@ -745,10 +745,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
+  <a href="#step-1-create-a-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Access Microsoft Fabric
+        Step 1: Create a workspace
       
     </span>
   </a>
@@ -756,10 +756,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
+  <a href="#step-2-create-a-lakehouse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Create a workspace
+        Step 2: Create a lakehouse
       
     </span>
   </a>
@@ -767,10 +767,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-lakehouse" class="md-nav__link">
+  <a href="#step-3-create-a-dataflow-gen2-to-ingest-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a lakehouse
+        Step 3: Create a Dataflow (Gen2) to ingest data
       
     </span>
   </a>
@@ -778,10 +778,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-create-a-dataflow-gen2-to-ingest-data" class="md-nav__link">
+  <a href="#step-4-transform-the-data-using-power-query" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Create a Dataflow (Gen2) to ingest data
+        Step 4: Transform the data using Power Query
       
     </span>
   </a>
@@ -789,10 +789,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-transform-the-data-using-power-query" class="md-nav__link">
+  <a href="#step-5-add-data-destination-for-dataflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Transform the data using Power Query
+        Step 5: Add data destination for Dataflow
       
     </span>
   </a>
@@ -800,21 +800,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-add-data-destination-for-dataflow" class="md-nav__link">
+  <a href="#step-6-add-a-dataflow-to-a-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Add data destination for Dataflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-add-a-dataflow-to-a-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 7: Add a dataflow to a pipeline
+        Step 6: Add a dataflow to a pipeline
       
     </span>
   </a>
@@ -1880,51 +1869,7 @@
 <div class="admonition warning">
 <p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
 </div>
-<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
-<p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.</p>
-</div>
-<ol>
-<li>
-<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
-</li>
-<li>
-<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
-</li>
-<li>
-<p>When prompted, sign in using:</p>
-<ul>
-<li><strong>Username</strong> from the QA Platform (used as the email address)</li>
-<li>
-<p><strong>Password</strong> from the QA Platform (used as a Temporary Access Pass)</p>
-</li>
-<li>
-<p>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</p>
-</li>
-</ul>
-<div class="admonition success">
-<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
-</div>
-</li>
-<li>
-<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
-</li>
-<li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a></p>
-</li>
-<li>
-<p>If prompted, <strong>re-enter your email address</strong> to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.</p>
-</li>
-<li>
-<p>After confirmation, you should be be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
 <p>Before working with data in Fabric, you need to create a workspace.</p>
 <ol>
 <li>
@@ -1946,7 +1891,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h2>
+<h2 id="step-2-create-a-lakehouse">Step 2: Create a lakehouse</h2>
 <p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
 <ol>
 <li>
@@ -1976,7 +1921,7 @@
 </li>
 </ol>
 <p>Currently, there are no tables or files in this lakehouse.</p>
-<h2 id="step-4-create-a-dataflow-gen2-to-ingest-data">Step 4: Create a Dataflow (Gen2) to ingest data</h2>
+<h2 id="step-3-create-a-dataflow-gen2-to-ingest-data">Step 3: Create a Dataflow (Gen2) to ingest data</h2>
 <p>Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an <em>extract, transform, and load</em> (ETL) process.</p>
 <ol>
 <li>
@@ -2008,7 +1953,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-5-transform-the-data-using-power-query">Step 5: Transform the data using Power Query</h2>
+<h2 id="step-4-transform-the-data-using-power-query">Step 4: Transform the data using Power Query</h2>
 <p>You can now transform the data. In this lab we will add a column using a custom formula.</p>
 <ol>
 <li>
@@ -2057,7 +2002,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-6-add-data-destination-for-dataflow">Step 6: Add data destination for Dataflow</h2>
+<h2 id="step-5-add-data-destination-for-dataflow">Step 5: Add data destination for Dataflow</h2>
 <p>The next step is to define a destination for your transformed data. This will be the lakehouse you created in Step 3.</p>
 <ol>
 <li>
@@ -2110,7 +2055,7 @@
 <p>On the toolbar ribbon, select the <strong>Home</strong> tab. Then select <strong>Save &amp; run</strong> and wait for the <strong>Dataflow 1</strong> dataflow to be created in your workspace.</p>
 </li>
 </ol>
-<h2 id="step-7-add-a-dataflow-to-a-pipeline">Step 7: Add a dataflow to a pipeline</h2>
+<h2 id="step-6-add-a-dataflow-to-a-pipeline">Step 6: Add a dataflow to a pipeline</h2>
 <p>You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created from your workspace by selecting <strong>+ New item</strong> &gt; <strong>Data pipeline</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">You now need to add the pipeline to your workspace.</p>

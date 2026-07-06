@@ -211,14 +211,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../run-inside-vm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    VM Logon Instructions
   
 
     
@@ -1743,10 +1743,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
+  <a href="#step-1-create-workspaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Access Microsoft Fabric
+        Step 1: Create workspaces
       
     </span>
   </a>
@@ -1754,10 +1754,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-create-workspaces" class="md-nav__link">
+  <a href="#step-2-create-a-deployment-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Create workspaces
+        Step 2: Create a deployment pipeline
       
     </span>
   </a>
@@ -1765,10 +1765,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-deployment-pipeline" class="md-nav__link">
+  <a href="#step-3-assign-workspaces-to-stages-of-a-deployment-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a deployment pipeline
+        Step 3: Assign workspaces to stages of a deployment pipeline
       
     </span>
   </a>
@@ -1776,10 +1776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-assign-workspaces-to-stages-of-a-deployment-pipeline" class="md-nav__link">
+  <a href="#step-4-create-content" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Assign workspaces to stages of a deployment pipeline
+        Step 4: Create content
       
     </span>
   </a>
@@ -1787,10 +1787,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-create-content" class="md-nav__link">
+  <a href="#step-5-review-your-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Create content
+        Step 5: Review your pipeline
       
     </span>
   </a>
@@ -1798,10 +1798,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-review-your-pipeline" class="md-nav__link">
+  <a href="#step-6-deploy-content-from-development-to-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Review your pipeline
+        Step 6: Deploy content from Development to Test
       
     </span>
   </a>
@@ -1809,10 +1809,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7-deploy-content-from-development-to-test" class="md-nav__link">
+  <a href="#step-7-deploy-content-from-test-to-production" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 7: Deploy content from Development to Test
+        Step 7: Deploy content from Test to Production
       
     </span>
   </a>
@@ -1820,21 +1820,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-8-deploy-content-from-test-to-production" class="md-nav__link">
+  <a href="#step-8-confirm-the-deployment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 8: Deploy content from Test to Production
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-9-confirm-the-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 9: Confirm the deployment
+        Step 8: Confirm the deployment
       
     </span>
   </a>
@@ -1894,51 +1883,7 @@
 
 
 <h1 id="lab-21-implement-deployment-pipelines-in-microsoft-fabric">Lab 21 ~ Implement deployment pipelines in Microsoft Fabric</h1>
-<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
-<p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.</p>
-</div>
-<ol>
-<li>
-<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
-</li>
-<li>
-<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
-</li>
-<li>
-<p>When prompted, sign in using:</p>
-<ul>
-<li><strong>Username</strong> from the QA Platform (used as the email address)</li>
-<li>
-<p><strong>Password</strong> from the QA Platform (used as a Temporary Access Pass)</p>
-</li>
-<li>
-<p>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</p>
-</li>
-</ul>
-<div class="admonition success">
-<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
-</div>
-</li>
-<li>
-<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
-</li>
-<li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a></p>
-</li>
-<li>
-<p>If prompted, <strong>re-enter your email address</strong> to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.</p>
-</li>
-<li>
-<p>After confirmation, you should be be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-2-create-workspaces">Step 2: Create workspaces</h2>
+<h2 id="step-1-create-workspaces">Step 1: Create workspaces</h2>
 <p>For this lab you need to create three workspaces: <strong>Development</strong>, <strong>Test</strong>, and <strong>Production</strong>.</p>
 <ol>
 <li>
@@ -1963,7 +1908,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="step-3-create-a-deployment-pipeline">Step 3: Create a deployment pipeline</h2>
+<h2 id="step-2-create-a-deployment-pipeline">Step 2: Create a deployment pipeline</h2>
 <p>Next, create a deployment pipeline.</p>
 <ol>
 <li>
@@ -1983,7 +1928,7 @@
 <p>In the new pipeline window, select: <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M19.22 4c.28 0 .53 0 .74.05.17 1.39-.02 4.25-3.3 7.53-1.7 1.71-3.73 3.02-6.01 3.89l-2.15-2.1c.92-2.31 2.23-4.34 3.92-6.03C15.18 4.58 17.64 4 19.22 4m0-2c-1.98 0-4.98.69-8.22 3.93-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.38.38.89.61 1.42.61.23 0 .47-.06.7-.15A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61S20.7 2 19.22 2m-4.68 7.46c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"></path></svg></span> Create and continue</strong></p>
 </li>
 </ol>
-<h2 id="step-4-assign-workspaces-to-stages-of-a-deployment-pipeline">Step 4: Assign workspaces to stages of a deployment pipeline</h2>
+<h2 id="step-3-assign-workspaces-to-stages-of-a-deployment-pipeline">Step 3: Assign workspaces to stages of a deployment pipeline</h2>
 <ol>
 <li>
 <p>On the left-hand navigation, select the pipeline you created. </p>
@@ -1998,7 +1943,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-5-create-content">Step 5: Create content</h2>
+<h2 id="step-4-create-content">Step 4: Create content</h2>
 <p>Fabric items haven't been created in your workspaces yet. Next, create a lakehouse in the <strong>Development</strong> workspace.</p>
 <ol>
 <li>
@@ -2028,7 +1973,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-6-review-your-pipeline">Step 6: Review your pipeline</h2>
+<h2 id="step-5-review-your-pipeline">Step 5: Review your pipeline</h2>
 <ol>
 <li>
 <p>In the menu bar on the left, select the pipeline you created.</p>
@@ -2046,7 +1991,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-7-deploy-content-from-development-to-test">Step 7: Deploy content from Development to Test</h2>
+<h2 id="step-6-deploy-content-from-development-to-test">Step 6: Deploy content from Development to Test</h2>
 <p>You will now deploy the lakehouse from the <strong>Development</strong> stage to the <strong>Test</strong> stage.</p>
 <ol>
 <li>
@@ -2075,7 +2020,7 @@
 <li>This is expected and indicates that nothing has been deployed to Production yet.</li>
 </ul>
 </div>
-<h2 id="step-8-deploy-content-from-test-to-production">Step 8: Deploy content from Test to Production</h2>
+<h2 id="step-7-deploy-content-from-test-to-production">Step 7: Deploy content from Test to Production</h2>
 <p>You will now deploy the lakehouse from the <strong>Test</strong> stage to the <strong>Production</strong> stage.</p>
 <ol>
 <li>
@@ -2094,7 +2039,7 @@
 <div class="admonition success">
 <p class="admonition-title">A green check mark inside each stage indicates that all stages are in sync and contain the same content.</p>
 </div>
-<h2 id="step-9-confirm-the-deployment">Step 9: Confirm the deployment</h2>
+<h2 id="step-8-confirm-the-deployment">Step 8: Confirm the deployment</h2>
 <p>Using deployment pipelines creates the same Fabric artefacts in each deployment stage. Let's confirm.</p>
 <ol>
 <li>

@@ -213,14 +213,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../run-inside-vm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    VM Logon Instructions
   
 
     
@@ -1645,10 +1645,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
+  <a href="#step-1-create-a-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Access Microsoft Fabric
+        Step 1: Create a workspace
       
     </span>
   </a>
@@ -1656,10 +1656,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
+  <a href="#step-2-create-a-sql-database-with-sample-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Create a workspace
+        Step 2: Create a SQL database with sample data
       
     </span>
   </a>
@@ -1667,10 +1667,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-sql-database-with-sample-data" class="md-nav__link">
+  <a href="#step-3-query-a-sql-database" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a SQL database with sample data
+        Step 3: Query a SQL database
       
     </span>
   </a>
@@ -1678,10 +1678,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-query-a-sql-database" class="md-nav__link">
+  <a href="#step-4-integrate-data-with-external-data-sources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Query a SQL database
+        Step 4: Integrate data with external data sources
       
     </span>
   </a>
@@ -1689,21 +1689,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-integrate-data-with-external-data-sources" class="md-nav__link">
+  <a href="#step-5-secure-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Integrate data with external data sources
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-secure-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Secure data
+        Step 5: Secure data
       
     </span>
   </a>
@@ -1869,51 +1858,7 @@
 <div class="admonition warning">
 <p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
 </div>
-<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
-<p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.</p>
-</div>
-<ol>
-<li>
-<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
-</li>
-<li>
-<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
-</li>
-<li>
-<p>When prompted, sign in using:</p>
-<ul>
-<li><strong>Username</strong> from the QA Platform (used as the email address)</li>
-<li>
-<p><strong>Password</strong> from the QA Platform (used as a Temporary Access Pass)</p>
-</li>
-<li>
-<p>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</p>
-</li>
-</ul>
-<div class="admonition success">
-<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
-</div>
-</li>
-<li>
-<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
-</li>
-<li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a></p>
-</li>
-<li>
-<p>If prompted, <strong>re-enter your email address</strong> to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.</p>
-</li>
-<li>
-<p>After confirmation, you should be be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
 <p>Before working with data in Fabric, you need to create a workspace.</p>
 <ol>
 <li>
@@ -1935,7 +1880,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-3-create-a-sql-database-with-sample-data">Step 3: Create a SQL database with sample data</h2>
+<h2 id="step-2-create-a-sql-database-with-sample-data">Step 2: Create a SQL database with sample data</h2>
 <p>Now that you have a workspace, it's time to create a SQL database.</p>
 <ol>
 <li>
@@ -1955,7 +1900,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-4-query-a-sql-database">Step 4: Query a SQL database</h2>
+<h2 id="step-3-query-a-sql-database">Step 3: Query a SQL database</h2>
 <p>The SQL query editor provides support for IntelliSense, code completion, syntax highlighting, client-side parsing, and validation. You can run Data Definition Language (DDL), Data Manipulation Language (DML) and Data Control Language (DCL) statements.</p>
 <ol>
 <li>
@@ -1996,7 +1941,7 @@
 <p>Close all query tabs.</p>
 </li>
 </ol>
-<h2 id="step-5-integrate-data-with-external-data-sources">Step 5: Integrate data with external data sources</h2>
+<h2 id="step-4-integrate-data-with-external-data-sources">Step 4: Integrate data with external data sources</h2>
 <p>You will integrate an external data about public holidays with sales order. Then, you'll  identify sales orders that coincide with public holidays, providing insights into how holidays might impact sales activities.</p>
 <ol>
 <li>
@@ -2068,7 +2013,7 @@
 <p>Close all query tabs.</p>
 </li>
 </ol>
-<h2 id="step-6-secure-data">Step 6: Secure data</h2>
+<h2 id="step-5-secure-data">Step 5: Secure data</h2>
 <p>Suppose a specific group of users should only have access to data from the United States to generate reports.</p>
 <p>Let's create a view based on the query we used earlier, and add a filter to it.</p>
 <ol>

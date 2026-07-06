@@ -213,14 +213,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../run-inside-vm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    VM Logon Instructions
   
 
     
@@ -445,10 +445,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
+  <a href="#step-1-create-a-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Access Microsoft Fabric
+        Step 1: Create a workspace
       
     </span>
   </a>
@@ -456,10 +456,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
+  <a href="#step-2-create-a-lakehouse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Create a workspace
+        Step 2: Create a lakehouse
       
     </span>
   </a>
@@ -467,10 +467,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-lakehouse" class="md-nav__link">
+  <a href="#step-3-upload-a-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a lakehouse
+        Step 3: Upload a file
       
     </span>
   </a>
@@ -478,10 +478,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-upload-a-file" class="md-nav__link">
+  <a href="#step-4-explore-shortcuts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Upload a file
+        Step 4: Explore shortcuts
       
     </span>
   </a>
@@ -489,10 +489,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-explore-shortcuts" class="md-nav__link">
+  <a href="#step-5-load-file-data-into-a-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Explore shortcuts
+        Step 5: Load file data into a table
       
     </span>
   </a>
@@ -500,10 +500,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-load-file-data-into-a-table" class="md-nav__link">
+  <a href="#step-6-use-a-notebook-to-query-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Load file data into a table
+        Step 6: Use a notebook to query tables
       
     </span>
   </a>
@@ -511,10 +511,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7-use-a-notebook-to-query-tables" class="md-nav__link">
+  <a href="#step-7-use-sql-to-query-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 7: Use a notebook to query tables
+        Step 7: Use SQL to query tables
       
     </span>
   </a>
@@ -522,21 +522,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-8-use-sql-to-query-tables" class="md-nav__link">
+  <a href="#step-8-create-a-visual-query" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 8: Use SQL to query tables
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-9-create-a-visual-query" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 9: Create a visual query
+        Step 8: Create a visual query
       
     </span>
   </a>
@@ -1902,51 +1891,7 @@
 <div class="admonition warning">
 <p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
 </div>
-<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
-<p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.</p>
-</div>
-<ol>
-<li>
-<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
-</li>
-<li>
-<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
-</li>
-<li>
-<p>When prompted, sign in using:</p>
-<ul>
-<li><strong>Username</strong> from the QA Platform (used as the email address)</li>
-<li>
-<p><strong>Password</strong> from the QA Platform (used as a Temporary Access Pass)</p>
-</li>
-<li>
-<p>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</p>
-</li>
-</ul>
-<div class="admonition success">
-<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
-</div>
-</li>
-<li>
-<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
-</li>
-<li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a></p>
-</li>
-<li>
-<p>If prompted, <strong>re-enter your email address</strong> to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.</p>
-</li>
-<li>
-<p>After confirmation, you should be be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
 <p>Before working with data in Fabric, you need to create a workspace.</p>
 <ol>
 <li>
@@ -1968,7 +1913,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h2>
+<h2 id="step-2-create-a-lakehouse">Step 2: Create a lakehouse</h2>
 <p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
 <ol>
 <li>
@@ -1998,7 +1943,7 @@
 </li>
 </ol>
 <p>Currently, there are no tables or files in this lakehouse.</p>
-<h2 id="step-4-upload-a-file">Step 4: Upload a file</h2>
+<h2 id="step-3-upload-a-file">Step 3: Upload a file</h2>
 <p>Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).</p>
 <ol>
 <li>
@@ -2040,7 +1985,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-5-explore-shortcuts">Step 5: Explore shortcuts</h2>
+<h2 id="step-4-explore-shortcuts">Step 4: Explore shortcuts</h2>
 <p>In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.</p>
 <ol>
 <li>
@@ -2053,7 +1998,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="step-6-load-file-data-into-a-table">Step 6: Load file data into a table</h2>
+<h2 id="step-5-load-file-data-into-a-table">Step 5: Load file data into a table</h2>
 <p>The sales data you uploaded is in a file, which you can work with directly by using Apache Spark code. However, in many scenarios you may want to load the data from the file into a table so that you can query it using SQL.</p>
 <ol>
 <li>
@@ -2093,7 +2038,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-7-use-a-notebook-to-query-tables">Step 7: Use a notebook to query tables</h2>
+<h2 id="step-6-use-a-notebook-to-query-tables">Step 6: Use a notebook to query tables</h2>
 <p>Fabric notebooks let you write and run code directly against your lakehouse tables using Apache Spark. This is useful for more complex transformations and analysis beyond what SQL alone can do.</p>
 <ol>
 <li>
@@ -2154,7 +2099,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-8-use-sql-to-query-tables">Step 8: Use SQL to query tables</h2>
+<h2 id="step-7-use-sql-to-query-tables">Step 7: Use SQL to query tables</h2>
 <p>When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL <code>SELECT</code> statements.</p>
 <ol>
 <li>
@@ -2184,7 +2129,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-9-create-a-visual-query">Step 9: Create a visual query</h2>
+<h2 id="step-8-create-a-visual-query">Step 8: Create a visual query</h2>
 <p>While many data professionals are familiar with SQL, those with Power BI experience can apply their Power Query skills to create visual queries.</p>
 <ol>
 <li>

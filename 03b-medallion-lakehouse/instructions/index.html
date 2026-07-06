@@ -213,14 +213,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../run-inside-vm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instructions
+    VM Logon Instructions
   
 
     
@@ -545,10 +545,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-access-microsoft-fabric" class="md-nav__link">
+  <a href="#step-1-create-a-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Access Microsoft Fabric
+        Step 1: Create a workspace
       
     </span>
   </a>
@@ -556,10 +556,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-create-a-workspace" class="md-nav__link">
+  <a href="#step-2-create-a-lakehouse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Create a workspace
+        Step 2: Create a lakehouse
       
     </span>
   </a>
@@ -567,10 +567,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-lakehouse" class="md-nav__link">
+  <a href="#step-3-upload-data-to-bronze-layer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a lakehouse
+        Step 3: Upload data to bronze layer
       
     </span>
   </a>
@@ -578,10 +578,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-upload-data-to-bronze-layer" class="md-nav__link">
+  <a href="#step-4-transform-the-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Upload data to bronze layer
+        Step 4: Transform the data
       
     </span>
   </a>
@@ -589,10 +589,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-transform-the-data" class="md-nav__link">
+  <a href="#step-5-data-validation-and-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Transform the data
+        Step 5: Data validation and cleanup
       
     </span>
   </a>
@@ -600,10 +600,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-data-validation-and-cleanup" class="md-nav__link">
+  <a href="#step-6-define-the-schema-for-the-silver-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Data validation and cleanup
+        Step 6: Define the schema for the silver table
       
     </span>
   </a>
@@ -611,10 +611,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-7-define-the-schema-for-the-silver-table" class="md-nav__link">
+  <a href="#step-7-insert-and-update-records" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 7: Define the schema for the silver table
+        Step 7: Insert and update records
       
     </span>
   </a>
@@ -622,10 +622,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-8-insert-and-update-records" class="md-nav__link">
+  <a href="#step-8-explore-data-in-the-silver-layer-using-the-sql-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 8: Insert and update records
+        Step 8: Explore data in the silver layer using the SQL endpoint
       
     </span>
   </a>
@@ -633,10 +633,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-9-explore-data-in-the-silver-layer-using-the-sql-endpoint" class="md-nav__link">
+  <a href="#step-9-transform-data-for-gold-layer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 9: Explore data in the silver layer using the SQL endpoint
+        Step 9: Transform data for gold layer
       
     </span>
   </a>
@@ -644,10 +644,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-10-transform-data-for-gold-layer" class="md-nav__link">
+  <a href="#step-10-create-a-semantic-model-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 10: Transform data for gold layer
+        Step 10: Create a semantic model (optional)
       
     </span>
   </a>
@@ -655,10 +655,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-11-create-a-semantic-model-optional" class="md-nav__link">
+  <a href="#step-11-create-relationships-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 11: Create a semantic model (optional)
+        Step 11: Create relationships (optional)
       
     </span>
   </a>
@@ -666,21 +666,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-12-create-relationships-optional" class="md-nav__link">
+  <a href="#step-12-create-a-powerbi-report-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 12: Create relationships (optional)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-13-create-a-powerbi-report-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 13: Create a PowerBi report (optional)
+        Step 12: Create a PowerBi report (optional)
       
     </span>
   </a>
@@ -1946,51 +1935,7 @@
 <div class="admonition warning">
 <p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
 </div>
-<h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
-<p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The QA Platform opens the Azure portal by default. This is expected. Microsoft Fabric is a separate portal, even though it uses the same Microsoft account.</p>
-</div>
-<ol>
-<li>
-<p>In the QA Platform, wait until the lab status shows <strong>Ready</strong>.</p>
-</li>
-<li>
-<p>Then right-click <strong>Open</strong> and choose <strong>Open in a private browsing window</strong> (InPrivate in Edge, Incognito in Chrome).</p>
-</li>
-<li>
-<p>When prompted, sign in using:</p>
-<ul>
-<li><strong>Username</strong> from the QA Platform (used as the email address)</li>
-<li>
-<p><strong>Password</strong> from the QA Platform (used as a Temporary Access Pass)</p>
-</li>
-<li>
-<p>If prompted to "Stay signed in?", select <strong>No</strong>. This ensures the session ends when the private window is closed.</p>
-</li>
-</ul>
-<div class="admonition success">
-<p class="admonition-title">You are now signed in to the <strong>Azure portal</strong>. This confirms your lab account is active.</p>
-</div>
-</li>
-<li>
-<p>In the same private browsing window, <strong>open a new tab</strong>.</p>
-</li>
-<li>
-<p>Navigate to the <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">Microsoft Fabric home page</a> at: <a href="https://app.fabric.microsoft.com/home?experience=fabric-developer">https://app.fabric.microsoft.com/home?experience=fabric-developer</a></p>
-</li>
-<li>
-<p>If prompted, <strong>re-enter your email address</strong> to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.</p>
-</li>
-<li>
-<p>After confirmation, you should be be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
-<div class="admonition quote">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../../img/qa-fabric-home.png"></a></p>
-</div>
-</li>
-</ol>
-<h2 id="step-2-create-a-workspace">Step 2: Create a workspace</h2>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
 <p>Before working with data in Fabric, you need to create a workspace.</p>
 <ol>
 <li>
@@ -2012,7 +1957,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h2>
+<h2 id="step-2-create-a-lakehouse">Step 2: Create a lakehouse</h2>
 <p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
 <ol>
 <li>
@@ -2030,7 +1975,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-4-upload-data-to-bronze-layer">Step 4: Upload data to bronze layer</h2>
+<h2 id="step-3-upload-data-to-bronze-layer">Step 3: Upload data to bronze layer</h2>
 <p>Next, you'll ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply download a text file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.</p>
 <ol>
 <li>
@@ -2067,7 +2012,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-5-transform-the-data">Step 5: Transform the data</h2>
+<h2 id="step-4-transform-the-data">Step 4: Transform the data</h2>
 <p>Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data before you load it to a delta table in the silver layer.</p>
 <ol>
 <li>
@@ -2150,7 +2095,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-6-data-validation-and-cleanup">Step 6: Data validation and cleanup</h2>
+<h2 id="step-5-data-validation-and-cleanup">Step 5: Data validation and cleanup</h2>
 <p>Now that you have transformed data, you can use a notebook to load it to a delta table in the silver layer.</p>
 <ol>
 <li>
@@ -2179,7 +2124,7 @@
 <p>Run the cell to execute the code using the <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> (Run cell)</strong> button.</p>
 </li>
 </ol>
-<h2 id="step-7-define-the-schema-for-the-silver-table">Step 7: Define the schema for the silver table</h2>
+<h2 id="step-6-define-the-schema-for-the-silver-table">Step 6: Define the schema for the silver table</h2>
 <ol>
 <li>
 <p>Next, you'll define the schema for the <strong>sales_silver</strong> table in the sales database using Delta Lake format. Create a new code block and add the following code to the cell:</p>
@@ -2215,7 +2160,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-8-insert-and-update-records">Step 8: Insert and update records</h2>
+<h2 id="step-7-insert-and-update-records">Step 7: Insert and update records</h2>
 <p>Now you're going to perform an upsert operation on a Delta table, updating existing records based on specific conditions and inserting new records when no match is found.</p>
 <ol>
 <li>
@@ -2274,7 +2219,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-9-explore-data-in-the-silver-layer-using-the-sql-endpoint">Step 9: Explore data in the silver layer using the SQL endpoint</h2>
+<h2 id="step-8-explore-data-in-the-silver-layer-using-the-sql-endpoint">Step 8: Explore data in the silver layer using the SQL endpoint</h2>
 <p>Now that you have data in your silver layer, you can use the SQL analytics endpoint to explore the data and perform some basic analysis. This is useful if you're familiar with SQL and want to do some basic exploration of your data. In this exercise we're using the SQL endpoint view in Fabric, but you can use other tools like SQL Server Management Studio (SSMS) and Azure Data Explorer.</p>
 <ol>
 <li>
@@ -2322,7 +2267,7 @@
 </div>
 </li>
 </ol>
-<h2 id="step-10-transform-data-for-gold-layer">Step 10: Transform data for gold layer</h2>
+<h2 id="step-9-transform-data-for-gold-layer">Step 9: Transform data for gold layer</h2>
 <p>You have successfully taken data from your bronze layer, transformed it, and loaded it into a silver Delta table. </p>
 <p>Now you'll use a new notebook to transform the data further, model it into a star schema, and load it into gold Delta tables.</p>
 <div class="admonition note">
@@ -2392,7 +2337,7 @@
 <div class="admonition success">
 <p class="admonition-title">You now have a curated, modeled <strong>gold</strong> layer that can be used for reporting and analysis.</p>
 </div>
-<h2 id="step-11-create-a-semantic-model-optional">Step 11: Create a semantic model (optional)</h2>
+<h2 id="step-10-create-a-semantic-model-optional">Step 10: Create a semantic model (optional)</h2>
 <div class="admonition note">
 <p class="admonition-title">Before you can create a semantic model, you need to have a PowerBI Pro licence</p>
 </div>
@@ -2433,7 +2378,7 @@
 <div class="admonition tip">
 <p class="admonition-title">If the tables are not showing, select the ... next to Tables in the Explorer pane and select Refresh</p>
 </div>
-<h2 id="step-12-create-relationships-optional">Step 12: Create relationships (optional)</h2>
+<h2 id="step-11-create-relationships-optional">Step 11: Create relationships (optional)</h2>
 <ol>
 <li>
 <p>Before you can make any changes you need to change to Editing mode:</p>
@@ -2458,7 +2403,7 @@
 <div class="admonition quote">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/qa-03b-dataset-relationships.png" data-desc-position="bottom"><img alt="Semantic model in Fabric." src="../../img/qa-03b-dataset-relationships.png"></a></p>
 </div>
-<h2 id="step-13-create-a-powerbi-report-optional">Step 13: Create a PowerBi report (optional)</h2>
+<h2 id="step-12-create-a-powerbi-report-optional">Step 12: Create a PowerBi report (optional)</h2>
 <ul>
 <li>You can now create a report: <strong>File</strong> &gt; <strong>Create new report</strong></li>
 <li>Or auto create a report from the semantic model in the Workspace</li>
