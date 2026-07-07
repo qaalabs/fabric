@@ -130,11 +130,7 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 Fabric notebooks let you write and run code directly against your lakehouse tables using Apache Spark. This is useful for more complex transformations and analysis beyond what SQL alone can do.
 
-1. On the **Home** tab of your lakehouse, select **Open notebook** > **New notebook**.
-
-    At the top-right of the Lakehouse page:
-
-    - Select **Analyze data with** dropdown and choose: **Notebook** > **New notebook**
+1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
     !!! quote ""
         ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)

@@ -67,11 +67,7 @@ Next, you'll ingest some data into the data lakehouse for analysis. There are mu
 
 Now that you have some data in the bronze layer of your lakehouse, you can use a notebook to transform the data before you load it to a delta table in the silver layer.
 
-1. On the **Home** tab of your lakehouse, select **Open notebook** > **New notebook**.
-
-    At the top-right of the Lakehouse page:
-
-    - Select **Analyze data with** dropdown and choose: **Notebook** > **New notebook**
+1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
     !!! quote ""
         ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)

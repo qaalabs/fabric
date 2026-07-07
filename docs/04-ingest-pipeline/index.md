@@ -135,7 +135,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 4. No other changes are necessary.
 
 
-## Step 5: Run the pipeline
+## Step 5: Save then run the pipeline
 
 1. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline.
 
