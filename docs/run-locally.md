@@ -10,7 +10,7 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 2. Then right-click **Open** and choose **Open in a private browsing window** (InPrivate in Edge, Incognito in Chrome).
 
 
-## Step 2: Logon to Azure and Microsoft Fabric
+## Step 2: Logon to Microsoft Azure
 
 1. When prompted, sign in using:
 
@@ -21,13 +21,16 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
     !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
 
-2. In the same private browsing window, **open a new tab**.
 
-3. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
+## Step 3: Logon to Microsoft Fabric
 
-4. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
+1. In the same private browsing window, **open a new tab**.
 
-5. After confirmation, you should be be redirected to the **Microsoft Fabric home page**:
+2. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
+
+3. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric. This check verifies that a Fabric licence has been assigned to your lab account.
+
+4. After confirmation, you should be be redirected to the **Microsoft Fabric home page**:
 
     !!! quote ""
         ![Fabric home page](img/qa-fabric-home.png)
