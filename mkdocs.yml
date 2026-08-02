@@ -8,6 +8,10 @@ nav:
 
   - "Microsoft Fabric":
 
+    - "00 Fabric Warmup":
+      - 00-fabric-warmup/index.md
+      - Summary: 00-fabric-warmup/summary.md
+
     - "01 Lakehouse":
       - 01-lakehouse/index.md
       - Summary: 01-lakehouse/summary.md
