@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create a lakehouse
@@ -36,7 +36,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
 
@@ -64,7 +64,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - Then select: **Copy data**
     - A **Copy Data** activity is added to the pipeline canvas:
 
-    !!! quote ""
+    !!! abstract ""
         ![Pipeline with a Copy Data activity.](../img/04-copy-data-pipeline.png)
 
 ### Configure the Source
@@ -92,7 +92,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Relative URL**: *Leave blank*
     - **File format**: Select `DelimitedText` from the drop-down
 
-    !!! quote ""
+    !!! abstract ""
         ![Source tab showing HTTP connection & file format settings.](../img/04-copy-data-source-tab.png)
 
 8. Select the **Settings** button next to the **File format** drop-down.
@@ -104,7 +104,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Row delimiter**: Line feed (\n)
     - **First row as header**: *Selected*
 
-    !!! quote ""
+    !!! abstract ""
         ![File format settings dialog.](../img/04-file-format-settings.png)
 
     !!! tip "Make sure you select: **Line feed (\n)**"
@@ -129,7 +129,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **File path**: `new_data` / `sales.csv`
     - **File format**: DelimitedText
 
-    !!! quote ""
+    !!! abstract ""
         ![copy data activity destination settings.](../img/04-copy-data-destination.png)
 
 4. No other changes are necessary.
@@ -151,7 +151,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     - Select the **new_data** folder to verify that the **sales.csv** file has been created.
 
-    !!! quote ""
+    !!! abstract ""
         ![the sales.csv file in the new_data folder.](../img/04-pipeline-file-loaded.png)
 
 
@@ -161,7 +161,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     - Click **Notebook** then **New notebook**
 
-    !!! quote ""
+    !!! abstract ""
         ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)
 
     After a few seconds, a new notebook containing a single *cell* will open. 
@@ -176,7 +176,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. 
 
-    !!! quote ""
+    !!! abstract ""
         ![Notebook Toggle Parameter Cell](../img/04-notebook-toggle-cell.png)
 
     !!! info "Toggle parameter cell"
@@ -207,7 +207,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 5. Verify that your notebook looks similar to this, and then use the :material-play: **Run all** button on the toolbar to run all of the cells it contains.
 
-    !!! quote ""
+    !!! abstract ""
         ![Notebook with parameters cell and code to transform data.](../img/04-notebook.png)
 
     !!! note
@@ -245,7 +245,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
     !!! note "If you can't see the **All activities** option - click the 3 dots (**...**)"
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a pipeline with Delete data and Copy data activities.](../img/04-delete-data-activity.png)
 
     !!! note "If you are unable to click the **Activity** tab - refreshing the page may help"
@@ -271,7 +271,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 5. Select the **Copy data** activity and then connect its **On Completion** output to the **Notebook** activity as shown here:
 
-    !!! quote ""
+    !!! abstract ""
         ![A pipeline with Copy Data and Notebook activities.](../img/04-pipeline.png)
 
 6. Select the **Notebook** activity, and then in the pane below the design canvas, set the following properties:
@@ -295,7 +295,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 8. Then use the :material-play: **Run** button to run the pipeline, and wait for all of the activities to complete.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a pipeline with a Dataflow activity.](../img/04-pipeline-run.png)
 
     !!! warning "If you see an error message"

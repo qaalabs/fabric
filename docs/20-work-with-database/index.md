@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create a SQL database with sample data
@@ -37,7 +37,7 @@ Now that you have a workspace, it's time to create a SQL database.
 
     After a minute or so, your database will be populated with sample data for your scenario.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a new database loaded with sample data.](../img/20-sql-database-sample.png)
 
 ## Step 3: Query a SQL database

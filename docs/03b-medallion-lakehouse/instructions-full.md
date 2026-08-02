@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create a lakehouse
@@ -36,7 +36,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
 ## Step 3: Upload data to bronze layer
@@ -60,7 +60,7 @@ Next, you'll ingest some data into the data lakehouse for analysis. There are mu
 
 4. After the files have been uploaded, select the **bronze** folder; and verify that the files have been uploaded, as shown here:
 
-    !!! quote ""
+    !!! abstract ""
         ![Uploaded products.csv file in a lakehouse.](../img/03b-bronze-files.png)
 
 ## Step 4: Transform the data
@@ -69,14 +69,14 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)
 
     !!! info "After a few seconds, a new notebook containing a *single cell* will open."
 
 2. When the notebook opens, rename it to `Transform data for Silver` by selecting the `Notebook 1` text at the top left of the notebook and entering the new name.
 
-    !!! quote ""
+    !!! abstract ""
         ![New notebook named Transform data for silver.](../img/03b-sales-notebook-rename.png)
 
 3. Select the existing cell in the notebook, which contains some simple commented-out code.
@@ -257,7 +257,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
 
     - Select the **Sales SQL analytics endpoint** to open your lakehouse in the SQL analytics endpoint view.
 
-    !!! quote ""
+    !!! abstract ""
         ![SQL endpoint in a lakehouse.](../img/03b-sql-endpoint-item.png)
 
 2. Select **New SQL query** from the ribbon, which will open a SQL query editor. Note that you can rename your query using the **...** menu item next to the existing query name in the Explorer pane.
@@ -276,7 +276,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
 
     This query calculates the total sales for each year in the sales_silver table. Your results should look like this:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the results of a SQL query in a lakehouse.](../img/03b-total-sales-sql.png)
 
 4. Next you'll review which customers are purchasing the most (in terms of quantity). Paste the following query into the query editor and select **Run**:
@@ -709,7 +709,7 @@ Note that you can't use the **default semantic model** that is automatically cre
     - **dimdate_gold: OrderDate** --> **factsales_gold: OrderDate**
     - **dimproduct_gold: ItemID** --> **factsales_gold: ItemID**
 
-!!! quote ""
+!!! abstract ""
     ![Semantic model in Fabric.](../img/03b-dataset-relationships.png)
 
 ## Step 12: Create a PowerBi report (optional)

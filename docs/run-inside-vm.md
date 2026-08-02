@@ -37,7 +37,7 @@
 
     !!! success "You are now signed in to **Microsoft Fabric**."
 
-    !!! quote ""
+    !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)
 
     !!! warning "You do not have to signup to a Microsoft Fabric Trial!"

@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. Your workspace should be empty, and look similar to this:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 
@@ -37,7 +37,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
 2. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
@@ -72,7 +72,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 4. After the file has been uploaded, select the **Files/data** folder and verify that the **sales.csv** file has been uploaded, as shown here:
 
-    !!! quote ""
+    !!! abstract ""
         ![Uploaded sales.csv file in a lakehouse.](../img/01-uploaded-sales-file.png)
 
 5. Select the **sales.csv** file to see a preview of its contents.
@@ -99,7 +99,7 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 2. In the **...** menu for the **sales.csv** file, select **Load to Tables** > **New table**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Load to tables - New table.](../img/qa-01-load-to-tables.png)
 
 3. In **Load to table** dialog box:
@@ -114,12 +114,12 @@ The sales data you uploaded is in a file, which you can work with directly by us
 
 4. In the **Explorer** pane, select the `sales` table that has been created to view the data:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a table preview.](../img/qa-01-table-preview.png)
 
 5. In the **...** menu for the `sales` table, select **View files** to see the underlying files for this table:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a table preview.](../img/qa-01-delta-table-files.png)
 
     !!! info ""
@@ -132,7 +132,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 
 1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)
 
 2. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
@@ -178,7 +178,7 @@ Fabric notebooks let you write and run code directly against your lakehouse tabl
 7. After exploring the notebook, select the **Run** tab above the ribbon and select **Stop session**.
     - This stops the compute resource being used by the notebook.
 
-    !!! quote ""
+    !!! abstract ""
         ![Run - Stop Session Notebook button.](../img/03b-run-stop-session.png)
 
 
@@ -203,7 +203,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
 3. Use the :material-play: **Run** button to run the query and view the results, which should show the total revenue for each product.
 
-    !!! quote ""
+    !!! abstract ""
         ![SQL query with results.](../img/qa-01-sql-query.png)
 
     !!! success "You should see the same revenue totals per item that you saw in the notebook."
@@ -216,14 +216,14 @@ While many data professionals are familiar with SQL, those with Power BI experie
 
 2. Drag the `sales` table (under dbo > Tables) to the new visual query editor pane that opens to create a Power Query as shown here:
 
-    !!! quote ""
+    !!! abstract ""
         ![Visual query.](../img/qa-01-visual-query.png)
 
 3. In the **Manage columns** menu, select **Choose columns**.
 
     - Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns. Click **OK**
 
-    !!! quote ""
+    !!! abstract ""
         ![Choose columns dialog box.](../img/01-choose-columns.png)
 
 4. in the **Transform** menu, select **Group by**. Then group the data by using the following **Basic** settings:
@@ -235,7 +235,7 @@ While many data professionals are familiar with SQL, those with Power BI experie
 
     When you're done, the results pane under the visual query shows the number of line items for each sales order.
 
-    !!! quote ""
+    !!! abstract ""
         ![Visual query with results.](../img/qa-01-visual-query-results.png)
 
 ---

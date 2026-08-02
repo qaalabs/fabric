@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create a lakehouse
@@ -36,7 +36,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
 2. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
@@ -53,12 +53,12 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 1. In the home page for your lakehouse, select **Get data > New Dataflow Gen2**
 
-    !!! quote ""
+    !!! abstract ""
         ![Lakehouse toolbar.](../img/lakehouse-toolbar.png)
 
     Click **Create**, and after a few seconds, the Power Query editor for your new dataflow opens as shown here:
 
-    !!! quote ""
+    !!! abstract ""
         ![New dataflow.](../img/05-new-dataflow.png)
 
 2. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
@@ -74,7 +74,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
     The Power Query editor shows the data source and an initial set of query steps to format the data, as shown here:
 
-    !!! quote ""
+    !!! abstract ""
         ![Query in the Power Query editor.](../img/05-power-query.png)
 
 ## Step 4: Transform the data using Power Query
@@ -86,7 +86,7 @@ You can now transform the data. In this lab we will add a column using a custom 
     - Select the **Add column** tab. 
     - Then select **Custom column** and create a new column.
 
-    !!! quote ""
+    !!! abstract ""
         ![Power Query Add Column.](../img/05-power-query-add-column.png)
 
 2. Do the following:
@@ -95,14 +95,14 @@ You can now transform the data. In this lab we will add a column using a custom 
     - Set the *Data type* to: **Whole number**
     - Add this *Custom column formula*: `Date.Month([OrderDate])`
 
-    !!! quote ""
+    !!! abstract ""
         ![Custom column in Power Query editor.](../img/05-custom-column.png)
 
 3. Click **OK** to create the column. Notice how the step to add the custom column is added to the query.
 
     The resulting column is displayed in the data pane:
 
-    !!! quote ""
+    !!! abstract ""
         ![Query with a custom column step.](../img/05-custom-column-added.png)
 
     !!! info
@@ -114,7 +114,7 @@ You can now transform the data. In this lab we will add a column using a custom 
 
 4. Check and confirm that the data type for the **OrderDate** column is set to **Date** and the data type for the newly created column **MonthNo** is set to **Whole Number**.
 
-    !!! quote ""
+    !!! abstract ""
         ![OrderData column type.](../img/05-order-date-column.png)
 
 ## Step 5: Add data destination for Dataflow
@@ -123,7 +123,7 @@ The next step is to define a destination for your transformed data. This will be
 
 1. On the toolbar ribbon, select the **Home** tab. Then in the **Query** section, choose **Add data destination**
 
-    !!! quote ""
+    !!! abstract ""
         ![Add data destination.](../img/05-add-data-destination.png)
 
     !!! note
@@ -135,14 +135,14 @@ The next step is to define a destination for your transformed data. This will be
 
 3. In the **Connect to data destination** dialog box, use the existing connection credentials:
 
-    !!! quote ""
+    !!! abstract ""
         ![Data destination configuration page.](../img/qa-05-dataflow-connection.png){ width="700" }
 
 4. Select **Next** and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. 
     
     - Then specify a new table named **orders**:
 
-    !!! quote ""
+    !!! abstract ""
         ![Data destination configuration page.](../img/05-data-destination-target.png)
 
 5. Select **Next** and on the **Choose destination settings** page:
@@ -151,12 +151,12 @@ The next step is to define a destination for your transformed data. This will be
     - Select **Append**
     - Then click **Save settings**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Data destination settings page.](../img/qa-05-destination-settings.png)
 
 6. On the Menu bar, open **View** and select **Diagram view**. Notice the **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
 
-    !!! quote ""
+    !!! abstract ""
         ![Query with a lakehouse destination.](../img/05-lakehouse-destination.png)
 
 7. On the toolbar ribbon, select the **Home** tab. Then select **Save & run** and wait for the **Dataflow 1** dataflow to be created in your workspace.
@@ -173,7 +173,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
     Click **Create**, and the pipeline editor will open:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty data pipeline.](../img/05-new-pipeline.png)
 
     !!! tip "If the Copy Data wizard opens automatically, you can just close it."
@@ -185,7 +185,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
     - On the **Settings** tab, in the **Dataflow** drop-down list, select **Dataflow1**
     - *This is the data flow you created previously*
 
-    !!! quote ""
+    !!! abstract ""
         ![Pipeline with a dataflow activity.](../img/qa-05-dataflow-activity.png)
 
 4. On the **Home** tab, save the pipeline using the :material-content-save: (Save) icon.
@@ -194,7 +194,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
     - Wait for it to complete. It may take a few minutes.
 
-    !!! quote ""
+    !!! abstract ""
         ![Pipeline with a dataflow that has completed successfully.](../img/qa-05-dataflow-pipeline-succeeded.png)
 
 6. In the menu bar on the left edge, select your lakehouse.
@@ -203,14 +203,14 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
     Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
 
-    !!! quote ""
+    !!! abstract ""
         ![Table loaded by a dataflow.](../img/qa-05-loaded-table.png)
 
 ??? tip "Tip for Power Bi Desktop users:"
     - In Power BI Desktop, you can connect directly to the data transformations done with your dataflow by using the Power BI dataflows (Legacy) connector.
     - You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialised datasets.
 
-    !!! quote ""
+    !!! abstract ""
         ![Power BI data source connectors](../img/05-pbid-dataflow-connectors.png){ width="350" }
 
 ---

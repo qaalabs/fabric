@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create a data warehouse
@@ -35,7 +35,7 @@ Before working with data in Fabric, you need to create a workspace.
 
     After a minute or so, a new warehouse will be created:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a new warehouse.](../img/06-new-data-warehouse.png)
 
 ## Step 3: Create tables and insert data
@@ -174,7 +174,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 4. Select the **FactSalesOrder** box, and click the **(+)** button on the canvas to **Merge queries**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Canvas with the FactSalesOrder table selected.](../img/06-visual-query-merge.png)
 
 5. In the **Merge queries** window, select **DimProduct** as the right table for merge.
@@ -182,7 +182,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
     - Leave the default **Left outer** join type
     - Click **OK**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Merge options.](../img/06-dw-merge.png)
 
 6. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table.
@@ -190,7 +190,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
     - Select **ProductName**
     - Click **OK**.
 
-    !!! quote ""
+    !!! abstract ""
         ![preview pane with the DimProduct column expanded, ProductName selected.](../img/06-visual-query-preview.png)
 
 7. If you're interested in looking at data for a single product, per a manager request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
@@ -212,7 +212,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
         - Then select the semantic model
         - Then: open semantic model
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the data warehouse model page.](../img/06-model-dw.png)
 
 ---
@@ -246,13 +246,13 @@ To get a PowerBi licence - do the following:
 
     When all of the relationships have been defined, the model should look like this:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the model with relationships.](../img/06-dw-relationships.png)
 
 4. Now go back to your semantic model in your workspace
     - Click: **Auto-create report**
 
-    !!! quote ""
+    !!! abstract ""
         ![PowerBi Report.](../img/06-powerbi-report.png)
 
 ---

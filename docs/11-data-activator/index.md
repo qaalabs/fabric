@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create an Activator
@@ -43,7 +43,7 @@ Create an Activator in the workspace you created:
 
     After a minute or so, a new activator will be created:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the Activator Home screen.](../img/11-activator-home-screen.png)
 
     !!! tip "On a real production environment, you would use your own data. However, for this lab, you use the sample data provided by Activator." 
@@ -57,7 +57,7 @@ Create an Activator in the workspace you created:
 
     - Change the name to: `Contoso Shipping Activator`
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the Activator home screen.](../img/11-activator-reflex-home-screen.png)
 
 !!! success "Our Activator project is now created and we can start navigating through its objects, properties and rules."
@@ -70,7 +70,7 @@ Let's explore the eventstream data this sample is built on.
 
     These events show the real-time status of packages that are in the process of being delivered.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the Event details live table.](../img/11-activator-event-details.png)
 
 2. Review the data in the **Event details** live table. Each data point contains information about incoming events. You might have to scroll to see it all.
@@ -81,7 +81,7 @@ Let's explore the eventstream data this sample is built on.
 
 4. In the **Definition** pane, review how the rule works. In the **Monitor** section, the **Temperature** property is selected as attribute being monitored. The temperature values come from the Temperature column in the **Event details** table that we saw earlier in the eventstream. 
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the temperature rule.](../img/11-activator-temperature-rule.png) 
 
 5. In the **Condition** section, you see the rule condition to monitor temperatures that are higher than 20 degrees Celsius.
@@ -110,7 +110,7 @@ Let's create a new object called *Redmond Packages*.
 
 1. Select **Create**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the Activator Build object pane.](../img/11-activator-build-object.png)
 
 In the **Explorer** pane, a new object called **Redmond Packages** has been added.
@@ -137,7 +137,7 @@ Since the Package object already contains a similar rule, you'll create one spec
     
 4. Change the name to ***Medicine temp out of range*** by selecting the pencil icon next to the rule's name in the middle pane.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the Activator new rule.](../img/11-activator-new-rule.png)
 
 ## Step 6: Add filters to the rule
@@ -157,7 +157,7 @@ Let's go ahead and add a couple of filters for those conditions.
     - Select the **Add filter** button
     - Set the **ColdChainType** attribute to **Is equal to** and enter **Refrigerated** as the value.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the Activator rule with filters set.](../img/11-activator-rule-filters.png)
 
 ## Step 7: Add an action to the rule
@@ -171,7 +171,7 @@ You're almost there! You just need to define what action you want to take when t
     - **Headline**: *Temperature too high*
     - **Context**: Select the *Temperature* property from the checkbox list.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the Activator define action.](../img/11-activator-define-action.png)
 
 6. Select **Save and start**.

@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create an eventhouse
@@ -50,7 +50,7 @@ Now that you have a workspace, you can start creating the Fabric items you'll ne
     !!! info "The creation of your new event stream in the workspace will be completed in just a few moments."
         - Once established, you will be automatically redirected to the primary editor, ready to begin integrating sources into your event stream.
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty eventstream.](../img/09-empty-eventstream.png)
 
 ## Step 4: Add a source
@@ -61,7 +61,7 @@ Now that you have a workspace, you can start creating the Fabric items you'll ne
 
     !!! info "Your stream will be mapped and you will be automatically displayed on the **eventstream canvas**."
 
-    !!! quote ""
+    !!! abstract ""
         ![Review the eventstream canvas](../img/09-real-time-intelligence-eventstream-sourced.png)
 
 ## Step 5: Add a destination
@@ -79,7 +79,7 @@ Now that you have a workspace, you can start creating the Fabric items you'll ne
     - In the **Create new table** box that appears, enter the table name `bikes` and select **Done**.
     - **Input data format:** JSON
 
-    !!! quote ""
+    !!! abstract ""
         ![Eventstream destination settings.](../img/09-kql-database-event-processing-before-ingestion.png)
 
 3. In the **Eventhouse** pane, select **Save**. 
@@ -91,7 +91,7 @@ Now that you have a workspace, you can start creating the Fabric items you'll ne
     - Then select the **bikes-table** node in the design canvas
     - And view the **Data preview** pane underneath to see the latest data that has been ingested:
 
-    !!! quote ""
+    !!! abstract ""
         ![A destination table in an eventstream.](../img/09-stream-data-preview.png)
 
 6. Wait a few minutes and then use the **Refresh** button to refresh the **Data preview** pane.
@@ -110,7 +110,7 @@ The eventstream you have created takes data from the sample source of bicycle da
 
     - Then select the **bikes** table:
 
-    !!! quote ""
+    !!! abstract ""
         ![A table in a KQL database.](../img/09-kql-table.png)
 
 3. In the **...** menu for the **bikes** table, select **Query table** > **Records ingested in the last 24 hours**.
@@ -125,7 +125,7 @@ The eventstream you have created takes data from the sample source of bicycle da
 
 5. Select the query code and run it to see 24 hours of data from the table.
 
-    !!! quote ""
+    !!! abstract ""
         ![KQL query.](../img/09-kql-query.png)
 
 ## Step 7: Transform event data
@@ -142,7 +142,7 @@ The data you've captured is unaltered from the source. In many scenarios, you ma
 
     - Then use the *pencil* icon in the **Group by** node to edit it.
 
-    !!! quote ""
+    !!! abstract ""
         ![Add group by to the transformation event.](../img/09-eventstream-add-aggregates.png)
 
 5. Configure out the properties of the **Group by** settings section:
@@ -170,7 +170,7 @@ The data you've captured is unaltered from the source. In many scenarios, you ma
     - **Destination table:** Create a new table named `bikes-by-street`
     - **Input data format:** JSON
 
-    !!! quote ""
+    !!! abstract ""
         ![Table for grouped data.](../img/09-group-by-table.png)
 
 9. In the **Eventhouse** pane, select **Save**. 
@@ -183,7 +183,7 @@ The data you've captured is unaltered from the source. In many scenarios, you ma
 
     - View the **data preview** pane beneath the canvas.
 
-    !!! quote ""
+    !!! abstract ""
         ![Table for grouped data.](../img/09-stream-table-with-windows.png)
 
     !!! note
@@ -220,7 +220,7 @@ Now you can query the bicycle data that has been transformed and loaded into a t
 
     The results show the number of bikes observed in each street within each 5 second time period.
 
-    !!! quote ""
+    !!! abstract ""
         ![Query returning grouped data.](../img/09-kql-group-query.png)
 
 ---

@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create a lakehouse
@@ -36,7 +36,7 @@ Now that you have a workspace, it's time to create a data lakehouse into which y
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](../img/new-lakehouse.png)
 
 ## Step 3: Upload data to bronze layer
@@ -64,7 +64,7 @@ Next, you'll ingest some data into the data lakehouse for analysis. There are mu
 
 4. After the files have been uploaded, select the **bronze** folder; and verify that the files have been uploaded, as shown here:
 
-    !!! quote ""
+    !!! abstract ""
         ![Uploaded products.csv file in a lakehouse.](../img/03b-bronze-files.png)
 
 ## Step 4: Transform the data
@@ -73,7 +73,7 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
 
 1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)
 
     !!! info "After a few seconds, a new notebook containing a *single cell* will open."
@@ -83,7 +83,7 @@ Now that you have some data in the bronze layer of your lakehouse, you can use a
     - Then set the **Name** of the notebook to `Transform data for Silver`
     - Close the settings pane to save the changes.
 
-    !!! quote ""
+    !!! abstract ""
         ![New notebook named Transform data for silver.](../img/03b-sales-notebook-rename.png)
 
 3. Select the existing cell in the notebook, which contains some simple commented-out code.
@@ -255,7 +255,7 @@ Now you're going to perform an upsert operation on a Delta table, updating exist
 3. After running the last cell, select the **Run** tab above the ribbon and then select: **Stop session**
     - This stops the compute resource being used by the notebook.
 
-    !!! quote ""
+    !!! abstract ""
         ![Run - Stop Session Notebook button.](../img/03b-run-stop-session.png)
 
 ## Step 8: Explore data in the silver layer using the SQL endpoint
@@ -266,7 +266,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
 
     - Select the **Sales SQL analytics endpoint** to open your lakehouse in the SQL analytics endpoint view.
 
-    !!! quote ""
+    !!! abstract ""
         ![SQL endpoint in a lakehouse.](../img/03b-sql-endpoint-item.png)
 
 2. Select **New SQL query** from the ribbon, which will open a SQL query editor. Note that you can rename your query using the **...** menu item next to the existing query name in the Explorer pane.
@@ -285,7 +285,7 @@ Now that you have data in your silver layer, you can use the SQL analytics endpo
 
     This query calculates the total sales for each year in the sales_silver table. Your results should look like this:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the results of a SQL query in a lakehouse.](../img/03b-total-sales-sql.png)
 
 4. Next you'll review which customers are purchasing the most (in terms of quantity).
@@ -320,7 +320,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 
 1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)
 
 2. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
@@ -367,7 +367,7 @@ Now you'll use a new notebook to transform the data further, model it into a sta
 
 4. After the cell has finished running, refresh the Tables pane and you should now see 4 new tables:
 
-    !!! quote ""
+    !!! abstract ""
         ![Gold tables created.](../img/03b-gold-tables-created.png)
 
 !!! success "You now have a curated, modeled **gold** layer that can be used for reporting and analysis."
@@ -417,7 +417,7 @@ You can now use the gold layer to create a report and analyze the data. But firs
     - **dimdate_gold: OrderDate** --> **factsales_gold: OrderDate**
     - **dimproduct_gold: ItemID** --> **factsales_gold: ItemID**
 
-!!! quote ""
+!!! abstract ""
     ![Semantic model in Fabric.](../img/qa-03b-dataset-relationships.png)
 
 ## Step 12: Create a PowerBi report (optional)

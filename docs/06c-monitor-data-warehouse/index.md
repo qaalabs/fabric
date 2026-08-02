@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create a sample data warehouse
@@ -33,7 +33,7 @@ Now that you have a workspace, it's time to create a data warehouse.
 
     After a minute or so, a new warehouse will be created and populated with sample data for a taxi ride analysis scenario.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a new warehouse.](../img/sample-data-warehouse.png)
 
 ## Step 3: Explore dynamic management views

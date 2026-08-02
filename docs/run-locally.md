@@ -32,5 +32,5 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
 4. After confirmation, you should be be redirected to the **Microsoft Fabric home page**:
 
-    !!! quote ""
+    !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)

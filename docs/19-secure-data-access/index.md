@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 !!! note "When you create a workspace, you automatically become a member of the Workspace Admin role."
@@ -33,7 +33,7 @@ Next, create a data warehouse in the workspace you created:
 
     After a minute or so, a new warehouse will be created:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a new warehouse.](../img/19-new-sample-warehouse.png)
 
 ## Step 3: Create a lakehouse
@@ -48,7 +48,7 @@ Next, create a lakehouse in the workspace you created.
 
     After a minute or so, a new Lakehouse will be created:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a new lakehouse in Fabric.](../img/19-new-sample-lakehouse.png)
 
 4. Select the **Start with sample data** tile and then select the **Public holidays** sample. After a minute or so, the lakehouse will be populated with data.
@@ -87,7 +87,7 @@ In this exercise, you add a user to a workspace role, apply permissions and, see
 
 12. Select the **Workspaces** icon on the left menu bar (the icon looks similar to &#128455;) and select on the workspace name you created as the Workspace Admin user. The second user can now see all of the items in the workspace because they were assigned the **Workspace Viewer** role.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of workspace items in Fabric.](../img/19-workspace-viewer-view.png)
 
 13. Select the warehouse and open it.
@@ -112,7 +112,7 @@ Item permissions control access to individual Fabric items within a workspace, l
 
 4. Select the word **Viewer** under the name of the second user. On the menu that appears, select **Remove**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of workspace access dropdown in Fabric.](../img/19-workspace-access.png)
 
 5. Close the **Manage access** section.
@@ -123,7 +123,7 @@ Item permissions control access to individual Fabric items within a workspace, l
 
 8. In the box that appears, under **Additional permissions** check **Read all data using SQL (ReadData)** and uncheck all other boxes.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of warehouse permissions being granted in Fabric.](../img/19-grant-warehouse-access.png)
 
 9. Select **Grant**
@@ -152,14 +152,14 @@ In this exercise, you assign an item permission and create a OneLake data access
 
 5. Select on the ellipse (**...**) to the right of the ellipse and select **Manage permissions**
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of setting permissions on a lakehouse in Fabric.](../img/19-lakehouse-manage-permissions.png)
 
 6. On the screen that appears, select **Add user**.
 
 7. Assign the second user to the lakehouse and ensure none of the checkboxes on the **Grant People Access** window are checked.  
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of the grant access lakehouse window in Fabric.](../img/19-grant-people-access-window.png)
 
 8. Select **Grant**. The second user now has read permissions on the lakehouse. Read permission only allows the user to see metadata for the lakehouse but not the underlying data. Next we'll validate this.
@@ -182,22 +182,22 @@ In this exercise, you assign an item permission and create a OneLake data access
 
     When the lakehouse opens, select **Manage OneLake data access** on the top menu bar and enable the feature by clicking the **Continue** button.
 
-    !!! quote ""
+    !!! abstract ""
         ![Manage OneLake data access feature.](../img/19-manage-onelake-roles.png)
 
 17. Select new role on the **Manage OneLake data access (preview)** screen that appears.
   
-    !!! quote ""
+    !!! abstract ""
         ![New role functionality in the manage OneLake data access feature.](../img/19-create-onelake-role.png)
 
 18. Create a new role called **publicholidays** that can only access the publicholidays folder as shown in the screenshot below.
 
-    !!! quote ""
+    !!! abstract ""
         ![Folder assignment in the manage OneLake data access feature.](../img/19-new-data-access-role.png)
 
 19. When the role finishes creating, select **Assign role** and assign the role to your second user, select **Add** and, select **Save**.
 
-    !!! quote ""
+    !!! abstract ""
        ![Folder assignment in the manage OneLake data access feature.](../img/19-assign-role.png)
 
 20. Return to the browser where you're logged in as the second user. Ensure you're still on the page where the lakehouse is open. Refresh the browser.  

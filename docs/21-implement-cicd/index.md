@@ -41,7 +41,7 @@ Next, create a deployment pipeline.
 
 3. Select the check mark **Assign** for each deployment stage.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of deployment pipeline.](../img/21-deployment-pipeline.png)
 
 ## Step 4: Create content
@@ -64,7 +64,7 @@ Fabric items haven't been created in your workspaces yet. Next, create a lakehou
 
 6. In the Lakehouse Explorer window, select **Start with sample data** to populate the new lakehouse with data.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of Lakehouse Explorer.](../img/21-lakehouse-explorer.png)
 
 ## Step 5: Review your pipeline
@@ -77,7 +77,7 @@ Fabric items haven't been created in your workspaces yet. Next, create a lakehou
 
 3. Select the **Test** stage and under the deployment pipeline canvas you can see that the lakehouse you created is only a stage item in the source, which in this case refers to the **Development** stage.  
 
-    !!! quote ""
+    !!! abstract ""
         ![Deployment pipeline showing content mismatches between stages.](../img/21-lab-pipeline-compare.png)
 
 ## Step 6: Deploy content from Development to Test
@@ -90,7 +90,7 @@ You will now deploy the lakehouse from the **Development** stage to the **Test**
 
 3. Select the **Deploy** button to copy the lakehouse in its current state to the **Test** stage:
 
-    !!! quote ""
+    !!! abstract ""
         ![Deployment pipeline from Development to Test.](../img/21-deploy-dev-to-test.png)
 
 4. In the **Deploy to next stage** window that appears, select **Deploy**.
@@ -136,7 +136,7 @@ In this exercise, you created a deployment pipeline, and assigned stages to the 
 
 - In the left navigation bar, select **Deployment pipelines**, select your pipeline, and then select **Delete this pipeline** from the settings menu to remove the deployment pipeline.
 
-!!! quote ""
+!!! abstract ""
     ![Screenshot of deployment pipeline, highlighting the Delete pipeline action.](../img/21-delete-pipeline.png)
 
 After deleting the pipeline, delete each workspace you created:

@@ -20,7 +20,7 @@ Before working with data in Fabric, you need to create a workspace.
 
 3. When your new workspace opens, it should be empty:
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](../img/new-workspace.png)
 
 ## Step 2: Create an eventstream
@@ -34,12 +34,12 @@ Now you're ready to find and ingest real-time data from a streaming source. To d
     !!! note
         If you don't see the **Real-Time hub**, select the ellipsis **(...)** and then pin the Real-Time hub to the menu bar.
 
-    !!! quote ""
+    !!! abstract ""
         ![Pinning the Real-Time hub to the menu bar.](../img/pin-real-time-hub.png)
 
 2. In the **Real-Time hub**, select **Add data**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Real-Time hub.](../img/real-time-hub.png)
 
 3. Select the **Stock market** sample data source.
@@ -51,14 +51,14 @@ Now you're ready to find and ingest real-time data from a streaming source. To d
 
     !!! info "The default stream associated with this data will automatically be named `stock-data-stream`"
 
-    !!! quote ""
+    !!! abstract ""
         ![a new eventstream.](../img/name-eventstream.png)
 
 5. Select **Next**, then **Connect** to create the eventstream. 
 
 6. Select **Open eventstream**. The eventstream will show the **stock** source and the **stock-data-stream** on the design canvas:
 
-    !!! quote ""
+    !!! abstract ""
         ![eventstream canvas.](../img/new-stock-stream.png)
 
 ## Step 3: Create an eventhouse
@@ -71,7 +71,7 @@ The eventstream ingests the real-time stock data, but doesn't currently do anyth
 
     Close any tips or prompts that are displayed until you see your new empty eventhouse.
 
-    !!! quote ""
+    !!! abstract ""
         ![new eventhouse](../img/create-eventhouse.png)
 
 2. In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse. You can create tables for your real-time data in this database, or create additional databases as necessary.
@@ -86,12 +86,12 @@ The eventstream ingests the real-time stock data, but doesn't currently do anyth
 
 6. In the **Select or create a destination table** pane, create a new table named `stock`. Then in the **Configure the data source** pane, select your workspace and the **stock-data** eventstream and name the connection `stock-table`.
 
-    !!! quote ""
+    !!! abstract ""
         ![configuration for loading a table from an eventstream.](../img/configure-destination.png)
 
 7. Use the **Next** button to complete the steps to inspect the data and then finish the configuration. Then close the configuration window to see your eventhouse with the stock table.
 
-    !!! quote ""
+    !!! abstract ""
         ![eventhouse with a table.](../img/eventhouse-with-table.png)
 
     The connection between the stream and the table has been created. Let's verify that in the eventstream.
@@ -100,7 +100,7 @@ The eventstream ingests the real-time stock data, but doesn't currently do anyth
 
     The eventstream now shows a destination for the stream:
 
-    !!! quote ""
+    !!! abstract ""
         ![eventstream with a destination.](../img/eventstream-destination.png)
 
     !!! tip "Select the destination on the design canvas, and if no data preview is shown beneath it, select **Refresh**."
@@ -126,7 +126,7 @@ The eventstream captures real-time stock market data and loads it into a table i
 
 4. Select the query code and run it to see 100 rows of data from the table.
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a KQL query.](../img/kql-stock-query.png)
 
 5. Review the results, then modify the query to retrieve the average price for each stock symbol in the last 5 minutes:
@@ -154,7 +154,7 @@ Now that you have a table that is being populated by stream of data, you can use
 
 3. Create the dashboard and open it. It should look like this:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a new dashboard.](../img/stock-dashboard-table.png)
 
 4. At the top-right of the dashboard, switch from **Viewing** mode to **Editing** mode.
@@ -163,12 +163,12 @@ Now that you have a table that is being populated by stream of data, you can use
 
 6. In the **Visual formatting** pane, change the **Visual** from *Table* to *Column chart*:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a dashboard tile being edited.](../img/edit-dashboard-tile.png)
 
 7. At the top of the dashboard, select **Apply changes** and view your modified dashboard:
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of a dashboard with a chart tile.](../img/stock-dashboard-chart.png)
 
     Now you have a live visualization of your real-time stock data.
@@ -193,7 +193,7 @@ Real-Time Intelligence in Microsoft Fabric includes a technology named *Activato
         - **Item**: Create a new item
         - **New item name**: *A unique name of your choice*
 
-    !!! quote ""
+    !!! abstract ""
         ![Screenshot of alert settings.](../img/configure-activator.png)
 
 3. Create the alert and wait for it to be saved. Then close the pane confirming it has been created.
