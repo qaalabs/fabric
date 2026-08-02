@@ -6,28 +6,28 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../run-inside-vm/">
       
       
-        <link rel="next" href="../../06-data-warehouse/">
+        <link rel="next" href="summary/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Summary - MS Fabric Labs</title>
+        <title>Lab 00 ~ Fabric Warmup: Create a Lakehouse - MS Fabric Labs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,13 +46,13 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-05-create-and-use-dataflows-gen2-in-microsoft-fabric" class="md-skip">
+        <a href="#lab-00-fabric-warmup-create-a-lakehouse" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MS Fabric Labs" class="md-header__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
+    <a href=".." title="MS Fabric Labs" class="md-header__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Summary
+              Lab 00 ~ Fabric Warmup: Create a Lakehouse
             
           </span>
         </div>
@@ -195,7 +195,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MS Fabric Labs" class="md-nav__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
+    <a href=".." title="MS Fabric Labs" class="md-nav__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
@@ -213,7 +213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../run-inside-vm/" class="md-nav__link">
+      <a href="../run-inside-vm/" class="md-nav__link">
         
   
   
@@ -318,6 +318,8 @@
                 
   
   
+    
+  
   
   
     
@@ -333,15 +335,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../00-fabric-warmup/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -359,13 +361,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -385,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../00-fabric-warmup/summary/" class="md-nav__link">
+      <a href="summary/" class="md-nav__link">
         
   
   
@@ -441,7 +443,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01-lakehouse/" class="md-nav__link ">
+            <a href="../01-lakehouse/" class="md-nav__link ">
               
   
   
@@ -485,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-lakehouse/summary/" class="md-nav__link">
+      <a href="../01-lakehouse/summary/" class="md-nav__link">
         
   
   
@@ -541,7 +543,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03b-medallion-lakehouse/" class="md-nav__link ">
+            <a href="../03b-medallion-lakehouse/" class="md-nav__link ">
               
   
   
@@ -585,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03b-medallion-lakehouse/summary/" class="md-nav__link">
+      <a href="../03b-medallion-lakehouse/summary/" class="md-nav__link">
         
   
   
@@ -641,7 +643,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04-ingest-pipeline/" class="md-nav__link ">
+            <a href="../04-ingest-pipeline/" class="md-nav__link ">
               
   
   
@@ -685,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-ingest-pipeline/summary/" class="md-nav__link">
+      <a href="../04-ingest-pipeline/summary/" class="md-nav__link">
         
   
   
@@ -718,8 +720,6 @@
                 
   
   
-    
-  
   
   
     
@@ -735,15 +735,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../05-dataflows-gen2/" class="md-nav__link ">
               
   
   
@@ -767,7 +767,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -784,37 +784,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Summary
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../05-dataflows-gen2/summary/" class="md-nav__link">
         
   
   
@@ -830,48 +803,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clean-up-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clean up resources
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -912,7 +843,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../06-data-warehouse/" class="md-nav__link ">
+            <a href="../06-data-warehouse/" class="md-nav__link ">
               
   
   
@@ -956,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06-data-warehouse/summary/" class="md-nav__link">
+      <a href="../06-data-warehouse/summary/" class="md-nav__link">
         
   
   
@@ -1012,7 +943,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../06b-data-warehouse-query/" class="md-nav__link ">
+            <a href="../06b-data-warehouse-query/" class="md-nav__link ">
               
   
   
@@ -1056,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06b-data-warehouse-query/summary/" class="md-nav__link">
+      <a href="../06b-data-warehouse-query/summary/" class="md-nav__link">
         
   
   
@@ -1112,7 +1043,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../06c-monitor-data-warehouse/" class="md-nav__link ">
+            <a href="../06c-monitor-data-warehouse/" class="md-nav__link ">
               
   
   
@@ -1156,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06c-monitor-data-warehouse/summary/" class="md-nav__link">
+      <a href="../06c-monitor-data-warehouse/summary/" class="md-nav__link">
         
   
   
@@ -1212,7 +1143,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../07-real-time-intelligence/" class="md-nav__link ">
+            <a href="../07-real-time-intelligence/" class="md-nav__link ">
               
   
   
@@ -1256,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-real-time-intelligence/summary/" class="md-nav__link">
+      <a href="../07-real-time-intelligence/summary/" class="md-nav__link">
         
   
   
@@ -1312,7 +1243,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../09-real-time-analytics-eventstream/" class="md-nav__link ">
+            <a href="../09-real-time-analytics-eventstream/" class="md-nav__link ">
               
   
   
@@ -1356,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../09-real-time-analytics-eventstream/summary/" class="md-nav__link">
+      <a href="../09-real-time-analytics-eventstream/summary/" class="md-nav__link">
         
   
   
@@ -1412,7 +1343,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../11-data-activator/" class="md-nav__link ">
+            <a href="../11-data-activator/" class="md-nav__link ">
               
   
   
@@ -1456,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../11-data-activator/summary/" class="md-nav__link">
+      <a href="../11-data-activator/summary/" class="md-nav__link">
         
   
   
@@ -1512,7 +1443,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../18-monitor-hub/" class="md-nav__link ">
+            <a href="../18-monitor-hub/" class="md-nav__link ">
               
   
   
@@ -1556,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../18-monitor-hub/summary/" class="md-nav__link">
+      <a href="../18-monitor-hub/summary/" class="md-nav__link">
         
   
   
@@ -1612,7 +1543,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../19-secure-data-access/" class="md-nav__link ">
+            <a href="../19-secure-data-access/" class="md-nav__link ">
               
   
   
@@ -1656,7 +1587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../19-secure-data-access/summary/" class="md-nav__link">
+      <a href="../19-secure-data-access/summary/" class="md-nav__link">
         
   
   
@@ -1712,7 +1643,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../20-work-with-database/" class="md-nav__link ">
+            <a href="../20-work-with-database/" class="md-nav__link ">
               
   
   
@@ -1756,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20-work-with-database/summary/" class="md-nav__link">
+      <a href="../20-work-with-database/summary/" class="md-nav__link">
         
   
   
@@ -1812,7 +1743,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../21-implement-cicd/" class="md-nav__link ">
+            <a href="../21-implement-cicd/" class="md-nav__link ">
               
   
   
@@ -1856,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../21-implement-cicd/summary/" class="md-nav__link">
+      <a href="../21-implement-cicd/summary/" class="md-nav__link">
         
   
   
@@ -1909,34 +1840,184 @@
 
 
 
-<h1 id="lab-05-create-and-use-dataflows-gen2-in-microsoft-fabric">Lab 05 - Create and use Dataflows (Gen2) in Microsoft Fabric</h1>
-<p>In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store, or to define a dataset for a Power BI report.</p>
-<p>This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise. </p>
-<p>This lab takes approximately <strong>30</strong> minutes to complete.</p>
+<h1 id="lab-00-fabric-warmup-create-a-lakehouse">Lab 00 ~ Fabric Warmup: Create a Lakehouse</h1>
 <div class="admonition info">
-<p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
+<p class="admonition-title">For this lab, you will access the QA Platform and sign in using the credentials provided.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
+<p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
 </div>
-<h2 id="overview">Overview</h2>
-<h3 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h3>
-<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
-<h3 id="step-2-create-a-workspace">Step 2: Create a workspace</h3>
-<p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
-<h3 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h3>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
+<p>Before working with data in Fabric, you need to create a workspace.</p>
+<ol>
+<li>
+<p>In the navigation pane on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Select <strong>+ New workspace</strong>, then create a workspace using the naming format below:</p>
+<ul>
+<li>Start the name with <code>fab_workspace</code></li>
+<li>Add random numbers to make it unique (for example, <code>fab_workspace123</code>)</li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
+</ul>
+</li>
+<li>
+<p>Your workspace should be empty, and look similar to this:</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/new-workspace.png" data-desc-position="bottom"><img alt="Empty workspace in Fabric." src="../img/new-workspace.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-create-a-lakehouse">Step 2: Create a lakehouse</h2>
 <p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
-<h3 id="step-4-create-a-dataflow-gen2-to-ingest-data">Step 4: Create a Dataflow (Gen2) to ingest data</h3>
-<p>Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an <em>extract, transform, and load</em> (ETL) process.</p>
-<h3 id="step-5-transform-the-data-using-power-query">Step 5: Transform the data using Power Query</h3>
-<p>You can now transform the data. In this lab we will add a column using a custom formula.</p>
-<h3 id="step-6-add-data-destination-for-dataflow">Step 6: Add data destination for Dataflow</h3>
-<p>The next step is to define a destination for your transformed data. This will be the lakehouse you created in Step 3.</p>
-<h3 id="step-7-add-a-dataflow-to-a-pipeline">Step 7: Add a dataflow to a pipeline</h3>
-<p>You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created in a few different experiences, including Data Factory experience.</p>
+<ol>
+<li>
+<p>On the menu bar on the left, select <strong>Create</strong>. In the <em>New</em> page, under the <em>Data Engineering</em> section, select <strong>Lakehouse</strong>.</p>
+<ul>
+<li>Name the lakehouse <code>fab_lakehouse</code></li>
+<li>Leave the <strong>Lakehouse schemas</strong> checkbox selected.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>Create</strong> option is not pinned to the sidebar, you need to select the ellipsis (…) option first.</p>
+</div>
+<p>After a minute or so, a new empty lakehouse will be created.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/new-lakehouse.png" data-desc-position="bottom"><img alt="New lakehouse." src="../img/new-lakehouse.png"></a></p>
+</div>
+</li>
+<li>
+<p>View the new lakehouse, and note that the <strong>Lakehouse explorer</strong> pane on the left enables you to browse tables and files in the lakehouse:</p>
+<ul>
+<li>
+<p>The <strong>Tables</strong> folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source <em>Delta Lake</em> file format, commonly used in Apache Spark.</p>
+</li>
+<li>
+<p>The <strong>Files</strong> folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Currently, there are no tables or files in this lakehouse.</p>
+<h2 id="step-3-upload-a-file">Step 3: Upload a file</h2>
+<p>Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).</p>
+<ol>
+<li>
+<p>In the <strong>Explorer</strong> pane of the lakehouse, click the <strong>...</strong> menu for the <strong>Files</strong> folder and select <strong>New subfolder</strong>.</p>
+<ul>
+<li>Name the new subfolder: <code>data</code></li>
+<li>Click <strong>Create</strong></li>
+</ul>
+</li>
+<li>
+<p>Locate the <code>sales.csv</code> file in the <code>files</code> directory on your Virtual Machine.</p>
+<ul>
+<li>If you are not using a VM, or the file is not there, download it from: <a href="https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv">https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>To download the file, open a new tab in the browser and paste in the URL.</li>
+<li>Right click anywhere on the page containing the data and select "Save as" to save the data as a CSV file.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the new <strong>data</strong> folder, select <strong>Upload</strong> and <strong>Upload files</strong>.</p>
+<ul>
+<li>Then upload the <strong>sales.csv</strong> file from your local computer (or lab VM if applicable).</li>
+</ul>
+</li>
+<li>
+<p>After the file has been uploaded, select the <strong>Files/data</strong> folder and verify that the <strong>sales.csv</strong> file has been uploaded, as shown here:</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/01-uploaded-sales-file.png" data-desc-position="bottom"><img alt="Uploaded sales.csv file in a lakehouse." src="../img/01-uploaded-sales-file.png"></a></p>
+</div>
+</li>
+<li>
+<p>Select the <strong>sales.csv</strong> file to see a preview of its contents.</p>
+<div class="admonition tip">
+<p class="admonition-title">If the <strong>sales.csv</strong> file does not automatically appear, in the <strong>...</strong> menu for the <strong>data</strong> folder, select <strong>Refresh</strong>.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-4-load-file-data-into-a-table">Step 4: Load file data into a table</h2>
+<p>The sales data you uploaded is in a file. In many scenarios you'll want to load the data from the file into a table so that you can query it using SQL.</p>
+<ol>
+<li>
+<p>In the <strong>Explorer</strong> pane, select the <strong>Files/data</strong> folder so you can see the <strong>sales.csv</strong> file it contains.</p>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>sales.csv</strong> file, select <strong>Load to Tables</strong> &gt; <strong>New table</strong>.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-01-load-to-tables.png" data-desc-position="bottom"><img alt="Load to tables - New table." src="../img/qa-01-load-to-tables.png"></a></p>
+</div>
+</li>
+<li>
+<p>In <strong>Load to table</strong> dialog box:</p>
+<ul>
+<li>Make sure that the new table name is : <code>sales</code></li>
+<li>Column header should be selected, and seperator should be a comma.</li>
+<li>Click <strong>Load</strong>.</li>
+</ul>
+<p>Wait for the table to be created and loaded.</p>
+<div class="admonition tip">
+<p class="admonition-title">If the <code>sales</code> table does not automatically appear, in the <strong>...</strong> menu for the <strong>Tables</strong> folder, select <strong>Refresh</strong>.</p>
+</div>
+</li>
+<li>
+<p>In the <strong>Explorer</strong> pane, select the <code>sales</code> table that has been created to view the data:</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-01-table-preview.png" data-desc-position="bottom"><img alt="Screenshot of a table preview." src="../img/qa-01-table-preview.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-5-use-sql-to-query-tables">Step 5: Use SQL to query tables</h2>
+<p>When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL <code>SELECT</code> statements.</p>
+<ol>
+<li>
+<p>At the top-right of the Lakehouse page, select <strong>Analyze data with</strong> and choose <strong>SQL analytics endpoint</strong>.</p>
+<ul>
+<li>Then wait a short time until the SQL analytics endpoint for your lakehouse opens in a visual interface from which you can query its tables.</li>
+</ul>
+</li>
+<li>
+<p>Use the <strong>New SQL query</strong> button to open a new query editor, and enter the following SQL query:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Item</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Quantity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">UnitPrice</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Revenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Item</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Revenue</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7z"></path></svg></span> <strong>Run</strong> button to run the query and view the results, which should show the total revenue for each product.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-01-sql-query.png" data-desc-position="bottom"><img alt="SQL query with results." src="../img/qa-01-sql-query.png"></a></p>
+</div>
+</li>
+</ol>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
-<p>Once you've finished exploring dataflows in Microsoft Fabric, you should delete the workspace you created for this exercise.</p>
+<p>In this warmup exercise, you created a lakehouse, uploaded a file, loaded it into a table, and queried it with SQL. This is the basic Fabric workflow you'll build on for the rest of the day.</p>
+<p>Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.</p>
+<ol>
+<li>
+<p>Navigate to Microsoft Fabric in your browser.</p>
+</li>
+<li>
+<p>In the bar on the left, select the icon for your workspace to view all of the items it contains.</p>
+</li>
+<li>
+<p>Select <strong>Workspace settings</strong> and in the <strong>General</strong> section, scroll down and select <strong>Remove this workspace</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Delete</strong> to delete the workspace.</p>
+</li>
+</ol>
+<hr>
+<p><small><b>Source:
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html</a>
+</b></small></p>
 
 
 
@@ -1986,10 +2067,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "content.code.copy", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   

@@ -9,7 +9,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../06-data-warehouse/">
+        <link rel="next" href="../../01-lakehouse/">
       
       
         
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-05-create-and-use-dataflows-gen2-in-microsoft-fabric" class="md-skip">
+        <a href="#lab-00-fabric-warmup-create-a-lakehouse" class="md-skip">
           Skip to content
         </a>
       
@@ -318,6 +318,8 @@
                 
   
   
+    
+  
   
   
     
@@ -333,15 +335,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../00-fabric-warmup/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -365,7 +367,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -382,10 +384,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../00-fabric-warmup/summary/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -401,6 +430,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clean up resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -718,8 +789,6 @@
                 
   
   
-    
-  
   
   
     
@@ -735,15 +804,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../05-dataflows-gen2/" class="md-nav__link ">
               
   
   
@@ -767,7 +836,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -784,37 +853,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Summary
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-dataflows-gen2/summary/" class="md-nav__link">
         
   
   
@@ -830,48 +872,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clean-up-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clean up resources
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1909,10 +1909,9 @@
 
 
 
-<h1 id="lab-05-create-and-use-dataflows-gen2-in-microsoft-fabric">Lab 05 - Create and use Dataflows (Gen2) in Microsoft Fabric</h1>
-<p>In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store, or to define a dataset for a Power BI report.</p>
-<p>This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise. </p>
-<p>This lab takes approximately <strong>30</strong> minutes to complete.</p>
+<h1 id="lab-00-fabric-warmup-create-a-lakehouse">Lab 00 - Fabric Warmup: Create a Lakehouse</h1>
+<p>A short warmup exercise to get comfortable navigating Microsoft Fabric again: create a workspace and a lakehouse, upload a file, load it into a table, and query it with SQL. No dataflows, notebooks, or Power Query - just the core click-through you'll be repeating all day.</p>
+<p>This lab takes approximately <strong>20</strong> minutes to complete.</p>
 <div class="admonition info">
 <p class="admonition-title">For this lab you need to navigate to QA Platform and login using the credentials provided</p>
 </div>
@@ -1920,23 +1919,21 @@
 <p class="admonition-title">It is important that you use an incognito/private mode browser tab and not your work or personal Microsoft login</p>
 </div>
 <h2 id="overview">Overview</h2>
-<h3 id="step-1-signing-in-to-microsoft-fabric">Step 1: Signing in to Microsoft Fabric</h3>
-<p>In this lab, you will sign in to Microsoft Fabric using the email and password from the QA Platform.</p>
-<h3 id="step-2-create-a-workspace">Step 2: Create a workspace</h3>
-<p>Before working with data in Fabric, you need to create a workspace with the Fabric trial enabled.</p>
-<h3 id="step-3-create-a-lakehouse">Step 3: Create a lakehouse</h3>
+<h3 id="step-1-create-a-workspace">Step 1: Create a workspace</h3>
+<p>Before working with data in Fabric, you need to create a workspace.</p>
+<h3 id="step-2-create-a-lakehouse">Step 2: Create a lakehouse</h3>
 <p>Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.</p>
-<h3 id="step-4-create-a-dataflow-gen2-to-ingest-data">Step 4: Create a Dataflow (Gen2) to ingest data</h3>
-<p>Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an <em>extract, transform, and load</em> (ETL) process.</p>
-<h3 id="step-5-transform-the-data-using-power-query">Step 5: Transform the data using Power Query</h3>
-<p>You can now transform the data. In this lab we will add a column using a custom formula.</p>
-<h3 id="step-6-add-data-destination-for-dataflow">Step 6: Add data destination for Dataflow</h3>
-<p>The next step is to define a destination for your transformed data. This will be the lakehouse you created in Step 3.</p>
-<h3 id="step-7-add-a-dataflow-to-a-pipeline">Step 7: Add a dataflow to a pipeline</h3>
-<p>You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created in a few different experiences, including Data Factory experience.</p>
+<h3 id="step-3-upload-a-file">Step 3: Upload a file</h3>
+<p>One of the simplest ways to ingest small amounts of data into a lakehouse is to upload files from your local computer (or lab VM).</p>
+<p>In this lab we will upload a file ~ <code>sales.csv</code></p>
+<h3 id="step-4-load-file-data-into-a-table">Step 4: Load file data into a table</h3>
+<p>Load the uploaded file into a managed table so it can be queried using SQL.</p>
+<h3 id="step-5-use-sql-to-query-tables">Step 5: Use SQL to query tables</h3>
+<p>When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL <code>SELECT</code> statements.</p>
 <hr>
 <h2 id="clean-up-resources">Clean up resources</h2>
-<p>Once you've finished exploring dataflows in Microsoft Fabric, you should delete the workspace you created for this exercise.</p>
+<p>In this warmup exercise, you created a lakehouse and imported data into it, then queried it with SQL.</p>
+<p>Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.</p>
 
 
 
