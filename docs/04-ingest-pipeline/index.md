@@ -75,7 +75,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 3. In the **Connection** drop-down, select **Browse all**
 
-4. Search for **HTTP** and select it.
+4. A connector selection page opens. Select: **HTTP**
 
 5. Then configure the following settings:
 

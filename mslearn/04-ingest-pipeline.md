@@ -54,8 +54,6 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 1. In the workspace, select **New item**, search for **Pipeline**, and create a new pipeline named `Ingest Sales Data`.
 1. In the pipeline editor, on the toolbar select **Copy data** > **Add copy data activity**. A **Copy Data** activity is added to the pipeline canvas.
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/04-copy-data-pipeline.png)
-
 ### Configure the Source
 
 1. Select the **Copy Data** activity on the canvas, and then in the pane below the canvas select the **Source** tab.
