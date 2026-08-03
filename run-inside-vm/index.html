@@ -1912,10 +1912,34 @@
 
   <h1>VM Logon Instructions</h1>
 
+<pre class="mermaid"><code>flowchart LR
+    subgraph LOCAL["Your &lt;b&gt;local machine&lt;/b&gt;"]
+        direction TB
+        A1["Logon to BUD"]
+        A2["Navigate to the&lt;br/&gt;Microsoft Fabric Playground"]
+        A3["Click: ▶ Start lab"]
+        B["Note username &amp; password"]
+        C{"Status:&lt;br/&gt;Ready?"}
+    end
+
+    subgraph VM["Your &lt;b&gt;Virtual Machine&lt;/b&gt;"]
+        direction TB
+        D["Open a private/incognito&lt;br/&gt;browser window"]
+        E["Logon to Microsoft Azure&lt;br/&gt;portal.azure.com"]
+        F["New tab:&lt;br/&gt;Logon to Microsoft Fabric&lt;br/&gt;app.fabric.microsoft.com"]
+    end
+
+    A1 --&gt; A2 --&gt; A3 --&gt; B --&gt; C
+    C -- "Ready? Yes" --&gt; D --&gt; E --&gt; F
+    C -- No, wait --&gt; C</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Start the lab on your own machine, not inside the VM.</p>
+<p>Once you have your username and password and the lab status shows <strong>Ready</strong>, switch to the VM to do the rest of the steps. Azure and Microsoft Fabric are accessed from inside the VM because corporate networks sometimes block those addresses (and file downloads) directly.</p>
+</div>
 <h2 id="step-1-start-the-qa-platform-ms-fabric-playground">Step 1: Start the QA Platform MS Fabric Playground</h2>
 <ol>
 <li>
-<p>Navigate to the <a href="https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/">QA Platform</a> to access the <strong>Microsoft Fabric Playground</strong>.</p>
+<p>On your own machine (not the VM), navigate to the <a href="https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/">QA Platform</a> to access the <strong>Microsoft Fabric Playground</strong>.</p>
 </li>
 <li>
 <p>Click <strong>Start</strong> to start the lab.</p>
@@ -2031,6 +2055,8 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
     
   
