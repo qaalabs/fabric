@@ -1834,6 +1834,13 @@
 
   <h1>Run locally</h1>
 
+<pre class="mermaid"><code>flowchart TD
+    A["QA Platform:&lt;br/&gt;Wait for status Ready"]
+    B["Right-click Open,&lt;br/&gt;▶ Open in private/incognito window"]
+    C["Logon to Microsoft Azure&lt;br/&gt;portal.azure.com"]
+    D["New tab:&lt;br/&gt;Logon to Microsoft Fabric&lt;br/&gt;app.fabric.microsoft.com"]
+
+    A --&gt; B --&gt; C --&gt; D</code></pre>
 <h2 id="step-1-access-microsoft-fabric">Step 1: Access Microsoft Fabric</h2>
 <p>In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.</p>
 <div class="admonition note">
@@ -1881,6 +1888,12 @@
 <p>After confirmation, you should be be redirected to the <strong>Microsoft Fabric home page</strong>:</p>
 <div class="admonition abstract">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/qa-fabric-home.png" data-desc-position="bottom"><img alt="Fabric home page" src="../img/qa-fabric-home.png"></a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">You do not have to signup to a Microsoft Fabric Trial!</p>
+<ul>
+<li>If asked to do so please let your trainer know.</li>
+</ul>
 </div>
 </li>
 </ol>
