@@ -1,6 +1,32 @@
+```mermaid
+flowchart LR
+    subgraph LOCAL["Your <b>local machine</b>"]
+        direction TB
+        A1["Logon to BUD"]
+        A2["Navigate to the<br/>Microsoft Fabric Playground"]
+        A3["Click: ▶ Start lab"]
+        B["Note username & password"]
+        C{"Status:<br/>Ready?"}
+    end
+
+    subgraph VM["Your <b>Virtual Machine</b>"]
+        direction TB
+        D["Open a private/incognito<br/>browser window"]
+        E["Logon to Microsoft Azure<br/>portal.azure.com"]
+        F["New tab:<br/>Logon to Microsoft Fabric<br/>app.fabric.microsoft.com"]
+    end
+
+    A1 --> A2 --> A3 --> B --> C
+    C -- "Ready? Yes" --> D --> E --> F
+    C -- No, wait --> C
+```
+
+!!! warning "Start the lab on your own machine, not inside the VM."
+    Once you have your username and password and the lab status shows **Ready**, switch to the VM to do the rest of the steps. Azure and Microsoft Fabric are accessed from inside the VM because corporate networks sometimes block those addresses (and file downloads) directly.
+
 ## Step 1: Start the QA Platform MS Fabric Playground
 
-1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
+1. On your own machine (not the VM), navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
 
 2. Click **Start** to start the lab.
 

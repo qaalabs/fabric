@@ -1,4 +1,4 @@
-# Lab 00 ~ Fabric Warmup: Create a Lakehouse
+# Lab ~ Fabric Warmup: Create a Workspace and then create Lakehouse
 
 !!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
 
@@ -58,7 +58,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
     - Name the new subfolder: `data`
     - Click **Create**
 
-2. Locate the `sales.csv` file in the `files` directory on your Virtual Machine.
+2. Locate the `sales.csv` file in the `day1` directory on your Virtual Machine.
 
     - If you are not using a VM, or the file is not there, download it from: https://raw.githubusercontent.com/qaalabs/fabric/refs/heads/main/data/sales.csv
 
@@ -146,6 +146,3 @@ Once you've finished exploring your lakehouse, you should delete the workspace y
 4. Select **Delete** to delete the workspace.
 
 ---
-<small><b>Source:
-https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html
-</b></small>

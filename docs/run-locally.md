@@ -1,3 +1,13 @@
+```mermaid
+flowchart TD
+    A["QA Platform:<br/>Wait for status Ready"]
+    B["Right-click Open,<br/>▶ Open in private/incognito window"]
+    C["Logon to Microsoft Azure<br/>portal.azure.com"]
+    D["New tab:<br/>Logon to Microsoft Fabric<br/>app.fabric.microsoft.com"]
+
+    A --> B --> C --> D
+```
+
 ## Step 1: Access Microsoft Fabric
 
 In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.
@@ -34,3 +44,7 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
     !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)
+
+    !!! warning "You do not have to signup to a Microsoft Fabric Trial!"
+        - If asked to do so please let your trainer know.
+
