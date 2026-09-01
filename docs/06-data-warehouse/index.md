@@ -212,6 +212,8 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
         - Then select the semantic model
         - Then: open semantic model
 
+4. In the top right hand corner, change the dropdown (next to Share) from **"Viewing"** to **"✏️ Editing"**
+
     !!! abstract ""
         ![Screenshot of the data warehouse model page.](../img/06-model-dw.png)
 

@@ -68,6 +68,11 @@ nav:
       - 21-implement-cicd/index.md
       - Summary: 21-implement-cicd/summary.md
 
+not_in_nav: |
+  mongo-db.md
+  run-locally.md
+  03b-medallion-lakehouse/instructions-full.md
+
 # Theme
 theme:
   name: material
