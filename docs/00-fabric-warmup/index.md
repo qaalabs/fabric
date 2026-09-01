@@ -1,4 +1,4 @@
-# Lab ~ Fabric Warmup: Create a Workspace and then create Lakehouse
+# Fabric Warmup: Create a Workspace then Create a Lakehouse
 
 !!! info "For this lab, you will access the QA Platform and sign in using the credentials provided."
 
