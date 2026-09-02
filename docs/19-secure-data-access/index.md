@@ -206,17 +206,9 @@ In this exercise, you assign an item permission and create a OneLake data access
 
 ---
 
-## Clean up resources
+## Summary
 
 In this exercise, you secured data using workspace access controls, item access controls and, OneLake data access roles.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
 
 ---
 <small><b>Source:

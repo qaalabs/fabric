@@ -197,17 +197,9 @@ Let's create a view based on the query we used earlier, and add a filter to it.
 
 ---
 
-## Clean up resources
+## Summary
 
-If you've finished exploring your database, you should delete the workspace you created for this exercise.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
+In this exercise, you created a SQL database with sample data, queried it, integrated it with external data sources, and secured the data.
 
 ---
 <small><b>Source:

@@ -225,19 +225,9 @@ Now you can query the bicycle data that has been transformed and loaded into a t
 
 ---
 
-## Clean up resources
+## Summary
 
 In this exercise, you have created an eventhouse and populated tables in its database by using an eventstream.
-
-When you've finished exploring your KQL database, you can delete the workspace you created for this exercise.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
 
 ---
 <small><b>Source:

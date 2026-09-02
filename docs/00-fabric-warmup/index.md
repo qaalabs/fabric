@@ -131,18 +131,8 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
 ---
 
-## Clean up resources
+## Summary
 
 In this warmup exercise, you created a lakehouse, uploaded a file, loaded it into a table, and queried it with SQL. This is the basic Fabric workflow you'll build on for the rest of the day.
-
-Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
 
 ---

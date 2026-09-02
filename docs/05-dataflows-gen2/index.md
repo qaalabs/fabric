@@ -167,7 +167,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 !!! note "You now need to add the pipeline to your workspace."
 
-1. From your Fabric-enabled workspace, select **+ New item > Data pipeline**
+1. From your Fabric-enabled workspace, select **+ New item > Pipeline**
 
     - When prompted, create a new pipeline named: **Load data**
 
@@ -215,17 +215,9 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 ---
 
-## Clean up resources
+## Summary
 
-Once you've finished exploring dataflows in Microsoft Fabric, you should delete the workspace you created for this exercise.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
+In this exercise, you used a dataflow in Microsoft Fabric to extract, transform, and load data.
 
 ---
 <small><b>Source:

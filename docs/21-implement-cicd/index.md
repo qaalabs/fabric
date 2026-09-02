@@ -130,24 +130,9 @@ Using deployment pipelines creates the same Fabric artefacts in each deployment 
 
 ---
 
-## Clean up
+## Summary
 
 In this exercise, you created a deployment pipeline, and assigned stages to the pipeline. Then you created content in a development workspace and deployed it between pipeline stages using deployment pipelines.
-
-- In the left navigation bar, select **Deployment pipelines**, select your pipeline, and then select **Delete this pipeline** from the settings menu to remove the deployment pipeline.
-
-!!! abstract ""
-    ![Screenshot of deployment pipeline, highlighting the Delete pipeline action.](../img/21-delete-pipeline.png)
-
-After deleting the pipeline, delete each workspace you created:
-
-1. In the bar on the left, select the icon for the workspace to view all of the items it contains.
-
-2. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-3. Select **Delete** to delete the workspace.
-
-!!! success "Do this for all 3 workspaces - Dev, Test, and Production."
 
 ---
 <small><b>Source:

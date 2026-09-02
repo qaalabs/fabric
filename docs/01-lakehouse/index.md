@@ -240,19 +240,9 @@ While many data professionals are familiar with SQL, those with Power BI experie
 
 ---
 
-## Clean up resources
+## Summary
 
 In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL.
-
-Once you've finished exploring your lakehouse, you should delete the workspace you created for this exercise.
-
-1. Navigate to Microsoft Fabric in your browser.
-
-2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-3. Select **Workspace settings** and in the **General** section, scroll down and select **Remove this workspace**.
-
-4. Select **Delete** to delete the workspace.
 
 ---
 <small><b>Source:

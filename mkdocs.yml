@@ -71,6 +71,7 @@ nav:
 not_in_nav: |
   index.md
   run-locally.md
+  clean-up.md
   03b-medallion-lakehouse/instructions-full.md
   mongo-db.md
 

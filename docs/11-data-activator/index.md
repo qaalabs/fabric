@@ -182,18 +182,11 @@ You're almost there! You just need to define what action you want to take when t
 
 ---
 
-## Clean up resources
+## Summary
 
 In this exercise, you have created an Activator with an alert rule. You should now be familiar with the Activator interface and how to create objects, properties, and rules.
 
-If you've finished exploring your Activator, you can delete the workspace you created for this exercise.
-
-1. In the left navigation bar, select the icon for your workspace to view all of the items it contains.
-
-2. In the menu on the top toolbar, select **Workspace settings**.
-
-3. In the **General** section, select **Remove this workspace**.
-
+---
 <small><b>Source:
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/11-data-activator.html
 </b></small>
