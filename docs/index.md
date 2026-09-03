@@ -2,18 +2,18 @@
 
 This site hosts the instructions for MS Fabric labs:
 
-- [01  - Create a Microsoft Fabric Lakehouse](01-lakehouse/index.md)
-- [03b - Medallion Lakehouse](03b-medallion-lakehouse/index.md)
-- [04  - Ingest Pipeline](04-ingest-pipeline/index.md)
-- [05  - Dataflows Gen2](05-dataflows-gen2/index.md)
-- [06  - Analyse data in a data warehouse](06-data-warehouse/index.md)
-- [06c - Monitor Data Warehouse](06c-monitor-data-warehouse/index.md)
-- [09  - Real-time Analytics eventstream](09-real-time-analytics-eventstream/index.md)
-- [11  - Data Activator](11-data-activator/index.md)
-- [18  - Monitor Hub](18-monitor-hub/index.md)
-- [19  - Secure Data Access](19-secure-data-access/index.md)
-- [20  - Work with SQL Database](20-work-with-database/index.md)
-- [21  - Deployment Pipelines](21-implement-cicd/index.md)
+- [Create a Microsoft Fabric Lakehouse](lakehouse/index.md)
+- [Medallion Lakehouse](medallion-lakehouse/index.md)
+- [Ingest Pipeline](ingest-pipeline/index.md)
+- [Dataflows Gen2](dataflows-gen2/index.md)
+- [Analyse data in a data warehouse](data-warehouse/index.md)
+- [Monitor Data Warehouse](monitor-data-warehouse/index.md)
+- [Real-time Analytics eventstream](real-time-analytics-eventstream/index.md)
+- [Data Activator](data-activator/index.md)
+- [Monitor Hub](monitor-hub/index.md)
+- [Secure Data Access](secure-data-access/index.md)
+- [Work with SQL Database](work-with-database/index.md)
+- [Deployment Pipelines](implement-cicd/index.md)
 
 ---
 

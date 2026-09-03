@@ -9,70 +9,66 @@ nav:
   - "Microsoft Fabric":
 
     - "Fabric Warmup":
-      - 00-fabric-warmup/index.md
-      - Summary: 00-fabric-warmup/summary.md
+      - fabric-warmup/index.md
+      - Summary: fabric-warmup/summary.md
 
-    - "01 Lakehouse":
-      - 01-lakehouse/index.md
-      - Summary: 01-lakehouse/summary.md
+    - "Lakehouse":
+      - lakehouse/index.md
+      - Summary: lakehouse/summary.md
 
-    - "03b Medallion Architecture":
-      - 03b-medallion-lakehouse/index.md
-      - Summary: 03b-medallion-lakehouse/summary.md
+    - "Medallion Architecture":
+      - medallion-lakehouse/index.md
+      - Summary: medallion-lakehouse/summary.md
 
-    - "04 Ingest Pipeline":
-      - 04-ingest-pipeline/index.md
-      - Summary: 04-ingest-pipeline/summary.md
+    - "Ingest Pipeline":
+      - ingest-pipeline/index.md
+      - Summary: ingest-pipeline/summary.md
 
-    - "05 Dataflows (Gen2)": 
-      - 05-dataflows-gen2/index.md
-      - Summary: 05-dataflows-gen2/summary.md
+    - "Dataflows (Gen2)":
+      - dataflows-gen2/index.md
+      - Summary: dataflows-gen2/summary.md
 
-    - "06 Analyse data in a Data Warehouse":
-      - 06-data-warehouse/index.md
-      - Summary: 06-data-warehouse/summary.md
+    - "Analyse data in a Data Warehouse":
+      - data-warehouse/index.md
+      - Summary: data-warehouse/summary.md
 
-    - "06b Query a Data Warehouse":
-      - 06b-data-warehouse-query/index.md
-      - Summary: 06b-data-warehouse-query/summary.md
+    - "Monitor a Data Warehouse":
+      - monitor-data-warehouse/index.md
+      - Summary: monitor-data-warehouse/summary.md
 
-    - "06c Monitor a Data Warehouse":
-      - 06c-monitor-data-warehouse/index.md
-      - Summary: 06c-monitor-data-warehouse/summary.md
+    - "Real-time Intelligence":
+      - real-time-intelligence/index.md
+      - Summary: real-time-intelligence/summary.md
 
-    - "07 Real-time Intelligence":
-      - 07-real-time-intelligence/index.md
-      - Summary: 07-real-time-intelligence/summary.md
+    - "Real-time Eventstream":
+      - real-time-analytics-eventstream/index.md
+      - Summary: real-time-analytics-eventstream/summary.md
 
-    - "09 Real-time Eventstream":
-      - 09-real-time-analytics-eventstream/index.md
-      - Summary: 09-real-time-analytics-eventstream/summary.md
+    - "Data Activator":
+      - data-activator/index.md
+      - Summary: data-activator/summary.md
 
-    - "11 Data Activator":
-      - 11-data-activator/index.md
-      - Summary: 11-data-activator/summary.md
+    - "Monitor Hub":
+      - monitor-hub/index.md
+      - Summary: monitor-hub/summary.md
 
-    - "18 Monitor Hub":
-      - 18-monitor-hub/index.md
-      - Summary: 18-monitor-hub/summary.md
+    - "Secure Data Access":
+      - secure-data-access/index.md
+      - Summary: secure-data-access/summary.md
 
-    - "19 Secure Data Access":
-      - 19-secure-data-access/index.md
-      - Summary: 19-secure-data-access/summary.md
+    - "Work with SQL Database":
+      - work-with-database/index.md
+      - Summary: work-with-database/summary.md
 
-    - "20 Work with SQL Database":
-      - 20-work-with-database/index.md
-      - Summary: 20-work-with-database/summary.md
-
-    - "21 Deployment Pipelines":
-      - 21-implement-cicd/index.md
-      - Summary: 21-implement-cicd/summary.md
+    - "Deployment Pipelines":
+      - implement-cicd/index.md
+      - Summary: implement-cicd/summary.md
 
 not_in_nav: |
   index.md
   run-locally.md
   clean-up.md
-  03b-medallion-lakehouse/instructions-full.md
+  medallion-lakehouse/instructions-full.md
   mongo-db.md
 
 # Theme
