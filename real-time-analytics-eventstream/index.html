@@ -6,24 +6,28 @@
       
       
       
+        <link rel="prev" href="../real-time-intelligence/summary/">
+      
+      
+        <link rel="next" href="summary/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>MS Fabric Labs</title>
+        <title>Ingest real-time data with Eventstream in Fabric - MS Fabric Labs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -42,13 +46,13 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -75,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ms-fabric-labs" class="md-skip">
+        <a href="#ingest-real-time-data-with-eventstream-in-fabric" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +95,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="MS Fabric Labs" class="md-header__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
+    <a href=".." title="MS Fabric Labs" class="md-header__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
@@ -111,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MS Fabric Labs
+              Ingest real-time data with Eventstream in Fabric
             
           </span>
         </div>
@@ -191,7 +195,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="MS Fabric Labs" class="md-nav__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
+    <a href=".." title="MS Fabric Labs" class="md-nav__button md-logo" aria-label="MS Fabric Labs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
@@ -209,7 +213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="run-inside-vm/" class="md-nav__link">
+      <a href="../run-inside-vm/" class="md-nav__link">
         
   
   
@@ -233,8 +237,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -270,11 +276,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -295,7 +301,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -333,7 +339,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="fabric-warmup/" class="md-nav__link ">
+            <a href="../fabric-warmup/" class="md-nav__link ">
               
   
   
@@ -377,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fabric-warmup/summary/" class="md-nav__link">
+      <a href="../fabric-warmup/summary/" class="md-nav__link">
         
   
   
@@ -433,7 +439,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="lakehouse/" class="md-nav__link ">
+            <a href="../lakehouse/" class="md-nav__link ">
               
   
   
@@ -477,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lakehouse/summary/" class="md-nav__link">
+      <a href="../lakehouse/summary/" class="md-nav__link">
         
   
   
@@ -533,7 +539,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="medallion-lakehouse/" class="md-nav__link ">
+            <a href="../medallion-lakehouse/" class="md-nav__link ">
               
   
   
@@ -577,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="medallion-lakehouse/summary/" class="md-nav__link">
+      <a href="../medallion-lakehouse/summary/" class="md-nav__link">
         
   
   
@@ -633,7 +639,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="ingest-pipeline/" class="md-nav__link ">
+            <a href="../ingest-pipeline/" class="md-nav__link ">
               
   
   
@@ -677,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ingest-pipeline/summary/" class="md-nav__link">
+      <a href="../ingest-pipeline/summary/" class="md-nav__link">
         
   
   
@@ -733,7 +739,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="dataflows-gen2/" class="md-nav__link ">
+            <a href="../dataflows-gen2/" class="md-nav__link ">
               
   
   
@@ -777,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dataflows-gen2/summary/" class="md-nav__link">
+      <a href="../dataflows-gen2/summary/" class="md-nav__link">
         
   
   
@@ -833,7 +839,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="data-warehouse/" class="md-nav__link ">
+            <a href="../data-warehouse/" class="md-nav__link ">
               
   
   
@@ -877,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-warehouse/summary/" class="md-nav__link">
+      <a href="../data-warehouse/summary/" class="md-nav__link">
         
   
   
@@ -933,7 +939,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="monitor-data-warehouse/" class="md-nav__link ">
+            <a href="../monitor-data-warehouse/" class="md-nav__link ">
               
   
   
@@ -977,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="monitor-data-warehouse/summary/" class="md-nav__link">
+      <a href="../monitor-data-warehouse/summary/" class="md-nav__link">
         
   
   
@@ -1033,7 +1039,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="real-time-intelligence/" class="md-nav__link ">
+            <a href="../real-time-intelligence/" class="md-nav__link ">
               
   
   
@@ -1077,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="real-time-intelligence/summary/" class="md-nav__link">
+      <a href="../real-time-intelligence/summary/" class="md-nav__link">
         
   
   
@@ -1110,6 +1116,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1125,15 +1133,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="real-time-analytics-eventstream/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1151,13 +1159,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1177,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="real-time-analytics-eventstream/summary/" class="md-nav__link">
+      <a href="summary/" class="md-nav__link">
         
   
   
@@ -1233,7 +1241,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="data-activator/" class="md-nav__link ">
+            <a href="../data-activator/" class="md-nav__link ">
               
   
   
@@ -1277,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-activator/summary/" class="md-nav__link">
+      <a href="../data-activator/summary/" class="md-nav__link">
         
   
   
@@ -1333,7 +1341,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="monitor-hub/" class="md-nav__link ">
+            <a href="../monitor-hub/" class="md-nav__link ">
               
   
   
@@ -1377,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="monitor-hub/summary/" class="md-nav__link">
+      <a href="../monitor-hub/summary/" class="md-nav__link">
         
   
   
@@ -1433,7 +1441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="secure-data-access/" class="md-nav__link ">
+            <a href="../secure-data-access/" class="md-nav__link ">
               
   
   
@@ -1477,7 +1485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="secure-data-access/summary/" class="md-nav__link">
+      <a href="../secure-data-access/summary/" class="md-nav__link">
         
   
   
@@ -1533,7 +1541,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="work-with-database/" class="md-nav__link ">
+            <a href="../work-with-database/" class="md-nav__link ">
               
   
   
@@ -1577,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="work-with-database/summary/" class="md-nav__link">
+      <a href="../work-with-database/summary/" class="md-nav__link">
         
   
   
@@ -1633,7 +1641,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="implement-cicd/" class="md-nav__link ">
+            <a href="../implement-cicd/" class="md-nav__link ">
               
   
   
@@ -1677,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="implement-cicd/summary/" class="md-nav__link">
+      <a href="../implement-cicd/summary/" class="md-nav__link">
         
   
   
@@ -1730,27 +1738,295 @@
 
 
 
-<h1 id="ms-fabric-labs">MS Fabric Labs</h1>
-<p>This site hosts the instructions for MS Fabric labs:</p>
+<h1 id="ingest-real-time-data-with-eventstream-in-fabric">Ingest real-time data with Eventstream in Fabric</h1>
+<div class="admonition info">
+<p class="admonition-title">For this lab, you will access the QA Platform and sign in using the credentials provided.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">You must use an incognito or private browser window to avoid conflicts with any work or personal Microsoft accounts you may already be signed in to.</p>
+</div>
+<h2 id="step-1-create-a-workspace">Step 1: Create a workspace</h2>
+<p>Before working with data in Fabric, you need to create a workspace.</p>
+<ol>
+<li>
+<p>In the navigation pane on the left, select <strong>Workspaces</strong> (the icon looks similar to 🗇).</p>
+</li>
+<li>
+<p>Select <strong>+ New workspace</strong>, then create a workspace using the naming format below:</p>
 <ul>
-<li><a href="lakehouse/">Create a Microsoft Fabric Lakehouse</a></li>
-<li><a href="medallion-lakehouse/">Medallion Lakehouse</a></li>
-<li><a href="ingest-pipeline/">Ingest Pipeline</a></li>
-<li><a href="dataflows-gen2/">Dataflows Gen2</a></li>
-<li><a href="data-warehouse/">Analyse data in a data warehouse</a></li>
-<li><a href="monitor-data-warehouse/">Monitor Data Warehouse</a></li>
-<li><a href="real-time-analytics-eventstream/">Real-time Analytics eventstream</a></li>
-<li><a href="data-activator/">Data Activator</a></li>
-<li><a href="monitor-hub/">Monitor Hub</a></li>
-<li><a href="secure-data-access/">Secure Data Access</a></li>
-<li><a href="work-with-database/">Work with SQL Database</a></li>
-<li><a href="implement-cicd/">Deployment Pipelines</a></li>
+<li>Start the name with <code>fab_workspace</code></li>
+<li>Add random numbers to make it unique (for example, <code>fab_workspace123</code>)</li>
+<li>Leave all other options as the default values</li>
+<li>Click <strong>Apply</strong></li>
 </ul>
+</li>
+<li>
+<p>When your new workspace opens, it should be empty:</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/new-workspace.png" data-desc-position="bottom"><img alt="Empty workspace in Fabric." src="../img/new-workspace.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-2-create-an-eventhouse">Step 2: Create an eventhouse</h2>
+<p>Now that you have a workspace, you can start creating the Fabric items you'll need for your real-time intelligence solution. we'll start by creating an eventhouse.</p>
+<ol>
+<li>
+<p>In the workspace you just created, select <strong>+ New item</strong>. In the <em>New item</em> pane, select <strong>Eventhouse</strong>, giving it a unique name of your choice.</p>
+</li>
+<li>
+<p>Close any tips or prompts that are displayed until you see your new empty eventhouse.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-create-eventhouse.png" data-desc-position="bottom"><img alt="Create eventhouse" src="../img/09-create-eventhouse.png"></a></p>
+</li>
+<li>
+<p>In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse.</p>
+</li>
+<li>
+<p>Select the KQL database to view it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: Currently there are no tables in the database.</p>
+<p>In the rest of this exercise you'll use an eventstream to load data from a real-time source into a table.</p>
+</div>
+</li>
+</ol>
+<h2 id="step-3-create-an-eventstream">Step 3: Create an Eventstream</h2>
+<ol>
+<li>
+<p>In the main page of your KQL database, select <strong>Get data</strong>.</p>
+</li>
+<li>
+<p>For the data source, select <strong>Eventstream</strong> &gt; <strong>New eventstream</strong>.</p>
+<ul>
+<li>Name the Eventstream <code>Bicycle-data</code>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">The creation of your new event stream in the workspace will be completed in just a few moments.</p>
+<ul>
+<li>Once established, you will be automatically redirected to the primary editor, ready to begin integrating sources into your event stream.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-empty-eventstream.png" data-desc-position="bottom"><img alt="Empty eventstream." src="../img/09-empty-eventstream.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-4-add-a-source">Step 4: Add a source</h2>
+<ol>
+<li>
+<p>In the Eventstream canvas, select <strong>Use sample data</strong>.</p>
+</li>
+<li>
+<p>Name the source <code>Bicycles</code>, and select the <strong>Bicycles</strong> sample data.</p>
+<div class="admonition info">
+<p class="admonition-title">Your stream will be mapped and you will be automatically displayed on the <strong>eventstream canvas</strong>.</p>
+</div>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-real-time-intelligence-eventstream-sourced.png" data-desc-position="bottom"><img alt="Review the eventstream canvas" src="../img/09-real-time-intelligence-eventstream-sourced.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-5-add-a-destination">Step 5: Add a destination</h2>
+<ol>
+<li>
+<p>Select the <strong>Transform events or add destination</strong> tile and search for <strong>Eventhouse</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Eventhouse</strong> pane, configure the following setup options.</p>
+<ul>
+<li><strong>Data ingestion mode:</strong>: Event processing before ingestion</li>
+<li><strong>Destination name:</strong> <code>bikes-table</code></li>
+<li><strong>Workspace:</strong> <em>Select the workspace you created at the beginning of this exercise</em></li>
+<li><strong>Eventhouse</strong>: <em>Select your eventhouse</em></li>
+<li><strong>KQL database:</strong> <em>Select your KQL database</em></li>
+<li><strong>KQL Destination table:</strong> Under the text box, select <strong>Create new</strong> (do <em>not</em> type directly into the text box — if you do, the <strong>Save</strong> button will remain greyed out).</li>
+<li>In the <strong>Create new table</strong> box that appears, enter the table name <code>bikes</code> and select <strong>Done</strong>.</li>
+<li><strong>Input data format:</strong> JSON</li>
+</ul>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-kql-database-event-processing-before-ingestion.png" data-desc-position="bottom"><img alt="Eventstream destination settings." src="../img/09-kql-database-event-processing-before-ingestion.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Eventhouse</strong> pane, select <strong>Save</strong>. </p>
+</li>
+<li>
+<p>On the toolbar, select <strong>Publish</strong>.</p>
+</li>
+<li>
+<p>Wait a minute or so for the data destination to become active. </p>
+<ul>
+<li>Then select the <strong>bikes-table</strong> node in the design canvas</li>
+<li>And view the <strong>Data preview</strong> pane underneath to see the latest data that has been ingested:</li>
+</ul>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-stream-data-preview.png" data-desc-position="bottom"><img alt="A destination table in an eventstream." src="../img/09-stream-data-preview.png"></a></p>
+</div>
+</li>
+<li>
+<p>Wait a few minutes and then use the <strong>Refresh</strong> button to refresh the <strong>Data preview</strong> pane.</p>
+<ul>
+<li>The stream is running perpetually, so new data may have been added to the table.</li>
+</ul>
+</li>
+<li>
+<p>Beneath the eventstream design canvas, view the <strong>Data insights</strong> tab to see details of the data events that have been captured.</p>
+</li>
+</ol>
+<h2 id="step-6-query-captured-data">Step 6: Query captured data</h2>
+<p>The eventstream you have created takes data from the sample source of bicycle data and loads it into the database in your eventhouse. You can analyze the captured data by querying the table in the database.</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select your KQL database.</p>
+</li>
+<li>
+<p>On the <strong>database</strong> tab, in the toolbar for your KQL database, use the <strong>Refresh</strong> button to refresh the view until you see the <strong>bikes</strong> table under the database.</p>
+<ul>
+<li>Then select the <strong>bikes</strong> table:</li>
+</ul>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-kql-table.png" data-desc-position="bottom"><img alt="A table in a KQL database." src="../img/09-kql-table.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>bikes</strong> table, select <strong>Query table</strong> &gt; <strong>Records ingested in the last 24 hours</strong>.</p>
+</li>
+<li>
+<p>In the query pane, note that the following query has been generated and run, with the results shown beneath:</p>
+<div class="highlight"><pre><span></span><code><span class="c">// See the most recent data - records ingested in the last 24 hours.</span>
+<span class="n">bikes</span>
+<span class="p">|</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ingestion_time</span><span class="p">()</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="p">(</span><span class="n">now</span><span class="p">(-</span><span class="mi">1</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="err">..</span><span class="w"> </span><span class="n">now</span><span class="p">())</span>
+</code></pre></div>
+</li>
+<li>
+<p>Select the query code and run it to see 24 hours of data from the table.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-kql-query.png" data-desc-position="bottom"><img alt="KQL query." src="../img/09-kql-query.png"></a></p>
+</div>
+</li>
+</ol>
+<h2 id="step-7-transform-event-data">Step 7: Transform event data</h2>
+<p>The data you've captured is unaltered from the source. In many scenarios, you may want to transform the data in the event stream before loading it into a destination.</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select the <strong>Bicycle-data</strong> eventstream.</p>
+</li>
+<li>
+<p>On the toolbar, select <strong>Edit</strong> to edit the eventstream.</p>
+</li>
+<li>
+<p>In the <strong>Transform events</strong> menu, select <strong>Group by</strong> to add a new <strong>Group by</strong> node to the eventstream.</p>
+</li>
+<li>
+<p>Drag a connection from the output of the <strong>Bicycle-data</strong> node to the input of the new <strong>Group by</strong> node.</p>
+<ul>
+<li>Then use the <em>pencil</em> icon in the <strong>Group by</strong> node to edit it.</li>
+</ul>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-eventstream-add-aggregates.png" data-desc-position="bottom"><img alt="Add group by to the transformation event." src="../img/09-eventstream-add-aggregates.png"></a></p>
+</div>
+</li>
+<li>
+<p>Configure out the properties of the <strong>Group by</strong> settings section:</p>
+<ul>
+<li><strong>Operation name:</strong> GroupByStreet</li>
+<li><strong>Aggregate type:</strong> <em>Select</em> Sum</li>
+<li><strong>Field:</strong> <em>select</em> No_Bikes. <em>Then select <strong>Add</strong> to create the function</em> SUM of No_Bikes</li>
+<li><strong>Group aggregations by (optional):</strong> Street</li>
+<li><strong>Time window</strong>: Tumbling</li>
+<li><strong>Duration</strong>: 5 seconds</li>
+<li><strong>Offset</strong>: 0 seconds</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note: This configuration will cause the eventstream to calculate the total number of bicycles in each street every 5 seconds.</p>
+</div>
+</li>
+<li>
+<p>Save the configuration and return to the eventstream canvas, where an error is indicated (because you need to store the output from the transformation somewhere!).</p>
+</li>
+<li>
+<p>Use the <strong>+</strong> icon to the right of the <strong>GroupByStreet</strong> node to add a new <strong>Eventhouse</strong> node.</p>
+</li>
+<li>
+<p>Configure the new eventhouse node with the following options:</p>
+<ul>
+<li><strong>Data ingestion mode:</strong>: Event processing before ingestion</li>
+<li><strong>Destination name:</strong> <code>bikes-by-street-table</code></li>
+<li><strong>Workspace:</strong> <em>Select the workspace you created at the beginning of this exercise</em></li>
+<li><strong>Eventhouse</strong>: <em>Select your eventhouse</em></li>
+<li><strong>KQL database:</strong> <em>Select your KQL database</em></li>
+<li><strong>Destination table:</strong> Create a new table named <code>bikes-by-street</code></li>
+<li><strong>Input data format:</strong> JSON</li>
+</ul>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-group-by-table.png" data-desc-position="bottom"><img alt="Table for grouped data." src="../img/09-group-by-table.png"></a></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Eventhouse</strong> pane, select <strong>Save</strong>. </p>
+</li>
+<li>
+<p>On the toolbar, select <strong>Publish</strong>.</p>
+</li>
+<li>
+<p>Wait a minute or so for the changes to become active.</p>
+</li>
+<li>
+<p>In the design canvas, select the <strong>bikes-by-street-table</strong> node</p>
+<ul>
+<li>View the <strong>data preview</strong> pane beneath the canvas.</li>
+</ul>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-stream-table-with-windows.png" data-desc-position="bottom"><img alt="Table for grouped data." src="../img/09-stream-table-with-windows.png"></a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>The trasformed data includes the grouping field you specified (<strong>Street</strong>),</li>
+<li>The aggregation you specified (<strong>SUM_no_Bikes</strong>),</li>
+<li>A timestamp field indicating the end of the 5 second tumbling window in which the event occurred (<strong>Window_End_Time</strong>).</li>
+</ul>
+</div>
+</li>
+</ol>
+<h2 id="step-8-query-the-transformed-data">Step 8: Query the transformed data</h2>
+<p>Now you can query the bicycle data that has been transformed and loaded into a table by your eventstream</p>
+<ol>
+<li>
+<p>In the menu bar on the left, select your KQL database.</p>
+</li>
+<li>
+<p>On the <strong>database</strong> tab, in the toolbar for your KQL database, use the <strong>Refresh</strong> button to refresh the view until you see the <strong>bikes-by-street</strong> table under the database.</p>
+</li>
+<li>
+<p>In the <strong>...</strong> menu for the <strong>bikes-by-street</strong> table, select <strong>Query data</strong> &gt; <strong>Show any 100 records</strong>.</p>
+</li>
+<li>
+<p>In the query pane, note that the following query is generated and run:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s">'bikes-by-street'</span><span class="p">]</span>
+<span class="p">|</span><span class="w"> </span><span class="k">take</span><span class="w"> </span><span class="mi">100</span>
+</code></pre></div>
+</li>
+<li>
+<p>Modify the KQL query to retrieve the total number of bikes per street within each 5 second window:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s">'bikes-by-street'</span><span class="p">]</span>
+<span class="p">|</span><span class="w"> </span><span class="k">summarize</span><span class="w"> </span><span class="n">TotalBikes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">tolong</span><span class="p">(</span><span class="n">SUM_No_Bikes</span><span class="p">))</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Window_End_Time</span><span class="p">,</span><span class="w"> </span><span class="n">Street</span>
+<span class="p">|</span><span class="w"> </span><span class="k">sort</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Window_End_Time</span><span class="w"> </span><span class="n">desc</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Street</span><span class="w"> </span><span class="n">asc</span>
+</code></pre></div>
+</li>
+<li>
+<p>Select the modified query and run it.</p>
+<p>The results show the number of bikes observed in each street within each 5 second time period.</p>
+<div class="admonition abstract">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/09-kql-group-query.png" data-desc-position="bottom"><img alt="Query returning grouped data." src="../img/09-kql-group-query.png"></a></p>
+</div>
+</li>
+</ol>
 <hr>
-<p>The full list of MSFabric labs can be found here:</p>
-<ul>
-<li><a href="https://microsoftlearning.github.io/mslearn-fabric/">https://microsoftlearning.github.io/mslearn-fabric/</a></li>
-</ul>
+<h2 id="summary">Summary</h2>
+<p>In this exercise, you have created an eventhouse and populated tables in its database by using an eventstream.</p>
+<hr>
+<p><small><b>Source:
+<a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/09-real-time-analytics-eventstream.html">https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/09-real-time-analytics-eventstream.html</a>
+</b></small></p>
 
 
 
@@ -1800,10 +2076,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["toc.integrate", "content.code.copy", "navigation.indexes"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "content.code.copy", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
