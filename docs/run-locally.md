@@ -1,10 +1,11 @@
 ```mermaid
 flowchart TD
-    A["QA Platform:<br/>Wait for status Ready"]
+    S["QA Platform:<br/>Click: ▶ Start lab"]
+    A["Wait for status Ready"]
     B["Open a private/incognito<br/>browser window"]
     C["Logon to Microsoft Fabric<br/>app.fabric.microsoft.com"]
 
-    A --> B --> C
+    S --> A --> B --> C
 ```
 
 ## Step 1: Access Microsoft Fabric
@@ -14,13 +15,17 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 !!! note
     The **Open** button in the QA Platform opens the Azure portal. You do not need to use it - sign in to Microsoft Fabric directly instead.
 
-1. In the QA Platform, wait until the lab status shows **Ready** with a green tick.
+1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
+
+2. Click **Start** to start the lab.
+
+3. Wait until the lab status shows **Ready** with a green tick.
 
     - This can take up to 15 minutes from the time you start the lab. The provisioning assigns a Fabric licence to your lab user account.
 
     !!! warning "**Ready to log in** with a grey tick and a percentage is not ready - keep waiting!"
 
-2. Make a note of your allocated **Username** and **Password**.
+4. Make a note of your allocated **Username** and **Password**.
 
 
 ## Step 2: Logon to Microsoft Fabric
