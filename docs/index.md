@@ -11,7 +11,6 @@ This site hosts the instructions for MS Fabric labs:
 - [Real-time Analytics eventstream](real-time-analytics-eventstream/index.md)
 - [Data Activator](data-activator/index.md)
 - [Monitor Hub](monitor-hub/index.md)
-- [Secure Data Access](secure-data-access/index.md)
 - [Work with SQL Database](work-with-database/index.md)
 - [Deployment Pipelines](implement-cicd/index.md)
 

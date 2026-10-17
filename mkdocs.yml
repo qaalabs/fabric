@@ -52,10 +52,6 @@ nav:
       - monitor-hub/index.md
       - Summary: monitor-hub/summary.md
 
-    - "Secure Data Access":
-      - secure-data-access/index.md
-      - Summary: secure-data-access/summary.md
-
     - "Work with SQL Database":
       - work-with-database/index.md
       - Summary: work-with-database/summary.md
