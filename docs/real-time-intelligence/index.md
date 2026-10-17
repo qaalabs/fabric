@@ -133,7 +133,7 @@ The eventstream captures real-time stock market data and loads it into a table i
 
     ```kql
     stock
-    | where ["time"] > ago(5m)
+    | where todatetime(["time"]) > ago(5m)
     | summarize avgPrice = avg(todecimal(bidPrice)) by symbol
     | project symbol, avgPrice
     ```
@@ -170,6 +170,10 @@ Now that you have a table that is being populated by stream of data, you can use
 
     !!! abstract ""
         ![Screenshot of a dashboard with a chart tile.](../img/stock-dashboard-chart.png)
+
+8. On the **Manage** menu, select **Refresh settings**. Select **Live refresh (recommended)** then **Settings**. Change the **Refresh rate limit** to 10 seconds then select **Apply**.
+
+9. Change the mode from **Editing** to **Viewing**. Save your changes when prompted.
 
     Now you have a live visualization of your real-time stock data.
 
