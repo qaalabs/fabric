@@ -93,7 +93,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **File format**: Select `DelimitedText` from the drop-down
 
     !!! abstract ""
-        ![Source tab showing HTTP connection & file format settings.](../img/04-copy-data-source-tab.png)
+        ![Screenshot of the File format settings dialog.](../img/04-copy-data-source-tab.png)
 
 8. Select the **Settings** button next to the **File format** drop-down.
 
