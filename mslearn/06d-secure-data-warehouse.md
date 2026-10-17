@@ -6,6 +6,12 @@ lab:
   duration: 45 minutes
   level: 300
   islab: true
+  categories:
+    - Data warehouse
+    - Security and governance
+  courses:
+    - DP-700
+    - DP-602
 ---
 
 # Secure data in a data warehouse
@@ -18,7 +24,7 @@ This lab takes approximately **45** minutes to complete.
 
 ## Create a workspace
 
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
@@ -65,13 +71,13 @@ Dynamic data masking rules are applied on individual columns at the table level 
    SELECT * FROM dbo.Customers;
     ```
 
-    When users who are restricted from seeing unmasked data query the table, the **FirstName** column will show the first letter of the string with XXXXXXX and none of the last characters. The **Phone** column will show xxxx. The **Email** column will show the first letter of the email address followed by `XXX@XXX.com`. This approach ensures that sensitive data remains confidential, while still allowing restricted users to query the table.
+    When users who are restricted from seeing unmasked data query the table, the **FirstName** column will show the first letter of the string with XXXXXXX and none of the last characters. The **Phone** column will show xxxx. The **Email** column will show the first letter of the email address followed by `XXX@XXXX.com`. This approach ensures that sensitive data remains confidential, while still allowing restricted users to query the table.
 
 2. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **Customers** in the **dbo** schema of the data warehouse.
 
 3. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **Customers** table has been created. The `SELECT` statement returns unmasked data for you because as the workspace creator, you're a member of the Workspace Admin role which can see unmasked data.
 
-    >**Note**: If you connect as a test user that's a member of the **Viewer** workspace role and run a `SELECT` statement on the **Customers** table, you'll see the following results for the masked data.
+    > **Optional**: If you connect as a test user that's a member of the **Viewer** workspace role and run a `SELECT` statement on the **Customers** table, you'll see the following results for the masked data.
    
     ![Screenshot of the Customers table with masked data.](./Images/masked-table.png)
  
@@ -141,7 +147,7 @@ Row-level security (RLS) can be used to limit access to rows based on the identi
 6. Use the **&#9655; Run** button to run the SQL script
 7. Then, in the **Explorer** pane, expand **Schemas** > **rls** > **Functions** > **Table-valued Functions**, and verify that the function has been created.
 
-    > **Note**: If you connect as the user you replaced `<username1>@<your_domain>.com` with, and run a `SELECT` statement on the **Sales** table, you'll see the following results for row-level security.
+    > **Optional**: If you connect as the user you replaced `<username1>@<your_domain>.com` with, and run a `SELECT` statement on the **Sales** table, you'll see the following results for row-level security.
 
     ![Screenshot of the Sales table with RLS.](./Images/rls-table.png)
 
@@ -173,7 +179,7 @@ Column-level security allows you to designate which users can access specific co
    DENY SELECT ON dbo.Orders (CreditCard) TO [<username1>@<your_domain>.com];
     ```
 
-    > **Note**: If you connect as the user you replaced `<username1>@<your_domain>.com` with, and run a `SELECT` statement on the **Orders** table, you'll see the following results for column-level security.
+    > **Optional**: If you connect as the user you replaced `<username1>@<your_domain>.com` with, and run a `SELECT` statement on the **Orders** table, you'll see the following results for column-level security.
 
     ![Screenshot of the Orders table query with error.](./Images/cls-table.png)
 
@@ -219,7 +225,7 @@ Fabric has a permissions model that allows you to control access to data at the 
    GRANT EXECUTE on dbo.sp_PrintMessage to [<username1>@<your_domain>.com];
     ```
 
-    > **Note**: If you connect as the user you replaced `<username1>@<your_domain>.com` with, execute the stored procedure and run a `SELECT` statement on the **Parts** table, you'll see the following results for granular permissions.
+    > **Optional**: If you connect as the user you replaced `<username1>@<your_domain>.com` with, execute the stored procedure and run a `SELECT` statement on the **Parts** table, you'll see the following results for granular permissions.
 
     ![Screenshot of the Parts table query with error.](./Images/grant-deny-table.png)
 

@@ -8,6 +8,11 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Copilot in Fabric
+    - Data engineering
+  courses:
+    - DP-3029
 ---
 
 # Work smarter with Copilot in Microsoft Fabric Dataflow Gen2
@@ -30,7 +35,7 @@ By completing this lab, you will:
 
 ## Before you start
 
-You need a [Microsoft Fabric Capacity (F2 or higher)](https://learn.microsoft.com/fabric/fundamentals/copilot-enable-fabric) with Copilot enabled to complete this exercise.
+> **Note**: You need a paid Fabric capacity to complete this exercise. A Fabric trial doesn't support Copilot capabilities. For information about Fabric licenses, see [Microsoft Fabric licenses](https://learn.microsoft.com/fabric/enterprise/licenses).
 
 ## Exercise scenario
 
@@ -38,15 +43,11 @@ Contoso, a global retail company, is modernizing its data infrastructure using M
 
 ## Create a workspace
 
-Before working with data in Fabric, create a workspace with Fabric enabled. A workspace serves as a container for all your Fabric items and provides collaboration capabilities for teams.
-
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
-1. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Premium*, or *Fabric*). Note that *Trial* is not supported.
-
-    > **Important**: Copilot features in Fabric require a paid capacity (F2 or higher). Trial workspaces don't support Copilot functionality.
+1. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Premium*, or *Fabric*).
 
 1. When your new workspace opens, it should be empty.
 
@@ -56,7 +57,7 @@ Before working with data in Fabric, create a workspace with Fabric enabled. A wo
 
 Now that you have a workspace, it's time to create a data lakehouse into which you'll ingest data.
 
-1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**. Give it a unique name of your choice. Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
+1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**. Give it a unique name of your choice. Make sure the "Lakehouse schemas" option is enabled.
 
     >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
 
@@ -255,15 +256,13 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
     ![Data destination configuration page.](./Images/dataflow-connection.png)
 
-1. Select **Next** and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. Then specify a new table named **Store**:
+1. Select **Next** and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. Then choose the **dbo** schema. 
 
-    ![Data destination configuration page.](./Images/copilot-fabric-dataflow-choose-destination.png)
+    ![Data destination configuration page.](./Images/copilot-fabric-dataflow-choose-destination-2.png)
 
-1. Select **Next** and on the **Choose destination settings** page, disable the **Use automatic settings** option, select **Append** and then **Save settings**.
+1. Select **Choose** and then select a table named **Store**. Select **Bind selected queries**.
 
-    > **Note:** We suggest using the *Power query* editor for updating data types, but you can also do so from this page, if you prefer.
-
-    ![Data destination settings page.](./Images/copilot-fabric-dataflow-destination-column-mapping.png)
+    ![Bind to default data destination](./Images/copilot-fabric-dataflow-bind-default-data-destination.png)
 
 1. Select **Save & run** to publish the dataflow. Then wait for the **Dataflow 1** dataflow to be created in your workspace.
 

@@ -1,16 +1,20 @@
 ---
 lab:
-  title: Create DAX calculations in Power BI Desktop
-  module: Create DAX calculations in Power BI Desktop
-  description: You'll learn to enhance Power BI data models by creating calculated tables, calculated columns, and measures using DAX. Through hands-on practice, you'll build a date table, control sorting behavior, organize measures into display folders, and create calculations that aggregate and compare data effectively.
+  title: Create DAX calculations in semantic models
+  module: Create DAX calculations in semantic models
+  description: You'll learn to enhance semantic models by creating calculated tables, calculated columns, and measures using DAX. Through hands-on practice, you'll build a date table, control sorting behavior, organize measures into display folders, and create calculations that aggregate and compare data effectively.
   duration: 45 minutes
   level: 300
   islab: true
   primarytopics:
     - Power BI
+  categories:
+    - Semantic models
+  courses:
+    - DP-600
 ---
 
-# Create DAX calculations in Power BI Desktop
+# Create DAX calculations in semantic models
 
 ## **Lab story**
 
@@ -24,7 +28,11 @@ In this lab you learn how to:
 
 **This lab should take approximately 45 minutes.**
 
+> **Tip:** For related training content, see [Create DAX calculations in semantic models](https://learn.microsoft.com/training/modules/dax-power-bi-create-calculations/).
+
 ## Get started
+
+> **Note**: You need [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494) (November 2025 or newer) installed to complete this exercise.
 
 To complete this exercise, first open a web browser and enter the following URL to download the zip folder:
 
@@ -34,7 +42,7 @@ Extract the folder to the **C:\Users\Student\Downloads\14-create-dax** folder.
 
 Open the **14-Starter-Sales Analysis.pbix** file.
 
-> ***Note**: You can dismiss the sign-in by selecting **Cancel**. Close any other informational windows. Select **Apply Later**, if prompted to apply changes.*
+> ***Note**: You can dismiss the sign-in by selecting **Cancel**. Close any other informational windows. Select **Apply Later**, if prompted to apply changes.
 
 ## Create the Salesperson calculated table
 

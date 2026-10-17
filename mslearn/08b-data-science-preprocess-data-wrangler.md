@@ -8,6 +8,10 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Data science
+  courses:
+    - DP-604
 ---
 
 # Preprocess data with Data Wrangler in Microsoft Fabric
@@ -16,11 +20,9 @@ In this lab, you'll learn how to use Data Wrangler in Microsoft Fabric to prepro
 
 This lab will take approximately **30** minutes to complete.
 
-> **Note**: You need a [Microsoft Fabric trial](https://learn.microsoft.com/fabric/get-started/fabric-trial) to complete this exercise.
-
 ## Create a workspace
 
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser and sign in with your Fabric credentials.
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
@@ -115,9 +117,9 @@ Now you're ready to run code to get data. You'll work with the [**OJ Sales datas
 
 Now that we have loaded the data, the next step is to preprocess it using Data Wrangler. Preprocessing is a crucial step in any machine learning workflow. It involves cleaning the data and transforming it into a format that can be fed into a machine learning model.
 
-1. Select **Data** in the notebook ribbon, and then select **Launch Data Wrangler** dropdown.
+1. Select **Data Wrangler** in the notebook ribbon, and then select the `df` dataset.
 
-1. Select the `df` dataset. When Data Wrangler launches, it generates a descriptive overview of the dataframe in the **Summary** panel.
+1. When Data Wrangler launches, it generates a descriptive overview of the dataframe in the **Summary** panel.
 
 1. Select the **Revenue** feature, and observe the data distribution of this feature.
 

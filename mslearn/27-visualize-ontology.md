@@ -8,19 +8,23 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Fabric IQ
+  courses:
 ---
 
 # Visualize ontology data with Microsoft Fabric IQ
 
 In this lab, you'll create an ontology from a notebook for a fictitious company called Lamna Healthcare. You'll visualize entity instances, explore entity relationships through interactive graphs, and see your data through property charts and time-series visualizations.
 
+> [!IMPORTANT]
+> Ontology in Microsoft Fabric is currently in [preview](https://learn.microsoft.com/fabric/fundamentals/preview).
+
 This lab takes approximately **30** minutes to complete.
 
-> **Note**: You need a [Microsoft Fabric trial](https://learn.microsoft.com/fabric/get-started/fabric-trial) to complete this exercise. You'll also need to enable the following [tenant settings](https://learn.microsoft.com/fabric/iq/ontology/overview-tenant-settings): **Enable Ontology item (preview)** and **User can create Graph (preview)**.
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial). You'll also need to enable the following [tenant settings](https://learn.microsoft.com/fabric/iq/ontology/overview-tenant-settings): **Enable Ontology item (preview)** and **User can create Graph (preview)**.
 
 ## Create a workspace
-
-Before working with ontologies in Fabric, you need a workspace with a Fabric capacity.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) in a browser, and sign in with your Fabric credentials.
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
@@ -35,7 +39,7 @@ The Lamna Healthcare ontology includes sample data representing hospitals, depar
 
 > **Note**: If you want to learn how to build ontologies step-by-step, see the exercises on [creating an ontology manually](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/23-build-ontology-manually.html) or [generating an ontology from a semantic model](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/24-build-ontology-semantic-model.html).
 
-1. Download the notebook file [**setup-ontology.ipynb**](https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/27-28/setup-ontology.ipynb) to your local computer. If your browser saves it as `setup-ontology.ipynb.txt`, rename the file to remove the `.txt` extension.
+1. Select [**setup-ontology.ipynb**](https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/27-28/setup-ontology.ipynb) to open the notebook file in your browser, then right-click and save it to your local computer. If your browser saves it as `setup-ontology.ipynb.txt`, rename the file to remove the `.txt` extension.
 
 1. In your workspace, select **Import** from the ribbon.
 
@@ -132,22 +136,16 @@ This combination lets you see both the equipment details and its real-time readi
    - **Time-series charts** show measurements over time (HeartRate, OxygenSaturation, RespiratoryRate) in addition to the standard property distribution charts (PatientId, EquipmentType)
    - The time range selector at the top controls what time period is displayed in the time-series charts
 
-1. The sample data for this exercise is timestamped for April 1, 2026. If you're running this lab later, the default "Last 30 days" filter won't show this historical data. You'll need to set a custom date range to display the vital signs readings.
+1. The sample data is timestamped for when you ran the setup notebook. To view the detailed time-series charts, configure the time range selector at the top:
+   - **Time range**: Select **Last 3 days**
+   - **Time granularity**: Select **5 minutes** 
+   - **Aggregation**: Select **Average**
 
-1. In the time range selector, set a custom date range:
-   - Select **Custom**
-   - **Start date**: April 1, 2026 at 12:00 AM
-   - **End date**: April 2, 2026 at 12:00 AM
-   - **Granularity**: 5 minutes
-   - **Aggregation**: Average
-   - Select **Apply**
+1. Observe the time-series charts showing vital sign readings (heart rate, oxygen saturation, respiratory rate) with data points at 5-minute intervals.
 
-2. Observe the time-series charts update to show vital sign readings (heart rate, oxygen saturation, respiratory rate) within the specified time range.
+1. In the **Entity instances** tile, select an equipment ID (for example, **VS-1004**) to view the specific readings in the **HeartRate**, **OxygenSaturation**, and **RespiratoryRate** tiles.
 
-
-3. In the **Entity instances** tile, select an equipment ID (for example, **VS-1004**) to view the specific readings in the **HeartRate**, **OxygenSaturation**, and **RespiratoryRate** tiles.
-
-4. Return to the ontology canvas when you are finished exploring.
+1. Return to the ontology canvas when you are finished exploring.
 
 ## Visualize the relationship graph
 

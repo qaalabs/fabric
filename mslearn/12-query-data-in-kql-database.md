@@ -8,6 +8,10 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Real-Time Intelligence
+  courses:
+    - DP-603
 ---
 
 # Work with data in a Microsoft Fabric eventhouse
@@ -22,7 +26,7 @@ This exercise takes approximately **25** minutes to complete.
 
 ## Create a workspace
 
-Before working with data in Fabric, create a workspace with the Fabric capacity enabled.
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser and sign in with your Fabric credentials.
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
@@ -36,7 +40,7 @@ Before working with data in Fabric, create a workspace with the Fabric capacity 
 Now that you have a workspace with support for a Fabric capacity, you can create an eventhouse in it.
 
 1. In the menu bar on the left, select **Workloads**. Then, select the **Real-Time Intelligence** tile.
-1. On the **Real-Time Intelligence** home page, select the **Explore Real-Time Intelligence Sample** tile. It will automatically create an eventhouse called **RTISample**:
+1. On the **Real-Time Intelligence** page, select the **Real-Time Intelligence Sample** tile, then select **Bike Rental Data**. It will automatically create an eventhouse called **Bike_Database**:
 
    ![Screenshot of a new eventhouse with sample data.](./Images/create-eventhouse-sample.png)
 

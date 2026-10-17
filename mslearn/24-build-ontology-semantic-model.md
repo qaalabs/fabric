@@ -1,28 +1,35 @@
 ---
 lab:
-  title: Build an ontology (preview) from a semantic model in Fabric IQ
+  title: Build an ontology from a semantic model in Fabric IQ
   module: Create ontology with Microsoft Fabric IQ
   description: 'In this lab, you generate a Fabric IQ ontology from a Power BI semantic model using healthcare data, configure entity types and relationships with data bindings, and combine static data from a lakehouse with time-series data from an eventhouse.'
   duration: 45 minutes
-  level: 300
+  level: 200
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Fabric IQ
+  courses:
+    - DP-600
 ---
 
-# Build an ontology (preview) from a semantic model in Fabric IQ
+# Build an ontology from a semantic model in Fabric IQ
 
 There are two ways to build a Fabric IQ ontology: manually, by creating each entity type and relationship from scratch, or automatically, by generating the structure from a Power BI semantic model. This lab uses the semantic model approach.
 
 In this lab, you'll load sample data for a fictitious healthcare company into a lakehouse and eventhouse, build a semantic model on top of it, and then generate an ontology from that model. The sample data represents hospitals, departments, rooms, patients, vital sign equipment, and vital signs readings. Each table in the semantic model becomes an entity type, and each relationship between tables becomes a relationship type in the ontology.
 
+> [!IMPORTANT]
+> Ontology in Microsoft Fabric is currently in [preview](https://learn.microsoft.com/fabric/fundamentals/preview).
+
 This lab takes approximately **45** minutes to complete.
 
-> **Note**: You need a [Microsoft Fabric trial](https://learn.microsoft.com/fabric/get-started/fabric-trial) to complete this exercise. You'll also need to enable the following [tenant settings](https://learn.microsoft.com/fabric/iq/ontology/overview-tenant-settings): **Enable Ontology item (preview)** and **User can create Graph (preview)**.
+> **Tip:** For related training content, see [Create an ontology in Microsoft Fabric](https://learn.microsoft.com/training/modules/create-ontology-with-fabric-iq/).
+
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial). You'll also need to enable the following [tenant settings](https://learn.microsoft.com/fabric/iq/ontology/overview-tenant-settings): **Enable Ontology item (preview)** and **User can create Graph (preview)**.
 
 ## Create a workspace
-
-Before working with ontologies in Fabric, you need a workspace with a Fabric capacity.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
@@ -63,13 +70,13 @@ You'll download sample CSV files, upload them to the lakehouse, and convert them
    - For each file, select the **ellipsis (...)** to the right of the file name
    - Select **Load to Tables** > **New table**
    - Configure the table:
-     - **Table name**: Fabric pre-fills this from the filename with a lowercase first letter (e.g., `hospitals`, `departments`, `rooms`, `patients`, `vitalSignEquipment`). 
+     - **Table name**: Fabric pre-fills this from the filename with lowercase letters (e.g., `hospitals`, `departments`, `rooms`, `patients`, `vitalsignequipment`). 
      - **Column header**: Check **Use header for column names**
      - **Separator**: Leave as comma (`,`)
    - Select **Load**
    - Repeat this process for all five files
 
-1. Verify you have five tables in the **Tables** section: `hospitals`, `departments`, `rooms`, `patients`, and `vitalSignEquipment`.
+1. Verify you have five tables in the **Tables** section: `hospitals`, `departments`, `rooms`, `patients`, and `vitalsignequipment`.
 
 ## Create an eventhouse with streaming data
 
@@ -98,7 +105,7 @@ Now you'll create a Power BI semantic model from your lakehouse. As you define e
 
 1. In the **New semantic model** dialog, as shown below:
    - In the **Direct Lake semantic model name** field, enter `LamnaHealthcareModel`.
-   - Select all five tables: **hospitals**, **departments**, **rooms**, **patients**, **vitalSignEquipment**.
+   - Select all five tables: **hospitals**, **departments**, **rooms**, **patients**, **vitalsignequipment**.
    - Select **Confirm**.
    
    > **Note**: If the tables don't appear in the list, refresh your browser and try again.

@@ -8,6 +8,11 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Get started with Fabric
+    - Data engineering
+  courses:
+    - DP-600
 ---
 
 # Discover and connect to data in OneLake
@@ -20,11 +25,11 @@ In this exercise, you create a sample environment with a lakehouse containing sa
 
 This lab takes approximately **30** minutes to complete.
 
-> **Note**: You need access to a Fabric-enabled workspace. If you don't have one, create a [Microsoft Fabric trial](https://learn.microsoft.com/fabric/get-started/fabric-trial) to complete this exercise.
+> **Tip:** For related training content, see [Discover and connect to data in OneLake](https://learn.microsoft.com/training/modules/discover-data-onelake/).
+
+> **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
 ## Create a workspace
-
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 
@@ -46,7 +51,7 @@ Now that you have a workspace, it's time to create a lakehouse and populate it w
 
     > **Note**: To download the file, open a new tab in the browser and paste in the URL. Right-click anywhere on the page and select **Save as** to save it as a CSV file.
 
-1. In your workspace, select **+ New item**, and then select **Lakehouse**. Give it a name of your choice (for example, _sales-data_).
+1. In your workspace, select **+ New item**, and then select **Lakehouse**. Give it a name of your choice (for example, _salesdata_).
 
     After a minute or so, a new lakehouse with empty **Tables** and **Files** folders will be created.
 
@@ -80,11 +85,11 @@ Now that you have data in your lakehouse, you can explore how to discover it thr
 
 1. At the top of the page, select the Fabric icon to return to the Fabric home page.
 
-1. In the left navigation pane, select the **OneLake catalog** icon.
+1. In the left navigation pane, select the **OneLake catalog** icon. In the catalog, select the **Explore** tab and filter by **Data items** if it isn't already selected.
 
-    ![Screenshot showing the OneLake catalog with various data assets listed.](./Images/onelake-catalog.png)
+    ![Screenshot showing the OneLake catalog with various data assets listed.](./Images/onelake-catalog-explore.png)
 
-1. In the catalog, you see various item types including lakehouses, warehouses, semantic models, and reports. Browse the list to find your **sales_data** lakehouse (or whatever name you chose).
+1. In the catalog, you see various item types including lakehouses, warehouses, semantic models, and reports. Browse the list to find your **salesdata** lakehouse (or whatever name you chose).
 
     > **Note**: Depending on what else is in your trial environment, you may see other items in the catalog. The catalog respects access permissions, so you only see items you have permission to access.
 
@@ -102,7 +107,7 @@ Now that you have data in your lakehouse, you can explore how to discover it thr
 
 After discovering a data asset in the catalog, the next step is to explore its structure. Understanding the tables, columns, and data types helps you determine whether the data meets your needs.
 
-1. From the catalog, select your **sales_data** lakehouse to open it.
+1. From the catalog, select your **salesdata** lakehouse to open it.
 
 1. In the **Explorer** pane on the left, expand the **Tables** folder to see the **sales** table you created earlier.
 
@@ -128,19 +133,22 @@ Shortcuts let you reference data from other workspaces without copying it, provi
 
     This lakehouse represents your analytics workspace where you'll transform data and build semantic models.
 
-1. When the new lakehouse opens, in the **Explorer** pane, select the **...** menu for the **Tables** folder and select **New shortcut**.
+1. When the new lakehouse opens, in the **Explorer** pane, 
+expand **Tables** and select the **...** menu for the **dbo** folder and select **New table shortcut**.
 
     ![Screenshot showing new shortcut option.](./Images/create-onelake-shortcut.png)
 
-1. In the **New shortcut** dialog, select **OneLake** as the shortcut source.
+1. In the **New table shortcut** dialog, select **OneLake** as the shortcut source.
 
     ![Screenshot showing shortcut creation dialog with OneLake selected.](./Images/onelake-shortcut-options.png)
 
-1. In the workspace list, select the workspace containing your original **sales_data** lakehouse (for example, _Data-Engineering_).
+1. In the workspace list, select the workspace containing your original **salesdata** lakehouse (for example, _Data-Engineering_).
 
-1. Select the **sales_data** lakehouse, then select the **Tables** folder.
+1. Select the **salesdata** lakehouse.
 
-1. Select the **sales** table, and then select **Next**.
+1. Select **Passthrough identity** in the Connection method dialog.
+
+1. Select **Tables** table, and then select **Next**.
 
 1. Review the shortcut details before selecting **Create**.
 

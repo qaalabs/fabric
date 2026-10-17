@@ -8,6 +8,11 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Fabric
+  categories:
+    - Copilot in Fabric
+    - Data engineering
+  courses:
+    - DP-3029
 ---
 
 # Analyze data with Apache Spark and Copilot in Microsoft Fabric notebooks
@@ -32,7 +37,7 @@ By completing this lab, you will be able to:
 
 ## Before you start
 
-You need a [Microsoft Fabric Capacity (F2 or higher)](https://learn.microsoft.com/fabric/fundamentals/copilot-enable-fabric) with Copilot enabled to complete this exercise.
+> **Note**: You need a paid Fabric capacity to complete this exercise. A Fabric trial doesn't support Copilot capabilities. For information about Fabric licenses, see [Microsoft Fabric licenses](https://learn.microsoft.com/fabric/enterprise/licenses).
 
 > **Note**: For your convenience, a notebook with all prompts for this exercise is available to you for download at:
 
@@ -46,15 +51,11 @@ Source: EUROPOP2023 Population on January 1 by age, sex, and type of projection 
 
 ## Create a workspace
 
-Before working with data in Fabric, create a workspace with Fabric enabled. A workspace in Microsoft Fabric serves as a collaborative environment where you can organize and manage all your data engineering artifacts including lakehouses, notebooks, and datasets. Think of it as a project folder that contains all the resources needed for your data analysis.
-
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
-1. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Premium*, or *Fabric*). Note that *Trial* is not supported.
-   
-    > **Why this matters**: Copilot requires a paid Fabric capacity to function. This ensures you have access to the AI-powered features that will help generate code throughout this lab.
+1. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Premium*, or *Fabric*).
 
 1. When your new workspace opens, it should be empty.
 
@@ -64,7 +65,7 @@ Before working with data in Fabric, create a workspace with Fabric enabled. A wo
 
 Now that you have a workspace, it's time to create a lakehouse into which you'll ingest data. A lakehouse combines the benefits of a data lake (storing raw data in various formats) with a data warehouse (structured data optimized for analytics). It will serve as both the storage location for our raw population data and the target for our cleaned, transformed dataset.
 
-1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**. Give it a unique name of your choice. Make sure the "Lakehouse schemas (Public Preview)" option is disabled.
+1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**. Give it a unique name of your choice. Make sure the **Lakehouse schemas** option is enabled.
 
     >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
 
@@ -109,11 +110,13 @@ You can now create a Fabric notebook to work with your data. Notebooks provide a
 
 To work with data in your lakehouse from the notebook, you need to attach the lakehouse to your notebook. This connection allows your notebook to read from and write to the lakehouse storage, creating a seamless integration between your analysis environment and your data storage.
 
-1. Select your new workspace from the left bar. You will see a list of items contained in the workspace including your lakehouse and notebook.
+1. In the notebook's **Explorer** pane, select **Add data items**, and then select **From OneLake catalog**.
 
-1. Select the lakehouse to display the Explorer pane.
+    ![Screenshot of the Add data items menu in the notebook Explorer pane with From OneLake catalog highlighted.](Images/22b-attach-lakehouse.png)
 
-1. From the top menu, select **Open notebook**, **Existing notebook**, and then open the notebook you created earlier. The notebook should now be open next to the Explorer pane. Expand Lakehouses, and expand the Files list. Notice there are no table or files listed yet next to the notebook editor, like this:
+1. In the **OneLake catalog**, select the lakehouse you created earlier, and then select **Connect**.
+
+1. In the **Explorer** pane, expand the lakehouse and its **Files** list. Notice that the lakehouse doesn't contain any tables or files yet.
 
     ![Screen picture of csv files in Explorer view.](Images/copilot-fabric-notebook-step-2-lakehouse-attached.png)
 
@@ -124,13 +127,13 @@ To work with data in your lakehouse from the notebook, you need to attach the la
 
 Now we'll use Copilot to help us download data from the Eurostat API. Instead of writing Python code from scratch, we'll describe what we want to do in natural language, and Copilot will generate the appropriate code. This demonstrates one of the key benefits of AI-assisted coding: you can focus on the business logic rather than the technical implementation details.
 
-1. Create a new cell in your notebook and copy the following instruction into it. To indicate that we want Copilot to generate code, use `%%code` as the first instruction in the cell. 
+1. On the **Home** ribbon, select **Copilot** to open the Copilot chat pane on the right side of the notebook.
 
-    > **About the `%%code` magic command**: This special instruction tells Copilot that you want it to generate Python code based on your natural language description. It's one of several "magic commands" that help you interact with Copilot more effectively.
+    ![Screenshot of notebook with Copilot panel open.](Images/copilot-fabric-notebook-step-6-copilot-pane.png)
+
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
-    %%code
-    
     Download the following file from this URL:
     
     https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/proj_23np$defaultview/?format=TSV
@@ -138,11 +141,9 @@ Now we'll use Copilot to help us download data from the Eurostat API. Instead of
     Then write the file to the default lakehouse into a folder named temp. Create the folder if it doesn't exist yet.
     ```
     
-1. Select ▷ **Run cell** to the left of the cell to run the code.
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code before you run it.
 
-    Copilot generates the following code, which might differ slightly depending on your environment and the latest updates to Copilot.
-    
-    ![Screenshot of the code generated by copilot.](Images/copilot-fabric-notebook-step-3-code-magic.png)
+    Copilot generates code in a new cell. The code might differ slightly depending on your environment and the latest updates to Copilot.
     
     > **How Copilot works**: Notice how Copilot translates your natural language request into working Python code. It understands that you need to make an HTTP request, handle the file system, and save the data to a specific location in your lakehouse.
     
@@ -175,19 +176,17 @@ Now we'll use Copilot to help us download data from the Eurostat API. Instead of
     print(f"File downloaded and saved to {file_path}")
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. The file should be downloaded and saved in the temporary folder of your Lakehouse.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell** to the left of the cell. After the cell runs successfully, select **Keep** in the Copilot pane. The file should be downloaded and saved in the temporary folder of your Lakehouse.
 
     > **Note**: you might need to refresh your lakehouse Files by selecting the three dots ...
     
     ![Screenshot of the a temp file created in the lakehouse.](Images/copilot-fabric-notebook-step-4-lakehouse-refreshed.png)
 
-1. Now that we have the raw data file in our lakehouse, we need to load it into a Spark DataFrame so we can analyze and transform it. Create a new cell in your notebook and copy the following instruction into it.
+1. Now that you have the raw data file in your lakehouse, load it into a Spark DataFrame so you can analyze and transform it. In the Copilot chat box, enter the following prompt:
 
     > **Information**: A DataFrame is a distributed collection of data organized into named columns, similar to a table in a database or a spreadsheet.
 
     ```copilot-prompt
-    %%code
-    
     Load the file 'Files/temp/proj_23np.tsv' into a spark dataframe.
     
     The fields are separated with a tab.
@@ -195,7 +194,7 @@ Now we'll use Copilot to help us download data from the Eurostat API. Instead of
     Show the contents of the DataFrame using display method.
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. The dataframe should contain the data from the TSV file. Here's an example of what the generated code might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -209,6 +208,8 @@ Now we'll use Copilot to help us download data from the Eurostat API. Instead of
     # Show the contents of the DataFrame using display method
     display(spark_df)
     ```
+
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
 Here's an example of what the output might look like:
 
@@ -228,16 +229,14 @@ Let's now go ahead and transform the data. We need to make sure the first field 
 
 > **Why we need to split the fields**: The first column contains multiple pieces of information concatenated together (frequency, projection type, sex, age group, unit, and geographic code). For proper analysis, each of these should be in its own column. This process is called "normalizing" the data structure.
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
 
     ```copilot-prompt
-    %%code
-    
     From the currently loaded DataFrame, split the first field 'freq,projection,sex,age,unit,geo\TIME_PERIOD' using a comma into 6 separate fields. Then, remove the original column.
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. Here's an example of what the output might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -256,7 +255,7 @@ Let's now go ahead and transform the data. We need to make sure the first field 
     display(spark_df)
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code. You might need to scroll the table to the right to see the new fields added to the table.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane. You might need to scroll the table to the right to see the new fields.
 
     ![Screenshot of the resulting table with additional fields.](Images/copilot-fabric-notebook-split-fields.png)
 
@@ -266,15 +265,13 @@ Some fields in the table offer no meaningful value, as they contain only a singl
 
 > **Data cleaning principle**: Columns with only one unique value don't provide analytical value and can make your dataset unnecessarily complex. Removing them simplifies the data structure and improves performance. In this case, 'freq' (frequency), 'age' (all records show TOTAL), and 'unit' (all records show PER for persons) are constant across all rows.
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
-    %%code
-    
     From the currently loaded DataFrame, remove the fields 'freq', 'age', 'unit'.
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. Here's an example of what the output might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -286,21 +283,19 @@ Some fields in the table offer no meaningful value, as they contain only a singl
     display(spark_df)
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
 ## Transform data: reposition fields
 
 Organizing your data with the most important identifying columns first makes it easier to read and understand. In data analysis, it's a common practice to position categorical/dimensional columns (like projection type, sex, and geographic location) before the numerical/measure columns (the population values by year).
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
-    %%code
-    
     From the currently loaded DataFrame, the fields 'projection', 'sex', 'geo' should be positioned first.
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. Here's an example of what the output might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -313,7 +308,7 @@ Organizing your data with the most important identifying columns first makes it 
     display(spark_df)
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
 ## Transform data: replace values
 
@@ -321,12 +316,10 @@ The projection field currently contains cryptic codes that aren't user-friendly.
 
 > **Understanding projection scenarios**: Statistical organizations often use different scenarios to model future population changes. The baseline represents the most likely scenario, while sensitivity tests show how population might change under different assumptions about fertility rates, mortality rates, and migration patterns.
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
 
     ```copilot-prompt
-    %%code
-    
     The 'projection' field contains codes that should be replaced with the following values:
         _'BSL' -> 'Baseline projections'.
         _'LFRT' -> 'Sensitivity test: lower fertility'.
@@ -336,7 +329,7 @@ The projection field currently contains cryptic codes that aren't user-friendly.
         _'NMIGR' -> 'Sensitivity test: no migration'.
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. Here's an example of what the output might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -357,7 +350,7 @@ The projection field currently contains cryptic codes that aren't user-friendly.
     display(spark_df)
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
     ![Screenshot of the resulting table with project field values replaced.](Images/copilot-fabric-notebook-replace-values.png)
     
@@ -369,15 +362,13 @@ The population projections table contains 2 rows for countries that do not exist
 
 ![Screenshot of the table with geo EA20 and EU2_2020 highlighted.](Images/copilot-fabric-notebook-europe.png)
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
-    %%code
-    
     Filter the 'geo' field and remove values 'EA20' and 'EU27_2020' (these are not countries).
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. Here's an example of what the output might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -389,7 +380,7 @@ The population projections table contains 2 rows for countries that do not exist
     display(spark_df)
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
     The population project table also contains a field 'sex' which contains the following distinct values:
     
@@ -401,15 +392,13 @@ The population projections table contains 2 rows for countries that do not exist
 
     > **Why remove totals**: Similar to the geographic aggregations, we want to keep only the individual sex categories (Male and Female) and exclude the total values. This allows for more flexible analysis - you can always sum Male and Female values to get totals, but you can't split totals back into components.
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
-    %%code
-    
     Filter the 'sex' field and remove 'T' (these are totals).
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. Here's an example of what the output might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -421,7 +410,7 @@ The population projections table contains 2 rows for countries that do not exist
     display(spark_df)
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
 ## Transform data: trim spaces
 
@@ -429,15 +418,13 @@ Some field names in the population projection table have a space at the end. We 
 
 > **Data quality concern**: Extra spaces in column names can cause issues when querying data or creating visualizations. It's a common data quality issue, especially when data comes from external sources or is exported from other systems. Trimming spaces ensures consistency and prevents hard-to-debug issues later.
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
-    %%code
-    
     Strip spaces from all field names in the dataframe.
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. Here's an example of what the output might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -451,7 +438,7 @@ Some field names in the population projection table have a space at the end. We 
     display(spark_df)
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
 ## Transform data: data type conversion
 
@@ -459,15 +446,13 @@ If we want to properly analyze the data later (using Power BI or SQL for example
 
 > **Importance of correct data types**: When data is loaded from text files, all columns are initially treated as strings. Converting year columns to integers enables mathematical operations (like calculations and aggregations) and ensures proper sorting. This step is crucial for downstream analytics and visualization tools.
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
-    %%code
-    
     Convert the data type of all the year fields to integer.
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code and observe the output. Here's an example of what the output might look like:
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -482,7 +467,7 @@ If we want to properly analyze the data later (using Power BI or SQL for example
     display(spark_df)
     ```
     
-1. Select ▷ **Run cell** to the left of the cell to run the code. Here's an example of what the output might look like (columns and rows removed for brevity):
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane. Here's an example of the output, with columns and rows removed for brevity:
 
 |          projection|sex|geo|    2022|    2023|     ...|    2100|
 |--------------------|---|---|--------|--------|--------|--------| 
@@ -501,15 +486,13 @@ Next, we want to save the transformed data to our lakehouse.
 
 > **Why save the transformed data**: After all this data cleaning and transformation work, we want to persist the results. Saving the data as a table in the lakehouse allows us and others to use this clean dataset for various analytics scenarios without having to repeat the transformation process. It also enables other tools in the Microsoft Fabric ecosystem (like Power BI, SQL Analytics Endpoint, and Data Factory) to work with this data.
 
-1. Create a new cell in your notebook and copy the following instruction into it.
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
-    %%code
-    
     Save the dataframe as a new table named 'Population' in the default lakehouse.
     ```
     
-1. Select ▷ **Run cell** to the left of the cell to run the code. Copilot generates code, which might differ slightly depending on your environment and the latest updates to Copilot.
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -517,7 +500,7 @@ Next, we want to save the transformed data to our lakehouse.
     spark_df.write.format("delta").saveAsTable("Population")
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code.
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
 ## Validation: ask questions
 
@@ -527,13 +510,7 @@ Now let's explore the power of Copilot for data analysis. Instead of writing com
 
     ![Screenshot of lakehouse now containing a new table named 'Population'.](Images/copilot-fabric-notebook-step-5-lakehouse-refreshed.png)
 
-1. From the Home ribbon, select the Copilot option.
-
-    > **Copilot chat interface**: The Copilot panel provides a conversational interface where you can ask questions about your data in natural language. It can generate code for analysis, create visualizations, and help you explore patterns in your dataset.
-
-    ![Screenshot of notebook with Copilot panel open.](Images/copilot-fabric-notebook-step-6-copilot-pane.png)
-
-1. Enter the following prompt:
+1. In the Copilot chat box, enter the following prompt:
 
     ```copilot-prompt
     What are the projected population trends for geo BE  from 2020 to 2050 as a line chart visualization. Make sure to sum up male and female numbers. Use only existing columns from the population table. Perform the query using SQL.
@@ -541,7 +518,7 @@ Now let's explore the power of Copilot for data analysis. Instead of writing com
 
     > **What this demonstrates**: This prompt showcases Copilot's ability to understand context (our Population table), generate SQL queries, and create visualizations. It's particularly powerful because it combines data querying with visualization in a single request.
 
-1. Observe the output generated, which might differ slightly depending on your environment and the latest updates to Copilot. Copy the code fragment into a new cell.
+1. Submit the prompt. When Copilot requests permission to add a code cell, select **Allow**. Review the generated code, which might differ from this example:
 
     ```python
     #### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
@@ -582,7 +559,7 @@ Now let's explore the power of Copilot for data analysis. Instead of writing com
     fig.show()
     ```
 
-1. Select ▷ **Run cell** to the left of the cell to run the code. 
+1. If Copilot requests permission to run the new cell, select **Allow**. Otherwise, select ▷ **Run cell**. After the cell runs successfully, select **Keep** in the Copilot pane.
 
     Observe the chart it created:
     
